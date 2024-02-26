@@ -2,7 +2,7 @@
 sidebar: auto
 ---
 
-# Tutoriel sur les Variables en JavaScript
+# Tutoriel sur les Variables en JavaScript <Badge type="warning" text="En cours de rédaction" />
 
 Les variables en JavaScript sont utilisées pour stocker des données. Elles peuvent contenir différents types de valeurs, tels que des nombres, des chaînes de caractères, des booléens, des tableaux et des objets. Dans ce tutoriel, nous allons explorer les bases des variables en JavaScript.
 

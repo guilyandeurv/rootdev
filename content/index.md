@@ -29,7 +29,7 @@ Et les zones de terminal :
 
 ---
 
-# Plusieurs sources utilisées :
+## Plusieurs sources utilisées :
 
 Ce serait une erreur de proposer de telles connaissances en ayant qu'une seule source, ainsi, [RootDev](/) inspire ses cours depuis plusieurs apprenants :
 
@@ -39,7 +39,7 @@ Ce serait une erreur de proposer de telles connaissances en ayant qu'une seule s
 
 [Udemy](https://udemy.com) : exploite la connaissance des professeurs
 
-
+---
 
 
 

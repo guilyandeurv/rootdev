@@ -8,12 +8,10 @@ Bienvenue sur la page d'accueil des tutoriels JavaScript ! Cette page regroupe u
 
 ## Liste des Tutoriels
 
-::: tip
-This is a tip.
-:::
-- [Fonctions](/fonctions.html)
-- [Boucles](/boucles.html)
-- [Tableaux](/tableaux.html)
-- [Objets](/objets.html)
+- [Variables](/javascript/variables.html)
+- [Fonctions](/javascript/fonctions.html)
+- [Boucles](/javascript/boucles.html)
+- [Tableaux](/javascript/tableaux.html)
+- [Objets](/javascript/objets.html)
 
 Choisissez un tutoriel ci-dessus pour commencer votre apprentissage de JavaScript !
