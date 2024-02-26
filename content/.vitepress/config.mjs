@@ -39,6 +39,7 @@ export default defineConfig({
         items: [
           { text: 'Introduction', link: '/javascript/' },
           { text: 'Variables', link: '/javascript/variables' },
+          { text: 'Fonctions', link: '/javascript/fonction' },
         ]
       },
       {
