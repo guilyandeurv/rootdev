@@ -21,13 +21,12 @@ let sum = x + y;
 console.log(sum); // Affiche 30
 30 // [!code ++]
 ```
+
 Et les zones de terminal :
 ```shell
 ┌─[root@parrot]─[~/Desktop]
 └──╼ $nslookup -type=txt rootdev.fr
 ```
-
----
 
 ## Plusieurs sources utilisées :
 
@@ -38,8 +37,3 @@ Ce serait une erreur de proposer de telles connaissances en ayant qu'une seule s
 [Cisco | Skills For All](https://skillsforall.com) : permet la préparation aux certifications
 
 [Udemy](https://udemy.com) : exploite la connaissance des professeurs
-
----
-
-
-

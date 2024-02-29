@@ -30,7 +30,8 @@ export default defineConfig({
         text: 'Cybersécurité',
         collapsed:true,
         items: [
-          { text: 'Introduction', link: '/cybersecurite/' }
+          { text: 'Introduction', link: '/cybersecurite/' },
+          { text: 'Définitions', link: '/cybersecurite/def' },
         ],
       },
       {
