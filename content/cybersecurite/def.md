@@ -38,7 +38,7 @@ Une **authentification simple** serait un usage d'un seul facteur, généralemen
 
 <br>
 
-::: danger Abus de langage
+::: danger Abus de langage ⚠️
 * *Crypter* : mot sans aucun sens utilisé à tort. ***Crypter*** ≠ ***Chiffrer***. *Idem pour* "***Cryptage***"
 
 Selon l'ANSSI, ce terme est incorrect. En effet, il s'agit d'un abus de langage puisque « **crypter** » un fichier reviendrait à le **chiffrer** sans connaître la **clé de chiffrement**, ce qui empêcherait de le **déchiffrer** par la suite.

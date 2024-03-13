@@ -57,6 +57,13 @@ export default defineConfig({
           { text: 'Introduction', link: '/certification/' },
           { text: 'CompTia Security + SYO-601', link: '/certification/securityplus' },
         ]
+      },
+      {
+        text: 'Réseaux',
+        collapsed:true,
+        items: [
+          { text: 'Introduction', link: '/reseaux/' },
+        ]
       }
     ],
     search: {
