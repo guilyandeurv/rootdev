@@ -21,6 +21,7 @@ export default defineConfig({
          { text: "Javascript", link: "/javascript/index" },
          { text: "Python", link: "/python/index" },
          { text: "Certifications", link: "/certification/index" },
+         { text: 'Réseaux', link: '/reseaux/' },
         ],
       },
     ],
@@ -63,6 +64,7 @@ export default defineConfig({
         collapsed:true,
         items: [
           { text: 'Introduction', link: '/reseaux/' },
+          { text: 'LAN', link: '/reseaux/lan' },
         ]
       }
     ],
