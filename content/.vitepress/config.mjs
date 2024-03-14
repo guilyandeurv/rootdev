@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  lang: 'fr-FR',
   title: "RootDev",
   description: "I'm going to write some resources here for the few things I need to learn",
   themeConfig: {
@@ -23,6 +24,7 @@ export default defineConfig({
          { text: "Python", link: "/python/index" },
          { text: "Certifications", link: "/certification/index" },
          { text: 'Réseaux', link: '/reseaux/' },
+         { text: 'Environnement', link: '/environnement/linux' },
         ],
       },
     ],
@@ -67,11 +69,18 @@ export default defineConfig({
           { text: 'Introduction', link: '/reseaux/' },
           { text: 'LAN', link: '/reseaux/lan' },
         ]
-      }
+      },
+      {
+        text: 'Environnement',
+        collapsed:true,
+        items: [
+          { text: 'Linux', link: '/environnement/linux' },
+          { text: 'Active Directory', link: '/environnement/ad' },
+        ]
+      },
     ],
     search: {
       provider: 'local',
-      searchPlaceholder: 'Rechercher'
     },
 
     socialLinks: [
