@@ -5,6 +5,7 @@ export default defineConfig({
   title: "RootDev",
   description: "I'm going to write some resources here for the few things I need to learn",
   themeConfig: {
+    lastUpdated: 'Dernière mise à jour',
     logo: "/logo.png",
     siteTitle: "RootDev",
     // https://vitepress.dev/reference/default-theme-config
@@ -69,12 +70,17 @@ export default defineConfig({
       }
     ],
     search: {
-      provider: 'local'
+      provider: 'local',
+      searchPlaceholder: 'Rechercher'
     },
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/guilyandeurv' }
     ],
+    docFooter: {
+			prev: "Précédent",
+			next: "Suivant"
+		  },
     footer: {
       message: 'Vous, et uniquement vous, êtes responsable de vos actes.',
       copyright: 'Copyright © 2024 - RootDev.fr par Guilyan'
