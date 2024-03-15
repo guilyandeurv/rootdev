@@ -2,6 +2,7 @@
 sidebar: auto
 ---
 # PRINCIPES DE SECURITE 
+<Badge type="tip" text="Rédigé le 26/02/2024" />
 <Badge type="warning" text="En cours de rédaction" />
 ::: tip Bases de la cybersécurité
 
@@ -94,3 +95,32 @@ Impact élevé & urgence élevée : **P1**
 Impact faible & urgence faible : **P5**
 :::
 
+## Méthodologie de test d'intrusion
+
+Les tests d’intrusion peuvent avoir une grande variété d’objectifs et de cibles dans le champ d’application. Pour cette raison, aucun test d’intrusion n’est identique et il n’y a pas de cas unique quant à la façon dont un testeur d’intrusion doit l’aborder.
+
+| Etape | Description |
+|-------|-------------|
+| Collecte d’informations	| Cette étape consiste à collecter autant d’informations accessibles au public sur une cible/organisation que possible, par exemple, l’OSINT et la recherche. Cela n’implique pas d’analyser les systèmes. |
+| Énumération/Numérisation | Cette étape consiste à découvrir les applications et les services exécutés sur les systèmes. Par exemple, trouver un serveur Web qui peut être potentiellement vulnérable. |
+| Exploitation | Cette étape consiste à exploiter les vulnérabilités découvertes sur un système ou une application. Cette étape peut impliquer l’utilisation d’exploits publics ou l’exploitation de la logique d’application. |
+| Élévation de privilèges	| Cette étape est la tentative d’étendre l'accès à un système. On peut escalader horizontalement et verticalement, où horizontalement est l’accès à un autre compte du même groupe d’autorisations (c’est-à-dire un autre utilisateur), tandis que verticalement est celui d’un autre groupe d’autorisations (c’est-à-dire un administrateur). |
+| Post-exploitation	| Cette étape comporte quelques sous-étapes :
+
+1. Quels autres hôtes peuvent être ciblés (pivotement)
+
+2. Quelles informations supplémentaires pouvons-nous recueillir auprès de l’hôte maintenant que nous sommes un utilisateur privilégié ?
+
+3. Brouiller les pistes
+
+4. Rapports |
+
+
+
+<hr>
+<br>
+
+::: info Sources
+Ce cours s'inspire (et utilise les images) de TryHackMe.com de la chambre "*Pentesting Fundamentals*" :
+https://tryhackme.com/room/pentestingfundamentals
+:::
