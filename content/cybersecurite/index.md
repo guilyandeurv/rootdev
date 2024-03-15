@@ -105,17 +105,83 @@ Les tests d’intrusion peuvent avoir une grande variété d’objectifs et de c
 | Énumération/Numérisation | Cette étape consiste à découvrir les applications et les services exécutés sur les systèmes. Par exemple, trouver un serveur Web qui peut être potentiellement vulnérable. |
 | Exploitation | Cette étape consiste à exploiter les vulnérabilités découvertes sur un système ou une application. Cette étape peut impliquer l’utilisation d’exploits publics ou l’exploitation de la logique d’application. |
 | Élévation de privilèges	| Cette étape est la tentative d’étendre l'accès à un système. On peut escalader horizontalement et verticalement, où horizontalement est l’accès à un autre compte du même groupe d’autorisations (c’est-à-dire un autre utilisateur), tandis que verticalement est celui d’un autre groupe d’autorisations (c’est-à-dire un administrateur). |
-| Post-exploitation	| Cette étape comporte quelques sous-étapes :
+| Post-exploitation	| Cette étape comporte quelques sous-étapes : 1. Quels autres hôtes peuvent être ciblés (pivotement) 2. Quelles informations supplémentaires pouvons-nous recueillir auprès de l’hôte maintenant que nous sommes un utilisateur privilégié ? 3. Brouiller les pistes. 4. Rapports |
 
-1. Quels autres hôtes peuvent être ciblés (pivotement)
+### OSSTMM (The Open Source Security Testing Methodology Manual)
 
-2. Quelles informations supplémentaires pouvons-nous recueillir auprès de l’hôte maintenant que nous sommes un utilisateur privilégié ?
+![logo OSSTMM](./img/osstmm.png)
 
-3. Brouiller les pistes
+The Open Source Security Testing Methodology Manual fournit un cadre détaillé de stratégies de test pour les systèmes, les logiciels, les applications, les communications et l’aspect humain de la cybersécurité.
+La méthodologie se concentre principalement sur la façon dont ces systèmes, applications communiquent, elle comprend donc une méthodologie pour :
 
-4. Rapports |
+* Télécommunications (téléphones, VoIP, etc.)
+* Réseaux câblés
+* Communications sans fil
 
+| Avantages | Inconvénients |
+|-----------|---------------|
+| Couvre en profondeur diverses stratégies de test. | Le cadre est difficile à comprendre, très détaillé et a tendance à utiliser des définitions uniques. |
+| Comprend des stratégies de mise à l’essai pour des cibles spécifiques (c.-à-d. les télécommunications et les réseaux) | X |
+| Le cadre est flexible en fonction des besoins de l’organisation. | X |
+| Le cadre est destiné à établir une norme pour les systèmes et les applications, ce qui signifie qu’une méthodologie universelle peut être utilisée dans un scénario de test d’intrusion. | X |
 
+### L'OWASP (Open Web Application Security Project)
+
+![logo OWASP](./img/owasp.png)
+
+Le framework « Open Web Application Security Project » est un framework communautaire et fréquemment mis à jour, utilisé uniquement pour tester la sécurité des applications et des services Web. La fondation rédige régulièrement des rapports indiquant les dix principales vulnérabilités de sécurité qu’une application Web peut avoir, l’approche de test et la remédiation.
+
+| Avantages | Inconvénients |
+|-----------|---------------|
+| Facile à prendre en main et à comprendre | Il se peut que le type de vulnérabilité d'une application web ne soit pas clair |
+| Activement maintenu et mis à jour fréquemment | L'OWASP ne fait pas de suggestion pour les cycles de vie spécifiques du développement logiciel |
+| Il couvre toutes les étapes d'une mission : des tests aux rapports et à la remédiation | Le framework ne détient aucune accréditation telle que CHECK |
+| Spécialisé dans les applications et services web | X |
+
+### Framework de cybersécurité du NIST 1.1 (National Institute of Standards and Technology)
+
+![logo NIST](./img/nist.jpg)
+
+Le framework de cybersécurité du NIST est un cadre populaire utilisé pour améliorer les normes de cybersécurité d’une organisation et gérer le risque de cybermenaces. Ce cadre est un peu une mention honorable en raison de sa popularité et de ses détails. Le cadre fournit des lignes directrices sur les contrôles de sécurité et des critères de réussite pour les organisations, des infrastructures critiques (centrales électriques, etc.) jusqu’aux entreprises. Il y a une section limitée sur une ligne directrice standard pour la méthodologie qu’un testeur d’intrusion devrait suivre.
+
+| Avantages | Inconvénients |
+|-----------|---------------|
+| On estime que le cadre du NIST sera utilisé par 50 % des organisations américaines d’ici 2020. | Le NIST propose de nombreuses itérations de frameworks, il peut donc être difficile de décider lequel s’applique à votre organisation. |
+| Le cadre est extrêmement détaillé dans l’établissement de normes pour aider les organisations à atténuer la menace posée par les cybermenaces. | Le cadre du NIST a des politiques d’audit faibles, ce qui rend difficile de déterminer comment une violation s’est produite. |
+| Le cadre est très fréquemment mis à jour.	| Le cadre ne prend pas en compte le cloud computing, qui devient rapidement de plus en plus populaire pour les organisations. |
+| Le NIST fournit une accréditation aux organisations qui utilisent ce cadre.	| X |
+| Le cadre du NIST est conçu pour être mis en œuvre parallèlement à d’autres cadres. | X |
+
+### NCSC CAF (Cyber Assesment Framework)
+
+![logo NCSC](./img/ncsc.jpg)
+
+Le CAF est un cadre exhaustif de quatorze principes utilisés pour évaluer le risque de diverses cybermenaces et les défenses d'une organisation contre celles-ci.
+Le cadre s’applique aux organisations considérées comme fournissant des « services et activités d’importance vitale » tels que les infrastructures critiques, les services bancaires, etc. Le cadre se concentre principalement sur les sujets suivants et les évalue :
+* Sécurité des données
+* Sécurité du système
+* Contrôle d’identité et d’accès
+* Résilience
+* Surveillance
+* Planification de l’intervention et du rétablissement
+
+| Avantages | Inconvénients |
+|-----------|---------------|
+| Ce cadre est soutenu par une agence gouvernementale de cybersécurité | Le cadre est encore nouveau dans l’industrie, ce qui signifie que les organisations n’ont pas eu beaucoup de temps pour apporter les modifications nécessaires pour s’y adapter. |
+| Ce cadre permet l’accréditation. | Le cadre est basé sur des principes et des idées et n’est pas aussi direct que d’avoir des règles comme d’autres cadres. |
+| Ce cadre couvre quatorze principes qui vont de la sécurité à la réponse. | X |
+
+## Les tests d'intrusion sous forme de boîte
+
+![logo des box d'intrusion](./img/box.svg)
+
+Il existe trois champs d’application principaux lors du test d’une application ou d’un service. La compréhension de la cible détermine le niveau de test que l'on effectue dans le cadre de la mission de test d’intrusion.
+
+| Type | Niveau de connaissance |
+|------|------------------------|
+| Boîte noire | Aucune connaissance de la cible sur le fonctionnement interne de l'application ou service |
+| Boîte grise | Connaissance limitée des composants de l’application ou du service. Néanmoins, il interagira avec l’application comme si elle était un scénario de boîte noire, puis utilise ses connaissances de l’application pour essayer de résoudre les problèmes au fur et à mesure qu’il les trouve. |
+| Boîte blanche | Connaissance complète de l’application et de son comportement attendu et disposera de beaucoup plus de temps plus consommant que les tests en boîte noire. La connaissance complète d’un scénario de test en boîte blanche fournit une approche de test qui garantit que l’ensemble de la surface d’attaque peut être validée. |
 
 <hr>
 <br>
