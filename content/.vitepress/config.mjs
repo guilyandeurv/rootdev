@@ -69,6 +69,7 @@ export default defineConfig({
           { text: 'Introduction', link: '/reseaux/' },
           { text: 'LAN', link: '/reseaux/lan' },
           { text: 'DNS', link: '/reseaux/dns' },
+          { text: 'HTTP', link: '/reseaux/http' },
         ]
       },
       {
@@ -77,6 +78,7 @@ export default defineConfig({
         items: [
           { text: 'Linux', link: '/environnement/linux' },
           { text: 'Active Directory', link: '/environnement/ad' },
+          { text: 'Cisco', link: '/environnement/cisco' },
         ]
       },
     ],
