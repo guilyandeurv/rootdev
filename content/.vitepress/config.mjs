@@ -68,6 +68,7 @@ export default defineConfig({
         items: [
           { text: 'Introduction', link: '/reseaux/' },
           { text: 'LAN', link: '/reseaux/lan' },
+          { text: 'DNS', link: '/reseaux/dns' },
         ]
       },
       {

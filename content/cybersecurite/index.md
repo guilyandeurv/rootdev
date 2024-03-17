@@ -109,7 +109,7 @@ Les tests d’intrusion peuvent avoir une grande variété d’objectifs et de c
 
 ### OSSTMM (The Open Source Security Testing Methodology Manual)
 
-![logo OSSTMM](./img/osstmm.png)
+<img src="./img/osstmm.png" width="100" height="100">
 
 The Open Source Security Testing Methodology Manual fournit un cadre détaillé de stratégies de test pour les systèmes, les logiciels, les applications, les communications et l’aspect humain de la cybersécurité.
 La méthodologie se concentre principalement sur la façon dont ces systèmes, applications communiquent, elle comprend donc une méthodologie pour :
@@ -127,7 +127,7 @@ La méthodologie se concentre principalement sur la façon dont ces systèmes, a
 
 ### L'OWASP (Open Web Application Security Project)
 
-![logo OWASP](./img/owasp.png)
+<img src="./img/owasp.png" width="100" height="100">
 
 Le framework « Open Web Application Security Project » est un framework communautaire et fréquemment mis à jour, utilisé uniquement pour tester la sécurité des applications et des services Web. La fondation rédige régulièrement des rapports indiquant les dix principales vulnérabilités de sécurité qu’une application Web peut avoir, l’approche de test et la remédiation.
 
@@ -140,7 +140,7 @@ Le framework « Open Web Application Security Project » est un framework commun
 
 ### Framework de cybersécurité du NIST 1.1 (National Institute of Standards and Technology)
 
-![logo NIST](./img/nist.jpg)
+<img src="./img/nist.jpg" width="100" height="100">
 
 Le framework de cybersécurité du NIST est un cadre populaire utilisé pour améliorer les normes de cybersécurité d’une organisation et gérer le risque de cybermenaces. Ce cadre est un peu une mention honorable en raison de sa popularité et de ses détails. Le cadre fournit des lignes directrices sur les contrôles de sécurité et des critères de réussite pour les organisations, des infrastructures critiques (centrales électriques, etc.) jusqu’aux entreprises. Il y a une section limitée sur une ligne directrice standard pour la méthodologie qu’un testeur d’intrusion devrait suivre.
 
@@ -154,7 +154,7 @@ Le framework de cybersécurité du NIST est un cadre populaire utilisé pour am�
 
 ### NCSC CAF (Cyber Assesment Framework)
 
-![logo NCSC](./img/ncsc.jpg)
+<img src="./img/ncsc.jpg" width="100" height="100">
 
 Le CAF est un cadre exhaustif de quatorze principes utilisés pour évaluer le risque de diverses cybermenaces et les défenses d'une organisation contre celles-ci.
 Le cadre s’applique aux organisations considérées comme fournissant des « services et activités d’importance vitale » tels que les infrastructures critiques, les services bancaires, etc. Le cadre se concentre principalement sur les sujets suivants et les évalue :
