@@ -36,6 +36,7 @@ export default defineConfig({
         items: [
           { text: 'Introduction', link: '/cybersecurite/' },
           { text: 'Définitions', link: '/cybersecurite/def' },
+          { text: 'Normes internationales', link: '/cybersecurite/normes' },
         ],
       },
       {
@@ -59,7 +60,8 @@ export default defineConfig({
         collapsed:true,
         items: [
           { text: 'Introduction', link: '/certification/' },
-          { text: 'CompTia Security + SYO-601', link: '/certification/securityplus' },
+          { text: 'CompTia Security+ SYO-601', link: '/certification/securityplus' },
+          { text: 'CompTia Pentest+', link: '/certification/pentestplus' },
         ]
       },
       {
@@ -70,6 +72,7 @@ export default defineConfig({
           { text: 'LAN', link: '/reseaux/lan' },
           { text: 'DNS', link: '/reseaux/dns' },
           { text: 'HTTP', link: '/reseaux/http' },
+          { text: 'NAT et PAT', link: '/reseaux/nat' },
         ]
       },
       {
