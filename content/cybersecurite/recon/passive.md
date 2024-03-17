@@ -191,7 +191,9 @@ Detected Plugins:
 
 On peut lire ici quelques technologies utilisées par le site ciblé, avec une description de ceux-ci grâce à l'option `-v` dans la commande
 
+:::tip Pièce jointe
 Pour des questions de confort de lecture, le résultat complet est [récupérable ici](./assets/whatweb-resultats.txt)
+:::
 
 <hr>
 <br>
