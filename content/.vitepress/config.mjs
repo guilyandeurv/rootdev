@@ -37,6 +37,11 @@ export default defineConfig({
           { text: 'Introduction', link: '/cybersecurite/' },
           { text: 'Définitions', link: '/cybersecurite/def' },
           { text: 'Normes internationales', link: '/cybersecurite/normes' },
+          { text: 'Reconnaissance',
+            collapsed:true,
+            items: [
+              { text: 'Reconnaissance passive', link: '/cybersecurite/recon/passive' },
+            ]}
         ],
       },
       {
