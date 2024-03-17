@@ -1,0 +1,121 @@
+┌─[✗]─[root@parrot]─[~/Desktop]
+└──╼ $whatweb mon-ent-occitanie.fr -v
+WhatWeb report for http://mon-ent-occitanie.fr/
+Status    : 302 Found
+Title     : <None>
+IP        : 80.247.224.231
+Country   : FRANCE, FR
+
+Summary   : RedirectLocation[https://mon-ent-occitanie.fr/]
+
+Detected Plugins:
+[ RedirectLocation ]
+	HTTP Server string location. used with http-status 301 and 
+	302 
+
+	String       : https://mon-ent-occitanie.fr/ (from location)
+
+HTTP Headers:
+	HTTP/1.1 302 Found
+	content-length: 0
+	location: https://mon-ent-occitanie.fr/
+	cache-control: no-cache
+	connection: close
+	
+WhatWeb report for https://mon-ent-occitanie.fr/
+Status    : 301 Moved Permanently
+Title     : <None>
+IP        : 80.247.224.231
+Country   : FRANCE, FR
+
+Summary   : RedirectLocation[https://www.mon-ent-occitanie.fr/]
+
+Detected Plugins:
+[ RedirectLocation ]
+	HTTP Server string location. used with http-status 301 and 
+	302 
+
+	String       : https://www.mon-ent-occitanie.fr/ (from location)
+
+HTTP Headers:
+	HTTP/1.1 301 Moved Permanently
+	content-length: 0
+	location: https://www.mon-ent-occitanie.fr/
+	connection: close
+	
+WhatWeb report for https://www.mon-ent-occitanie.fr/
+Status    : 200 OK
+Title     : Site inter-établissements
+IP        : 80.247.224.231
+Country   : FRANCE, FR
+
+Summary   : HTML5, MetaGenerator[Skolengo], Script[text/javascript], Strict-Transport-Security[max-age=15768000; includeSubDomains], UncommonHeaders[referrer-policy,xkey,x-content-type-options], X-Frame-Options[SAMEORIGIN], X-UA-Compatible[requiresActiveX=true]
+
+Detected Plugins:
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration 
+
+
+[ MetaGenerator ]
+	This plugin identifies meta generator tags and extracts its 
+	value. 
+
+	String       : Skolengo
+
+[ Script ]
+	This plugin detects instances of script HTML elements and 
+	returns the script language/type. 
+
+	String       : text/javascript
+
+[ Strict-Transport-Security ]
+	Strict-Transport-Security is an HTTP header that restricts 
+	a web browser from accessing a website without the security 
+	of the HTTPS protocol. 
+
+	String       : max-age=15768000; includeSubDomains
+
+[ UncommonHeaders ]
+	Uncommon HTTP server headers. The blacklist includes all 
+	the standard headers and many non standard but common ones. 
+	Interesting but fairly common headers should have their own 
+	plugins, eg. x-powered-by, server and x-aspnet-version. 
+	Info about headers can be found at www.http-stats.com 
+
+	String       : referrer-policy,xkey,x-content-type-options (from headers)
+
+[ X-Frame-Options ]
+	This plugin retrieves the X-Frame-Options value from the 
+	HTTP header. - More Info: 
+	http://msdn.microsoft.com/en-us/library/cc288472%28VS.85%29.
+	aspx
+
+	String       : SAMEORIGIN
+
+[ X-UA-Compatible ]
+	This plugin retrieves the X-UA-Compatible value from the 
+	HTTP header and meta http-equiv tag. - More Info: 
+	http://msdn.microsoft.com/en-us/library/cc817574.aspx 
+
+	String       : requiresActiveX=true
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	x-frame-options: SAMEORIGIN
+	referrer-policy: no-referrer
+	xkey: ENTMIP_ENTMIDIP_RUB_1
+	xkey: ENTMIP_ENTMIDIP_CMS
+	xkey: ENTMIP_ENTMIDIP_PAS
+	expires: Sun, 17 Mar 2024 22:25:19 GMT
+	cache-control: private, no-cache, no-store, no-transform
+	vary: accept-encoding
+	content-encoding: gzip
+	content-type: text/html;charset=UTF-8
+	date: Sun, 17 Mar 2024 22:25:19 GMT
+	age: 82
+	accept-ranges: bytes
+	x-cache: HIT
+	content-length: 18094
+	x-content-type-options: nosniff
+	strict-transport-security: max-age=15768000; includeSubDomains
+	connection: close
