@@ -4,12 +4,11 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   lang: 'fr-FR',
   title: "RootDev",
-  description: "I'm going to write some resources here for the few things I need to learn",
+  description: "Ressources personnelles concernant la cybersécurité, le développement et le réseau.",
   themeConfig: {
     lastUpdated: 'Dernière mise à jour',
     logo: "/logo.png",
     siteTitle: "RootDev",
-    // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Accueil', link: '/' },
       { text: 'Udemy', link: 'https://www.udemy.com/' },
@@ -18,7 +17,6 @@ export default defineConfig({
       {
         text: "Contenu",
         items: [
-         { text: "Menu", link: "/markdown-examples" },
          { text: "Cybersécurité", link: "/cybersecurite/index" },
          { text: "Javascript", link: "/javascript/index" },
          { text: "Python", link: "/python/index" },
