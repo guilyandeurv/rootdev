@@ -183,6 +183,29 @@ Il existe trois champs d’application principaux lors du test d’une applicati
 | Boîte grise | Connaissance limitée des composants de l’application ou du service. Néanmoins, il interagira avec l’application comme si elle était un scénario de boîte noire, puis utilise ses connaissances de l’application pour essayer de résoudre les problèmes au fur et à mesure qu’il les trouve. |
 | Boîte blanche | Connaissance complète de l’application et de son comportement attendu et disposera de beaucoup plus de temps plus consommant que les tests en boîte noire. La connaissance complète d’un scénario de test en boîte blanche fournit une approche de test qui garantit que l’ensemble de la surface d’attaque peut être validée. |
 
+## La pyramide de douleur
+
+La pyramide de douleur est un modèle utilisé en cybersécurité pour classer les risques et les menaces informatiques en fonction de leur impact potentiel sur une organisation. Cette pyramide se compose de trois niveaux, chacun représentant un niveau croissant de gravité et de perturbation pour l'organisation.
+
+### Niveau 1: Attaques Directes
+
+Au sommet de la pyramide se trouvent les attaques directes, telles que les attaques par déni de service distribué (DDoS), les attaques de logiciels malveillants sophistiqués et les attaques ciblées par des cybercriminels expérimentés. Ces attaques ont le potentiel de causer des dommages significatifs à l'infrastructure et aux opérations de l'organisation.
+
+### Niveau 2: Vulnérabilités Exploitées
+
+Le deuxième niveau de la pyramide concerne les vulnérabilités exploitées, telles que les failles de sécurité dans les logiciels, les configurations incorrectes des systèmes et les faiblesses dans les processus de gestion des identités. Bien que moins immédiates que les attaques directes, ces vulnérabilités peuvent être exploitées par des cybercriminels pour accéder aux systèmes et aux données sensibles de l'organisation.
+
+### Niveau 3: Erreurs et Omissions
+
+À la base de la pyramide se trouvent les erreurs et omissions, telles que les mots de passe faibles, les mises à jour logicielles manquantes et les pratiques de sécurité laxistes. Bien que moins évidentes que les attaques directes ou les vulnérabilités exploitées, ces erreurs et omissions peuvent créer des failles de sécurité qui permettent aux cybercriminels de compromettre les systèmes de l'organisation.
+
+La pyramide de douleur en cybersécurité aide les organisations à prioriser leurs efforts de sécurité en se concentrant d'abord sur la protection contre les attaques les plus graves et les plus susceptibles de causer des dommages importants.
+
+::: tip Ressources supplémentaires
+TryHackMe reprend parfaitement ce concept dans son cours "Pyramid of Pain" disponible [ici](https://tryhackme.com/room/pyramidofpainax) *(gratuit)*.
+:::
+
+
 <hr>
 <br>
 
