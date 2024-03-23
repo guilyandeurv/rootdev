@@ -75,6 +75,7 @@ export default defineConfig({
         items: [
           { text: 'Introduction', link: '/reseaux/' },
           { text: 'LAN', link: '/reseaux/lan' },
+          { text: 'WAN', link: '/reseaux/wan' },
           { text: 'DNS', link: '/reseaux/dns' },
           { text: 'HTTP', link: '/reseaux/http' },
           { text: 'NAT et PAT', link: '/reseaux/nat' },
