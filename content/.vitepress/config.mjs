@@ -39,7 +39,12 @@ export default defineConfig({
             collapsed:true,
             items: [
               { text: 'Reconnaissance passive', link: '/cybersecurite/recon/passive' },
-            ]}
+            ]},
+          { text: 'Outils',
+            collapsed:true,
+            items: [
+              { text: 'nMap', link: '/cybersecurite/outils/nmap' },
+            ]},
         ],
       },
       {
@@ -77,6 +82,9 @@ export default defineConfig({
           { text: 'DNS', link: '/reseaux/dns' },
           { text: 'HTTP', link: '/reseaux/http' },
           { text: 'NAT et PAT', link: '/reseaux/nat' },
+          { text: 'Le modèle OSI', link: '/reseaux/osi' },
+          { text: 'Le modèle TCP/IP', link: '/reseaux/tcp' },
+          { text: 'Les sites web', link: '/reseaux/web' },
         ]
       },
       {
