@@ -43,7 +43,7 @@ export default defineConfig({
           { text: 'Outils',
             collapsed:true,
             items: [
-              { text: 'nMap', link: '/cybersecurite/outils/nmap' },
+              { text: 'Nmap', link: '/cybersecurite/outils/nmap' },
             ]},
         ],
       },
