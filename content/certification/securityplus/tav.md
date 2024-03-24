@@ -248,6 +248,9 @@ Les exercices de cybersécurité mettent en scène des équipes de défense (blu
 
 En utilisant ces techniques, les équipes de test de pénétration peuvent identifier les vulnérabilités et renforcer la sécurité des systèmes de l'organisation.
 
+<hr>
+<br>
+
 ::: info Sources
 Ce cours s'inspire du cours sur Linkedin eLearning de ***Mike CHAPPLE*** :
 
