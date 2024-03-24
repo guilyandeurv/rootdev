@@ -68,7 +68,16 @@ export default defineConfig({
         collapsed:true,
         items: [
           { text: 'Introduction', link: '/certification/' },
-          { text: 'CompTia Security+ SYO-601', link: '/certification/securityplus' },
+          { text: 'CompTia Security+ SYO-701',
+              collapsed: true,
+              items: [
+                { text: 'Introduction', link: 'certification/securityplus'},
+                { text: 'Menaces, attaques & vulnérabilités', link: 'certification/securityplus/tav'},
+                { text: 'Architecture et design', link: 'certification/securityplus/arch-des'},
+                { text: "Attaques d'application", link: 'certification/securityplus/app-att'},
+                { text: "Opérations & réponses aux incidents", link: 'certification/securityplus/oir'},
+                { text: "Gouvernance, risques & conformité", link: 'certification/securityplus/grc'},
+              ]},
           { text: 'CompTia Pentest+', link: '/certification/pentestplus' },
         ]
       },

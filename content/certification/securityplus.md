@@ -2,15 +2,15 @@
 sidebar: auto
 ---
 
-# Certification CompTIA Security+ SY0-601 <Badge type="warning" text="En cours de rédaction" />
+# Certification CompTIA Security+ SY0-701 <Badge type="warning" text="En cours de rédaction" />
 
 ![CompTia Security + logo](../img/comptia-security+.png)
 
-Page dédiée à la certification CompTIA Security+ SY0-601. Cette certification est une accréditation reconnue dans le domaine de la sécurité informatique et est conçue pour valider les compétences essentielles nécessaires pour assurer la sécurité des systèmes et des réseaux.
+Page dédiée à la certification CompTIA Security+ SY0-701. Cette certification est une accréditation reconnue dans le domaine de la sécurité informatique et est conçue pour valider les compétences essentielles nécessaires pour assurer la sécurité des systèmes et des réseaux.
 
 ## Objectifs de la certification
 
-Les objectifs de la certification CompTIA Security+ SY0-601 sont définis par CompTIA et couvrent plusieurs domaines clés de la sécurité informatique. En développant chaque objectif avec des exemples concrets, des concepts clés et en citant les types d'attaques associés, les candidats peuvent mieux comprendre comment ces concepts s'appliquent dans des situations réelles et être mieux préparés pour l'examen de certification CompTIA Security+ SY0-601.
+Les objectifs de la certification CompTIA Security+ SY0-701 sont définis par CompTIA et couvrent plusieurs domaines clés de la sécurité informatique. En développant chaque objectif avec des exemples concrets, des concepts clés et en citant les types d'attaques associés, les candidats peuvent mieux comprendre comment ces concepts s'appliquent dans des situations réelles et être mieux préparés pour l'examen de certification CompTIA Security+ SY0-701.
 
 ## Menaces, attaques et vulnérabilités
 
