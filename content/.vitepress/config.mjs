@@ -7,7 +7,7 @@ export default defineConfig({
   description: "Ressources personnelles concernant la cybersécurité, le développement et le réseau.",
   themeConfig: {
     lastUpdated: 'Dernière mise à jour',
-    logo: "../img/logo.png",
+    logo: "logo.png",
     siteTitle: "RootDev",
     nav: [
       { text: 'Accueil', link: '/' },
@@ -119,7 +119,7 @@ export default defineConfig({
 		  },
     footer: {
       message: 'Vous, et uniquement vous, êtes responsable de vos actes.',
-      copyright: 'Copyright © 2024 - RootDev.fr par Guilyan'
+      copyright: 'Copyright © 2024 - RootDev.fr par Guilyan - contact@rootdev.fr'
     }
   }
 })

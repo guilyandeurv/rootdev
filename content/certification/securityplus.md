@@ -4,7 +4,7 @@ sidebar: auto
 
 # Certification CompTIA Security+ SY0-701 <Badge type="warning" text="En cours de rédaction" />
 
-![CompTia Security + logo](../img/comptia-security+.png)
+![CompTia Security + logo](./img/comptia-security+.png)
 
 Page dédiée à la certification CompTIA Security+ SY0-701. Cette certification est une accréditation reconnue dans le domaine de la sécurité informatique et est conçue pour valider les compétences essentielles nécessaires pour assurer la sécurité des systèmes et des réseaux.
 

@@ -1,5 +1,4 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
@@ -7,7 +6,7 @@ hero:
   text: "Cybersécurité & développement"
   tagline: "Ici, on se dédouane de toutes responsabilités"
   image:
-    src: img/logo.png
+    src: logo.png
     alt: logo
   actions:
     - theme: brand
