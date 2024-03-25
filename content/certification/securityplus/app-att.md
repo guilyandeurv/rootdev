@@ -3,7 +3,6 @@ sidebar: auto
 ---
 # Attaques d'applications
 <Badge type="tip" text="Rédigé le 24/03/2024" />
-<Badge type="warning" text="En cours de rédaction" />
 
 ## Implémentation de protocoles sécurisés (Objectif 3.1)
 
