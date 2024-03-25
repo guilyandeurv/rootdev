@@ -9,6 +9,7 @@ export default defineConfig({
     lastUpdated: 'Dernière mise à jour',
     logo: "logo.png",
     siteTitle: "RootDev",
+    head: [['link', { rel: 'icon', href: 'favicon.ico' }]],
     nav: [
       { text: 'Accueil', link: '/' },
       { text: 'Udemy', link: 'https://www.udemy.com/' },
