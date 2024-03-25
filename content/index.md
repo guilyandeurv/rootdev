@@ -4,7 +4,7 @@ layout: home
 hero:
   name: "RootDev"
   text: "Cybersécurité & développement"
-  tagline: "Ici, on se dédouane de toutes responsabilités"
+  tagline: "Ressources en constantes rédaction"
   image:
     src: logo.png
     alt: logo
