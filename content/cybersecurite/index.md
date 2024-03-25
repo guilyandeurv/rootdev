@@ -187,7 +187,7 @@ Il existe trois champs d’application principaux lors du test d’une applicati
 
 La pyramide de douleur est un modèle utilisé en cybersécurité pour classer les risques et les menaces informatiques en fonction de leur impact potentiel sur une organisation. Cette pyramide se compose de trois niveaux, chacun représentant un niveau croissant de gravité et de perturbation pour l'organisation.
 
-<img src="./img/pyramide.Png" width="100" height="100">
+<img src="./img/pyramide.png" width="100" height="100">
 
 ### Niveau 1: Attaques Directes
 

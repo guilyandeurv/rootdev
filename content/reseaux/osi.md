@@ -6,7 +6,7 @@ sidebar: auto
 
 OSI est un modèle standardisé qui est utilisé pour démontrer la théorie derrière les réseaux informatiques. En pratique, il s'agit du [modèle TCP/IP](tcp) le plus "compact" sur lequel est basé le réseau du monde réel.
 
-<img src="./img/osi.Png" width="400" height="400">
+<img src="./img/osi.png" width="400" height="400">
 
 *Image provenant du cours **Openclassrooms** disponible* *[ici](https://openclassrooms.com/fr/courses/6944606-concevez-votre-reseau-tcp-ip/7236472-prenez-du-recul-sur-votre-pratique-grace-au-modele-osi)*
 

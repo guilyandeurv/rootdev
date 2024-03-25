@@ -7,7 +7,7 @@ export default defineConfig({
   description: "Ressources personnelles concernant la cybersécurité, le développement et le réseau.",
   themeConfig: {
     lastUpdated: 'Dernière mise à jour',
-    logo: "/logo.png",
+    logo: "../logo.png",
     siteTitle: "RootDev",
     nav: [
       { text: 'Accueil', link: '/' },
