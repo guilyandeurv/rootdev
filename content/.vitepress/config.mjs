@@ -21,7 +21,7 @@ export default defineConfig({
          { text: "Cybersécurité", link: "/cybersecurite/index" },
          { text: "Javascript", link: "/javascript/index" },
          { text: "Python", link: "/python/index" },
-         { text: "Certifications", link: "/certification/index" },
+         { text: "Certifications", link: "/certification/introduction" },
          { text: 'Réseaux', link: '/reseaux/' },
          { text: 'Environnement', link: '/environnement/linux' },
         ],
