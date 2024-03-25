@@ -231,6 +231,67 @@ Les systèmes de gestion des identités peuvent également prendre en compte d'a
 
 Ces politiques vous permettent de créer un environnement solide de gestion des identités et des accès, où vous pouvez verrouiller et désactiver les comptes en cas d'activité suspecte, ainsi que d'effectuer des audits réguliers pour garantir que l'activité des utilisateurs correspond à vos attentes. Ces connaissances sont essentielles pour réussir l'examen Security Plus.
 
+## Mettre en œuvre des solutions d'authentification et d'autorisation (Objectif 3.8)
+
+Protéger les informations d'identification est crucial, et des technologies telles que les coffres-forts de mots de passe, les TPM (Trusted Platform Modules) et les HSM (Hardware Security Modules) aident à protéger les mots de passe et les clés d'accès.
+
+### Technologies d'Authentification et d'Authorisation :
+
+1. ***Authentification unique*** (SSO) : Permet aux utilisateurs de s'authentifier une seule fois et d'accéder à plusieurs systèmes. Kerberos est une solution centralisée à cet effet.
+2. ***Protocoles obsolètes*** : Le Protocole d'Authentification par Mot de Passe (PAP) et le Protocole d'Authentification par Poignée de Main (CHAP) doivent être évités en raison de vulnérabilités de sécurité.
+3. ***Solutions d'authentification fédérée*** : SAML, OpenID Connect et OAuth permettent l'authentification à travers des organisations et des services.
+
+### Modèles de contrôle d'accès :
+1. ***Contrôle d'accès obligatoire*** (MAC) : Applique les exigences de sécurité sans exception en se basant sur des niveaux de sécurité.
+2. ***Contrôle d'accès discrétionnaire*** (DAC) : Permet aux propriétaires d'accorder des autorisations à des ressources.
+3. ***Contrôle d'accès basé sur les rôles*** (RBAC) : Accorde l'accès en fonction des rôles des utilisateurs.
+4. ***Contrôle d'accès basé sur les attributs*** (ABAC) : Considère les attributs des identités des utilisateurs pour l'autorisation.
+
+### Firewalls et contrôle d'accès basé sur les règles : 
+Les pare-feu appliquent les politiques de sécurité en utilisant des règles prédéfinies.
+
+### Gestion des accès privilégiés (PAM) : 
+Gère et surveille les comptes privilégiés pour renforcer la sécurité.
+
+Comprendre ces concepts et technologies est essentiel pour la préparation à l'examen Security+ et pour la mise en œuvre de solutions d'authentification et d'autorisation robustes dans les organisations.
+
+## Implémentation d'une infrastructure à clé publique (PKI) (Objectif 3.9)
+
+La PKI repose sur la cryptographie asymétrique et permet aux utilisateurs de partager leurs clés publiques de manière sécurisée avec d'autres et de fournir à ces derniers l'assurance que ces clés sont légitimes.
+
+### Mécanismes de partage de clés
+1. ***Certificats numériques***: Des fichiers contenant la clé publique d'un utilisateur et signés numériquement par une autorité de certification (CA).
+2. ***Autorité de certification*** (CA): Une tierce partie de confiance qui signe les certificats numériques.
+
+### Processus de validation des certificats
+1. Validation de la signature numérique: Confirmer l'authenticité de la signature numérique par une CA de confiance.
+2. Vérification de la validité du certificat: Vérifier si le certificat n'a pas expiré.
+3. Révocation des certificats: Les CA peuvent révoquer des certificats compromis.
+
+### Méthodes de révocation
+1. ***Liste de révocation de certificats*** (CRL): Liste des certificats invalides consultée lors de la validation.
+2. ***Protocole de statut de certificat en ligne*** (OCSP): Validation en temps réel du statut du certificat.
+
+### Processus de création de certificats
+1. ***Demande de signature de certificat*** (CSR): Requête envoyée à une CA pour obtenir un certificat.
+2. ***Émission de certificats***: Les CA valident l'identité de l'utilisateur et émettent un certificat.
+
+### Types de certificats
+1. Certificats de validation de domaine (DV): Valident le contrôle du domaine.
+2. Certificats de validation étendue (EV): Valident l'identité de l'organisation.
+
+### Formats de certificats
+1. DER: Format binaire généralement avec les extensions .der, .crt ou .cer.
+2. PEM: Format texte ASCII, avec les extensions .pem ou .crt.
+3. PFX: Format binaire utilisé par les systèmes Windows, avec les extensions .pfx ou .p12.
+
+### Utilisation de certificats auto-signés
+
+Les organisations peuvent créer leurs propres certificats, mais ils ne sont généralement pas fiables en dehors de l'organisation.
+
+
+Comprendre les concepts et processus liés à la PKI est essentiel pour réussir l'examen Security+ et pour mettre en œuvre des solutions sécurisées dans les organisations.
+
 
 <hr>
 <br>

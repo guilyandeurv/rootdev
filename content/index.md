@@ -32,7 +32,7 @@ Et les zones de terminal :
 
 ## Plusieurs sources utilisées :
 
-Ce serait une erreur de proposer de telles connaissances en ayant qu'une seule source, ainsi, **RootDev** inspire ses cours depuis plusieurs apprenants :
+Ce serait une erreur de proposer de telles connaissances en ayant qu'une seule source, ainsi, **RootDev** inspire ses ressources depuis plusieurs apprenants :
 
 [TryHackMe](https://tryhackme.com) : permet la pratique ainsi que l'apprentissage
 
