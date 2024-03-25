@@ -6,5 +6,8 @@
     "docs:dev": "vitepress dev content",
     "docs:build": "vitepress build content",
     "docs:preview": "vitepress preview content"
+  },
+  "dependencies": {
+    "fund": "^1.0.0"
   }
 }
