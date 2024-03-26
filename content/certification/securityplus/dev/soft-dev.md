@@ -1,9 +1,17 @@
 ---
 sidebar: auto
 ---
-# Gouvernance, risques et conformité
-<Badge type="tip" text="Rédigé le 24/03/2024" />
+# Méthodologie du développement
+<Badge type="tip" text="Rédigé le */*/2024" />
+<Badge type="danger" text="<--- à mettre à jour" />
 <Badge type="warning" text="En cours de rédaction" />
+
+
+
+
+
+
+
 
 <hr>
 <br>

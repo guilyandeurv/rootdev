@@ -2,7 +2,7 @@
 sidebar: auto
 ---
 # Opérations et réponses aux incidents
-<Badge type="tip" text="Rédigé le 24/03/2024" />
+<Badge type="tip" text="Rédigé le 25/03/2024" />
 
 ## Utilisation d'outils appropriés pour évaluer la sécurité organisationnelle (Objectif 4.1)
 
