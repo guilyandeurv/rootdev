@@ -110,6 +110,20 @@ DHCP pour **D**ynamic **H**ost **C**onfiguration **P**rotocol.
 
 Un nouvel appareil se connecte sur le réseau sans adresse IP. Il va donc faire une demande au serveur DHCP afin qu'il lui en attribue une, celui-ci lui fait une **offre** : il propose une adresse IP disponible et invite l'appareil à l'utiliser.
 
+## La redirection des ports
+
+La redirection de port est un élément essentiel dans la connexion des applications et des services à Internet. Sans redirection de port, les applications et services tels que les serveurs Web ne sont disponibles que pour les appareils appartenant au même réseau direct.
+
+Ci-dessous l'exemple d'un réseau comprenant 2 clients et un serveur web (192.168.1.10). Seul les deux clients présents dans le réseau peuvent accéder au serveur web :
+
+![Schéma RDP](./img/rdp1.svg)
+
+Si l'administrateur souhaitait que le site Web soit accessible au public (via Internet), il devrait implémenter la redirection de port, comme dans le schéma ci-dessous :
+
+![Schéma RDP](./img/rdp2.svg)
+
+Avec cette conception, le réseau n°2 pourra désormais accéder au serveur Web exécuté sur le réseau n°1 en utilisant l'adresse IP publique du réseau n°1 (82.62.51.70).
+La redirection de port est configurée sur le routeur d'un réseau.
 
 
 
@@ -134,6 +148,9 @@ Un nouvel appareil se connecte sur le réseau sans adresse IP. Il va donc faire 
 <br>
 
 ::: info Sources
-Ce cours s'inspire (et utilise les images) de TryHackMe.com de la chambre "*Intro to LAN*" :
-https://tryhackme.com/room/introtolan
+Ce cours s'inspire (et utilise les images) de TryHackMe.com de la chambre "*Intro to LAN*" & "*Extending your network*" :
+
+https://tryhackme.com/room/introtolan  <Badge type="tip" text="Gratuit" />
+
+https://tryhackme.com/r/room/extendingyournetwork <Badge type="danger" text="Payant" />
 :::

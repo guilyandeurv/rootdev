@@ -24,11 +24,15 @@ Ce modèle est composé de sept couches :
 
 ## La couche 7 : Application
 
-La couche application du modèle OSI fournit essentiellement des options de mise en réseau aux programmes exécutés sur un ordinateur. Il fonctionne presque exclusivement avec des applications, leur fournissant une interface à utiliser pour transmettre des données.
+La couche application du modèle OSI fournit essentiellement des options de mise en réseau aux programmes exécutés sur un ordinateur. Il fonctionne presque exclusivement avec des applications, leur fournissant une interface à utiliser pour transmettre des données. La couche application est la couche dans laquelle des protocoles et des règles sont en place pour déterminer la manière dont l'utilisateur doit interagir avec les données envoyées ou reçues.
+
+Les applications quotidiennes telles que les clients de messagerie, les navigateurs ou les logiciels de navigation sur serveur de fichiers tels que FileZilla fournissent une interface utilisateur graphique (**GUI**) conviviale permettant aux utilisateurs d'interagir avec les données envoyées ou reçues. D'autres protocoles incluent DNS (**D***omain **N**ame **S**ystem), qui permet de traduire les adresses de sites Web en adresses IP.
 
 ## La couche 6 : Présentation
 
-La couche de présentation traduit les données dans un format standardisé et gère tout chiffrement, compression ou autre transformation des données. Une fois cette opération terminée, les données sont transmises à la couche session.
+La couche de présentation traduit les données dans un format standardisé et gère tout chiffrement, compression ou autre transformation des données. Une fois cette opération terminée, les données sont transmises à la couche session. Étant donné que les développeurs de logiciels peuvent développer différemment n'importe quel logiciel tel qu'un client de messagerie, les données doivent toujours être traitées de la même manière, quel que soit le fonctionnement du logiciel.
+
+Cette couche agit comme un traducteur des données vers et depuis la couche application (couche 7). L'ordinateur récepteur comprendra également les données envoyées à un ordinateur dans un format destiné à un autre format. Les fonctionnalités de sécurité telles que le chiffrement des données (comme HTTPS lors de la visite d'un site sécurisé) se produisent au niveau de cette couche.
 
 ## La couche 5 : Session
 
@@ -72,6 +76,9 @@ Les processus d'*encapsulation* et de *désencapsulation* sont très importants,
 <br>
 
 ::: info Sources
-Ce cours s'inspire (et utilise les images) de TryHackMe.com de la chambre "*Intro to Networking*" :
-https://tryhackme.com/room/introtonetworking
+Ce cours s'inspire (et utilise les images) de TryHackMe.com de la chambre "*Intro to Networking*" & "*OSI Model*" :
+
+https://tryhackme.com/room/introtonetworking  <Badge type="tip" text="Gratuit" />
+
+https://tryhackme.com/r/room/osimodelzi  <Badge type="danger" text="Payant" />
 :::
