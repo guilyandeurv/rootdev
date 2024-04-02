@@ -3,7 +3,6 @@ sidebar: auto
 ---
 # L'HyperText Transfer Protocol (HTTP)
 <Badge type="tip" text="Rédigé le 16/03/2024" />
-<Badge type="warning" text="En cours de rédaction" />
 
 ## HTTP & HTTPS
 

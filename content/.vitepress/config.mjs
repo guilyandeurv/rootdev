@@ -62,6 +62,19 @@ export default defineConfig({
         collapsed:true,
         items: [
           { text: 'Introduction', link: '/python/' },
+          { text: 'Outils',
+            collapsed: true,
+            items: [
+              { text: 'Énumération des sous-domaines', link: '/python/outils/enum-sd'},
+              { text: 'Énumération des dossiers', link: '/python/outils/enum-dos'},
+              { text: 'Scanner de réseau', link: '/python/outils/scan-net'},
+              { text: 'Scanner de ports', link: '/python/outils/scan-por'},
+              { text: 'Téléchargeur de fichiers', link: '/python/outils/tel-fic'},
+              { text: 'Cracker de chiffrement', link: '/python/outils/crack'},
+              { text: 'Enregistreur de frappe', link: '/python/outils/listener'},
+              { text: 'SSH Bruteforce', link: '/python/outils/ssh-bru'}
+            ]
+          }
         ]
       },
       {
