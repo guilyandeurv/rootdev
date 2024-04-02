@@ -84,3 +84,20 @@ else :
 ```
 
 Ici, **si** l'argent dans mon **portefeuille** est **inférieur** au **prix**, alors que je ne peux pas acheter le produit. **Sinon**, je peux acheter le produit.
+
+
+
+
+
+
+
+
+
+<hr>
+<br>
+
+::: info Sources
+Ce cours s'inspire (et utilise les images) de TryHackMe.com de la chambre "*Python basics*" :
+
+https://tryhackme.com/r/room/pythonbasics <Badge type="tip" text="Gratuit" />
+:::
