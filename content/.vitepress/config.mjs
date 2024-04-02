@@ -118,6 +118,7 @@ export default defineConfig({
           { text: 'NAT et PAT', link: '/reseaux/nat' },
           { text: 'Le modèle OSI', link: '/reseaux/osi' },
           { text: 'Le modèle TCP/IP', link: '/reseaux/tcp' },
+          { text: 'Les Firewall', link: '/reseaux/firewall' },
           { text: 'Les sites web', link: '/reseaux/web' },
         ]
       },
