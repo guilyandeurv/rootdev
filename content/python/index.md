@@ -85,9 +85,39 @@ else :
 
 Ici, **si** l'argent dans mon **portefeuille** est **inférieur** au **prix**, alors que je ne peux pas acheter le produit. **Sinon**, je peux acheter le produit.
 
+## Les boucles
 
+En programmation, les boucles permettent aux programmes d’itérer et d’effectuer des actions un certain nombre de fois. Il existe deux types de boucles : `for` et `while`.
 
+### La boucle While
 
+```python:line-numbers=1
+i = 1
+while i <= 10:
+    print(i)
+    i = i + 1
+```
+
+Ici, `i` est égal à **1**. ***Tant que*** `i` n'est pas égal à **10**, alors, `print` de `i` et `i + 1`.
+
+### La boucle For
+
+Une boucle for est utilisée pour itérer sur une séquence telle qu’une liste. 
+
+```python:line-numbers=1
+siteweb = ["rootdev.fr", "tryhackme.com", "udemy.com"]
+for site in siteweb:
+    print(site)
+```
+
+Ici, `siteweb` est une liste comprenant les valeurs *rootdev.fr*, *tryhackme.fr* et *udemy.com*. ***Pour chaque*** élément *(site)*, `print` l'élement.
+
+En Python, on peut également itérer sur une plage de nombres à l’aide de la fonction `range`. Ci-dessous un exemple de code Python qui affichera les nombres de 0 à 4. En programmation, 0 est souvent le nombre de départ.
+
+```python:line-numbers=1
+for i in range(5):
+    print(i)
+```
 
 
 
