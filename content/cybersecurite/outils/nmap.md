@@ -36,6 +36,6 @@ EXAMPLES:
 
 ::: info Sources
 Ce cours s'inspire (et utilise les images) de TryHackMe.com de la chambre "*Nmap*" :
-https://tryhackme.com/room/furthernmap
+https://tryhackme.com/r/module/nmap
 :::
 
