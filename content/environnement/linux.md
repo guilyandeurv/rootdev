@@ -62,6 +62,10 @@ Afficher le nom d'utilisateur sur lequel nous sommes connecté
 ```shell
 whoami
 ```
+Télécharger un fichier
+```shell
+wget https://rootdev.fr/cybersecurite/recon/assets/whatweb-resultats.txt
+```
 
 ### Recherche de fichiers
 
@@ -71,9 +75,9 @@ whoami
 Images  Répertoire1 fichier.txt 
 ```
 
-Ci-dessus, nous pouvons lire les différents noms des répertoires présents dans *Desktop*. Pour éviter de chercher dans chaque répertoire le fichier *fichier2.txt*, la commande `find` s'offre à nous.
+Ci-dessus, on peut lire les différents noms des répertoires présents dans *Desktop*. Pour éviter de chercher dans chaque répertoire le fichier *fichier2.txt*, la commande `find` s'offre à nous.
 
-Dans le cas où nous connaissons le nom du fichier :
+Dans le cas où l'on connaît le nom du fichier :
 ```shell
 ┌─[root@parrot]─[~/Desktop]
 └──╼ find -name fichier2.txt
@@ -81,7 +85,7 @@ Dans le cas où nous connaissons le nom du fichier :
 ```
 Ici, le *fichier2.txt* a été trouvé dans *./Répertoire1/fichier2.txt*.
 
-Dans le cas où nous ne connaissons pas son nom, ou que nous voulons rechercher chaque fichier portant l'extension *.txt*
+Dans le cas où l'on ne connaît pas son nom, ou que l'on veut rechercher chaque fichier portant l'extension *.txt*
 ```shell
 ┌─[root@parrot]─[~/Desktop]
 └──╼ find -name *.txt
@@ -210,3 +214,27 @@ Supposons que nous voulons changer le groupe du fichier exemple.txt au groupe co
 chgrp comptabilite exemple.txt
 ```
 
+## Transfert de fichiers depuis un hôte - SCP (SSH)
+
+La copie sécurisée, ou SCP, n'est que cela : un **moyen de copier des fichiers en toute sécurité**. Contrairement à la commande cp classique, cette commande permet de transférer des fichiers entre deux ordinateurs à l'aide du protocole ***SSH*** pour fournir à la fois l'authentification et le chiffrement.
+
+Travaillant sur un modèle de **SOURCE** et **DESTINATION**, SCP permet de :
+* Copiez les fichiers et répertoires de notre système actuel vers un système distant
+* Copiez les fichiers et répertoires d'un système distant vers notre système actuel
+
+À condition que l'on connaît les noms d’utilisateur et les mots de passe d’un utilisateur sur notre système actuel et d’un utilisateur sur le système distant.
+
+|Variable|Valeur|
+|-|-|
+|L'adresse IP du système distant|10.10.168.8|
+|Utilisateur sur le système distant|root|
+|Nom du fichier sur le système local|text.txt|
+|Nom sous lequel il doit s'enregistrer sur le système distant|transfert.txt|
+
+Ce qui, en forme de commande, ressemblerait à :
+
+`scp text.txt root@10.10.168.8:/home/root/transfert.txt`
+
+L'inverse ressemblerait à : 
+
+`scp root@10.10.168.8:/home/root/text.txt transfert.txt`
