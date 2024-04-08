@@ -31,6 +31,27 @@ EXAMPLES:
   nmap -v -iR 10000 -Pn -p 80
 ```
 
+
+
+## Options principales
+
+* Analyse UDP `-sU`
+* Analyse TCP `-sT`
+* Détection de l'OS `-o`
+* Versions des services executés `-sV`
+* Verbose `-v` / amélioré `-vv`
+* Enregistrer les résultats dans un format "*normal*" `-oN`
+* Mode agressif `-a`
+* Analyser un port en particulier `-p 80`
+* Analyser une "*fourchette*" de ports `-p 1000-1500`
+* Analyser tous les ports `-p`
+* Activer un script `--script`
+
+Lors d'une analyse des ports, il y a trop types d'analyse de base :
+* TCP Connect Scans `-sT`
+* SYN "Half-open" Scans `-sS`
+* UDP Scans `-sU`
+
 <hr>
 <br>
 
