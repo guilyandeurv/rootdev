@@ -194,6 +194,27 @@ Les scripts Nmap sont accompagnés de menus d'aide intégrés, accessibles en ut
 
 En suivant cette approche structurée, les utilisateurs peuvent mieux organiser leurs informations sur l'utilisation des scripts NSE avec Nmap.
 
+### Recherche et installation de scripts dans Nmap
+
+Pour trouver des scripts utilisables avec Nmap, les utilisateurs disposent de deux options complémentaires :
+
+1. ***Page Nmap officielle*** : Cette page répertorie tous les scripts officiels de Nmap. Les utilisateurs peuvent y trouver une liste complète des scripts disponibles avec leurs descriptions et leurs cas d'utilisation.
+
+2. ***Stockage local sur la machine*** : Sous Linux, Nmap stocke ses scripts dans le répertoire ` ` par défaut. C'est là que Nmap recherche les scripts lorsque spécifiés. Pour rechercher les scripts localement, deux méthodes peuvent être utilisées :
+
+    * **Utilisation du fichier `script.db`** : Bien qu'étant un fichier texte formaté et non une base de données réelle, **script.db** contient les noms de fichiers et les catégories pour chaque script disponible. Par exemple, en utilisant la commande `grep "ftp" /usr/share/nmap/scripts/script.db`, les utilisateurs peuvent rechercher des scripts liés au FTP.
+
+    * **Utilisation de la commande `ls`** : En utilisant `ls -l /usr/share/nmap/scripts/*ftp*`, les utilisateurs peuvent obtenir une liste des scripts liés au FTP. L'utilisation d'astérisques (*) de chaque côté du terme de recherche permet une recherche plus flexible.
+
+#### Installation de nouveaux scripts
+
+Si un script recherché est manquant localement, il peut être installé de deux manières :
+
+1. ***Mise à jour via APT*** : La commande `sudo apt update && sudo apt install nmap` résout souvent ce problème en mettant à jour Nmap avec les derniers scripts disponibles.
+
+2. ***Installation manuelle*** : Les utilisateurs peuvent également télécharger manuellement le script depuis le site de Nmap en utilisant `sudo wget -O /usr/share/nmap/scripts/<nom-du-script>.nse https://svn.nmap.org/nmap/scripts/<nom-du-script>.nse`. Ensuite, exécutez `nmap --script-updatedb` pour mettre à jour le fichier **script.db** avec le nouveau script téléchargé.
+
+Il est important de noter que la même commande "**updatedb**" est nécessaire si les utilisateurs créent leurs propres scripts NSE et les ajoutent à Nmap. Cette tâche est gérable avec des connaissances de base en Lua.
 
 <hr>
 <br>
