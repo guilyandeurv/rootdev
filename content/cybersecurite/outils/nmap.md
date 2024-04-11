@@ -59,19 +59,19 @@ L'analyse **TCP** Connect (`-sT`) et l'analyse **SYN** (`-sS`) sont toutes deux 
 ### Analyse TCP Connect (`-sT`):
 
 1. Effectue une négociation complète à trois voies avec chaque port cible.
-2. Envoie une requête TCP avec le drapeau SYN défini.
-3. Si le port est ouvert, le serveur répond avec un paquet TCP contenant les drapeaux SYN/ACK.
-4. Si le port est fermé, le serveur répond avec un paquet TCP contenant le drapeau RST.
-5. Si le port est filtré par un pare-feu, Nmap ne reçoit pas de réponse.
+2. Envoie une **requête TCP avec le drapeau SYN** défini.
+3. Si le port est ouvert, le serveur répond avec un paquet **TCP contenant les drapeaux SYN/ACK**.
+4. Si le port est fermé, le serveur répond avec un paquet **TCP contenant le drapeau RST**.
+5. Si le port est filtré par un pare-feu, Nmap **ne reçoit pas de réponse**.
 
 ### Analyse SYN (`-sS`):
 
-1. Aussi connue sous le nom d'analyse "furtive".
-2. Ne termine pas la négociation à trois voies.
-3. Envoie uniquement un paquet TCP avec le drapeau SYN.
-4. Si le port est ouvert, le serveur répond avec un paquet TCP contenant les drapeaux SYN/ACK, mais Nmap envoie alors un paquet RST pour éviter une connexion complète.
-5. Si le port est fermé, le serveur répond avec un paquet TCP contenant le drapeau RST.
-6. Si le port est filtré par un pare-feu, Nmap peut ne pas recevoir de réponse, ou bien le paquet SYN peut être supprimé ou usurpé par un paquet RST.
+1. Aussi connue sous le nom d'analyse "***furtive***".
+2. **Ne termine pas** la négociation à trois voies.
+3. Envoie uniquement un paquet **TCP avec le drapeau SYN**.
+4. Si le port est ouvert, le serveur *répond avec un paquet TCP contenant les drapeaux SYN/ACK*, mais ***Nmap envoie alors un paquet RST*** pour éviter une connexion complète.
+5. Si le port est fermé, le serveur répond avec un paquet **TCP contenant le drapeau RST**.
+6. Si le port est filtré par un pare-feu, Nmap peut ne pas recevoir de réponse, ou bien **le paquet SYN peut être supprimé ou usurpé par un paquet RST**.
 
 Les avantages de l'analyse SYN comprennent sa *rapidité* et sa *furtivité*, ce qui peut *contourner certains systèmes de détection d'intrusion* et *ne pas laisser de traces dans les journaux* des applications écoutant sur les ports ouverts. Cependant, elle nécessite des autorisations sudo sur Linux et peut perturber les services instables.
 
@@ -87,11 +87,11 @@ Caractéristiques de l'analyse UDP avec Nmap:
 
 * ***Difficulté de reconnaissance*** : L'absence de réponse standardisée pour les ports ouverts rend l'analyse des connexions UDP plus complexe. Nmap utilise différentes méthodes pour déterminer si un port est ouvert, fermé ou filtré.
 
-* ***Identification des ports ouverts*** : Lorsqu'un paquet est envoyé vers un port UDP ouvert, il ne devrait normalement y avoir aucune réponse. Si Nmap ne reçoit pas de réponse, il marque le port comme "open|filtered". Si une réponse est reçue, le port est marqué comme "open".
+* ***Identification des ports ouverts*** : Lorsqu'un paquet est envoyé vers un port UDP ouvert, il ne devrait normalement y avoir aucune réponse. Si Nmap ne reçoit pas de réponse, il marque le port comme "`open|filtered`". Si une réponse est reçue, le port est marqué comme "open".
 
 * ***Identification des ports fermés*** : Lorsqu'un paquet est envoyé vers un port UDP fermé, la cible doit normalement répondre avec un paquet ICMP indiquant que le port est inaccessible. Nmap marque alors le port comme fermé.
 
-* ***Lenteur de l'analyse*** : En raison de la nécessité de répéter les tentatives de vérification et de l'absence de réponse standardisée, l'analyse des connexions UDP est beaucoup plus lente que celle des connexions TCP. Il est recommandé d'utiliser l'option --top-ports pour limiter le nombre de ports analysés et réduire ainsi le temps d'analyse.
+* ***Lenteur de l'analyse*** : En raison de la nécessité de répéter les tentatives de vérification et de l'absence de réponse standardisée, l'analyse des connexions UDP est beaucoup plus lente que celle des connexions TCP. Il est recommandé d'utiliser l'option `--top-ports` pour limiter le nombre de ports analysés et réduire ainsi le temps d'analyse.
 
 * ***Envoi de paquets vides ou avec charge utile*** : Nmap envoie généralement des requêtes UDP vides lors de l'analyse des ports. Cependant, pour les ports occupés par des services bien connus, il peut envoyer des charges utiles spécifiques au protocole pour obtenir des réponses plus précises.
 
@@ -104,19 +104,19 @@ Les analyses de ports TCP **NULL**, **FIN** et **Xmas** sont moins couramment ut
 Voici un bref aperçu de chacune de ces analyses :
 
 1. ***Analyse NULL*** (`-sN`) :
-  * Cette analyse envoie une requête TCP sans aucun indicateur défini.
-  * Si le port est fermé, la RFC stipule que l'hôte cible doit répondre par un paquet RST.
-  * Si aucun paquet RST n'est reçu en réponse, le port est marqué comme filtered ou open|filtered.
+    * Cette analyse envoie une requête TCP sans aucun indicateur défini.
+    * Si le port est fermé, la RFC stipule que l'hôte cible doit répondre par un paquet RST.
+    * Si aucun paquet RST n'est reçu en réponse, le port est marqué comme filtered ou open|filtered.
 
 2. ***Analyse FIN*** (`-sF`) :
-  * Cette analyse envoie une requête TCP avec seulement le drapeau FIN défini.
-  * Encore une fois, si le port est fermé, la cible devrait répondre avec un paquet RST.
-  * Si aucun paquet RST n'est reçu en réponse, le port est marqué comme filtered ou open|filtered.
+    * Cette analyse envoie une requête TCP avec seulement le drapeau FIN défini.
+    * Encore une fois, si le port est fermé, la cible devrait répondre avec un paquet RST.
+    * Si aucun paquet RST n'est reçu en réponse, le port est marqué comme filtered ou open|filtered.
 
 3. ***Analyse Xmas*** (`-sX`) :
-  * Cette analyse envoie un paquet TCP mal formé avec les indicateurs PSH, URG et FIN définis.
-  * Comme pour les analyses NULL et FIN, elle attend une réponse RST si le port est fermé.
-  * Si aucun paquet RST n'est reçu en réponse, le port est marqué comme filtered ou open|filtered.
+    * Cette analyse envoie un paquet TCP mal formé avec les indicateurs PSH, URG et FIN définis.
+    * Comme pour les analyses NULL et FIN, elle attend une réponse RST si le port est fermé.
+    * Si aucun paquet RST n'est reçu en réponse, le port est marqué comme filtered ou open|filtered.
 
 L'objectif principal de ces analyses est de **contourner les pare-feu qui bloquent les paquets TCP entrants** avec le drapeau SYN activé, en envoyant des requêtes qui ne contiennent pas ce drapeau. Cependant, leur *efficacité peut être limitée par les systèmes de détection d'intrusion modernes*, qui sont de plus en plus capables de détecter et de bloquer ces types d'analyses.
 
@@ -167,6 +167,32 @@ Il est important de noter que l'utilisation de certains scripts, en particulier 
 ::: tip Lien externe
 Davantages d'informations sur les scripts NSE sont disponible [ici](https://nmap.org/book/nse-usage.html).
 :::
+
+### Utilisation des scripts NSE avec nmap
+
+Pour activer les scripts NSE lors de l'exécution de scans avec Nmap, l'utilisateur utilise le commutateur `--script`. Ce commutateur permet de spécifier la catégorie de scripts à exécuter. Par exemple, pour exécuter des scripts de détection de vulnérabilités, l'utilisateur utilise `--script=vuln`.
+
+D'autres catégories telles que safe pour les scripts sûrs peuvent également être spécifiées de la même manière.
+Exécution de Scripts Spécifiques
+
+Pour exécuter un script spécifique, l'utilisateur utilise la syntaxe `--script=<nom-du-script>`. Par exemple, pour exécuter un script appelé `http-fileupload-exploiter`, l'utilisateur utilise `--script=http-fileupload-exploiter`.
+Exécution de Scripts Multiples
+
+Il est possible d'exécuter plusieurs scripts simultanément en les séparant par des virgules après le commutateur `--script`. Par exemple, pour exécuter les scripts `smb-enum-users` et `smb-enum-shares` en même temps, l'utilisateur utilise `--script=smb-enum-users`,`smb-enum-shares`.
+Arguments des Scripts
+
+Certains scripts nécessitent des arguments pour fonctionner correctement. L'utilisateur peut fournir ces arguments en utilisant le commutateur `--script-args`. Les arguments sont séparés par des virgules et connectés au script correspondant par des points (`<nom-du-script>.<argument>`).
+Exemple d'utilisation d'arguments
+
+Par exemple, le script `http-put` est utilisé pour télécharger des fichiers en utilisant la méthode PUT. Il nécessite deux arguments : l'URL vers laquelle télécharger le fichier et l'emplacement du fichier sur le disque. 
+
+```shell
+nmap -p 80 --script http-put --script-args http-put.url='/dav/shell.php',http-put.file='./shell.php'
+```
+
+Les scripts Nmap sont accompagnés de menus d'aide intégrés, accessibles en utilisant la commande `nmap --script-help <nom-du-script>`. Bien que ces aides ne soient pas aussi détaillées que la documentation en ligne, elles fournissent des informations utiles sur l'utilisation du script.
+
+En suivant cette approche structurée, les utilisateurs peuvent mieux organiser leurs informations sur l'utilisation des scripts NSE avec Nmap.
 
 
 <hr>
