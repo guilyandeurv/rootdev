@@ -68,7 +68,7 @@ export default defineConfig({
         text: 'Javascript',
         collapsed:true,
         items: [
-          { text: 'Introduction', link: '/javascript/' },
+          { text: 'Introduction', link: '/javascript/index' },
           { text: 'Variables', link: '/javascript/variables' },
           { text: 'Fonctions', link: '/javascript/fonction' },
         ]
@@ -77,7 +77,7 @@ export default defineConfig({
         text: 'Python',
         collapsed:true,
         items: [
-          { text: 'Introduction', link: '/python/' },
+          { text: 'Introduction', link: '/python/index' },
           { text: 'Outils',
             collapsed: true,
             items: [
