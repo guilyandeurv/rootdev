@@ -216,6 +216,22 @@ Si un script recherché est manquant localement, il peut être installé de deux
 
 Il est important de noter que la même commande "**updatedb**" est nécessaire si les utilisateurs créent leurs propres scripts NSE et les ajoutent à Nmap. Cette tâche est gérable avec des connaissances de base en Lua.
 
+## Esquiver les firewall
+
+Contourner les configurations de pare-feu est crucial lors de l'exécution de scans de sécurité avec Nmap. Voici quelques techniques et options de commutation utiles pour contourner les pare-feu courants :
+
+* ***Option `-Pn`*** : Cette option indique à Nmap de ne pas envoyer de requêtes ping à l'hôte avant de l'analyser. Cela permet à Nmap de traiter tous les hôtes cibles comme étant vivants, contournant ainsi le blocage ICMP. Cependant, cela peut entraîner des temps d'analyse plus longs, car Nmap vérifiera chaque port spécifié même si l'hôte est réellement mort.
+
+* ***Requêtes ARP*** : Si vous êtes sur le réseau local, Nmap peut également utiliser les requêtes ARP pour déterminer l'activité de l'hôte. Cela peut contourner le blocage ICMP et fournir une détection précise des hôtes actifs.
+
+* ***Options de fragmentation*** :
+        1. L'option `-f` fragmente les paquets en morceaux plus petits, ce qui rend moins probable qu'ils soient détectés par un pare-feu ou un IDS.
+        2. L'option `--mtu <number>` permet de spécifier une taille maximale d'unité de transmission pour les paquets envoyés, offrant un contrôle plus précis sur la fragmentation.
+
+* ***Option `--scan-delay <time>ms`*** : Cette option ajoute un délai entre les paquets envoyés. Elle est utile pour éviter les déclencheurs de pare-feu ou d'IDS temporels et peut également stabiliser les scans sur des réseaux instables.
+
+* ***Option `--badsum`*** : Cette option génère une somme de contrôle invalide pour les paquets. Bien qu'une véritable pile TCP/IP abandonnerait un tel paquet, les pare-feu peuvent répondre automatiquement sans vérifier la somme de contrôle. Cette option peut être utilisée pour détecter la présence d'un pare-feu ou d'un IDS.
+
 <hr>
 <br>
 
