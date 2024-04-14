@@ -9,7 +9,6 @@
     "docs:preview": "vitepress preview content"
   },
   "dependencies": {
-    "fund": "^1.0.0",
-    "vitepress-plugin-image-viewer": "^1.1.3"
+    "fund": "^1.0.0"
   }
 }
