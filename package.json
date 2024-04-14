@@ -9,6 +9,7 @@
     "docs:preview": "vitepress preview content"
   },
   "dependencies": {
+    "full": "^1.0.1",
     "fund": "^1.0.0"
   }
 }
