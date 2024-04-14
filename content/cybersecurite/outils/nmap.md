@@ -75,7 +75,9 @@ L'analyse **TCP** Connect (`-sT`) et l'analyse **SYN** (`-sS`) sont toutes deux 
 
 Les avantages de l'analyse SYN comprennent sa *rapidité* et sa *furtivité*, ce qui peut *contourner certains systèmes de détection d'intrusion* et *ne pas laisser de traces dans les journaux* des applications écoutant sur les ports ouverts. Cependant, elle nécessite des autorisations sudo sur Linux et peut perturber les services instables.
 
-Dans l'ensemble, les deux méthodes peuvent être efficaces pour le scanning des ports, mais l'utilisation dépend des circonstances et des préférences spécifiques de l'utilisateur.
+:::danger Attention
+Concernant la discrétion de ce scan, c'était vrai il y a quelques dizaines d'années. Désormais, avec les technologies actuelles, celle-ci n'est plus utilisée pour des scans dit *furtifs*.
+:::
 
 ### Analyse UDP (`-Su`)
 
