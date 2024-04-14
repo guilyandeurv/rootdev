@@ -31,8 +31,6 @@ EXAMPLES:
   nmap -v -iR 10000 -Pn -p 80
 ```
 
-
-
 ## Options principales
 
 * Analyse UDP `-sU`
