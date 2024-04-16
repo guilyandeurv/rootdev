@@ -62,6 +62,15 @@ export default defineConfig({
               { text: 'Metasploit', link: '/cybersecurite/outils/metasploit' },
               { text: 'Wireshark', link: '/cybersecurite/outils/wireshark' },
             ]},
+            { text: 'Réseaux',
+            collapsed:true,
+            items: [
+              { text: 'Protocole FTP', link: '/cybersecurite/reseaux/ftp' },
+              { text: 'Protocole NFS', link: '/cybersecurite/reseaux/nfs' },
+              { text: 'Protocole SMB', link: '/cybersecurite/reseaux/smb' },
+              { text: 'Protocole SMTP', link: '/cybersecurite/reseaux/smtp' },
+              { text: 'Protocole Telnet', link: '/cybersecurite/reseaux/telnet' },
+            ]},
         ],
       },
       {
