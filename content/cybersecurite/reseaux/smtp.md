@@ -9,6 +9,6 @@ sidebar: auto
 <br>
 
 ::: info Sources
-Ce cours s'inspire (et utilise les images) de TryHackMe.com de la chambre "*Nmap*" :
+Ce cours s'inspire (et utilise les images) de TryHackMe.com de la chambre "*Network Services*" :
 https://tryhackme.com/r/room/networkservices
 :::
