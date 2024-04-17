@@ -3,7 +3,6 @@ sidebar: auto
 ---
 # Protocole SMB
 <Badge type="tip" text="Rédigé le 17/04/2024" />
-<Badge type="warning" text="En cours de rédaction" />
 
 ## Introduction à SMB
 
