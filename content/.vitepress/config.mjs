@@ -41,6 +41,13 @@ export default defineConfig({
             items: [
               { text: 'Reconnaissance passive', link: '/cybersecurite/recon/passive' },
             ]},
+          { text: 'Dark Web',
+            collapsed:true,
+            items: [
+              { text: 'Introduction', link: '/cybersecurite/darkweb/intro' },
+              { text: 'Ses intérêts', link: '/cybersecurite/darkweb/interet' },
+              { text: "L'utiliser", link: '/cybersecurite/darkweb/utiliser' },
+            ]},
           { text: 'Attaques web',
             collapsed:true,
             items: [
