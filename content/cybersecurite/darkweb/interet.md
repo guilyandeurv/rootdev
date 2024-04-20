@@ -3,7 +3,6 @@ sidebar: auto
 ---
 # Les intérêts du Dark Web
 <Badge type="tip" text="Rédigé le 19/04/2024" />
-<Badge type="warning" text="En cours de rédaction" />
 
 Le Dark Web présente également des avantages, en particulier dans des contextes légitimes.
 
@@ -26,7 +25,7 @@ Bien que le Dark Web ne garantisse pas un anonymat absolu, il offre une plus gra
 
 En résumé, le Dark Web présente des avantages significatifs pour la collecte de renseignements, les opérations de maintien de l'ordre, la liberté d'expression et la confidentialité en ligne, bien que son utilisation puisse également être associée à des activités illicites et à des risques potentiels.
 
-## Activitées légales
+## Activités légales
 
 Il est essentiel de comprendre que les entreprises ou individus qui collectent et vendent des informations sur les menaces provenant du Dark Web doivent agir dans le cadre de la loi et respecter les réglementations en vigueur dans leur juridiction. 
 
@@ -84,7 +83,7 @@ En explorant le cas de [Recorded Future](https://www.recordedfuture.com), une en
 
 Recorded Future parvient à accéder à des forums privés et cachés sur le Dark Web pour extraire des informations exploitables pour leurs clients. Leur capacité à fournir des alertes précoces sur les cyberattaques imminentes, des renseignements stratégiques sur les ventes de malwares et d'outils de piratage, ainsi que des informations sur les données piratées, est précieuse pour les équipes de sécurité des entreprises.
 
-## Activitées illégales
+## Activités illégales
 
 Il est important de souligner qu'il existe des activités illégales que les entreprises ou individus ne doivent pas entreprendre, telles que :
 
@@ -101,6 +100,21 @@ L'accès illégal à des forums ou des sites privés en utilisant des méthodes 
 Offrir des conseils, des informations, de l'argent ou d'autres ressources pour aider des individus ou des parties à commettre des crimes constitue une complicité et peut également être poursuivi par la loi.
 
 En résumé, les entreprises qui opèrent dans le domaine de la sécurité informatique doivent agir dans le respect de la loi et des réglementations, en s'abstenant de participer à des activités illégales sur le Dark Web et en se concentrant sur des pratiques légales et éthiques pour collecter et utiliser des informations sur les menaces.
+
+### Ses dangers
+
+Il est crucial de souligner les dangers associés à l'exploration du Dark Web. Bien que cette partie d'Internet puisse susciter de la curiosité, il est important de comprendre les risques encourus.
+
+* ***Contenu illégal*** : Le Dark Web abrite des places de marché illégales proposant une gamme de produits et services illicites, y compris des armes, de la drogue, du contenu explicite, et même des humains. La visite de ces sites peut être illégale et peut entraîner des conséquences légales graves.
+* ***Responsabilité personnelle*** : En cliquant sur des liens vers du contenu explicite ou illégal, chacun assume la responsabilité de ses actions. Les individus pourraient être poursuivis en justice pour avoir visionné ou accédé à ce type de contenu.
+* ***Risques pour la sécurité*** : Le Dark Web est également un foyer de logiciels malveillants et d'activités de hacking. En cliquant sur des liens malveillants, les utilisateurs pourraient exposer leur système à des infections par des logiciels malveillants, entraînant le vol ou le cryptage de leurs fichiers, voire même des attaques de chantage.
+
+Il est essentiel de prendre ces avertissements au sérieux et de ne pas céder à la curiosité de naviguer sur le Dark Web. La sécurité personnelle et la conformité avec la loi doivent toujours être prioritaires.
+
+::: danger NE SOYEZ PAS CURIEUX
+* Si vous cliquez sur un mauvais lien et que votre navigateur charge du contenu explicite, tel que de la pédopornographie, vous en êtes responsable et vous pouvez être poursuivi pour l'avoir visionné.
+* Si vous cliquez sur un mauvais lien, votre système peut être infecté par un logiciel malveillant capable de voler ou de crypter vos fichiers, ce qui peut mener à des attaques de deuxième phase, telles que le chantage.
+:::
 
 <hr>
 <br>

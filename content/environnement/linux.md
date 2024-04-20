@@ -67,6 +67,11 @@ Télécharger un fichier
 wget https://rootdev.fr/cybersecurite/recon/assets/whatweb-resultats.txt
 ```
 
+Installer un package
+```shell
+dpkg -i package.deb
+```
+
 ### Recherche de fichiers
 
 ```shell
