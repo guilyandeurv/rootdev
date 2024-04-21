@@ -3,7 +3,6 @@ sidebar: auto
 ---
 # Accéder au Dark Web
 <Badge type="tip" text="Rédigé le 20/04/2024" />
-<Badge type="warning" text="En cours de rédaction" />
 
 ## TOR
 
@@ -44,6 +43,8 @@ Reading package lists... Done
 Building dependency tree... Done
 Reading state information... Done
 ```
+
+Le site [darknet-tor](https://darknet-tor.com/meilleurs-sites-onion-deepweb.php) liste plusieurs liens du Dark Web.
 
 
 
