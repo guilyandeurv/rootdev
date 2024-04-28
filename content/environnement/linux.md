@@ -72,6 +72,10 @@ Installer un package
 dpkg -i package.deb
 ```
 
+Pilotes cartes Wifi
+
+[Tutoriel de Debian-facile](https://debian-facile.org/doc:materiel:wifi:detecter)
+
 ### Recherche de fichiers
 
 ```shell
