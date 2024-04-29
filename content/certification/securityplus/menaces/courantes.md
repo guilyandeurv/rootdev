@@ -3,7 +3,6 @@ sidebar: auto
 ---
 # Attaques courantes
 <Badge type="tip" text="Rédigé le 29/04/2024" />
-<Badge type="warning" text="En cours de rédaction" />
 
 ## Attaques de mots de passe
 
