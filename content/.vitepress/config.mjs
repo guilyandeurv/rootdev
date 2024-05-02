@@ -36,6 +36,7 @@ export default defineConfig({
           { text: 'Introduction', link: '/cybersecurite/' },
           { text: 'Définitions', link: '/cybersecurite/def' },
           { text: 'Normes internationales', link: '/cybersecurite/normes' },
+          { text: 'Norme ISO 27001', link: '/cybersecurite/iso27001' },
           { text: 'Reconnaissance',
             collapsed:true,
             items: [
