@@ -50,7 +50,7 @@ Les variables permettent de stocker et de mettre à jour des données dans un pr
 marque = "Yamaha"
 prix = 5000
 ```
-Ici nous avons **délcaré** la variable `marque` sous la valeur `"Yamaha"`, qui est une chaine de caractère (*string*), ainsi que la variabl `prix` sous la valeur `5000`, qui est un entier (*int*).
+Ici nous avons **délcaré** la variable `marque` sous la valeur `"Yamaha"`, qui est une chaine de caractère (*string*), ainsi que la variable `prix` sous la valeur `5000`, qui est un entier (*int*).
 
 Les valeurs de celles-ci peuvent être modifiées à tout moment lors du programme, comme l'exemple si dessous :
 ```python:line-numbers=1 {4}
@@ -60,11 +60,27 @@ print(prix)
 5005
 ```
 
+Lorsque l'on veut que l'utilisateur entre sa propre valeur, on peut utiliser l'argument `input()` dans une variable :
+```python:line-numbers=1{3}
+portefeuille = input("Combien avez-vous dans votre portefeuille ?")
+print(portefeuille)
+Combien avez-vous dans votre portefeuille ?
+# l'utilisateur entre sa valeur
+```
+De cette manière, la valeur entrée par l'utilsiateur sera de type `string`.
+
+Dans le cas où l'on voudrait afficher cette valeur **int** ou **float**... dans un print, on pourrait utiliser l'argument suivant :
+```python:line-numbers=1
+portefeuille = 5000
+print("Total dans le portefeuille : {}".format(portefeuille))
+```
+Ici, l'arguement `format` va convertir la valeur de la variable de `int` à `string`. La valeur sera placée à la place de `{}`, ils sont appelés **placeholders**.
+
 ## Types de données
 
 1. ***Chaîne de caractère*** (String) : utilisée pour les combinaisons de caractères, tels que des lettres ou des symboles.
 2. ***Entier*** (Integer) : Nombres entiers
-3. ***Float*** : Nombres contenant des points décimaux ou pour des fractions
+3. ***Float*** : Nombres contenant des points décimaux 
 4. ***Booléen*** : Utilisé pour les données limitées aux options `Vrai` ou `Faux`
 5. ***Liste*** : Série de différents types de données stockés dans une collection
 
