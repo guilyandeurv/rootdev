@@ -60,6 +60,17 @@ print(prix)
 5005
 ```
 
+Si on veut afficher les deux valeurs dans un seul `print`, on peut utiliser l'argument `sep=` :
+```python:line-numbers=1 {5}
+a = 0
+b = 1
+c = 2
+print(a, b, c, sep=" + ")
+0 + 1 + 2
+```
+
+Ici, les valeurs des 3 variables seront "print" séparées par le caractère sélectionné, "+".
+
 Lorsque l'on veut que l'utilisateur entre sa propre valeur, on peut utiliser l'argument `input()` dans une variable :
 ```python:line-numbers=1{3}
 portefeuille = input("Combien avez-vous dans votre portefeuille ?")
@@ -83,12 +94,17 @@ Ici, l'arguement `format` va convertir la valeur de la variable de `int` à `str
 3. ***Float*** : Nombres contenant des points décimaux 
 4. ***Booléen*** : Utilisé pour les données limitées aux options `Vrai` ou `Faux`
 5. ***Liste*** : Série de différents types de données stockés dans une collection
+6. ***Tuple*** : Similaire aux listes, cependant les tuples sont immutables, ce qui signifie que les valeurs ne peuvent pas être changées une fois affectées.
+    **Ce déclare de la façon suivante :**
+    ```python
+    tuple = ("Premier", 45, True)
+    ```
 
 ![Exemples types](./img/types.png)
 
-## Les instructions
+## Les conditions
 
-L'utilisation des instructions `if`, `elif` et `else` permettent aux programmes de prendre des décisions.
+L'utilisation des conditions `if`, `elif` et `else` permettent aux programmes de prendre des décisions.
 
 ```python:line-numbers=1
 portefeuille = 1000
@@ -98,8 +114,17 @@ if portefeuille < prix :
 else :
     print("Vous avez assez d'argent")
 ```
-
 Ici, **si** l'argent dans mon **portefeuille** est **inférieur** au **prix**, alors que je ne peux pas acheter le produit. **Sinon**, je peux acheter le produit.
+
+Lorsque l'on veut que l'utilisateur entre sa propre valeur, on peut vérifier que la valeur correspond bien :
+```python:line-numbers=1{2,4}
+portefeuille = input("Combien avez-vous dans votre portefeuille ?")
+if portefeuille.isdigit() : # La fonction isdigit() vérifie que les valeurs entrées sont des nombres
+    print(portefeuille)
+else:
+    print("La valeur entrée n'est pas conforme.")
+    portefeuille = input("Combien avez-vous dans votre portefeuille ?")
+```
 
 ## Les boucles
 
@@ -135,10 +160,65 @@ for i in range(5):
     print(i)
 ```
 
+## Les erreurs
 
+### Try & Except
 
+Lorsqu'une erreur se produit, ou également appelée *exception*, Python s'arrête et génère un message d'erreur.
+Ces exceptions peuvent être gérées grâce à l'instruction ***Try***.
 
+```python
+try:
+    print(i)
+except:
+    print("Une erreur est survenue, la valeur demandée n'existe pas.")
+```
 
+Ici, l'exception sera notée car aucune variable "i" n'a été déclarée plus tôt.
+On peut également sélectionner "la raison" pour laquelle l'exception est déclarée. <br>
+Par exemple, on demande une valeur *int* à l'utilisateur, mais une valeur *str* est entrée, alors on déclare l'exception :
+
+```python
+while True:
+    try:
+        i = int(input("Entrer une valeur"))
+        break
+    except ValueError: #ValueError vérifie que l'entrée correspond à ce qui est demandé.
+        print("Uniquement une valeur INT, réessayez.")
+```
+
+### Erreurs dans la déclaration d'une variable
+
+```python
+list = range(3)
+list2 = range(5)
+list(list2)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'range' object is not callable
+```
+
+Le problème qui survient dans ce code vient du fait que 'range(3)' est assigné dans une variable qui est déjà utilisée par Python pour convertir un objet en liste (la fonction list).
+
+Ainsi, quand on essaie de convertir la liste 'list2', avec la fonction list, l'erreur `TypeError: 'range' object is not callable` apparaît.
+En écrasant le mot réservé 'list' par 'range(3)', on écrase la fonction list et quand on veut l'utiliser plus loin dans le script, Python essaie de convertir la liste 'list2' avec l'objet 'range' contenu à l'intérieur de la variable 'list' au lieu d'utiliser la fonction list.
+
+#### Noms réservés par Python
+
+```
+False               def                 if                  raise
+None                del                 import              return
+True                elif                in                  try
+and                 else                is                  while
+as                  except              lambda              with
+assert              finally             nonlocal            yield
+break               for                 not                 
+class               from                or                  
+continue            global              pass 
+```
+
+À cette liste on peut ajouter toutes les fonctions de base de Python, comme la fonction str, la fonction int, la fonction dict, la fonction print, la fonction list etc...
+Il faut faire très ***attention à ne pas écraser des noms réservés*** par Python.
 <hr>
 <br>
 
