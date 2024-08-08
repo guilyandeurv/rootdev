@@ -23,6 +23,20 @@ On peut contrôler ce qui est affiché à l'écran en utilisant l'instruction  `
 |Modulo|`%`|10 % 2 = 0|
 |Exposant|`**`|5 ** 2 = 25 (5²)|
 
+Exemple, calcul du volume d'une sphère :
+
+La formule étant (4π/3) × rayon³, on va procéder de telle manière :
+
+```python:line-numbers=1
+import math
+rayon = 10.0
+volume = (4.0 * math.pi / 3.0) * (rayon ** 3)
+print(volume)
+```
+
+L'import du module `math` permet d'obtenir une valeur précise de pi.
+Le symbole `*` permet de multiplier, tandis que le symbole `**` permet de calculer le rayon puissance 3. Le symbole pour la division est la barre oblique `/`.
+
 ## Opérateurs de comparaison
 
 |Opérateur|Syntaxe|
@@ -231,6 +245,30 @@ else:
 ```
 
 Dans l'exemple ci-dessus, on demande à l'utilisateur d'entrer une valeur numérique, si celui-ci entre une valeur en `str`, `isdigit(valeur)` renverra `False` et passera à la ligne `else`, sinon, il "printera" la valeur donnée par l'utilisateur.
+
+### La fonction `list` & `range`
+
+Permet la création rapide d'une liste de nombre selon une échelle donnée.
+La fonction `list` permet elle de créer une liste selon un argument donné, ici la variable `liste`.
+Exemple :
+
+```python:line-numbers=1 {4}
+liste = range(5, 15)
+liste2 = list(liste)
+print(liste2)
+[5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+```
+
+On peut également entrer un seul argument dans la fonction `range`, qui débutera alors par 0 jusqu'au nombre donné, exemple : 
+
+`liste = list(range(10)) => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]`
+
+**Attention !** Depuis Python 3, la fonction `range()` ne retourne pas une liste mais un objet de type 'range'.
+
+Si on veut créer une liste de nombres pairs, on peut donner un écart entre chaque nombre :
+`liste = range(2, 101, 2)`
+
+Ici ce sera le dernier arguement de la fonction `range()` qui définira l'écart.
 
 ## Les erreurs
 
