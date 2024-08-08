@@ -60,6 +60,16 @@ print(prix)
 5005
 ```
 
+On peut également remplacer une valeur d'une variable depuis une autre variable :
+```python:line-numbers=1 {4}
+phrase1 = "Un petit mot dans la boîte"
+phrase2 = phrase1.replace("petit", "gros")
+print(phrase2)
+Un gros mot dans la boîte
+```
+La fonction replace va récupérer le premier argument "petit", qui sera celui qui est remplacé, par le second, "gros". 
+La fonction replace va remplacer toutes les instances de la chaîne de caractère qu'elle trouve dans la phrase. Si on a 3 fois le mot "petit", les trois occurrences du mot seront remplacées.
+
 Si on veut afficher les deux valeurs dans un seul `print`, on peut utiliser l'argument `sep=` :
 ```python:line-numbers=1 {5}
 a = 0
@@ -76,7 +86,7 @@ Lorsque l'on veut que l'utilisateur entre sa propre valeur, on peut utiliser l'a
 portefeuille = input("Combien avez-vous dans votre portefeuille ?")
 print(portefeuille)
 Combien avez-vous dans votre portefeuille ?
-# l'utilisateur entre sa valeur
+# L'utilisateur est invité à entrer une valeur
 ```
 De cette manière, la valeur entrée par l'utilsiateur sera de type `string`.
 
@@ -159,6 +169,68 @@ En Python, on peut également itérer sur une plage de nombres à l’aide de la
 for i in range(5):
     print(i)
 ```
+## Les fonctions d'origine
+
+Les fonctions "d'origine", familièrement appelées, sont les fonctions disponibles dans Python dès son installation. Plusieurs ont été citées plus haut, elles ont un intérêt dans la conception des programmes, que ce soit pour organiser des listes, vérifier des données, etc.
+
+### La fonction `split()`
+
+Permet de séparer la chaîne de caractère en plusieurs éléments, en opérant la séparation sur un caractère.
+Exemple :
+
+```python:line-numbers=1 {4}
+chaine = "Thomas, Théo, Ludo, Olivier, Antho"
+chaineListe = chaine.split(", ")
+print(chaineListe)
+["Thomas", "Théo", "Ludo", "Olivier", "Antho"]
+```
+
+Ici, la fonction `split()` a transformé la variable `str` en une liste. Les éléments de cette liste ont été identifiés par chaque séparation ", ", indiqué comme argument dans la fonction.
+
+### La fonction `sort()`
+
+Permet de trier les valeurs de façon croissante.
+
+Exemple :
+```python:line-numbers=1 {4,8}
+chaine = ["Thomas", "Théo", "Ludo", "Olivier", "Antho"]
+print(chaine)
+["Thomas", "Théo", "Ludo", "Olivier", "Antho"]
+chaine.sort()
+chaineTriee = ", ".join(chaine)
+print(chaine)
+Antho, Ludo, Olivier, Théo, Thomas
+```
+
+Dans l'exemple ci-dessus, on peut s'apercevoir que les prénoms ont été triés dans l'ordre alphabétique.
+
+### La fonction `join()`
+Permet joindre différents éléments d'une liste par une chaîne de caractère. 
+Exemple : 
+
+```python:line-numbers=1 {4,8}
+chaine = ["Thomas", "Théo", "Ludo", "Olivier", "Antho"]
+chaineStr = ", ".join(chaine)
+print(chaineStr)
+Antho, Ludo, Olivier, Théo, Thomas
+```
+
+Dans l'exemple ci-dessus, on comprend que la liste `chaine` est devenue une `str`, chaque élément de la liste ont été séparés par l'argument précédent la fonction `join()`, ici ", ".
+
+### La fonction `isdigit()`
+
+Renvoie une valeur `True` ou `False` selon l'argument entré dans la fonction si oui ou non il s'agit de nombres.
+Exemple :
+
+```python:line-numbers=1 {2}
+portefeuille = input("Combien avez-vous dans votre portefeuille ?")
+if portefeuille.isdigit() : # La fonction isdigit() vérifie que les valeurs entrées sont des nombres
+    print(portefeuille)
+else:
+    print("La valeur entrée n'est pas conforme.")
+```
+
+Dans l'exemple ci-dessus, on demande à l'utilisateur d'entrer une valeur numérique, si celui-ci entre une valeur en `str`, `isdigit(valeur)` renverra `False` et passera à la ligne `else`, sinon, il "printera" la valeur donnée par l'utilisateur.
 
 ## Les erreurs
 
