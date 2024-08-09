@@ -246,7 +246,7 @@ else:
 
 Dans l'exemple ci-dessus, on demande à l'utilisateur d'entrer une valeur numérique, si celui-ci entre une valeur en `str`, `isdigit(valeur)` renverra `False` et passera à la ligne `else`, sinon, il "printera" la valeur donnée par l'utilisateur.
 
-### La fonction `list` & `range`
+### La fonction `list()` & `range()`
 
 Permet la création rapide d'une liste de nombre selon une échelle donnée.
 La fonction `list` permet elle de créer une liste selon un argument donné, ici la variable `liste`.
@@ -269,6 +269,43 @@ Si on veut créer une liste de nombres pairs, on peut donner un écart entre cha
 `liste = range(2, 101, 2)`
 
 Ici ce sera le dernier arguement de la fonction `range()` qui définira l'écart.
+
+### La fonction `random()`
+
+Permet de générer une valeur aléatoire.
+Exemple : 
+
+```python:line-numbers=1 {6,7,8,9,10}
+import random
+
+for _ in range(5):
+    nombre = random.choice(range(1, 7))
+    print(nombre)
+5
+1
+1
+2
+5
+```
+
+### La fonction `count()`
+
+Permet de compteur le nombre d'un argument choisi.
+Exemple : 
+
+```python:line-numbers=1 {6}
+lettre_a_chercher = "o"
+phrase = "Bonjour tout le monde"
+
+x = phrase.count(lettre_a_chercher)
+print(x)
+4
+```
+
+Ici, la fonction `count()` va chercher le nombre de "o" dans la phrase "Bonjour tout le monde", et retourne donc la valeur 4.
+Cependant, si on a une phrase contenant des "O" majuscules, ceux-ci ne seront pas comptabilisés, pour cela, on peut rendre minuscule chaque lettre avec la fonction `lower` :
+<br>
+`x = phrase.lower(phrase.count(lettre_a_chercher))`
 
 ## Les erreurs
 
