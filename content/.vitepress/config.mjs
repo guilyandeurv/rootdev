@@ -21,6 +21,7 @@ export default defineConfig({
          { text: "Cybersécurité", link: "/cybersecurite/index" },
          { text: "Javascript", link: "/javascript/index" },
          { text: "Python", link: "/python/index" },
+         { text: "Ruby", link: "/ruby/intro" },
          { text: "Certifications", link: "/certification/introduction" },
          { text: 'Réseaux', link: '/reseaux/' },
          { text: 'Environnement', link: '/environnement/linux' },
@@ -88,6 +89,13 @@ export default defineConfig({
           { text: 'Introduction', link: '/javascript/index' },
           { text: 'Variables', link: '/javascript/variables' },
           { text: 'Fonctions', link: '/javascript/fonction' },
+        ]
+      },
+      {
+        text: 'Ruby',
+        collapsed:true,
+        items: [
+          { text: 'Introduction', link: '/ruby/intro' },
         ]
       },
       {
