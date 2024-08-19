@@ -103,6 +103,8 @@ export default defineConfig({
         collapsed:true,
         items: [
           { text: 'Introduction', link: '/python/index' },
+          { text: "Fonctions d'origine, link: '/python/fonction-dorigine" },
+          { text: 'Erreurs', link: '/python/erreurs' },
           { text: 'Outils',
             collapsed: true,
             items: [

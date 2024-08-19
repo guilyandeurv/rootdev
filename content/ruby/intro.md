@@ -21,8 +21,8 @@ IRB permet d’écrire et d’interpréter du Ruby à la volée, sans avoir à e
 
 ```ruby:line-numbers=1 {2}
 puts "Hello World !"
-Hello World !
-=> nil
+Hello World ! # [!code ++]
+=> nil# [!code ++]
 ```
 
 `puts` est l'équivalent en **Ruby** de `Console.WriteLine` en **C#** ou de `print` en **Python**.
@@ -50,7 +50,7 @@ def h
 puts "Une fonction appelée méthode parce qu'on ne veut pas faire comme tout le monde..."
 end
 h
-Une fonction appelée méthode parce qu'on ne veut pas faire comme tout le monde...
+Une fonction appelée méthode parce qu'on ne veut pas faire comme tout le monde...# [!code ++]
 ```
 
 
