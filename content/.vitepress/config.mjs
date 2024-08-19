@@ -103,7 +103,7 @@ export default defineConfig({
         collapsed:true,
         items: [
           { text: 'Introduction', link: '/python/index' },
-          { text: "Fonctions d'origine, link: '/python/fonction-dorigine" },
+          { text: "Fonctions d'origine", link: '/python/fonction-dorigine' },
           { text: 'Erreurs', link: '/python/erreurs' },
 	  { text: 'Django', link: '/python/django' },
           { text: 'Outils',
