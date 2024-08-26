@@ -113,7 +113,7 @@ Il est essentiel de prendre ces avertissements au sérieux et de ne pas céder �
 
 ::: danger NE SOYEZ PAS CURIEUX
 * Si vous cliquez sur un mauvais lien et que votre navigateur charge du contenu explicite, tel que de la pédopornographie, vous en êtes responsable et vous pouvez être poursuivi pour l'avoir visionné.
-* Si vous cliquez sur un mauvais lien, votre système peut être infecté par un logiciel malveillant capable de voler ou de crypter vos fichiers, ce qui peut mener à des attaques de deuxième phase, telles que le chantage.
+* Si vous cliquez sur un mauvais lien, votre système peut être infecté par un logiciel malveillant capable de voler ou de chiffrer vos fichiers, ce qui peut mener à des attaques de deuxième phase, comme le chantage par exemple.
 :::
 
 <hr>
