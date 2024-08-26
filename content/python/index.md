@@ -164,8 +164,77 @@ Ici, l'arguement `format` va convertir la valeur de la variable de `int` à `str
     ```python
     tuple = ("Premier", 45, True)
     ```
-
 ![Exemples types](./img/types.png)
+
+
+## Les listes
+
+Pour déclarer une liste, on utilise la syntaxe suivante :
+```python:line-numbers=1
+liste = ["Yamaha", "Guitare", "Piano"]
+```
+
+On peut accéder à chaque élément d'une liste en utilisant l'index de l'élément. Par exemple, pour accéder à l'élément 0 de la liste précédente, on peut utiliser l'instruction suivante :
+```python:line-numbers=1{2}
+print(liste[0])
+Yamaha
+```
+
+Pour récupérer le premier élément, on utilise les crochets et l'indice `0`.
+
+Pour récupérer le dernier élément, peu importe la taille de la liste, on utilise l'indice `-1`.
+
+Pour récupérer les deux premiers éléments de la liste, on utilise une syntaxe un peu spéciale, qui se nomme ***slicing***. En effet, plutôt que de spécifier un seul indice entre les crochets, on peut spécifier un indice de départ et un indice de fin.
+
+Ainsi, pour récupérer les deux premiers éléments, on peut utiliser la syntaxe :
+```python:line-numbers=1
+liste[0:2]
+```
+
+On n'a même pas besoin d'indiquer le 0 et Python comprendra qu'on veut commencer depuis le début de la liste, jusqu'au deuxième élément inclus `liste[:2]`. 
+
+Pour récupérer les deux derniers éléments, peu importe la taille de la liste, on utilise là encore un indice négatif et toujours le même principe de '***slicing***' : 
+```python:line-numbers=1
+liste[-2:]`
+```
+
+Si on veut récupérer un élément sur deux, on peut utiliser le '***slicing***' de la manière suivante : 
+```python:line-numbers=1
+liste[::2]`
+```
+
+La syntaxe complète du slicing est donc : `liste[indice_de_depart:indice_de_fin:pas]`
+
+Si on veut récupérer les éléments de 4 à 25 avec un pas de 3 on fera donc :
+
+```python:line-numbers=1{3}
+liste = range(100)
+liste[4:26:3]
+[4, 7, 10, 13, 16, 19, 22, 25]
+```
+
+On peut également ajouter un élément à la fin de la liste :
+```python:line-numbers=1{2}
+liste.append("Clarinet")
+print(liste)
+Yamaha Guitare Piano Clarinet
+```
+
+Pour en ajouter plusieurs, on peut utiliser la fonction `extend()` :
+```python:line-numbers=1{2}
+liste.extend(["Clarinet", "Orgue"])
+print(liste)
+Yamaha Guitare Piano Clarinet Orgue
+```
+
+On peut également supprimer un élément à partir de la liste :
+```python:line-numbers=1{2}
+liste.remove("Piano")
+print(liste)
+Yamaha Guitare Clarinet
+```
+
+
 
 ## Les conditions
 
