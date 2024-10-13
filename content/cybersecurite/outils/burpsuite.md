@@ -51,6 +51,8 @@ BurpSuite est un outil populaire de test de sécurité des applications Web, dé
 * **Prévention des attaques** : En simulant des attaques réelles, BurpSuite permet d'anticiper et de prévenir les menaces potentielles.
 
 
+<hr>
+<br>
 
 ::: info Sources
 Ce cours s'inspire (et utilise les images) de TryHackMe.com de la chambre "*Burp Suite*" :

@@ -79,6 +79,8 @@ steghide extract -sf filename-with-data.jpg -xf getdata.txt -p [passphrase]
 L'argument **`-p [passphrase]`** permet de spécifier le mot de passe à utiliser pour déchiffrer les données cachées, qui a été défini lors de la première étape.   
 
 
+<hr>
+<br>
 
 
 ::: info Sources
