@@ -70,6 +70,7 @@ export default defineConfig({
               { text: 'Burp Suite', link: '/cybersecurite/outils/burpsuite' },
               { text: 'Metasploit', link: '/cybersecurite/outils/metasploit' },
               { text: 'Wireshark', link: '/cybersecurite/outils/wireshark' },
+              { text: 'Stéganographie', link: '/cybersecurite/outils/stega' },
             ]},
             { text: 'Réseaux',
             collapsed:true,
