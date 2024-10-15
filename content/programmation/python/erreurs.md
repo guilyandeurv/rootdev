@@ -1,7 +1,7 @@
 ---
 sidebar: auto
 ---
-# Les fonctions d'origine
+# La gestion des erreurs
 <Badge type="tip" text="Rédigé le 18/08/2024" />
 <Badge type="warning" text="En cours de rédaction" />
 

@@ -12,16 +12,11 @@ export default defineConfig({
     head: [['link', { rel: 'icon', href: 'favicon.ico' }]],
     nav: [
       { text: 'Accueil', link: '/' },
-      { text: 'Udemy', link: 'https://www.udemy.com/' },
-      { text: 'TryHackMe', link: 'https://tryhackme.com/' },
-      { text: 'SkillsForAll', link: 'https://skillsforall.com/' },
       {
         text: "Contenu",
         items: [
          { text: "Cybersécurité", link: "/cybersecurite/index" },
-         { text: "Javascript", link: "/javascript/index" },
-         { text: "Python", link: "/python/index" },
-         { text: "Ruby", link: "/ruby/intro" },
+         { text: "Programmation", link: "/programmation/index" },
          { text: "Certifications", link: "/certification/introduction" },
          { text: 'Réseaux', link: '/reseaux/' },
          { text: 'Environnement', link: '/environnement/linux' },
@@ -84,42 +79,43 @@ export default defineConfig({
         ],
       },
       {
-        text: 'Javascript',
+        text: 'Programmation',
         collapsed:true,
         items: [
-          { text: 'Introduction', link: '/javascript/index' },
-          { text: 'Variables', link: '/javascript/variables' },
-          { text: 'Fonctions', link: '/javascript/fonction' },
-        ]
-      },
-      {
-        text: 'Ruby',
-        collapsed:true,
-        items: [
-          { text: 'Introduction', link: '/ruby/intro' },
-        ]
-      },
-      {
-        text: 'Python',
-        collapsed:true,
-        items: [
-          { text: 'Introduction', link: '/python/index' },
-          { text: "Fonctions d'origine", link: '/python/fonction-dorigine' },
-          { text: 'Erreurs', link: '/python/erreurs' },
-	        { text: 'Django', link: '/python/django' },
-          { text: 'Outils',
-            collapsed: true,
+          { text: 'Javascript',
+            collapsed:true,
             items: [
-              { text: 'Énumération des sous-domaines', link: '/python/outils/enum-sd'},
-              { text: 'Énumération des dossiers', link: '/python/outils/enum-dos'},
-              { text: 'Scanner de réseau', link: '/python/outils/scan-net'},
-              { text: 'Scanner de ports', link: '/python/outils/scan-por'},
-              { text: 'Téléchargeur de fichiers', link: '/python/outils/tel-fic'},
-              { text: 'Cracker de chiffrement', link: '/python/outils/crack'},
-              { text: 'Enregistreur de frappe', link: '/python/outils/listener'},
-              { text: 'SSH Bruteforce', link: '/python/outils/ssh-bru'}
-            ]
-          }
+              { text: 'Introduction', link: '/programmation/javascript/index' },
+              { text: 'Variables', link: '/programmation/javascript/variables' },
+              { text: 'Fonctions', link: '/programmation/javascript/fonction' },
+            ]},
+          { text: 'Ruby',
+            collapsed:true,
+            items: [
+              { text: 'Introduction', link: '/programmation/ruby/intro' },
+            ]},
+          { text: 'Python',
+            collapsed:true,
+            items: [
+              { text: 'Introduction', link: '/programmation/python/index' },
+              { text: "Fonctions d'origine", link: '/programmation/python/fonction-dorigine' },
+              { text: 'Erreurs', link: '/programmation/python/erreurs' },
+              { text: 'Django', link: '/programmation/python/django' },
+              { text: 'Outils',
+                collapsed: true,
+                items: [
+                  { text: 'Énumération des sous-domaines', link: '/programmation/python/outils/enum-sd'},
+                  { text: 'Énumération des dossiers', link: '/programmation/python/outils/enum-dos'},
+                  { text: 'Scanner de réseau', link: '/programmation/python/outils/scan-net'},
+                  { text: 'Scanner de ports', link: '/programmation/python/outils/scan-por'},
+                  { text: 'Téléchargeur de fichiers', link: '/programmation/python/outils/tel-fic'},
+                  { text: 'Cracker de chiffrement', link: '/programmation/python/outils/crack'},
+                  { text: 'Enregistreur de frappe', link: '/programmation/python/outils/listener'},
+                  { text: 'SSH Bruteforce', link: '/programmation/python/outils/ssh-bru'}
+                ]
+              }
+            ]},
+          
         ]
       },
       {
