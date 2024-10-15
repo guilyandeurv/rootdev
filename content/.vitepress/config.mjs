@@ -94,6 +94,11 @@ export default defineConfig({
             items: [
               { text: 'Introduction', link: '/programmation/ruby/index' },
             ]},
+          { text: 'Langage C',
+            collapsed:true,
+            items: [
+              { text: 'Introduction', link: '/programmation/c/index' },
+            ]},
           { text: 'Python',
             collapsed:true,
             items: [

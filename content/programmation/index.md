@@ -29,6 +29,12 @@ sidebar: auto
 |-|-|
 |Introduction à Ruby|[Ruby](/programmation/ruby/index.md)|
 
+## C
+
+|Cours|Lien|
+|-|-|
+|Introduction à C|[C](/programmation/c/index.md)|
+
 ## SQL
 
 <Badge type="warning" text="En cours de rédaction" />
