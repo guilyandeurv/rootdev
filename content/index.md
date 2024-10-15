@@ -4,14 +4,14 @@ layout: home
 hero:
   name: "RootDev"
   text: "Cybersécurité & développement"
-  tagline: "Ressources en constantes rédaction"
+  tagline: "Ressources en constante rédaction"
   image:
     src: logo.png
     alt: logo
   actions:
     - theme: brand
       text: Se rendre vers les ressources
-      link: /ressources
+      link: /cybersecurite/
 ---
 
 ## Suivi clair & précis

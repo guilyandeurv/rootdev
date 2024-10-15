@@ -5,7 +5,7 @@ sidebar: auto
 <Badge type="tip" text="Rédigé le 17/03/2024" />
 <Badge type="warning" text="En cours de rédaction" />
 
-Avant de commencer la configuration, il faut avoir un accès console à l'appareil Cisco. On peut utiliser un câble console et un programme de terminal tel que *PuTTY* ou *Tera Term* pour vous connecter à l'appareil. Une fois connecté, il faut s'identifier avec un nom d'utilisateur et un mot de passe si la configuration de sécurité l'exige.
+Avant de commencer la configuration, il faut avoir un accès console à l'appareil Cisco. On peut utiliser un câble console et un programme de terminal tel que *PuTTY* ou *Tera Term* pour se connecter à l'appareil. Une fois connecté, il faut s'identifier avec un nom d'utilisateur et un mot de passe si la configuration de sécurité l'exige.
 
 ## Commandes de base
 
