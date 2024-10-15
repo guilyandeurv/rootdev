@@ -92,7 +92,7 @@ export default defineConfig({
           { text: 'Ruby',
             collapsed:true,
             items: [
-              { text: 'Introduction', link: '/programmation/ruby/intro' },
+              { text: 'Introduction', link: '/programmation/ruby/index' },
             ]},
           { text: 'Python',
             collapsed:true,

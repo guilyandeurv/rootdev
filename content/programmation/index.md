@@ -11,8 +11,8 @@ sidebar: auto
 |-|-|
 |Introduction à Python|[Introduction](/programmation/python/index.md)|
 |Les fonctions d'origine|[Fonctions d'origine](/programmation/python/fonction-dorigine.md)|
-|Les erreurs|[Gestion des erreurs](/programmation/python/erreurs)|
-|Le framework Django|[Django](/programmation/python/django)|
+|Les erreurs|[Gestion des erreurs](/programmation/python/erreurs.md)|
+|Le framework Django|[Django](/programmation/python/django.md)|
 
 
 ## Javascript
@@ -20,8 +20,8 @@ sidebar: auto
 |Cours|Lien|
 |-|-|
 |Introduction à Javascript|[Introduction](/programmation/javascript/index.md)|
-|Les variables|[Variables](/programmation/javascript/variables)|
-|Les fonctions|[Fonction](/programmation/javascript/fonction)|
+|Les variables|[Variables](/programmation/javascript/variables.md)|
+|Les fonctions|[Fonction](/programmation/javascript/fonction.md)|
 
 ## Ruby
 
