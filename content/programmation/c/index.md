@@ -568,6 +568,9 @@ Les opérateurs de décalage permettent de déplacer les bits d'un nombre de bit
 * **`^`** : Bitwise XOR.
 * **`~`** : Bitwise NOT.
 
+<br>
+<hr>
+
 ::: info Sources
 Ce cours s'inspire d'Openclassrooms 'Apprendre à programmer en C' :
 https://openclassrooms.com/fr/courses/19980-apprenez-a-programmer-en-c
