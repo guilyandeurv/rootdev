@@ -122,7 +122,7 @@ export default defineConfig({
         text: 'Certification',
         collapsed:true,
         items: [
-          { text: 'Introduction', link: '/certification/' },
+          { text: 'Introduction', link: '/certification/introduction' },
           { text: 'CompTia Security+ SYO-701',
               collapsed: true,
               items: [
