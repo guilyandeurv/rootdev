@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../node_modules/@nolebase/vitepress-plugin-page-properties/dist/client/index.mjs", "../../../../node_modules/@nolebase/vitepress-plugin-page-properties/dist/client/constants.mjs"],
+  "sourcesContent": ["import NolebasePageProperties from \"./components/PageProperties.vue\";\nimport NolebasePagePropertiesEditor from \"./components/PagePropertiesEditor.vue\";\nimport { InjectionKey } from \"./constants.mjs\";\nconst components = {\n  NolebasePageProperties,\n  NolebasePagePropertiesEditor\n};\nexport function NolebasePagePropertiesPlugin() {\n  return {\n    install(app, options) {\n      if (typeof options !== \"undefined\" && typeof options === \"object\")\n        app.provide(InjectionKey, options);\n      for (const key of Object.keys(components))\n        app.component(key, components[key]);\n    }\n  };\n}\nexport {\n  InjectionKey,\n  NolebasePageProperties,\n  NolebasePagePropertiesEditor\n};\n", "export const InjectionKey = Symbol(\"vitepress-nolebase-page-properties\");\n"],
+  "mappings": ";AAAA,OAAO,4BAA4B;AACnC,OAAO,kCAAkC;;;ACDlC,IAAM,eAAe,OAAO,oCAAoC;;;ADGvE,IAAM,aAAa;AAAA,EACjB;AAAA,EACA;AACF;AACO,SAAS,+BAA+B;AAC7C,SAAO;AAAA,IACL,QAAQ,KAAK,SAAS;AACpB,UAAI,OAAO,YAAY,eAAe,OAAO,YAAY;AACvD,YAAI,QAAQ,cAAc,OAAO;AACnC,iBAAW,OAAO,OAAO,KAAK,UAAU;AACtC,YAAI,UAAU,KAAK,WAAW,GAAG,CAAC;AAAA,IACtC;AAAA,EACF;AACF;",
+  "names": []
+}

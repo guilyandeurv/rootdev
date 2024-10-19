@@ -1,5 +1,10 @@
 {
   "devDependencies": {
+    "@nolebase/vitepress-plugin-enhanced-readabilities": "^2.6.1",
+    "@nolebase/vitepress-plugin-git-changelog": "^2.6.1",
+    "@nolebase/vitepress-plugin-highlight-targeted-heading": "^2.6.1",
+    "@nolebase/vitepress-plugin-inline-link-preview": "^2.6.1",
+    "@nolebase/vitepress-plugin-page-properties": "^2.6.1",
     "sass": "^1.75.0",
     "vitepress": "^1.1.4"
   },

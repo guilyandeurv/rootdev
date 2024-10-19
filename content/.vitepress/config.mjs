@@ -1,7 +1,38 @@
 import { defineConfig } from 'vitepress'
+// Prévisualisation des liens
+import { 
+  InlineLinkPreviewElementTransform 
+} from '@nolebase/vitepress-plugin-inline-link-preview/markdown-it'
+// Github Changelog
+import { 
+  GitChangelog, 
+  GitChangelogMarkdownSection, 
+} from '@nolebase/vitepress-plugin-git-changelog/vite'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  vite: { 
+    plugins : [
+      GitChangelog({
+        repoURL: () => 'https://github.com/guilyandeurv/rootdev',
+      }),
+      GitChangelogMarkdownSection(),
+    ],
+    optimizeDeps: { 
+      exclude: [ 
+        '@nolebase/vitepress-plugin-enhanced-readabilities/client', 
+        '@nolebase/vitepress-plugin-inline-link-preview/client', 
+      ], 
+    }, 
+    ssr: { 
+      noExternal: [ 
+        // If there are other packages that need to be processed by Vite, you can add them here.
+        '@nolebase/vitepress-plugin-enhanced-readabilities', 
+        '@nolebase/vitepress-plugin-inline-link-preview',
+        '@nolebase/vitepress-plugin-highlight-targeted-heading', 
+      ], 
+    }, 
+  }, 
   lang: 'fr-FR',
   title: "RootDev",
   description: "Ressources personnelles concernant la cybersécurité, le développement et le réseau.",
@@ -206,5 +237,11 @@ export default defineConfig({
       message: 'Vous, et uniquement vous, êtes responsable de vos actes.',
       copyright: 'Copyright © 2024 - RootDev.fr par Guilyan - contact@rootdev.fr'
     }
+  },
+  markdown: { 
+    config(md) { 
+      // other markdown-it configurations...
+      md.use(InlineLinkPreviewElementTransform) 
+    } 
   }
 })
