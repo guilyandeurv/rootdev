@@ -207,6 +207,66 @@ La pyramide de douleur en cybersécurité aide les organisations à prioriser le
 TryHackMe reprend parfaitement ce concept dans son cours "Pyramid of Pain" disponible [ici](https://tryhackme.com/room/pyramidofpainax) *(gratuit)*.
 :::
 
+## Cyber ​​Kill Chain
+
+La chaîne d'attaque cybernétique est un modèle développé pour décrire les phases d'une attaque informatique, permettant ainsi d'identifier et de contrer les menaces à chaque étape. Ce modèle est souvent utilisé par les professionnels de la cybersécurité pour améliorer la détection et la réponse aux attaques. Voici une exploration des étapes de la chaîne d'attaque, avec des exemples pour illustrer chaque phase.
+
+1. **Reconnaissance**
+
+Il cherche des informations sur une entreprise cible. Par exemple, il utilise des outils comme Maltego pour cartographier les connexions et les réseaux sociaux de l'entreprise et ses employés.
+
+2. **Armement**
+
+Il crée une charge utile malveillante. Par exemple, il développe un cheval de Troie (Trojan) en utilisant un outil comme Metasploit et l'intègre dans un document PDF.
+
+3. **Livraison**
+
+Il envoie le document PDF malveillant à une victime par e-mail. Par exemple, il envoie un courriel d'hameçonnage (phishing) contenant le document PDF infecté, incitant la victime à l'ouvrir.
+
+4. **Exploitation**
+
+Lorsque la victime ouvre le PDF infecté, le code malveillant s'exécute. Par exemple, le PDF exploite une vulnérabilité du lecteur PDF de la victime pour exécuter du code.
+
+5. **Installation**
+
+Il installe un accès persistant sur la machine de la victime. Par exemple, il installe un backdoor pour garantir un accès continu à la machine compromise.
+
+6. **Commande et contrôle (C2)**
+
+Il établit une communication avec la machine compromise. Par exemple, il configure un serveur de commande et contrôle pour recevoir des instructions et exfiltrer des données.
+
+7. **Actions sur objectifs**
+
+Il réalise ses objectifs finaux. Par exemple, il exfiltre des données sensibles, comme des informations financières ou des secrets commerciaux, de la machine compromise.
+
+### Unified Kill Chain
+
+La modélisation des menaces, dans un contexte de cybersécurité, est une série d'étapes visant à améliorer la sécurité d'un système. La modélisation des menaces consiste à identifier les risques et se résume essentiellement à :
+
+1. Identifier les systèmes et les applications qui doivent être sécurisés et leur fonction dans l'environnement. Par exemple, le système est-il essentiel au fonctionnement normal et contient-il des informations sensibles telles que des informations de paiement ou des adresses ?
+2. Évaluer les vulnérabilités et les faiblesses de ces systèmes et applications et la manière dont elles pourraient être potentiellement exploitées
+3. Créer un plan d'action pour sécuriser ces systèmes et applications contre les vulnérabilités mises en évidence
+4. Mettre en place des politiques pour empêcher que ces vulnérabilités ne se reproduisent lorsque cela est possible (par exemple, mettre en œuvre un cycle de vie de développement logiciel (***SDLC***) pour une application ou former les employés à la sensibilisation au phishing).
+
+La modélisation des menaces est une procédure importante pour réduire les risques au sein d'un système ou d'une application, car elle crée une vue d'ensemble de haut niveau des actifs (asset) informatiques d'une organisation (un actif informatique est un logiciel ou un matériel) et des procédures pour résoudre les vulnérabilités.
+
+L'UKC peut encourager la modélisation des menaces car le cadre UKC aide à identifier les surfaces d'attaque potentielles et la manière dont ces systèmes peuvent être exploités.
+
+*STRIDE*, *DREAD* et *CVSS* (pour n'en citer que quelques-uns) sont tous des frameworks spécifiquement utilisés dans la modélisation des menaces. Si vous souhaitez en savoir plus, consultez la salle «[Principes de sécurité](https://tryhackme.com/room/principlesofsecurity)» sur *TryHackMe*.
+
+[Unified Kill Chain](https://www.unifiedkillchain.com/) de Paul Pols, publié en 2017, vise à compléter d'autres cadres de chaîne de destruction de cybersécurité, tels que ATT&CK de Lockheed Martin et de MITRE.
+
+L'UKC indique qu'une attaque se déroule en 18 phases : de la reconnaissance à l'exfiltration de données et à la compréhension des motivations d'un attaquant. Ces phases ont été regroupées dans cette salle en quelques domaines d'intérêt pour des raisons de concision, qui seront détaillés dans les tâches restantes.
+
+L'un des principaux avantages de l' UKC par rapport aux cadres traditionnels de chaîne de destruction de la cybersécurité est qu'il est moderne et extrêmement détaillé ( rappel : il comporte officiellement 18 phases, alors que d'autres cadres peuvent en avoir une petite poignée).
+
+![UKC](./img/ukc.png)
+
+*Image de l'UKC disponible sur [unifiedkillchain.com](https://www.unifiedkillchain.com/)*
+
+::: tip Ressources supplémentaires
+TryHackMe reprend parfaitement ce concept dans son cours "Unified Kill Chain" disponible [ici](https://tryhackme.com/r/room/unifiedkillchain) *(gratuit)*.
+:::
 
 <hr>
 <br>

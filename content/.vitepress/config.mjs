@@ -15,18 +15,18 @@ export default defineConfig({
       {
         text: "Contenu",
         items: [
-         { text: "Cybersécurité", link: "/cybersecurite/index" },
-         { text: "Programmation", link: "/programmation/index" },
-         { text: "Certifications", link: "/certification/introduction" },
-         { text: 'Réseaux', link: '/reseaux/' },
-         { text: 'Environnement', link: '/environnement/linux' },
+         { text: "🔐 Cybersécurité", link: "/cybersecurite/index" },
+         { text: "📟 Programmation", link: "/programmation/index" },
+         { text: "🎖️ Certifications", link: "/certification/introduction" },
+         { text: '🛜 Réseaux', link: '/reseaux/' },
+         { text: '🖥️ Environnement', link: '/environnement/linux' },
         ],
       },
     ],
 
     sidebar: [
       {
-        text: 'Cybersécurité',
+        text: '🔐 Cybersécurité',
         collapsed:true,
         items: [
           { text: 'Introduction', link: '/cybersecurite/' },
@@ -79,7 +79,7 @@ export default defineConfig({
         ],
       },
       {
-        text: 'Programmation',
+        text: '📟 Programmation',
         collapsed:true,
         items: [
           { text: 'Javascript',
@@ -124,7 +124,7 @@ export default defineConfig({
         ]
       },
       {
-        text: 'Certification',
+        text: '🎖️ Certification',
         collapsed:true,
         items: [
           { text: 'Introduction', link: '/certification/introduction' },
@@ -159,14 +159,14 @@ export default defineConfig({
                     { text: 'Méthodologie du développement', link: 'certification/securityplus/dev/soft-dev'},
                     { text: 'Développer qualitativement', link: 'certification/securityplus/dev/soft-quali'},
                     { text: "Attaques d'applications", link: 'certification/securityplus/dev/soft-att'},
-                    { text: "Pratiques de développement sécurisé", link: 'certification/securityplus/dev/sec-dev'},
+                    { text: "Pratiques de développement sécurisées", link: 'certification/securityplus/dev/sec-dev'},
                   ]},
               ]},
           { text: 'CompTia Pentest+', link: '/certification/pentestplus' },
         ]
       },
       {
-        text: 'Réseaux',
+        text: '🛜 Réseaux',
         collapsed:true,
         items: [
           { text: 'Introduction', link: '/reseaux/' },
@@ -182,7 +182,7 @@ export default defineConfig({
         ]
       },
       {
-        text: 'Environnement',
+        text: '🖥️ Environnement',
         collapsed:true,
         items: [
           { text: 'Linux', link: '/environnement/linux' },

@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "full": "^1.0.1",
-    "fund": "^1.0.0"
+    "fund": "^1.0.0",
+    "giscus": "^1.5.0",
+    "viewerjs": "^1.11.6",
+    "vitepress-plugin-comment-with-giscus": "^1.1.15"
   }
 }
