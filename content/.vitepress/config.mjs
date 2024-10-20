@@ -2,30 +2,36 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  locales: {
+    root: {
+      label: 'Français',
+      lang: 'fr'
+    },
+  },
+  // Enhanced readabilities : https://nolebase-integrations.ayaka.io/pages/en/integrations/vitepress-plugin-enhanced-readabilities/
   vite: { 
     optimizeDeps: { 
       exclude: [ 
         '@nolebase/vitepress-plugin-enhanced-readabilities/client', 
-        'vitepress', 
-        '@nolebase/ui', 
+        'vitepress',
+        '@nolebase/ui',
       ], 
     }, 
     ssr: { 
       noExternal: [ 
         // If there are other packages that need to be processed by Vite, you can add them here.
-        '@nolebase/vitepress-plugin-enhanced-readabilities', 
+        '@nolebase/vitepress-plugin-enhanced-readabilities',
+        '@nolebase/vitepress-plugin-highlight-targeted-heading',  
         '@nolebase/ui',
       ], 
     }, 
   }, 
-  lang: 'fr-FR',
+  lang : 'fr-FR',
   title: "RootDev",
   description: "Ressources personnelles concernant la cybersécurité, le développement et le réseau.",
   themeConfig: {
-    lastUpdated: 'Dernière mise à jour',
     logo: "logo.png",
-    siteTitle: "RootDev",
-    head: [['link', { rel: 'icon', href: 'favicon.ico' }]],
+    // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Accueil', link: '/' },
       {
@@ -98,7 +104,7 @@ export default defineConfig({
         text: '📟 Programmation',
         collapsed:true,
         items: [
-          { text: 'Javascript',
+          { text: '<i class="fa-brands fa-square-js"></i> Javascript',
             collapsed:true,
             items: [
               { text: 'Introduction', link: '/programmation/javascript/index' },
@@ -115,7 +121,7 @@ export default defineConfig({
             items: [
               { text: 'Introduction', link: '/programmation/c/index' },
             ]},
-          { text: 'Python',
+          { text: '<i class="fa-brands fa-python"></i> Python',
             collapsed:true,
             items: [
               { text: 'Introduction', link: '/programmation/python/index' },
@@ -201,8 +207,8 @@ export default defineConfig({
         text: '🖥️ Environnement',
         collapsed:true,
         items: [
-          { text: 'Linux', link: '/environnement/linux' },
-          { text: 'Active Directory', link: '/environnement/ad' },
+          { text: '<i class="fa-brands fa-linux"></i> Linux', link: '/environnement/linux' },
+          { text: '<i class="fa-brands fa-microsoft"></i> Active Directory', link: '/environnement/ad' },
           { text: 'Cisco', link: '/environnement/cisco' },
         ]
       },
@@ -215,12 +221,23 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/guilyandeurv' }
     ],
     docFooter: {
-			prev: "Précédent",
-			next: "Suivant"
+			prev: "Page précédente",
+			next: "Page suivante"
 		  },
     footer: {
       message: 'Vous, et uniquement vous, êtes responsable de vos actes.',
       copyright: 'Copyright © 2024 - RootDev.fr par Guilyan - contact@rootdev.fr'
+    },
+    editLink: {
+      pattern: 'https://github.com/guilyandeurv/rootdev-v2/edit/main/docs/:path',
+      text: 'Editer cette page'
+    },
+    lastUpdated: {
+      text: 'Mise à jour le ',
+      formatOptions: {
+        dateStyle: 'full',
+        timeStyle: 'medium'
+      }
     }
   }
 })
