@@ -10,6 +10,7 @@ export default defineConfig({
   },
   // Enhanced readabilities : https://nolebase-integrations.ayaka.io/pages/en/integrations/vitepress-plugin-enhanced-readabilities/
   vite: {
+    css: { preprocessorOptions: { scss: { api: 'modern' } } },
     optimizeDeps: { 
       exclude: [ 
         '@nolebase/vitepress-plugin-enhanced-readabilities/client',
@@ -238,6 +239,6 @@ export default defineConfig({
         dateStyle: 'full',
         timeStyle: 'medium'
       }
-    }
+    },
   }
 })

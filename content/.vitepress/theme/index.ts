@@ -30,7 +30,6 @@ import {
   NolebaseHighlightTargetedHeading,  
 } from '@nolebase/vitepress-plugin-highlight-targeted-heading/client'
 
-
 export default {
   extends: DefaultTheme,
   Layout: () => {
