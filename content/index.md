@@ -40,8 +40,6 @@ Ce serait une erreur de proposer de telles connaissances en ayant qu'une seule s
 
 [TryHackMe](https://tryhackme.com) : permet la pratique ainsi que l'apprentissage
 
-<iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=2216910" style='border:none;'></iframe>
-
 [Cisco | Skills For All](https://skillsforall.com) : permet la préparation aux certifications
 
 [Udemy](https://udemy.com) : exploite la connaissance des professeurs
