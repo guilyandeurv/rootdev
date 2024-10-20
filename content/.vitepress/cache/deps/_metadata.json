@@ -1,55 +1,55 @@
 {
-  "hash": "8261b298",
+  "hash": "4d888c03",
   "configHash": "90c211c3",
-  "lockfileHash": "b1da11b2",
-  "browserHash": "ac1a1eac",
+  "lockfileHash": "bbe80a61",
+  "browserHash": "d72eecca",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "fa87e093",
+      "fileHash": "ca693461",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "f1db4ffa",
+      "fileHash": "20fb3f26",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "fe8de28c",
+      "fileHash": "bde6a0e0",
       "needsInterop": false
     },
     "vitepress > @vueuse/integrations/useFocusTrap": {
       "src": "../../../../node_modules/@vueuse/integrations/useFocusTrap.mjs",
       "file": "vitepress___@vueuse_integrations_useFocusTrap.js",
-      "fileHash": "dbb65542",
+      "fileHash": "6ff42f6a",
       "needsInterop": false
     },
     "vitepress > mark.js/src/vanilla.js": {
       "src": "../../../../node_modules/mark.js/src/vanilla.js",
       "file": "vitepress___mark__js_src_vanilla__js.js",
-      "fileHash": "849c9443",
+      "fileHash": "3b652508",
       "needsInterop": false
     },
     "vitepress > minisearch": {
       "src": "../../../../node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "3e1f223c",
+      "fileHash": "7570eb21",
       "needsInterop": false
     },
     "@theojs/lumen": {
       "src": "../../../../node_modules/@theojs/lumen/components/index.ts",
       "file": "@theojs_lumen.js",
-      "fileHash": "8fda3342",
+      "fileHash": "1bf230b6",
       "needsInterop": false
     },
     "@nolebase/vitepress-plugin-highlight-targeted-heading/client": {
       "src": "../../../../node_modules/@nolebase/vitepress-plugin-highlight-targeted-heading/dist/client/index.mjs",
       "file": "@nolebase_vitepress-plugin-highlight-targeted-heading_client.js",
-      "fileHash": "0d03869e",
+      "fileHash": "e6d1e125",
       "needsInterop": false
     }
   },

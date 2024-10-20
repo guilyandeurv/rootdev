@@ -2,9 +2,16 @@
 import { h } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
-import './style.css'
-// Thème Lumen
-import '@theojs/lumen/theme'
+import './all.scss'
+import './badge.scss'
+import './button.scss'
+import './colors.scss'
+import './doc-blocks.scss'
+import './doc.scss'
+import './home-links.scss'
+import './home.scss'
+import './icon.scss'
+import './picture.scss'
 // Lien sur page d'accueil pour les annonces
 import { Announcement } from '@theojs/lumen'
 // Lien sur le técô
