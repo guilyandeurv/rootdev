@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import path from 'path'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -9,13 +10,13 @@ export default defineConfig({
     },
   },
   // Enhanced readabilities : https://nolebase-integrations.ayaka.io/pages/en/integrations/vitepress-plugin-enhanced-readabilities/
-  vite: { 
+  vite: {
     optimizeDeps: { 
       exclude: [ 
-        '@nolebase/vitepress-plugin-enhanced-readabilities/client', 
+        '@nolebase/vitepress-plugin-enhanced-readabilities/client',
         'vitepress',
         '@nolebase/ui',
-      ], 
+      ],
     }, 
     ssr: { 
       noExternal: [ 
