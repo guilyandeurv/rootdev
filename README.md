@@ -1,10 +1,10 @@
-![Logo Rootdev](/content/public/logo-texte.png)
+<img src="/content/public/logo-texte.png" width="100" height="100">
 
 Ressources personnelles concernant la cybersécurité, le développement et le réseau.
 
 <hr>
 
-## [RootDev.fr](https://www.rootdev.fr) ![logo](/content/public/logo.png)
+## [RootDev.fr](https://www.rootdev.fr) <img src="/content/public/logo.png" width="100" height="100">
 
 Se met à jour automatiquement à chaque commit sur la branche `main` via [Kinsta.com](kinsta.com)
 
