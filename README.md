@@ -1,4 +1,4 @@
-<img src="/content/public/logo-texte.png" width="700" height="400">
+<img src="/content/public/logo-texte.png" width="700" height="300">
 
 Ressources personnelles concernant la cybersécurité, le développement et le réseau.
 
