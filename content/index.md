@@ -6,7 +6,7 @@ hero:
   text: "Cybersécurité & développement"
   tagline: "Ressources en constante rédaction"
   image:
-    src: logo.png
+    src: logov2.png
     alt: logo
   actions:
     - theme: brand
