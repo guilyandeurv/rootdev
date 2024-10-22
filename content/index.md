@@ -14,7 +14,7 @@ hero:
       link: /cybersecurite/
   prelink: 
     title: '<i class="fa-brands fa-github" style="color: #63E6BE;"></i> Projet GitHub</p>'
-    link: https://github.com/guilyandeurv/rootdev-v2
+    link: https://github.com/guilyandeurv/rootdev
     target: _blank
 ---
 

@@ -29,6 +29,8 @@ import '@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css'
 import {  
   NolebaseHighlightTargetedHeading,  
 } from '@nolebase/vitepress-plugin-highlight-targeted-heading/client'
+// Page info
+import PageInfo from '../components/PageInfo.vue'
 
 export default {
   extends: DefaultTheme,
@@ -53,9 +55,11 @@ export default {
       'layout-top': () => [ 
         h(NolebaseHighlightTargetedHeading), 
       ],
+      // Page info
+      'aside-top': () => h(PageInfo),
     })
   },
   enhanceApp({ app, router, siteData }) {
-    
+    app.component('PageInfo', PageInfo)
   }
 } satisfies Theme
