@@ -31,6 +31,9 @@ import {
 } from '@nolebase/vitepress-plugin-highlight-targeted-heading/client'
 // Page info
 import PageInfo from '../components/PageInfo.vue'
+// Reading progress
+import Layout from './Layout.vue'
+import ReadingProgress from '../components/ReadingProgress.vue'
 
 export default {
   extends: DefaultTheme,
@@ -53,7 +56,7 @@ export default {
       'nav-screen-content-after': () => h(NolebaseEnhancedReadabilitiesScreenMenu), 
       // A highlight targeted headings
       'layout-top': () => [ 
-        h(NolebaseHighlightTargetedHeading), 
+        h(NolebaseHighlightTargetedHeading), h(ReadingProgress),
       ],
       // Page info
       'aside-top': () => h(PageInfo),
