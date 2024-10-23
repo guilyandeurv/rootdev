@@ -19,12 +19,14 @@
         <span class="emoji">🚧</span> En cours de rédaction
       </div>
     </div>
+    <FocusMode />
   </div>
 </template>
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import { useData } from 'vitepress'
+import FocusMode from './FocusMode.vue'
 
 const { frontmatter, page } = useData()
 const isReady = ref(false)
