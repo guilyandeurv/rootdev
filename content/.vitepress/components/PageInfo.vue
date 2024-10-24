@@ -31,7 +31,6 @@ import FocusMode from './FocusMode.vue'
 const { frontmatter, page } = useData()
 const route = useRoute()
 const isReady = ref(false)
-
 const wordCount = ref(0)
 
 const readingTime = computed(() => Math.max(1, Math.ceil(wordCount.value / 200)))
@@ -44,12 +43,14 @@ const formattedDate = computed(() => {
 })
 
 const countWords = () => {
-  nextTick(() => {
-    const content = document.querySelector('.vp-doc')?.textContent || ''
-    wordCount.value = content.trim().split(/\s+/).filter(word => word.length > 0).length
-    console.log('Nombre de mots comptés:', wordCount.value) // Pour le débogage
-    isReady.value = true
-  })
+  if (typeof window !== 'undefined') {
+    nextTick(() => {
+      const content = document.querySelector('.vp-doc')?.textContent || ''
+      wordCount.value = content.trim().split(/\s+/).filter(word => word.length > 0).length
+      console.log('Nombre de mots comptés:', wordCount.value) // Pour le débogage
+      isReady.value = true
+    })
+  }
 }
 
 watch(() => route.path, () => {
