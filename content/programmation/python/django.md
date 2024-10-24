@@ -154,6 +154,17 @@ On a le répertoire racine de notre repository `Projet/`, qui contient les fichi
 * **app/app/settings.py** - la configuration de l'ensemble du projet
 * **app/listings/**- le répertoire de l’application généré par `python manage.py startapp listings`
 
+<FileTree content="
+- app/
+  - app/
+    - settings.py
+- listings/
+    - []
+- db.sqlite3
+- .gitignore
+- manage.py
+"/>
+
 ## Création d'une nouvelle page
 
 Pour créer une nouvelle page, on va ouvrir le fichier `listings/views.py` et éditer le code suivant :

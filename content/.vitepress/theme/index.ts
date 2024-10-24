@@ -34,6 +34,10 @@ import PageInfo from '../components/PageInfo.vue'
 // Reading progress
 import Layout from './Layout.vue'
 import ReadingProgress from '../components/ReadingProgress.vue'
+// FileTree
+import FileTree from '../components/FileTree.vue'
+// TreeItem
+import TreeItem from '../components/TreeItem.vue'
 
 export default {
   extends: DefaultTheme,
@@ -64,5 +68,7 @@ export default {
   },
   enhanceApp({ app, router, siteData }) {
     app.component('PageInfo', PageInfo)
+    app.component('FileTree', FileTree)
+    app.component('TreeItem', TreeItem)
   }
 } satisfies Theme
