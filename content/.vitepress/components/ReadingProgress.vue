@@ -1,5 +1,5 @@
 <template>
-  <div class="reading-progress-container">
+  <div v-if="!isHomePage" class="reading-progress-container">
     <div class="progress-bar" :style="{ width: progress + '%' }"></div>
     <button v-show="showScrollTop" @click="scrollToTop" class="scroll-top-button" aria-label="Retour en haut de la page">
       <span class="emoji">⬆️</span>
@@ -8,7 +8,11 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, computed } from 'vue'
+import { useRoute } from 'vitepress'
+
+const route = useRoute()
+const isHomePage = computed(() => route.path === '/')
 
 const progress = ref(0)
 const showScrollTop = ref(false)
@@ -28,12 +32,16 @@ const scrollToTop = () => {
 }
 
 onMounted(() => {
-  window.addEventListener('scroll', updateProgress)
-  updateProgress()
+  if (!isHomePage.value) {
+    window.addEventListener('scroll', updateProgress)
+    updateProgress()
+  }
 })
 
 onUnmounted(() => {
-  window.removeEventListener('scroll', updateProgress)
+  if (!isHomePage.value) {
+    window.removeEventListener('scroll', updateProgress)
+  }
 })
 </script>
 
@@ -79,4 +87,3 @@ onUnmounted(() => {
   font-size: 1.2em;
 }
 </style>
-
