@@ -1,3 +1,4 @@
 node_modules
 content/.vitepress/cache
 content/.vitepress/dist
+content/markdown.md
