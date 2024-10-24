@@ -24,17 +24,15 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
-import { useData } from 'vitepress'
+import { ref, computed, watch, onMounted, nextTick } from 'vue'
+import { useData, useRoute } from 'vitepress'
 import FocusMode from './FocusMode.vue'
 
 const { frontmatter, page } = useData()
+const route = useRoute()
 const isReady = ref(false)
 
-const wordCount = computed(() => {
-  const content = document.querySelector('.vp-doc')?.textContent || ''
-  return content.trim().split(/\s+/).filter(word => word.length > 0).length
-})
+const wordCount = ref(0)
 
 const readingTime = computed(() => Math.max(1, Math.ceil(wordCount.value / 200)))
 const isInProgress = computed(() => frontmatter.value.redac === true)
@@ -45,10 +43,22 @@ const formattedDate = computed(() => {
   return date.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })
 })
 
-onMounted(() => {
-  setTimeout(() => {
+const countWords = () => {
+  nextTick(() => {
+    const content = document.querySelector('.vp-doc')?.textContent || ''
+    wordCount.value = content.trim().split(/\s+/).filter(word => word.length > 0).length
+    console.log('Nombre de mots comptés:', wordCount.value) // Pour le débogage
     isReady.value = true
-  }, 100)
+  })
+}
+
+watch(() => route.path, () => {
+  isReady.value = false
+  countWords()
+}, { immediate: true })
+
+onMounted(() => {
+  countWords()
 })
 </script>
 
