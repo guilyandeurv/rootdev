@@ -1,5 +1,7 @@
 ---
 sidebar: auto
+redac: true
+date: 2024-*-*
 ---
 # Injection de commandes 
 <Badge type="tip" text="Rédigé le */*/2024" />

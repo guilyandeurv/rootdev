@@ -1,7 +1,9 @@
+---
 sidebar: auto
+redac: true
+date: 2024-03-23
+---
 # Les réseaux étendus (WAN)
-<Badge type="tip" text="Rédigé le 23/03/2024" />
-<Badge type="warning" text="En cours de rédaction" />
 
 WAN : Wide Area Network
 

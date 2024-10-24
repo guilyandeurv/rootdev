@@ -1,5 +1,7 @@
 ---
 sidebar: auto
+redac: true
+date: 2024-03-17
 ---
 # L'environnement Cisco
 <Badge type="tip" text="Rédigé le 17/03/2024" />

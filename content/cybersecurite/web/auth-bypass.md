@@ -1,9 +1,9 @@
 ---
 sidebar: auto
+redac: true
+date: 2024-06-27
 ---
 # Contournement de l'authentification 
-<Badge type="tip" text="Rédigé le 27/06/2024" />
-<Badge type="warning" text="En cours de rédaction" />
 
 Ces failles, connues pour leur criticité, permettent le contournement de l'authentification du client. Cela peut amener à des fuites de données personnelles, et donc leur correction est primordial.
 

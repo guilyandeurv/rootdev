@@ -1,9 +1,9 @@
 ---
 sidebar: auto
+redac: true
+date: 2024-08-09
 ---
 # Introduction à Ruby
-<Badge type="tip" text="Rédigé le 09/08/2024" />
-<Badge type="warning" text="En cours de rédaction" />
 
 ## Interactive Ruby
 Une première approche de Ruby, la plus simple, consiste à utiliser IRB (Interactive Ruby) dans un terminal :

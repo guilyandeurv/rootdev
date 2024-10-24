@@ -1,9 +1,9 @@
 ---
 sidebar: auto
+redac: true
+date: 2024-10-15
 ---
 # Programmation 
-<Badge type="tip" text="Rédigé le 15/10/2024" />
-<Badge type="warning" text="En cours de rédaction" />
 
 ## Python
 

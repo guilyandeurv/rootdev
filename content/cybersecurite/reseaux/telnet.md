@@ -1,5 +1,6 @@
 ---
 sidebar: auto
+date: 2024-04-21
 ---
 # Protocole Telnet
 <Badge type="tip" text="Rédigé le 21/04/2024" />

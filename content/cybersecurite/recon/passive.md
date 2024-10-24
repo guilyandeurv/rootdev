@@ -1,9 +1,9 @@
 ---
 sidebar: auto
+redac: true
+date: 2024-03-17
 ---
 # La reconnaissance passive
-<Badge type="tip" text="Rédigé le 17/03/2024" />
-<Badge type="warning" text="En cours de rédaction" />
 
 La reconnaissance passive est le premier acte d'un test d'intrusion. Il permet d'en apprendre davantage sur la cible en terme de connaissances publiques.
 Cette étape à pour intérêt de récupérer quelconque information qui pourrait se montrer utile dans l'intrusion plus tard.

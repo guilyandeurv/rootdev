@@ -1,8 +1,8 @@
 ---
 sidebar: auto
+date: 2024-02-26
 ---
 # PRINCIPALES DEFINTIONS DE LA CYBERSECURITE 
-<Badge type="warning" text="En cours de rédaction" />
 
 ## L'authentification
 

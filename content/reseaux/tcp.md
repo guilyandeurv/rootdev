@@ -1,8 +1,9 @@
 ---
 sidebar: auto
+redac: true
+date: 2024-03-24
 ---
 # Le modèle TCP/IP
-<Badge type="tip" text="Rédigé le 24/03/2024" />
 
 Le modèle TCP/IP est, à bien des égards, très similaire au modèle OSI. Il a quelques années de plus et sert de base à un réseautage réel. Le modèle TCP/IP se compose de quatre couches : **application**, **transport**, **Internet** et **interface réseau**. Ensemble, ceux-ci couvrent le même éventail de fonctions que les sept couches du modèle OSI.
 

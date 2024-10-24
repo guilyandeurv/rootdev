@@ -1,8 +1,9 @@
 ---
 sidebar: auto
+redac: true
+date: 2024-03-24
 ---
 # Le modèle OSI (Open Systems Interconnection)
-<Badge type="tip" text="Rédigé le 24/03/2024" />
 
 OSI est un modèle standardisé qui est utilisé pour démontrer la théorie derrière les réseaux informatiques. En pratique, il s'agit du [modèle TCP/IP](tcp) le plus "compact" sur lequel est basé le réseau du monde réel.
 

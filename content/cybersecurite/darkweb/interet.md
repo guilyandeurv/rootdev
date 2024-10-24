@@ -1,8 +1,8 @@
 ---
 sidebar: auto
+date: 2024-04-19
 ---
 # Les intérêts du Dark Web
-<Badge type="tip" text="Rédigé le 19/04/2024" />
 
 Le Dark Web présente également des avantages, en particulier dans des contextes légitimes.
 

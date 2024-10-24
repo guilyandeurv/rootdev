@@ -1,5 +1,6 @@
 ---
 sidebar: auto
+date: 2024-*-*
 ---
 # Wireshark 
 <Badge type="tip" text="Rédigé le */*/2024" />

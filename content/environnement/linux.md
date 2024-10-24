@@ -1,5 +1,7 @@
 ---
 sidebar: auto
+redac: true
+date: 2024-03-14
 ---
 # Les fondamentaux de Linux
 <Badge type="tip" text="Rédigé le 14/03/2024" />

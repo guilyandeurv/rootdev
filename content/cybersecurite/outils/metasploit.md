@@ -1,5 +1,7 @@
 ---
 sidebar: auto
+redac: true
+date: 2024-*-*
 ---
 # Metasploit
 <Badge type="tip" text="Rédigé le */*/2024" />

@@ -3,9 +3,12 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   locales: {
-    root: {
+    '/': {
       label: 'Français',
-      lang: 'fr'
+      lang: 'fr',
+      toc: {
+        title: 'Sur cette page'
+      }
     },
   },
   // Enhanced readabilities : https://nolebase-integrations.ayaka.io/pages/en/integrations/vitepress-plugin-enhanced-readabilities/

@@ -1,11 +1,10 @@
 ---
 sidebar: auto
+date: 2024-02-26
 ---
 # PRINCIPES DE SECURITE 
-<Badge type="tip" text="Rédigé le 26/02/2024" />
-<Badge type="warning" text="En cours de rédaction" />
-::: tip Bases de la cybersécurité
 
+::: tip Bases de la cybersécurité
 On va décrire ici les principaux fondamentaux de la sécurité, notamment les cadres utilisés pour protéger les données et les systèmes.
 Les mesures, cadres & protocoles que l'on va découvrir sont utiles au rôle de la "défense en profondeur", qui consiste à utiliser plusieurs couches de sécurité variées pour les systèmes et les données d'une organisation, afin qu'elles assurent la redondance de la sécurisation d'une organisation.
 :::

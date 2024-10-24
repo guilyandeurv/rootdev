@@ -1,8 +1,9 @@
 ---
 sidebar: auto
+redac: true
+date: 2024-03-13
 ---
 # Les réseaux locaux (LAN) 
-<Badge type="tip" text="Rédigé le 13/03/2024" />
 
 LAN : Local Area Network
 

@@ -1,6 +1,9 @@
 ---
 sidebar: auto
+redac: true
+date: 2024-10-24
 ---
+<br>
 # Tests des composants
 
 <FileTree content="

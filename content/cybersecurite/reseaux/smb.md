@@ -1,8 +1,8 @@
 ---
 sidebar: auto
+date: 2024-04-17
 ---
 # Protocole SMB
-<Badge type="tip" text="Rédigé le 17/04/2024" />
 
 ## Introduction à SMB
 

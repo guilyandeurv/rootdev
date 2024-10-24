@@ -1,5 +1,7 @@
 ---
 sidebar: auto
+redac: true
+date: 2024-10-15
 ---
 
 # Introduction au langage C

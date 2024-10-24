@@ -1,9 +1,9 @@
 ---
 sidebar: auto
+redac: true
+date: 2024-04-02
 ---
 # Les Firewall
-<Badge type="tip" text="Rédigé le 02/04/2024" />
-<Badge type="warning" text="En cours de rédaction" />
 
 ## Introduction
 

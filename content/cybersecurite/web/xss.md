@@ -1,5 +1,7 @@
 ---
 sidebar: auto
+redac: true
+date: 2024-10-16
 ---
 # Failles XSS 
 <Badge type="tip" text="Rédigé le 16/10/2024" />
@@ -102,7 +104,8 @@ Les attaques XSS peuvent avoir un impact important sur la sécurité d'une appli
 
 Selon le contexte et la nature de la vulnérabilité XSS, les dommages potentiels peuvent être très importants pour les utilisateurs et l'entreprise propriétaire de l'application web.
 
-
+<br>
+<hr>
 
 ::: info Sources
 Ce cours s'inspire (et utilise les images) de TryHackMe.com de la chambre "*Introduction to Web Hacking*" :

@@ -1,5 +1,7 @@
 ---
 sidebar: auto
+redac: true
+date: 2024-*-*
 ---
 # Énumération des sous-domaines 
 <Badge type="tip" text="Rédigé le */*/2024" />

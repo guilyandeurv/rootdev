@@ -1,9 +1,9 @@
 ---
 sidebar: auto
+redac: true
+date: 2024-03-24
 ---
 # Nmap
-<Badge type="tip" text="Rédigé le 24/03/2024" />
-<Badge type="warning" text="En cours de rédaction" />
 
 ## Introduction & explications
 

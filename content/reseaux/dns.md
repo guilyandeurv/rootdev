@@ -1,8 +1,9 @@
 ---
 sidebar: auto
+redac: true
+date: 2024-03-16
 ---
 # Le Domain Name System (DNS)
-<Badge type="tip" text="Rédigé le 16/03/2024" />
 
 Le DNS permet de communiquer avec les appareils sur Internet sans nous souvenir de nombres complexes. Quand on veut visiter un site web, il n'est pas vraiment pratique de se souvenir de son adresse IP, et c'est là que le DNS peut aider. Donc au lieu de vous souvenir de 104.26.10.110, on se souvient de rootdev.fr à la place.
 

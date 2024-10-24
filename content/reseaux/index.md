@@ -1,5 +1,6 @@
 ---
 sidebar: auto
+redac: true
+date: 2024-*-*
 ---
 # Index sur les réseaux
-<Badge type="warning" text="En cours de rédaction" />

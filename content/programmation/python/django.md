@@ -1,9 +1,10 @@
 ---
 sidebar: auto
+redac: true
+date: 2024-08-19
 ---
 # Le framework Django
-<Badge type="tip" text="Rédigé le 19/08/2024" />
-<Badge type="warning" text="En cours de rédaction" />
+
 
 ## Introduction
 Django est un framework Python qui permet de créer des applications web rapidement et facilement. Il est conçu pour être facile à utiliser et à personnaliser. Il est composé de plusieurs modules qui peuvent être utilisés pour créer des applications web. 

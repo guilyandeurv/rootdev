@@ -1,5 +1,7 @@
 ---
 sidebar: auto
+redac: true
+date: 2024-*-*
 ---
 # Inclusion de fichiers 
 <Badge type="tip" text="Rédigé le */*/2024" />

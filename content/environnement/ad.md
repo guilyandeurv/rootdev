@@ -1,9 +1,10 @@
 ---
 sidebar: auto
+redac: true
+date: 2024-03-14
 ---
 # Les fondamentaux de l'Active Directory
-<Badge type="tip" text="Rédigé le 14/03/2024" />
-<Badge type="warning" text="En cours de rédaction" />
+
 
 L'Active Directory (AD) est un service d'annuaire développé par Microsoft pour les réseaux basés sur Windows. Il est utilisé pour gérer les ressources réseau telles que les utilisateurs, les ordinateurs, les groupes et les politiques de groupe. L'Active Directory est un composant central dans de nombreux environnements réseau Windows. En comprenant ses fonctionnalités de base telles que les domaines, les groupes, les politiques de groupe et les méthodes d'authentification, on peut mieux gérer et sécuriser des infrastructures réseaux.
 

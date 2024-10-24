@@ -1,8 +1,9 @@
 ---
 sidebar: auto
+redac: true
+date: 2024-03-16
 ---
 # L'HyperText Transfer Protocol (HTTP)
-<Badge type="tip" text="Rédigé le 16/03/2024" />
 
 ## HTTP & HTTPS
 

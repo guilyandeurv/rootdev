@@ -1,5 +1,6 @@
 ---
 sidebar: auto
+date: 2024-04-19
 ---
 # Dark Web
 <Badge type="tip" text="Rédigé le 19/04/2024" />

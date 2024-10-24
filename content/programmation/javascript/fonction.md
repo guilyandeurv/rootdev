@@ -1,5 +1,7 @@
 ---
 sidebar: auto
+redac: true
+date: 2024-03-20
 ---
 
 # Tutoriel sur les Fonctions en JavaScript

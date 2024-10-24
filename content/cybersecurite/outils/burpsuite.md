@@ -1,9 +1,9 @@
 ---
 sidebar: auto
+redac: true
+date: 2024-06-02
 ---
 # Burp Suite 
-<Badge type="tip" text="Rédigé le 02/06/2024" />
-<Badge type="warning" text="En cours de rédaction" />
 
 ## Introduction
 

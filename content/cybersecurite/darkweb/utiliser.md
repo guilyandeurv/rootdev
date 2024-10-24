@@ -1,8 +1,8 @@
 ---
 sidebar: auto
+date: 2024-04-19
 ---
 # Accéder au Dark Web
-<Badge type="tip" text="Rédigé le 20/04/2024" />
 
 ## TOR
 

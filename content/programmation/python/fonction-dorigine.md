@@ -1,9 +1,9 @@
 ---
 sidebar: auto
+redac: true
+date: 2024-08-18
 ---
 # Les fonctions d'origine
-<Badge type="tip" text="Rédigé le 18/08/2024" />
-<Badge type="warning" text="En cours de rédaction" />
 
 Les fonctions "d'origine", familièrement appelées, sont les fonctions disponibles dans Python dès son installation. Plusieurs ont été citées plus haut, elles ont un intérêt dans la conception des programmes, que ce soit pour organiser des listes, vérifier des données, etc.
 
