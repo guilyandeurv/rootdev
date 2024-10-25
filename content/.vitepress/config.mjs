@@ -71,6 +71,16 @@ export default defineConfig({
               { text: 'Ses intérêts', link: '/cybersecurite/darkweb/interet' },
               { text: "L'utiliser", link: '/cybersecurite/darkweb/utiliser' },
             ]},
+          { text: 'Développement de malware',
+              collapsed:true,
+              items: [
+                { text: 'Introduction', link: '/cybersecurite/malware-dev/index' },
+              ]},
+          { text: 'Reverse engineering',
+              collapsed:true,
+              items: [
+                { text: 'Introduction', link: '/cybersecurite/reverse-engineering/index' },
+            ]},
           { text: 'Attaques web',
             collapsed:true,
             items: [
