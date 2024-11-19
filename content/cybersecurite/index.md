@@ -267,6 +267,102 @@ L'un des principaux avantages de l' UKC par rapport aux cadres traditionnels de 
 TryHackMe reprend parfaitement ce concept dans son cours "Unified Kill Chain" disponible [ici](https://tryhackme.com/r/room/unifiedkillchain) *(gratuit)*.
 :::
 
+### Les phases de la Unified Kill Chain (UKC)
+
+#### 1. Reconnaissance (***MITRE Tactic TA0043***)
+
+Cette phase de la UKC décrit les techniques que l'adversaire utilise pour rassembler des informations relatives à sa cible. Cela peut être réalisé par des moyens de reconnaissance passive et active.
+
+*Exemples :*
+
+* **Découverte des systèmes et services** : identifier les systèmes et services en cours d'exécution sur la cible, informations utiles pour les phases de weaponisation et d'exploitation.
+
+* **Listes de contacts ou d'employés** : trouver des listes de contacts ou d'employés qui peuvent être impersonnés ou utilisés dans une attaque de phishing ou d'ingénierie sociale.
+
+* **Recherche de credentials** : rechercher des credentials potentiels utiles pour les phases de pivotement ou d'accès initial.
+
+* **Compréhension de la topologie du réseau** : comprendre la topologie du réseau et les autres systèmes réseau pour pivoter vers eux.
+
+#### 2. Weaponization (***MITRE Tactic TA0001***)
+
+Cette phase de la UKC décrit la mise en place par l'adversaire de l'infrastructure nécessaire pour mener l'attaque. Par exemple, cela peut inclure la configuration d'un serveur de command and control ou d'un système capable de capturer des reverse shells et de livrer des payloads au système.
+
+*Exemples :*
+
+* **Configuration d'un serveur de command and control** : établir un serveur pour gérer les communications entre l'attaquant et le système cible.
+
+* **Livraison de payloads** : livrer des payloads au système cible pour exécuter des actions malveillantes.
+
+#### 3. Ingénierie Sociale (***MITRE Tactic TA0001***)
+
+Cette phase de la UKC décrit les techniques que l'adversaire peut employer pour manipuler les employés afin qu'ils effectuent des actions aidant l'attaque.
+
+*Exemples :*
+
+* **Ouvrir un attachement malveillant** : inciter un utilisateur à ouvrir un attachement malveillant.
+
+* **Impersonner une page web** : impersonner une page web pour obtenir les credentials de l'utilisateur.
+
+* **Appel ou visite pour impersonner un utilisateur** : appeler ou visiter la cible en impersonnant un utilisateur pour demander un réinitialisation de mot de passe ou accéder à des zones restreintes du site[2][4].
+
+#### 4. Exploitation (***MITRE Tactic TA0002***)
+
+Cette phase de la UKC décrit comment l'attaquant profite des faiblesses ou vulnérabilités présentes dans un système. La UKC définit l'exploitation comme l'abus de vulnérabilités pour exécuter du code.
+
+*Exemples :*
+
+* **Exécuter une reverse shell** : télécharger et exécuter une reverse shell sur une application web.
+
+* **Interférer avec un script automatique** : interferer avec un script automatique sur le système pour exécuter du code.
+
+* **Abuser d'une vulnérabilité d'application web** : abuser d'une vulnérabilité d'application web pour exécuter du code sur le système.
+
+#### 5. Persistance (***MITRE Tactic TA0003***)
+
+Cette phase de la UKC est relativement courte et simple. Elle décrit les techniques que l'adversaire utilise pour maintenir l'accès à un système sur lequel il a acquis un premier accès.
+
+*Exemples :*
+
+* **Créer un service sur le système cible** : créer un service sur le système cible pour permettre à l'attaquant de regagner l'accès.
+
+* **Ajouter le système cible à un serveur de command and control** : ajouter le système cible à un serveur de command and control où des commandes peuvent être exécutées à distance à tout moment.
+
+* **Laisser d'autres formes de backdoors** : laisser d'autres formes de backdoors qui s'exécutent lorsqu'une action spécifique se produit sur le système (par exemple, une reverse shell s'exécutera lorsque l'administrateur du système se connecte).
+
+#### 6. Évasion de la Défense (***MITRE Tactic TA0005***)
+
+La section "Évasion de la Défense" de la UKC est l'une des phases les plus précieuses de la UKC. Elle décrit les techniques que l'adversaire utilise pour éviter les mesures de défense mises en place dans le système ou le réseau.
+
+*Exemples :*
+
+* **Pare-feu d'application web** : contourner les pare-feu d'application web.
+
+* **Pare-feu réseau** : contourner les pare-feu réseau.
+
+* **Systèmes antivirus sur la machine cible** : contourner les systèmes antivirus sur la machine cible.
+
+* **Systèmes de détection d'intrusion** : contourner les systèmes de détection d'intrusion.
+
+#### 7. Command and Control (***MITRE Tactic TA0011***)
+
+La phase "Command and Control" de la UKC combine les efforts de l'adversaire réalisés pendant la phase de "Weaponization" pour établir des communications entre l'adversaire et le système cible.
+
+*Exemples :*
+
+* **Exécuter des commandes** : exécuter des commandes sur le système cible.
+
+* **Vol de données, credentials et autres informations** : voler des données, credentials et autres informations.
+
+* **Utiliser le serveur contrôlé pour pivoter vers d'autres systèmes du réseau** : utiliser le serveur contrôlé pour pivoter vers d'autres systèmes du réseau.
+
+#### 8. Pivotement (***MITRE Tactic TA0008***)
+
+Le "Pivotement" est la technique que l'adversaire utilise pour accéder à d'autres systèmes dans un réseau qui ne sont pas accessibles directement (par exemple, ils ne sont pas exposés à Internet).
+
+*Exemples :*
+
+* **Accéder à un serveur web public pour attaquer d'autres systèmes** : accéder à un serveur web public pour attaquer d'autres systèmes dans le même réseau (mais non accessibles via Internet).
+
 <hr>
 <br>
 

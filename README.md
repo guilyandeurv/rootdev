@@ -15,7 +15,7 @@ Propulsé par [VitePress](https://github.com/vuejs/vitepress).
 Copiez le contenu du projet, puis installez les dépendances :
 
 ```bash
-npm add -D vitepress
+npm install
 ```
 
 Puis lancez la commande :
