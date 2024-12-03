@@ -4,6 +4,7 @@ date: 2024-12-02
 ---
 
 # Analyse SOC : Comprendre la détection et la réponse aux incidents
+<ESDInfo />
 
 ## 🔍 Qu'est-ce qu'un Analyste SOC ?
 
@@ -83,3 +84,5 @@ Un Analyste SOC est un expert en cybersécurité qui a pour mission de :
     * Extraction de fichiers
     * Analyse forensique réseau
     * Identification de hosts
+
+<hr>

@@ -38,6 +38,9 @@ import ReadingProgress from '../components/ReadingProgress.vue'
 import FileTree from '../components/FileTree.vue'
 // TreeItem
 import TreeItem from '../components/TreeItem.vue'
+//ESDinfo
+import ESDInfo from '../components/ESDInfo.vue'
+
 
 export default {
   extends: DefaultTheme,
@@ -70,5 +73,6 @@ export default {
     app.component('PageInfo', PageInfo)
     app.component('FileTree', FileTree)
     app.component('TreeItem', TreeItem)
+    app.component('ESDInfo', ESDInfo)
   }
 } satisfies Theme
