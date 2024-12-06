@@ -199,7 +199,12 @@ export default defineConfig({
                   ]},
               ]},
           { text: 'CompTia Pentest+', link: '/certification/pentestplus' },
-          { text: 'Red Team Analyst', link: '/certification/redteam-analyst' },
+          { text: 'Red Team Analyst',
+            collapsed:true,
+            items: [
+              { text: 'Introduction', link: '/certification/redteam-analyst/index' },
+              { text: 'Définitions', link: '/certification/redteam-analyst/def' },
+          ]},
           { text: 'Analyste SOC',
             collapsed: true,
             items: [
