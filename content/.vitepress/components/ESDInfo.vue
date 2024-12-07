@@ -3,8 +3,8 @@
     <div class="esd-content">
       <img 
         :src="isDark 
-          ? './france-competence-dark.png'
-          : './france-competence.png'" 
+          ? './img/france-competence-dark.png'
+          : './img/france-competence.png'" 
         alt="Logo France Compétences" 
         class="esd-logo"
       />
