@@ -44,6 +44,3 @@ La sécurité informatique évolue chaque année. La genèse et les protections 
 
 
 
-## Le modèle de gouvernance du SOC
-
-

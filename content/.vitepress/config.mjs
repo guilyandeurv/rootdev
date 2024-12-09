@@ -209,6 +209,7 @@ export default defineConfig({
             collapsed: true,
             items: [
               { text: 'Introduction', link: '/certification/analyst-soc'},
+              { text: "Le métier d'analyste SOC", link: 'certification/analyst-soc/job/activite'},
               { text: "Security Operation Center (SOC)",
                 collapsed:true,
                 items: [
@@ -216,16 +217,6 @@ export default defineConfig({
                   { text: "Services intégrés & données collectées", link: 'certification/analyst-soc/soc/services-donnees'},
                   { text: "Modèle de gouvernance", link: 'certification/analyst-soc/soc/modele-gouvernance'},
                   { text: "Référentiels ATT&CK / DeTT&CT / Sigma / MISP", link: 'certification/analyst-soc/soc/referentiels'},
-              ]},
-              { text: "Le métier d'analyste SOC",
-                collapsed:true,
-                items: [
-                  { text: 'Activité quotidienne', link: 'certification/analyst-soc/job/activite'},
-                  { text: "Prérequis et rôle", link: 'certification/analyst-soc/job/prerequis-role'},
-                  { text: "Triage des alertes", link: 'certification/analyst-soc/job/triage-alertes'},
-                  { text: "Révision en état de sécurité", link: 'certification/analyst-soc/job/revision-securite'},
-                  { text: "Identification et rapport", link: 'certification/analyst-soc/job/id-rapport'},
-                  { text: "Threat Hunting", link: 'certification/analyst-soc/job/threat-hunting'},
               ]},
               { text: "Sources de données à monitorer",
                 collapsed:true,
