@@ -27,7 +27,7 @@ Les compétences recherchées sont pour un tel poste sont :
 * Expérience en interprétion de résultats de scanneurs de vulnérabilités
 * Capacité de veilles techniques et l'évolution des cyber menaces
 
-## Les soft skills d'un analyste SOC
+### Les soft skills d'un analyste SOC
 
 * Avoir une vue d'ensemble
 * Comprendre un événement dans son contexte
