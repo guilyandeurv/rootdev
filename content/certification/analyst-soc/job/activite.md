@@ -47,3 +47,34 @@ L'activité quotidienne de l'analyste SOC est la suivante :
 - Relation avec le client (SOC externalisé)
 - Etudier les nouvelles menaces, les rapports des CERTs
 - Recherche de traces de compromission sur les systèmes d'information
+
+## Trier les alertes
+
+L'analyste SOC a comme principale tâche de trier en temps réel les alertes de sécurité et de les remonter au niveau 2 s'il estime que ce n'est pas un faux positif. 
+
+![triage](./img/triage.png)
+
+## Vérification du bon fonctionnement
+
+Il est important de vérifier le bon fonctionnement du SOC quotidiennement, ces actions peuvent être réalisées :
+
+- Vérifier l'état de santé du SIEM
+- Contrôler l'état du trafic réseau
+- Vérifier le volume des logs
+
+## Rapport & ticket
+
+L'analyste SOC doit être capable de remonter un incident, et pour cela il a besoin d'avoir une méthodologie, comme par exemple :
+
+
+|N°|Evènement|Méthode de détection|Atténué|Nécessite investigation|Commentaire|
+|-|-|-|-|-|-|
+|54|Scan sur Firewall interne|Logs du Firewall|Non|Oui|Escalade au niveau 2|
+
+L'idée ici est de remonter l'incident, en indiquant les zones identifiées comme potentiellement attaquées ou vulnérables.
+
+## Threat hunting
+
+La "chasse aux menaces" est une tactique permettant de connaître précisément le degré de risque de cyberattaque auquel est soumise une société. La méthode consiste à dresser un portrait général de la surface d'attaque, tout en identifiant les attaquants potentiels, leurs motifs et leurs façons de faire.
+
+L'analyste SOC doit savoir comment fonctionne une cyberattaque, ses tactiques et avoir les connaissances techniques nécessaires pour les détecter.
