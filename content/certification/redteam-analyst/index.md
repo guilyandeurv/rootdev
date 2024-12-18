@@ -112,3 +112,29 @@ Les acteurs de la menace n'utilisent pas un seul système pour lancer des attaqu
 
 Il protège l'emplacement d'origine du serveur de l'équipe.
 
+## Processus d'authentification de Kerberos
+
+::: info Authentification Kerberos
+Dans l'environnement Active Directory, toutes les requêtes et le processus d'authentification sont effectués par le biais de tickets. Par conséquent, aucun mot de passe n'est utilisé pour accéder au réseau.
+- Un ticket est une forme de jeton d'authentification et d'autorisation et peut être classé comme suit :
+  - Ticket Granting Ticket (TGT) pour l'authentification
+  - Ticket Granting Service (TGS) pour l'autorisation
+  - Les tickets (TGT et TGS) sont stockés en mémoire et peuvent être extraits à des fins abusives, car ils représentent les informations d'identification de l'utilisateur.
+  - Le TGS peut être utilisé pour accéder à un service spécifique d'un serveur du domaine. 
+:::
+
+<br>
+
+### Demande de TGT
+
+![Kerberos](./img/kerberos-step1.png)
+
+### Demande de TGS
+
+![Kerberos](./img/kerberos-step2.png)
+
+### Délégation Kerberos
+
+Elle permet de réutiliser les informations d'identification d'un utilisateur de domaine authentifié pour accéder à des ressources hébergées sur un autre serveur d'un domaine. Cet utilitaire est utile dans les applications ou les architectures à plusieurs niveaux.
+- Par exemple : Un utilisateur du domaine s'authentifie auprès d'un serveur d'application et le serveur d'application appelle le serveur de base de données. Le serveur d'application peut demander l'accès aux ressources du serveur de base de données en tant qu'utilisateur du domaine (l'utilisateur est identifié) et non en tant que compte de service du serveur d'application.
+- Le compte de service du serveur d'application doit être approuvé pour que la délégation puisse faire des demandes en tant qu'utilisateur de domaine authentifié.
