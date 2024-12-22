@@ -1,5 +1,5 @@
 // node_modules/@nolebase/vitepress-plugin-highlight-targeted-heading/dist/client/index.mjs
-import NolebaseHighlightTargetedHeading from "/workspaces/rootdev/node_modules/@nolebase/vitepress-plugin-highlight-targeted-heading/dist/client/components/HighlightTargetedHeading.vue";
+import NolebaseHighlightTargetedHeading from "C:/Users/Serval/Documents/RootDev/node_modules/@nolebase/vitepress-plugin-highlight-targeted-heading/dist/client/components/HighlightTargetedHeading.vue";
 var components = {
   NolebaseHighlightTargetedHeading
 };

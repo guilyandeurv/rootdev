@@ -242,8 +242,7 @@ export default defineConfig({
                 collapsed:true,
                 items: [
                   { text: 'Fonctionnement de Logstash', link: 'certification/analyst-soc/logstash/fonctionnement-logstash'},
-                  { text: "Fichiers Input & Output", link: 'certification/analyst-soc/logstash/input-output'},
-                  { text: "filtres Groks & sources externes", link: 'certification/analyst-soc/logstash/groks-external'},
+                  { text: "Filtres Groks & sources externes", link: 'certification/analyst-soc/logstash/groks-external'},
               ]},
               { text: "Elasticsearch",
                 collapsed:true,
