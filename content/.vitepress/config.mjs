@@ -93,6 +93,7 @@ export default defineConfig({
               { text: 'Vulnérabilités XSS', link: '/cybersecurite/web/xss' },
               { text: 'Injection SQL', link: '/cybersecurite/web/sql-inject' },
               { text: 'Énumération des sous-domaines', link: '/cybersecurite/web/subdomain' },
+              { text: "Attaques d'API", link: '/cybersecurite/web/api' },
             ]},
           { text: 'Outils',
             collapsed:true,
