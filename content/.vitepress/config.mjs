@@ -63,7 +63,15 @@ export default defineConfig({
             collapsed:true,
             items: [
               { text: 'Reconnaissance passive', link: '/cybersecurite/recon/passive' },
-            ]},
+          ]},
+          { text: 'Cyberdéfense',
+            collapsed:true,
+            items: [
+              { text: 'La cybersécurité en France', link: '/cybersecurite/cyberdefense/cyber-france' },
+              { text: "Audit d'un SI", link: '/cybersecurite/cyberdefense/audit' },
+              { text: "Durcissement des infrastructures Windows", link: '/cybersecurite/cyberdefense/durcissement' },
+              { text: "Défense alignée aux attaques", link: '/cybersecurite/cyberdefense/defense' },
+          ]},
           { text: 'Dark Web',
             collapsed:true,
             items: [
@@ -251,8 +259,6 @@ export default defineConfig({
                 items: [
                   { text: "Recherche d'évènements", link: 'certification/analyst-soc/kibana/search-event'},
                   { text: "Visualisation des données", link: 'certification/analyst-soc/kibana/visualisation-donnees'},
-                  { text: "Ajout de règles de détection & IoC", link: 'certification/analyst-soc/kibana/regle-detect'},
-                  { text: "Architecture avancée ELK avec HELK", link: 'certification/analyst-soc/kibana/elk-helk'},
               ]},
               { text: 'Rapports', link: '/certification/analyst-soc/rapport'},
               { text: 'Windows Security',
