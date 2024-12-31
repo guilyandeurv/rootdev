@@ -245,13 +245,7 @@ export default defineConfig({
                   { text: 'Fonctionnement de Logstash', link: 'certification/analyst-soc/logstash/fonctionnement-logstash'},
                   { text: "Filtres Groks & sources externes", link: 'certification/analyst-soc/logstash/groks-external'},
               ]},
-              { text: "Elasticsearch",
-                collapsed:true,
-                items: [
-                  { text: 'Terminologie', link: 'certification/analyst-soc/elasticsearch/terminologie'},
-                  { text: "Syntaxe Lucene", link: 'certification/analyst-soc/elasticsearch/syntaxe-lucene'},
-                  { text: "Alerte avec ElasticAlert & Sigma", link: 'certification/analyst-soc/elasticsearch/elasticalert-sigma'},
-              ]},
+              { text: "Elasticsearch", link: 'certification/analyst-soc/elasticsearch/terminologie'},
               { text: "Kibana",
                 collapsed:true,
                 items: [
