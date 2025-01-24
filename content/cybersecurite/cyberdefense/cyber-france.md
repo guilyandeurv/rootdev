@@ -117,3 +117,49 @@ Depuis plusieurs années, l'état français a renforcé l'ensemble de ses branch
 ### COMCYBER (Commandement de la cyberdéfense)
 
 Le COMCYBER est affilié au *Ministère des Armées*, il assure la protection des SI sous la responsabilité des armées. Il définit les moyens RH, techniques et organisationnels nécessaires à la surveillance du réseau des armées, assure la lutte défensive mais également offensive. Il y avait en 2018 +1000 cybercombattants, avec un objectif de 4400 visé pour 2025.
+
+### DGA (Direction Générale de l'Armement)
+
+La DGA est également affiliée au *Ministère des Armées*, elle a la maîtrise d'ouvrage des programmes d'armement et est en charge de la conception des armes cyber, pour le renseignement ou au COMCYBER.
+
+### ANSSI (Agence Nationale de la Sécurité des Systèmes d'Information)
+
+L'ANSSI est elle affiliée au *Premier Ministre*, elle est l'autorité nationale en matière de cybersécurité. Elle est en charge de préserver la souveraineté numérique de la France, de faire de la prévention et partager les bonnes pratiques, ainsi que de la veille (CERT-FR). Elle répond aux incidents informatiques visant les institutions sensibles (OIV, etc.).
+
+Mais son rôle principal est l'anticipation, la détection et la réponse aux incidents. L'ANSSI assure au niveau opérationnel et tactique la défense des systèmes numériques d'intérêt pour la nation.
+
+### Ministère de l'Intérieur
+
+Ce ministère est affilié au *Premier Ministre*, il est en charge de la lutte contre la criminalité numérique (*C3N* & *SDLC*), enquête sur les fraudes aux technologies de l'information (*BEFTI*), conduit les investigations sur Internet. Il est également en charge de la lutte contre la cybermenace interne, pilote et coordonne la lutte contre la cybercriminalité.
+La lutte contre la cybercriminilatié vise les institutions, les intérêts nationaux, les acteurs économiques, les collectivitiés publiques et particuliers, contrairement à l'ANSSI qui ne s'occupe pas des particuliers.
+
+## Zoom sur l'ANSSI
+
+Créé par décret en juillet 2009, l'ANSSI (***A***gence ***N***ationale de la ***S***écurité des ***S***ystèmes d'***I***nformation) est un service français, rattaché au secrétarait général de la défense de la sécurité nationale (***SGDSN***). Il s'git d'une autorité chargée d'assister le Premier Ministre dans l'exercice de ses responsabilités en matière de défense et de sécurité nationale. L'ANSSI remplace la Direction Centrale de la Sécurité des Systèmes d'Information (***DCSSI***).
+
+L'agence assure la mission d'autorité nationale en matière de sécrutié des systèmes d'information. A ce titre, elle est chargé de proposer les règles à appliquer pour la protection des SI de l'état et de vérifier l'application des mesures adoptées.
+
+Dans le domaine de la défense des SI, elle assure un service de veille, de détection, d'alerte et de réaction aux attaques informatiques, notamment sur les réseaux de l'état.
+
+L'ANSSI apporte son expertise et son assistance technique aux administrations et aux entreprises avec une mission renforcée au profit des opérateurs d'importance vitale (secteur médical, sanitaire, énergétique, bancaire...). Elle est chargée de la promotion des technologies, des produits et services de confiance, des systèmes et des savoir-faire nationaux auprès des experts comme du grand public. Elle contribue ainsi au développement de la confiance dans les usages du numérique. Son action auprès de différents publics comprend la veille, la réaction, le développement de produits pour la société civile, l'information et le conseil, la formation ainsi que la labellisation de produits et de prestataires de confiance.
+
+### Détails sur les différentes activités liées à l'ANSSI - Les Visas
+
+Les solutions de cybersécurité sont nombreuses et variées, mais toutes n'offrent pas le même niveau d'efficacité, de robustesse et de confiance. Les Visas de sécurité que délivre l'ANSSI permettent d'identifier facilement les plus fiables d'entre elles et reconnues comme telles à l'issue d'une évaluation réalisée par des laboratoires agréés selon une méthodologie rigoureuse et éprouvée.
+
+Les Visas de sécurité répondent à 3 objectifs :
+* ***Des objectifs réglementaires*** : pour répondre aux règlements nationaux ou européens qui imposent l'utilisation de solutions garantissant un niveau de robustesse éprouvé.
+* ***Des objectifs contractuels*** : pour répondre aux donneurs d'ordres publics ou privés qui exigent que les solutions utilisées aient préalablement obtenu un VISA.
+* ***Des objectifs commerciaux*** : pour permettre à un fournisseur de produits ou à un prestataire de services, ainsi qu'aux utilisateurs finaux de ces solutions, de se démarquer de la concurrence par la garantie d'un certain niveau de robustesse.
+
+La certification est l'attestation de la robustesse des produits qui ont été éprouvés lors de tests d'intrusion et un référentiel permettant de répondre de la meilleure manière aux besoins de sécurité des utilisateurs, et de tenir compte des évolutions technologiques.
+
+* Objectifs de la certification :
+   * ***En tant qu'utilisateur*** : en choisissant un produit certifié, on est assuré qu'il offre des fonctionnalités et un niveau de sécurité éprouvés.
+   * ***En tant que développeur de solutions numériques*** : la certification d'un produit permet d'accéder à de nombreux marchés de cybersécurité en France et à l'international.
+
+Il existe deux types de certification :
+* ***Certification critères communs*** (CC) : Il s'agit 'un standard internationalement reconnu s'inscrivant dans des accords de reconnaissance multilatéraux. Les CC permettent d'atteindre différents niveaux d'assurance dans la sécurité du produit en considérent d'une part son environnement et les processus de développement associés, et d'autre part sa résistance face à un niveau d'attaque donné.
+* ***Certification de sécurité de premier niveau*** (CSPN) : Mise en place par l'ANSSI afin de proposer une alternative aux évaluations CC, dont le coût et la durée peuvent être un obstacle, elle permet d'attester de la résistance du produit face à un niveau d'attaque donné. Elle prend la forme de tests effectués en temps et charge contraits (2 mois, 25 à 35 jours/homme), nécessitant un investissement modéré.
+
+
