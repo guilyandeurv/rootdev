@@ -1,3 +1,5 @@
+import "./chunk-BUSYA2B4.js";
+
 // node_modules/@nolebase/vitepress-plugin-highlight-targeted-heading/dist/client/index.mjs
 import NolebaseHighlightTargetedHeading from "/workspaces/rootdev/node_modules/@nolebase/vitepress-plugin-highlight-targeted-heading/dist/client/components/HighlightTargetedHeading.vue";
 var components = {
