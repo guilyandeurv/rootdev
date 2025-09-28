@@ -81,7 +81,15 @@ export default defineConfig({
               { text: "🦾 Durcissement des infrastructures Windows", link: '/cybersecurite/cyberdefense/durcissement' },
               { text: "🪖 Défense alignée aux attaques", link: '/cybersecurite/cyberdefense/defense' },
               { text: "📐 Architecture et organisation d'un SOC", link: '/cybersecurite/cyberdefense/soc' },
-              { text: "⚠️ Détection d'intrusion", link: '/cybersecurite/cyberdefense/detection' },
+              { text: "⚠️ Détection d'intrusion",
+                    collapsed:true,
+                    items: [
+                        { text: '🔍 Regle de détection - SNORT', link: '/cybersecurite/cyberdefense/detection/snort' },
+                        { text: "📰 Journaux d'événements Windows", link: '/cybersecurite/cyberdefense/detection/event-windows' },
+                        { text: '👥 Comptes et authentification', link: '/cybersecurite/cyberdefense/detection/users' },
+                        { text: '🕵️ Investigation - Powershell', link: '/cybersecurite/cyberdefense/detection/powershell' },
+                        { text: '🕵️ Investigation - Persistence', link: '/cybersecurite/cyberdefense/detection/persistence' },
+                    ]},
               { text: '🧩 Splunk',
                     collapsed:true,
                     items: [
@@ -317,7 +325,7 @@ export default defineConfig({
         text: '🛜 Réseaux',
         collapsed:true,
         items: [
-          { text: '🔎 Introduction', link: '/reseaux/' },
+          { text: '📕 Fondamentaux', link: '/reseaux/' },
           { text: '📶 LAN', link: '/reseaux/lan' },
           { text: '🌎 WAN', link: '/reseaux/wan' },
           { text: '🛎️ DNS', link: '/reseaux/dns' },

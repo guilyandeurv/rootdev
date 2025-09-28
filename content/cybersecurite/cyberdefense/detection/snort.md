@@ -1,7 +1,8 @@
 ---
 sidebar: auto
+redac: true
 date: 2025-09-28
 ---
 
-# ⚠️ Détection d'intrusion
+# 🔍 Regle de détection - SNORT
 <ESDInfo />
