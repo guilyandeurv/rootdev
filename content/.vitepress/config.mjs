@@ -335,6 +335,12 @@ export default defineConfig({
           { text: '♦️ Le modèle TCP/IP', link: '/reseaux/tcp' },
           { text: '🧱 Les Firewall', link: '/reseaux/firewall' },
           { text: '🕸️ Les sites web', link: '/reseaux/web' },
+          { text: 'Dépannage des réseaux',
+                collapsed:true,
+                items: [
+                  { text: '🔎 Introduction', link: '/reseaux/dépannage/intro' },
+                  { text: '🦈 Wireshark', link: '/reseaux/dépannage/wireshark' },
+              ]},
           { text: '💪 Durcissement des réseaux',
                 collapsed:true,
                 items: [
@@ -438,6 +444,7 @@ export default defineConfig({
                         ]},
               ]},
           { text: '©️ Cisco', link: '/environnement/cisco' },
+          { text: '🖥️ Virtualisation', link: '/environnement/virtualisation' },
         ]
       },
     ],
