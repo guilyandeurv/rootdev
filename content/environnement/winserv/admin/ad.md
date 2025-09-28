@@ -5,6 +5,7 @@ date: 2024-03-14
 ---
 # Les fondamentaux de l'Active Directory
 
+<ESDInfo />
 
 L'Active Directory (AD) est un service d'annuaire développé par Microsoft pour les réseaux basés sur Windows. Il est utilisé pour gérer les ressources réseau telles que les utilisateurs, les ordinateurs, les groupes et les politiques de groupe. L'Active Directory est un composant central dans de nombreux environnements réseau Windows. En comprenant ses fonctionnalités de base telles que les domaines, les groupes, les politiques de groupe et les méthodes d'authentification, on peut mieux gérer et sécuriser des infrastructures réseaux.
 
@@ -12,7 +13,7 @@ L'Active Directory (AD) est un service d'annuaire développé par Microsoft pour
 
 Un domaine dans l'Active Directory est une unité d'organisation logique qui regroupe des objets tels que des utilisateurs, des ordinateurs, des groupes et des politiques de groupe. Les domaines permettent une gestion centralisée des ressources réseau.
 
-![Exemple d'un domaine](./img/domain.png)
+![Exemple d'un domaine](./../../img/domain.png)
 
 ## Groupe et Utilisateur
 
@@ -42,7 +43,7 @@ Les ordinateurs dans l'Active Directory sont des appareils qui font partie du do
 
 Les politiques de groupe sont des règles de configuration qui peuvent être appliquées à des utilisateurs et des ordinateurs dans un domaine. Elles permettent de contrôler divers aspects de la configuration du système, tels que les paramètres de sécurité, les restrictions logicielles et les paramètres du système d'exploitation.
 
-![Exemple d'une politique de groupe](./img/policies.png)
+![Exemple d'une politique de groupe](./../../img/policies.png)
 
 Par exemple, ci-dessus se trouve les politiques de mot de passe.
 

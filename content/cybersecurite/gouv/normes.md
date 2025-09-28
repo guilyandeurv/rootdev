@@ -3,7 +3,9 @@ sidebar: auto
 redac: true
 date: 2024-03-17
 ---
-# Principales normes internationales en cybersécurité
+# 📰 Principales normes internationales en cybersécurité
+
+<ESDInfo />
 
 La cybersécurité repose sur un ensemble de normes internationales qui fournissent des lignes directrices et des bonnes pratiques pour assurer la sécurité des systèmes informatiques et des données.
 

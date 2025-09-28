@@ -3,7 +3,7 @@ sidebar: auto
 date: 2024-12-30
 ---
 
-# Cyberdéfense : La cybersécurité en france
+# 🇫🇷 Cyberdéfense : La cybersécurité en France
 <ESDInfo />
 
 ## Introduction aux menaces

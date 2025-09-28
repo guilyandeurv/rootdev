@@ -2,7 +2,7 @@
 sidebar: auto
 ---
 
-# Certification CompTIA Security+ SY0-701 <Badge type="warning" text="En cours de rédaction" />
+# 📛 Certification CompTIA Security+ SY0-701
 
 ![CompTia Security + logo](./img/comptia-security+.png)
 
