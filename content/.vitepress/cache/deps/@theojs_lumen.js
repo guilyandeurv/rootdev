@@ -8,16 +8,16 @@ import {
 import "./chunk-BUSYA2B4.js";
 
 // node_modules/@theojs/lumen/types/index.ts
-import { default as default2 } from "D:/Rootdev-new/rootdev/node_modules/@theojs/lumen/components/DocBox.vue";
-import { default as default3 } from "D:/Rootdev-new/rootdev/node_modules/@theojs/lumen/components/DocLinks.vue";
-import { default as default4 } from "D:/Rootdev-new/rootdev/node_modules/@theojs/lumen/components/DocBoxCube.vue";
-import { default as default5 } from "D:/Rootdev-new/rootdev/node_modules/@theojs/lumen/components/DocVideoLink.vue";
-import { default as default6 } from "D:/Rootdev-new/rootdev/node_modules/@theojs/lumen/components/Announcement.vue";
-import { default as default7 } from "D:/Rootdev-new/rootdev/node_modules/@theojs/lumen/components/DocAsideLogo.vue";
-import { default as default8 } from "D:/Rootdev-new/rootdev/node_modules/@theojs/lumen/components/HomeFooter.vue";
-import { default as default9 } from "D:/Rootdev-new/rootdev/node_modules/@theojs/lumen/components/HomeUnderline.vue";
-import { default as default10 } from "D:/Rootdev-new/rootdev/node_modules/@theojs/lumen/components/DocTwikoo.vue";
-import { default as default11 } from "D:/Rootdev-new/rootdev/node_modules/@theojs/lumen/components/ShareButton.vue";
+import { default as default2 } from "D:/RootDev/rootdev/node_modules/@theojs/lumen/components/DocBox.vue";
+import { default as default3 } from "D:/RootDev/rootdev/node_modules/@theojs/lumen/components/DocLinks.vue";
+import { default as default4 } from "D:/RootDev/rootdev/node_modules/@theojs/lumen/components/DocBoxCube.vue";
+import { default as default5 } from "D:/RootDev/rootdev/node_modules/@theojs/lumen/components/DocVideoLink.vue";
+import { default as default6 } from "D:/RootDev/rootdev/node_modules/@theojs/lumen/components/Announcement.vue";
+import { default as default7 } from "D:/RootDev/rootdev/node_modules/@theojs/lumen/components/DocAsideLogo.vue";
+import { default as default8 } from "D:/RootDev/rootdev/node_modules/@theojs/lumen/components/HomeFooter.vue";
+import { default as default9 } from "D:/RootDev/rootdev/node_modules/@theojs/lumen/components/HomeUnderline.vue";
+import { default as default10 } from "D:/RootDev/rootdev/node_modules/@theojs/lumen/components/DocTwikoo.vue";
+import { default as default11 } from "D:/RootDev/rootdev/node_modules/@theojs/lumen/components/ShareButton.vue";
 
 // node_modules/@theojs/lumen/types/utils.ts
 import { useData } from "vitepress";
@@ -107,7 +107,7 @@ var useCopyLink = () => {
 };
 
 // node_modules/@theojs/lumen/types/index.ts
-import "D:/Rootdev-new/rootdev/node_modules/@fortawesome/fontawesome-free/css/all.min.css";
+import "D:/RootDev/rootdev/node_modules/@fortawesome/fontawesome-free/css/all.min.css";
 export {
   default6 as Announcement,
   default7 as DocAsideLogo,

@@ -149,7 +149,7 @@ export default defineConfig({
               { text: '🦈 Wireshark', link: '/cybersecurite/outils/wireshark' },
               { text: '🥷 Stéganographie', link: '/cybersecurite/outils/stega' },
             ]},
-            { text: '🌐 Réseaux',
+            { text: '📶 Réseaux',
             collapsed:true,
             items: [
               { text: '📂 Protocole FTP', link: '/cybersecurite/reseaux/ftp' },
