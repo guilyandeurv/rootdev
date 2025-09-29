@@ -338,8 +338,8 @@ export default defineConfig({
           { text: 'Dépannage des réseaux',
                 collapsed:true,
                 items: [
-                  { text: '🔎 Introduction', link: '/reseaux/dépannage/intro' },
-                  { text: '🦈 Wireshark', link: '/reseaux/dépannage/wireshark' },
+                  { text: '🔎 Introduction', link: '/reseaux/depannage/intro' },
+                  { text: '🦈 Wireshark', link: '/reseaux/depannage/wireshark' },
               ]},
           { text: '💪 Durcissement des réseaux',
                 collapsed:true,
