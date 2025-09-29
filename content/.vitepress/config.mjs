@@ -335,7 +335,7 @@ export default defineConfig({
           { text: '♦️ Le modèle TCP/IP', link: '/reseaux/tcp' },
           { text: '🧱 Les Firewall', link: '/reseaux/firewall' },
           { text: '🕸️ Les sites web', link: '/reseaux/web' },
-          { text: 'Dépannage des réseaux',
+          { text: '🔧 Dépannage des réseaux',
                 collapsed:true,
                 items: [
                   { text: '🔎 Introduction', link: '/reseaux/depannage/intro' },
