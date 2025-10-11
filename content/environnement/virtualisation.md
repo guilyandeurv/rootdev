@@ -4,7 +4,7 @@ date: 2025-09-28
 ---
 
 # 🖥️ Virtualisation
-<ESDInfo />
+<ais />
 
 ## 📕 Fondamentaux
 

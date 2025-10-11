@@ -40,6 +40,8 @@ import FileTree from '../components/FileTree.vue'
 import TreeItem from '../components/TreeItem.vue'
 //ESDinfo
 import ESDInfo from '../components/ESDInfo.vue'
+//AIS
+import ais from '../components/ais.vue'
 
 
 export default {
@@ -74,5 +76,6 @@ export default {
     app.component('FileTree', FileTree)
     app.component('TreeItem', TreeItem)
     app.component('ESDInfo', ESDInfo)
+    app.component('ais', ais)
   }
 } satisfies Theme

@@ -5,7 +5,7 @@ date: 2025-09-29
 ---
 
 # 📐 Architecture
-<ESDInfo />
+<ais />
 
 ## **🎬 Introduction**
 

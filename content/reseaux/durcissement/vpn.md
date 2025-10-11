@@ -5,4 +5,4 @@ date: 2025-09-29
 ---
 
 # 🔐 VPN & certificats
-<ESDInfo />
+<ais />

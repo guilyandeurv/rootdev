@@ -5,7 +5,7 @@ date: 2025-09-29
 ---
 
 # 🔂 Sécurisation des commutateurs
-<ESDInfo />
+<ais />
 
 ## **⚙️ Les commutateurs dans le SI**
 

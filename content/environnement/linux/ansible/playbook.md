@@ -4,4 +4,4 @@ date: 2025-09-28
 ---
 
 # ⏯️ Playbook
-<ESDInfo />
+<ais />

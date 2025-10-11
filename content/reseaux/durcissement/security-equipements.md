@@ -5,4 +5,4 @@ date: 2025-09-29
 ---
 
 # 🖥️ Sécurisation des équipements
-<ESDInfo />
+<ais />
