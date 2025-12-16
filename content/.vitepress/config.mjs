@@ -45,8 +45,7 @@ export default defineConfig({
          { text: "📟 Programmation", link: "/programmation/index" },
          { text: "🎖️ Certifications", link: "/certification/introduction" },
          { text: '🛜 Réseaux', link: '/reseaux/' },
-         { text: '🖥️ Environnement', link: '/environnement/linux' },
-         { text: '💾 Bases de données', link: '/bdd/index' },
+         { text: '🖥️ Environnement', link: '/environnement/linux/linux' },
         ],
       },
     ],
@@ -205,7 +204,7 @@ export default defineConfig({
         ]
       },
       {
-        text: '🎖️ Certification',
+        text: '🎖️ Certifications',
         collapsed:true,
         items: [
           { text: '🔎Introduction', link: '/certification/introduction' },
@@ -374,7 +373,7 @@ export default defineConfig({
         ]
       },
       {
-        text: '🖥️ Environnement',
+        text: '🖥️ Environnements',
         collapsed:true,
         items: [
           { text: '<i class="fa-brands fa-linux"></i> Linux',

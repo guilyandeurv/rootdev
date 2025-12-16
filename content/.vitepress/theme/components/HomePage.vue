@@ -285,7 +285,8 @@ onUnmounted(() => {
             <a href="/cybersecurite/" class="footer-link">Cybersécurité</a>
             <a href="/programmation/" class="footer-link">Programmation</a>
             <a href="/reseaux/" class="footer-link">Réseaux</a>
-            <a href="/certification/" class="footer-link">Certifications</a>
+            <a href="/certification/introduction" class="footer-link">Certifications</a>
+            <a href="/environnement/linux/linux" class="footer-link">Environnements</a>
           </div>
         </div>
       </div>
