@@ -5,7 +5,7 @@ import {
   onUnmounted,
   ref
 } from "./chunk-FA4MWVOB.js";
-import "./chunk-BUSYA2B4.js";
+import "./chunk-HKJ2B2AA.js";
 
 // node_modules/@theojs/lumen/types/index.ts
 import { default as default2 } from "D:/RootDev/rootdev/node_modules/@theojs/lumen/components/DocBox.vue";
@@ -36,7 +36,7 @@ var isImage = (url) => {
 var isExternalLink = (link) => /^https?:\/\//.test(link);
 async function initTwikoo(envId) {
   try {
-    const twikoo = await import("./twikoo.all.min-QF6PF4HV.js");
+    const twikoo = await import("./twikoo.all.min-IRW72XAT.js");
     console.log("Twikoo 加载成功");
     if (typeof window !== "undefined") {
       await nextTick();
