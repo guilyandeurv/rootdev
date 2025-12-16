@@ -131,10 +131,10 @@ onUnmounted(() => {
       <div class="features-container">
         <div class="section-header">
           <h2 class="section-title">
-            <span class="title-accent">Explorez</span> nos domaines
+            <span class="title-accent">Explorez</span> les domaines
           </h2>
           <p class="section-subtitle">
-            Des ressources complètes et pratiques pour maîtriser la cybersécurité
+            Des ressources complètes et pratiques pour maîtriser les domaines IT
           </p>
         </div>
 
