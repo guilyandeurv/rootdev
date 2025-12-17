@@ -463,7 +463,7 @@ export default defineConfig({
       copyright: 'Copyright © 2024 - RootDev.fr par Guilyan - contact@rootdev.fr'
     },
     editLink: {
-      pattern: 'https://github.com/guilyandeurv/rootdev/edit/main/docs/:path',
+      pattern: 'https://github.com/guilyandeurv/rootdev/edit/main/content/:path',
       text: 'Editer cette page'
     },
     lastUpdated: {
