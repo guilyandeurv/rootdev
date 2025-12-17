@@ -452,7 +452,7 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/guilyandeurv' }
+      { icon: 'github', link: 'https://github.com/guilyandeurv/rootdev' }
     ],
     docFooter: {
 			prev: "Page précédente",
@@ -463,11 +463,11 @@ export default defineConfig({
       copyright: 'Copyright © 2024 - RootDev.fr par Guilyan - contact@rootdev.fr'
     },
     editLink: {
-      pattern: 'https://github.com/guilyandeurv/rootdev-v2/edit/main/docs/:path',
+      pattern: 'https://github.com/guilyandeurv/rootdev/edit/main/docs/:path',
       text: 'Editer cette page'
     },
     lastUpdated: {
-      text: 'Mise à jour le ',
+      text: 'Mis à jour le ',
       formatOptions: {
         dateStyle: 'full',
         timeStyle: 'medium'
