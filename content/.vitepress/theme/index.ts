@@ -42,6 +42,8 @@ import TreeItem from '../components/TreeItem.vue'
 import ESDInfo from '../components/ESDInfo.vue'
 //AIS
 import ais from '../components/ais.vue'
+// Page ContentPage
+import ContentPage from './components/ContentPage.vue'
 
 
 export default {
@@ -77,5 +79,6 @@ export default {
     app.component('TreeItem', TreeItem)
     app.component('ESDInfo', ESDInfo)
     app.component('ais', ais)
+    app.component('ContentPage', ContentPage)
   }
 } satisfies Theme

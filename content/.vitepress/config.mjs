@@ -46,8 +46,14 @@ export default defineConfig({
          { text: "🎖️ Certifications", link: "/certification/introduction" },
          { text: '🛜 Réseaux', link: '/reseaux/' },
          { text: '🖥️ Environnement', link: '/environnement/linux/linux' },
+         
         ],
       },
+      {
+      items: [
+        { text: 'Voir tout →', link: '/content' }
+      ]
+      }
     ],
 
     sidebar: [
