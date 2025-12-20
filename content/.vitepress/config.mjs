@@ -51,7 +51,8 @@ export default defineConfig({
       },
       {
       items: [
-        { text: 'Voir tout →', link: '/content' }
+        { text: 'Voir tout →', link: '/content' },
+        { text: '📟 Jeu rootar.io', link: '/game' }
       ]
       }
     ],

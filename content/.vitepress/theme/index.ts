@@ -44,6 +44,8 @@ import ESDInfo from '../components/ESDInfo.vue'
 import ais from '../components/ais.vue'
 // Page ContentPage
 import ContentPage from './components/ContentPage.vue'
+// Page Rootar.io
+import GameRootario from './components/GameRootario.vue'
 
 
 export default {
@@ -80,5 +82,6 @@ export default {
     app.component('ESDInfo', ESDInfo)
     app.component('ais', ais)
     app.component('ContentPage', ContentPage)
+    app.component('GameRootario', GameRootario)
   }
 } satisfies Theme
