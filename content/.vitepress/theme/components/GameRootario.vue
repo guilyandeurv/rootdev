@@ -81,6 +81,7 @@ const techStack = [
               <h3>Rejoignez la résistance</h3>
               <p>Projet Open-Source. Pull requests bienvenues pour améliorer et/ou corriger le jeu.</p>
             </div>
+            <a href="/programmation/rootario-doc" target="_blank" class="doc-btn">Documentation</a>
             <a href="https://github.com/guilyandeurv/io.rootdev" target="_blank" class="github-btn">GitHub</a>
           </div>
         </div>
@@ -280,7 +281,7 @@ section { margin-bottom: 120px; }
 .badge-new { 
   display: inline-block; 
   background: rgba(16, 185, 129, 0.26); 
-  color: #a5da86; 
+  color: #52da04; 
   padding: 8px 16px; 
   border-radius: 20px; 
   font-size: 0.75rem; 
@@ -687,7 +688,7 @@ html:not(.dark) .terminal-header {
 }
 
 .command { color: #58a6ff; margin-top: 15px; }
-.prompt { color: var(--emerald); margin-right: 10px; }
+.prompt { color: var(--greenbtn); margin-right: 10px; }
 .response { color: #8b949e; }
 .highlight { color: #d29922; font-weight: bold; }
 
@@ -758,6 +759,34 @@ html:not(.dark) .github-card {
     transform: scale(1.05);
     box-shadow: 0 0 30px rgba(16, 185, 129, 0.4);
 }
+
+.doc-btn { 
+  background: #e7e7e7; 
+  color: #111111; 
+  padding: 14px 28px; 
+  border-radius: 8px; 
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: auto;
+  flex-shrink: 0;
+  transition: 0.3s;
+}
+html:not(.dark) .doc-btn { 
+  background: #1a1a1a; 
+  color: #ffffff; 
+  padding: 14px 28px; 
+  border-radius: 8px; 
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: auto;
+  flex-shrink: 0;
+  transition: 0.3s;
+}
+.doc-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(16, 185, 129, 0.4);
+}
+
 @media (max-width: 900px) {
 .game-preview-bento {
 grid-template-columns: 1fr;
