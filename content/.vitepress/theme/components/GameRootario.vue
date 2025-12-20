@@ -59,8 +59,8 @@ const techStack = [
 
     <div class="container">
       <section class="hero">
-        <div class="badge-new animate-pulse">v2.0 : Emerald Update</div>
-        <h1 class="main-title">io.rootdev.fr</h1>
+        <div class="badge-new animate-pulse">v0.7.0 : alpha version</div>
+        <h1 class="main-title">rootar.io</h1>
         <p class="hero-desc">
           L'expérience ultime de simulation de hacking clandestin.<br>
           <span class="text-gradient">Infiltrez. Gérez. Dominez.</span>
@@ -79,9 +79,9 @@ const techStack = [
             <svg class="git-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
             <div class="github-text">
               <h3>Rejoignez la résistance</h3>
-              <p>Projet Open-Source. Pull requests bienvenues pour de nouveaux modules de hack.</p>
+              <p>Projet Open-Source. Pull requests bienvenues pour améliorer et/ou corriger le jeu.</p>
             </div>
-            <a href="https://github.com/guilyandeurv/io.rootdev" target="_blank" class="github-btn">FORK REPOSITORY</a>
+            <a href="https://github.com/guilyandeurv/io.rootdev" target="_blank" class="github-btn">GitHub</a>
           </div>
         </div>
       </section>
@@ -90,24 +90,24 @@ const techStack = [
         <div class="bento-main">
           <div class="image-slot hover-zoom">
             <img src="/game/preview-main.png" alt="Interface io.rootdev.fr">
-            <div class="overlay-info">Dashboard Principal</div>
+            <div class="overlay-info">OS</div>
           </div>
         </div>
         <div class="bento-side">
           <div class="image-slot hover-zoom">
             <img src="/game/preview-terminal.png" alt="Terminal">
-            <div class="overlay-info">Terminal de Brèche</div>
+            <div class="overlay-info">Terminal</div>
           </div>
           <div class="image-slot hover-zoom">
             <img src="/game/preview-shop.png" alt="Shop Hardware">
-            <div class="overlay-info">Black Market Hardware</div>
+            <div class="overlay-info">Black Market</div>
           </div>
         </div>
       </section>
       <br><br><br><br>
       <section class="features-section">
         <div class="section-header">
-          <h2 class="section-title">Fonctionnalités Clés</h2>
+          <h2 class="section-title">Fonctionnalités clés</h2>
           <p class="section-subtitle">Des mécaniques de gameplay innovantes pour une immersion maximale</p>
         </div>
         <div class="feature-grid">
@@ -215,9 +215,10 @@ const techStack = [
   --border-color: rgba(255, 255, 255, 0.05);
   --text-primary: #f0f6fc;
   --text-secondary: #8b949e;
-  --emerald: #10b981;
+  --emerald: #3e8538;
   --title-gradient-start: #fff;
-  --title-gradient-end: #444;
+  --title-gradient-end: #444444;
+  --greenbtn: #65f043;
   
   min-height: 100vh;
   background-color: var(--bg-color);
@@ -278,8 +279,8 @@ section { margin-bottom: 120px; }
 .hero { text-align: center; margin-bottom: 120px; }
 .badge-new { 
   display: inline-block; 
-  background: rgba(16, 185, 129, 0.1); 
-  color: var(--emerald); 
+  background: rgba(16, 185, 129, 0.26); 
+  color: #a5da86; 
   padding: 8px 16px; 
   border-radius: 20px; 
   font-size: 0.75rem; 
@@ -316,7 +317,7 @@ html:not(.dark) .badge-new {
 }
 
 .text-gradient { 
-  background: linear-gradient(90deg, #10b981, #6366f1); 
+  background: linear-gradient(90deg, #10b981, #ff7300); 
   -webkit-background-clip: text; 
   -webkit-text-fill-color: transparent; 
   font-weight: 700; 
@@ -333,7 +334,7 @@ html:not(.dark) .badge-new {
   display: inline-block;
   letter-spacing: 1px; 
   transition: 0.3s;
-  box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 0 20px rgba(6, 95, 36, 0.3);
 }
 
 html:not(.dark) .primary-btn {
@@ -355,7 +356,7 @@ html:not(.dark) .primary-btn {
   background: rgba(16, 185, 129, 0.1); 
   padding: 4px 12px; 
   border-radius: 4px; 
-  color: var(--emerald); 
+  color: var(--greenbtn); 
   font-family: 'JetBrains Mono';
   border: 1px solid rgba(16, 185, 129, 0.2);
 }
@@ -489,7 +490,7 @@ html:not(.dark) .feature-card {
   font-size: 0.65rem; 
   text-transform: uppercase; 
   letter-spacing: 1px; 
-  color: var(--emerald); 
+  color: var(--greenbtn); 
   font-weight: 800; 
 }
 
@@ -624,7 +625,7 @@ html:not(.dark) .tech-features {
   display: flex;
   align-items: center;
   gap: 12px;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   font-size: 0.95rem;
   font-weight: 500;
 }
@@ -632,7 +633,7 @@ html:not(.dark) .tech-features {
 .tech-feature-item svg {
   width: 20px;
   height: 20px;
-  color: var(--emerald);
+  color: var(--greenbtn);
 }
 
 /* Terminal Style */
