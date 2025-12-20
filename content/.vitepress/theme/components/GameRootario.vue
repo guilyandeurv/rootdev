@@ -59,7 +59,7 @@ const techStack = [
 
     <div class="container">
       <section class="hero">
-        <div class="badge-new animate-pulse">v0.7.0 : alpha version</div>
+        <div class="badge-new animate-pulse">v0.7.1 : alpha version</div>
         <h1 class="main-title">rootar.io</h1>
         <p class="hero-desc">
           L'expérience ultime de simulation de hacking clandestin.<br>
