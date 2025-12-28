@@ -40,7 +40,7 @@ const modules = [
     title: "Security+",
     category: "Certifications",
     desc: "Concepts fondamentaux : GRC, architecture, menaces et conformité.",
-    link: "/certification/securityplus/",
+    link: "certification/securityplus",
     tags: ["CompTIA", "Basics"]
   },
   {
@@ -100,7 +100,7 @@ const modules = [
     title: "Linux Administration",
     category: "Environnement",
     desc: "Gestion système, stockage, réseaux et dépannage avancé.",
-    link: "/environnement/linux/admin/intro",
+    link: "/environnement/linux/linux",
     tags: ["Linux", "SysAdmin"]
   },
   {
@@ -127,7 +127,7 @@ const modules = [
 
   // --- PROGRAMMATION ---
   {
-    title: "Python Security",
+    title: "Python",
     category: "Programmation",
     desc: "Scripting offensif, scanners réseaux et interaction APIs.",
     link: "/programmation/python/",
@@ -147,7 +147,14 @@ const modules = [
     link: "/programmation/javascript/",
     tags: ["Web", "JS"]
   },
-
+  {
+    title: "Rust",
+    category: "Programmation",
+    desc: "Fondamentaux Rust. Performance du C++ avec une sécurité mémoire. Au cœur de l'infrastructure moderne.",
+    link: "/programmation/rust/",
+    tags: ["Logiciel", "Rust"]
+  },
+  
   // --- RÉSEAUX ---
   {
     title: "Architecture & OSI",

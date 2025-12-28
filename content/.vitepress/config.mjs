@@ -46,12 +46,11 @@ export default defineConfig({
          { text: "🎖️ Certifications", link: "/certification/introduction" },
          { text: '🛜 Réseaux', link: '/reseaux/' },
          { text: '🖥️ Environnement', link: '/environnement/linux/linux' },
-         
+         { text: '♾️ Voir tout →', link: '/content' },
         ],
       },
       {
       items: [
-        { text: 'Voir tout →', link: '/content' },
         { text: '📟 Jeu rootar.io', link: '/game' }
       ]
       }
