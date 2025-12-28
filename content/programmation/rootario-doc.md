@@ -2,7 +2,6 @@
 sidebar: auto
 redac: true
 date: 2025-12-20
-title: Documentation Rootar.io 
 ---
 
 # Documentation Rootar.io

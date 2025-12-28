@@ -46,6 +46,8 @@ import ais from '../components/ais.vue'
 import ContentPage from './components/ContentPage.vue'
 // Page Rootar.io
 import GameRootario from './components/GameRootario.vue'
+// Page Rust
+import RustPresentation from './components/RustPresentation.vue'
 
 
 export default {
@@ -83,5 +85,6 @@ export default {
     app.component('ais', ais)
     app.component('ContentPage', ContentPage)
     app.component('GameRootario', GameRootario)
+    app.component('RustPresentation', RustPresentation)
   }
 } satisfies Theme

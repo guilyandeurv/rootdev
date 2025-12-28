@@ -179,7 +179,19 @@ export default defineConfig({
           { text: '💎 Ruby',
             collapsed:true,
             items: [
-              { text: '🔎 Introduction', link: '/programmation/ruby/index' },
+              { text: '🔎 Introduction', link: '/programmation/rust/index' },
+            ]},
+          { text: '<i class="fa-brands fa-rust"></i> Rust',
+            collapsed:true,
+            items: [
+              { text: '🔎 Introduction', link: '/programmation/rust/index' },
+              { text: '📦 Fondamentaux',
+                collapsed: true,
+                items: [
+                  { text: '🔎 Introduction', link: '/programmation/rust/fondamentaux/intro'},
+                  { text: '🗃️ Variables', link: '/programmation/rust/fondamentaux/variables'},
+                ]
+              }
             ]},
           { text: '©️ Langage C',
             collapsed:true,
