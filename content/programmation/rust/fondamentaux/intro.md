@@ -172,3 +172,32 @@ x = 15; // Cela provoquera une erreur car x est immuable
 ::: info Notions avancées
 Retrouvez la suite des explications sur la varible [ici](/programmation/rust/fondamentaux/variables)
 :::
+
+## ➕ Opérateurs arithmétiques
+
+Opérateurs sont utilisés pour effectuer des opérations sur des valeurs.
+
+|Opérateur|Opération|Exemple|
+|---|---|---|
+|+|Addition|3 + 2 = 5|
+|-|Soustraction|3 - 2 = 1|
+|*|Multiplication|3 * 2 = 6|
+|/|Division|4 / 2 = 2|
+
+Voici un exemple d'utilisation :
+
+```rust
+let a: i32 = 3;
+let b: i32 = 5;
+let c: i32 = a + b
+// c contient 8
+```
+
+Lorsqu'on travaille avec des nombres décimaux en Rust, on utilise le type de données `f64`, qui peut stocker des nombres avec des points décimaux. Les mêmes opérateurs arithmétiques (`+`, `-`, `*`, `/`) fonctionnent avec `f64` de la même manière qu'avec les entiers :
+
+```rust
+let x: f64 = 3.3;
+let y: f64 = 4.1;
+let z: f64 = x + y;
+// z contient 7.
+```
