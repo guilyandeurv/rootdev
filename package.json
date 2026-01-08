@@ -19,6 +19,7 @@
     "patch-package": "^8.0.1"
   },
   "overrides": {
-    "preact": "^10.26.10"
+    "preact": "^10.26.10",
+    "esbuild": "^0.25.0"
   }
 }
