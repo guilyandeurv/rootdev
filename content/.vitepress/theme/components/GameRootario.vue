@@ -81,7 +81,7 @@ const techStack = [
               <h3>Rejoignez la résistance</h3>
               <p>Projet Open-Source. Pull requests bienvenues pour améliorer et/ou corriger le jeu.</p>
             </div>
-            <a href="/programmation/rootario-doc" target="_blank" class="doc-btn">Documentation</a>
+            <a href="/rootario-doc" target="_blank" class="doc-btn">Documentation</a>
             <a href="https://github.com/guilyandeurv/io.rootdev" target="_blank" class="github-btn">GitHub</a>
           </div>
         </div>
