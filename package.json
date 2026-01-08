@@ -17,7 +17,7 @@
     "@vitejs/plugin-vue": "^5.1.4",
     "lucide-vue-next": "^0.560.0",
     "patch-package": "^8.0.1"
-  }
+  },
   "overrides": {
     "preact": "^10.26.10"
   }
