@@ -12,13 +12,6 @@ import './home-links.scss'
 import './home.scss'
 import './icon.scss'
 import './picture.scss'
-// Lien sur page d'accueil pour les annonces
-import { Announcement } from '@theojs/lumen'
-// Lien sur le técô
-import { DocAsideLogo } from '@theojs/lumen'
-import { Aside_Data } from '../data/AsideData'
-// Partager la page
-import { ShareButton } from '@theojs/lumen'
 // Enhanced readabilities
 import { 
   NolebaseEnhancedReadabilitiesMenu, 
@@ -54,17 +47,6 @@ export default {
   extends: DefaultTheme,
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
-      // Ajoute un lien sur la page d'accueil pour les annonces
-      'home-hero-info-before': () => h(Announcement),
-      // Liens sur le técô
-      'aside-ads-before': () => h(DocAsideLogo, { Aside_Data }),
-      'aside-outline-before': () =>
-        h(ShareButton, {
-          buttonIcon: 'fas fa-share-alt', // Logo share
-          buttonText: ' Partager cette page', // Texte sur le bouton
-          copiedIcon: 'fas fa-thumbs-up', // Logo une fois cliqué
-          copiedText: 'Lien copié !', // Texte après copie
-         }),
       // A enhanced readabilities menu for wider screens
       'nav-bar-content-after': () => h(NolebaseEnhancedReadabilitiesMenu), 
       // A enhanced readabilities menu for narrower screens (usually smaller than iPad Mini)
