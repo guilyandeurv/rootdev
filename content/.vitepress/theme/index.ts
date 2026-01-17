@@ -12,6 +12,7 @@ import './home-links.scss'
 import './home.scss'
 import './icon.scss'
 import './picture.scss'
+import '@fortawesome/fontawesome-free/css/all.min.css'
 // Enhanced readabilities
 import { 
   NolebaseEnhancedReadabilitiesMenu, 
