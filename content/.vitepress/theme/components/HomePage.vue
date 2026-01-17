@@ -1271,4 +1271,132 @@ html:not(.dark) .code-window {
 .footer-link:hover {
   color: var(--vp-c-brand-1, #3b82f6);
 }
+
+/* =========================================
+   MEDIA QUERIES - MOBILE & TABLETTE
+   ========================================= */
+
+@media (max-width: 1024px) {
+  /* On réduit déjà les marges sur tablette */
+  .features-section,
+  .code-preview-section,
+  .sources-section {
+    padding: 4rem 1.5rem; /* De 8rem à 4rem */
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr; /* Force l'empilement */
+  }
+}
+
+@media (max-width: 768px) {
+  /* --- 1. Ajustements Globaux --- */
+  .hero-section {
+    padding: 3rem 1rem 1rem;
+  }
+  
+  .main-content {
+    padding: 1rem 1rem 3rem;
+  }
+
+  /* --- 2. Carte de Connexion (Terminal + Boutons) --- */
+  .connect-content {
+    padding: 1.25rem;
+  }
+
+  .button-group {
+    flex-direction: column; /* Boutons l'un sous l'autre */
+    width: 100%;
+  }
+
+  .connect-button {
+    width: 100%; /* Pleine largeur pour le tactile */
+    justify-content: center;
+  }
+
+  /* --- 3. Section Quickstart --- */
+  .quickstart-card {
+    flex-direction: column; /* Icône au dessus, texte dessous */
+    align-items: flex-start;
+  }
+
+  .quickstart-icon {
+    width: 40px;
+    height: 40px; /* Icônes plus petites */
+  }
+
+  /* --- 4. Section Features (Grille) --- */
+  .features-grid {
+    /* CORRECTION CRITIQUE : Remplace le minmax(340px) qui casse le mobile */
+    grid-template-columns: 1fr; 
+    gap: 1.5rem;
+  }
+
+  .feature-card {
+    padding: 2rem 1.5rem; /* Moins de padding interne */
+  }
+  
+  .feature-icon-wrapper {
+    width: 70px;
+    height: 70px; /* Icône plus petite */
+    margin-bottom: 1.5rem;
+  }
+
+  /* --- 5. Section Code Preview (Le plus gros problème) --- */
+  .code-preview-section {
+    padding: 4rem 1rem;
+  }
+
+  .code-grid {
+    margin-top: 2rem;
+    /* CORRECTION CRITIQUE : Remplace le minmax(400px) */
+    grid-template-columns: 1fr; 
+  }
+
+  .code-window {
+    /* Empêche la fenêtre de code de dépasser de l'écran */
+    max-width: 100%;
+    border-radius: 1rem;
+  }
+
+  .window-content {
+    padding: 1rem; /* Moins d'espace interne */
+    overflow-x: auto; /* Permet de scroller LE CODE, pas toute la page */
+  }
+
+  pre.code-block {
+    font-size: 0.8rem; /* Code plus petit sur mobile */
+  }
+
+  /* --- 6. Section Sources --- */
+  .sources-grid {
+    /* CORRECTION CRITIQUE : Remplace le minmax(340px) */
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .source-card {
+    padding: 2.5rem 1.5rem;
+  }
+
+  /* --- 7. Footer --- */
+  .footer {
+    padding: 2rem 1.5rem;
+  }
+
+  /* --- 8. Typographie Mobile --- */
+  .section-title {
+    font-size: 2rem; /* Titres plus petits */
+  }
+  
+  .section-subtitle, 
+  .sources-description {
+    font-size: 1rem;
+  }
+
+  /* Désactiver les animations lourdes sur mobile pour la performance */
+  .floating-particles {
+    opacity: 0.3; /* Moins intrusif */
+  }
+}
 </style>
