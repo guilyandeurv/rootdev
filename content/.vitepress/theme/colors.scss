@@ -81,3 +81,76 @@ html.dark:root {
 html.dark .DocSearch {
   --docsearch-hit-active-color: var(--c-text-light-1);
 }
+
+/* =========================================
+   1. Configuration des Couleurs de Fond (Glow)
+   ========================================= */
+
+body {
+  /* --- MODE CLAIR --- */
+  background-color: var(--c-white-dark);
+  
+  /* Définition de la couleur des points du motif (gris bleuté très léger) */
+  --bg-pattern-color: rgba(71, 130, 96, 0.15); 
+
+  /* Double spot lumineux :
+     1. Haut-Gauche : Un Teal très léger (pour remplacer le vert trop fort)
+     2. Bas-Droite : Un gris bleuté pour équilibrer sans éblouir
+  */
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(190, 190, 190, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(243, 243, 243, 0.4) 0px, transparent 50%);
+    
+  background-attachment: fixed;
+}
+
+html.dark body {
+  /* --- MODE SOMBRE --- */
+  background-color: var(--c-black);
+  
+  /* Les points deviennent blancs mais très transparents */
+  --bg-pattern-color: rgba(255, 255, 255, 0.05);
+
+  /* Double spot lumineux :
+     1. Haut-Gauche : Votre bleu "Brand" (Yellow-soft-1) sombre
+     2. Bas-Droite : Un violet/bleu très profond pour la profondeur
+  */
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(105, 151, 238, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, var(--c-black) 0px, transparent 50%);
+
+  background-attachment: fixed;
+}
+
+/* =========================================
+   2. Texture "Formes" (Dot Pattern)
+   ========================================= */
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Derrière le contenu */
+  pointer-events: none;
+  
+  /* Création du motif de points géométriques */
+  background-image: radial-gradient(var(--bg-pattern-color) 1px, transparent 1px);
+  
+  /* Taille de la grille (espace entre les points) */
+  background-size: 24px 24px;
+  
+  /* Optionnel : Masque pour estomper les points vers le bas (plus élégant) 
+     Les points sont visibles en haut et disparaissent doucement vers le bas
+  */
+  mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+}
+
+/* S'assurer que le contenu du site passe PAR DESSUS le background */
+#app {
+  position: relative;
+  z-index: 1;
+}
