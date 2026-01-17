@@ -154,3 +154,50 @@ body::before {
   position: relative;
   z-index: 1;
 }
+
+/* =========================================
+   Style des Blocs de Code (Glassmorphism)
+   ========================================= */
+
+/* --- CONFIGURATION PAR DÉFAUT (MODE CLAIR) --- */
+.vp-doc div[class*='language-'] {
+  /* Fond blanc semi-transparent pour laisser deviner les points derrière */
+  background-color: rgba(255, 255, 255, 0.6) !important;
+  
+  /* Bordure grise très subtile pour délimiter le bloc */
+  border: 1px solid rgba(60, 60, 67, 0.12);
+  
+  /* Le flou qui crée l'effet de verre dépoli */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  
+  /* Une ombre douce pour "soulever" le code du background texturé */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  
+  /* Transition douce si on change de thème */
+  transition: all 0.3s ease;
+}
+
+/* --- SURCHARGE POUR LE MODE SOMBRE --- */
+html.dark .vp-doc div[class*='language-'] {
+  /* Fond noir semi-transparent */
+  background-color: rgba(0, 0, 0, 0.5) !important; 
+  
+  /* Bordure blanche subtile */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  
+  /* Ombre plus sombre pour le mode nuit */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+/* --- OPTIONNEL : Effet au survol du code --- */
+/* Rend le bloc légèrement plus opaque quand la souris passe dessus pour faciliter la lecture */
+.vp-doc div[class*='language-']:hover {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  border-color: var(--vp-c-brand); /* La bordure prend la couleur de votre marque */
+}
+
+html.dark .vp-doc div[class*='language-']:hover {
+  background-color: rgba(15, 15, 15, 0.7) !important;
+  border-color: var(--vp-c-brand);
+}
