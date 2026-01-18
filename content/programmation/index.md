@@ -1,40 +1,12 @@
 ---
-sidebar: auto
-redac: true
-date: 2024-10-15
+layout: page
+title: Programmation
+sidebar: true
+footer: true
 ---
-# Programmation 
 
-## Python
+<script setup>
+import ContentPage from '../.vitepress/theme/components/ProgIndex.vue'
+</script>
 
-|Cours|Lien|
-|-|-|
-|Introduction à Python|[Introduction](/programmation/python/index.md)|
-|Les fonctions d'origine|[Fonctions d'origine](/programmation/python/fonction-dorigine.md)|
-|Les erreurs|[Gestion des erreurs](/programmation/python/erreurs.md)|
-|Le framework Django|[Django](/programmation/python/django.md)|
-
-
-## Javascript
-
-|Cours|Lien|
-|-|-|
-|Introduction à Javascript|[Introduction](/programmation/javascript/index.md)|
-|Les variables|[Variables](/programmation/javascript/variables.md)|
-|Les fonctions|[Fonction](/programmation/javascript/fonction.md)|
-
-## Ruby
-
-|Cours|Lien|
-|-|-|
-|Introduction à Ruby|[Ruby](/programmation/ruby/index.md)|
-
-## C
-
-|Cours|Lien|
-|-|-|
-|Introduction à C|[C](/programmation/c/index.md)|
-
-## SQL
-
-<Badge type="warning" text="En cours de rédaction" />
+<ContentPage />

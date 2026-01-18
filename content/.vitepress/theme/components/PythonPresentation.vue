@@ -3,57 +3,57 @@ import { ref } from 'vue'
 
 const techSpecs = ref([
   {
-    title: "Ownership & Borrowing",
-    desc: "Gestion mémoire unique au monde. Le compilateur vérifie la propriété des données, éliminant les erreurs de segmentation.",
+    title: "Typage & Mémoire",
+    desc: "Typage dynamique fort. Gestion automatique de la mémoire via Garbage Collector (comptage de références).",
     category: "Architecture"
   },
   {
-    title: "Sécurité (Memory Safety)",
-    desc: "Protection garantie contre les buffer overflows et les accès invalides, sans utiliser de Garbage Collector.",
+    title: "Sécurité (Django)",
+    desc: "Le framework Django intègre par défaut des protections contre les injections SQL, XSS, CSRF et le Clickjacking.",
     category: "Sécurité"
   },
   {
-    title: "Interopérabilité C",
-    desc: "Peut appeler du code C (et être appelé par lui) sans surcoût de performance (Zero-cost FFI).",
+    title: "Extensibilité C/C++",
+    desc: "Agit comme un langage de 'colle'. Les librairies critiques (NumPy, TensorFlow) tournent en C/C++ pour la vitesse.",
     category: "Intégration"
   },
   {
-    title: "Toolchain Cargo",
-    desc: "Un seul outil pour tout gérer : dépendances, compilation, tests, documentation et publication.",
+    title: "Écosystème PyPI",
+    desc: "Le plus vaste dépôt de paquets au monde. 'Pip' permet d'installer des solutions pour l'IA, le Web ou l'IoT en une commande.",
     category: "DevOps"
   }
 ])
 </script>
 
 <template>
-  <div class="rust-pro-wrapper">
+  <div class="python-pro-wrapper">
     
     <header class="header-split">
       <div class="header-text">
-        <div class="tag-pill">Langage Système</div>
-        <h1>Rust</h1>
+        <div class="tag-pill">Langage Polyvalent</div>
+        <h1>Python</h1>
         <p class="lead-text">
-          Le standard industriel pour la performance et la sécurité. <br>
-          Conçu pour les infrastructures critiques, la cybersécurité offensive et les systèmes embarqués.
+          Le standard mondial pour la Data Science et le Web rapide. <br>
+          Propulse des applications robustes grâce au framework <strong>Django</strong> et domine l'intelligence artificielle.
         </p>
         
         <div class="meta-row">
           <div class="meta-item">
             <span class="meta-label">Version Stable</span>
-            <span class="meta-value">v1.83+</span>
+            <span class="meta-value">v3.12+</span>
           </div>
           <div class="meta-sep"></div>
           <div class="meta-item">
             <span class="meta-label">Licence</span>
-            <span class="meta-value">MIT / Apache 2.0</span>
+            <span class="meta-value">PSFL (Open Source)</span>
           </div>
         </div>
       </div>
 
       <div class="header-logo">
         <img 
-          src="https://prev.rust-lang.org/logos/rust-logo-512x512.png" 
-          alt="Rust Logo" 
+          src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" 
+          alt="Python Logo" 
         />
       </div>
     </header>
@@ -81,49 +81,49 @@ const techSpecs = ref([
       <div class="cards-grid">
         <article class="pro-card">
           <div class="card-top">
-            <span class="card-icon">🛡️</span>
-            <h3>Cybersécurité & Recherche</h3>
+            <span class="card-icon">🌐</span>
+            <h3>Développement Web (Django)</h3>
           </div>
           <p>
-            Privilégié pour le <strong>développement d'outils offensifs</strong> (Red Teaming) et défensifs. 
-            Sa gestion mémoire stricte élimine mathématiquement les classes de vulnérabilités les plus courantes (CVEs).
+            Création rapide de backends sécurisés avec <strong>Django</strong> ("The framework for perfectionists with deadlines"). 
+            Architecture MVT, ORM puissant et interface d'administration native.
           </p>
           <div class="tags-container">
-            <span class="tech-tag">Malware Dev</span>
-            <span class="tech-tag">Reverse Engineering</span>
-            <span class="tech-tag">Fuzzing</span>
-          </div>
-        </article>
-
-        <article class="pro-card">
-          <div class="card-top">
-            <span class="card-icon">⚙️</span>
-            <h3>Infrastructure & SysAdmin</h3>
-          </div>
-          <p>
-            Remplace progressivement les outils GNU/Linux historiques et les scripts Python 
-            pour les tâches critiques nécessitant <strong>robustesse</strong> et faible empreinte ressources.
-          </p>
-          <div class="tags-container">
-            <span class="tech-tag">CLI Tools</span>
-            <span class="tech-tag">Monitoring</span>
-            <span class="tech-tag">Virtualisation</span>
-          </div>
-        </article>
-
-        <article class="pro-card">
-          <div class="card-top">
-            <span class="card-icon">⚡</span>
-            <h3>Performance & Web</h3>
-          </div>
-          <p>
-            Architecture de backends scalables capable de traiter des milliers de requêtes/seconde. 
-            Support natif de <strong>WebAssembly</strong> pour le web haute performance.
-          </p>
-          <div class="tags-container">
+            <span class="tech-tag">REST API</span>
+            <span class="tech-tag">Fullstack</span>
             <span class="tech-tag">Microservices</span>
-            <span class="tech-tag">Game Engine</span>
-            <span class="tech-tag">Wasm</span>
+          </div>
+        </article>
+
+        <article class="pro-card">
+          <div class="card-top">
+            <span class="card-icon">🧠</span>
+            <h3>Data Science & IA</h3>
+          </div>
+          <p>
+            Langage incontournable pour le Machine Learning et le Big Data. 
+            Syntaxe simple permettant aux scientifiques de manipuler des données complexes sans friction.
+          </p>
+          <div class="tags-container">
+            <span class="tech-tag">PyTorch</span>
+            <span class="tech-tag">Pandas</span>
+            <span class="tech-tag">Jupyter</span>
+          </div>
+        </article>
+
+        <article class="pro-card">
+          <div class="card-top">
+            <span class="card-icon">🤖</span>
+            <h3>Automatisation & Scripting</h3>
+          </div>
+          <p>
+            Idéal pour l'automatisation de tâches système (DevOps), le web scraping et le prototypage rapide. 
+            Remplace souvent Bash pour des logiques complexes.
+          </p>
+          <div class="tags-container">
+            <span class="tech-tag">Ansible</span>
+            <span class="tech-tag">Scraping</span>
+            <span class="tech-tag">Bots</span>
           </div>
         </article>
       </div>
@@ -151,35 +151,35 @@ const techSpecs = ref([
           <thead>
             <tr>
               <th width="30%">Critère</th>
-              <th width="25%" class="highlight-header">Rust 🦀</th>
-              <th width="25%">C++</th>
-              <th width="20%">Python</th>
+              <th width="25%" class="highlight-header">Python 🐍</th>
+              <th width="25%">Node.js (JS)</th>
+              <th width="20%">Go</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><strong>Gestion Mémoire</strong></td>
-              <td class="highlight-cell">Compile-time (Sûr)</td>
-              <td>Manuelle (Risquée)</td>
-              <td>Garbage Collector</td>
+              <td><strong>Typage</strong></td>
+              <td class="highlight-cell">Dynamique (Strict)</td>
+              <td>Dynamique (Faible)</td>
+              <td>Statique</td>
             </tr>
             <tr>
-              <td><strong>Performance</strong></td>
-              <td class="highlight-cell">Native / Métal</td>
-              <td>Native / Métal</td>
-              <td>Interprétée (Lente)</td>
+              <td><strong>Vitesse d'écriture</strong></td>
+              <td class="highlight-cell">Très Élevée</td>
+              <td>Élevée</td>
+              <td>Moyenne</td>
             </tr>
             <tr>
-              <td><strong>Erreurs Runtime</strong></td>
-              <td class="highlight-cell">Très Rares (Panic)</td>
-              <td>Segfaults fréquents</td>
-              <td>Exceptions fréquentes</td>
+              <td><strong>Performance CPU</strong></td>
+              <td class="highlight-cell">Moyenne (Interprété)</td>
+              <td>Bonne (JIT)</td>
+              <td>Excellente (Natif)</td>
             </tr>
              <tr>
-              <td><strong>Déploiement</strong></td>
-              <td class="highlight-cell">1 Binaire Statique</td>
-              <td>Dépendances (DLL/SO)</td>
-              <td>Environnement Virtuel</td>
+              <td><strong>Philosophie Web</strong></td>
+              <td class="highlight-cell">Batteries Included (Django)</td>
+              <td>Minimaliste (Express)</td>
+              <td>Standard Library</td>
             </tr>
           </tbody>
         </table>
@@ -191,10 +191,10 @@ const techSpecs = ref([
 
 <style scoped>
 /* --- CONTENEUR PRINCIPAL --- */
-.rust-pro-wrapper {
+.python-pro-wrapper {
   font-family: var(--vp-font-family-base, sans-serif);
   color: var(--vp-c-text-1);
-  max-width: 1200px; /* Large mais pas illimité pour garder la lecture fluide */
+  max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 1rem;
 }
@@ -208,13 +208,13 @@ h1, h2, h3, h4 {
 p {
   line-height: 1.6;
   margin: 0;
-  color: var(--vp-c-text-2); /* Fallback */
+  color: var(--vp-c-text-2);
 }
 
 /* --- HEADER --- */
 .header-split {
   display: flex;
-  flex-direction: column-reverse; /* Logo en haut sur mobile */
+  flex-direction: column-reverse;
   gap: 2rem;
   padding-bottom: 3rem;
   border-bottom: 1px solid var(--vp-c-divider);
@@ -257,7 +257,7 @@ h1 {
 
 .lead-text {
   font-size: 1.15rem;
-  color: var(--vp-c-text-1); /* Texte clair forcé */
+  color: var(--vp-c-text-1);
   margin-bottom: 2rem;
   max-width: 600px;
 }
@@ -288,7 +288,7 @@ h1 {
 }
 
 .header-logo img {
-  width: 160px;
+  width: 140px; /* Légèrement ajusté pour le ratio du logo Python */
   height: auto;
   opacity: 0.9;
   filter: drop-shadow(0 0 30px rgba(0,0,0,0.2));
@@ -319,7 +319,7 @@ h1 {
 }
 
 .pro-card {
-  background-color: var(--vp-c-bg-alt); /* Fond alternatif plus clair */
+  background-color: var(--vp-c-bg-alt);
   border: 1px solid var(--vp-c-divider);
   padding: 1.5rem;
   border-radius: 8px;
@@ -347,7 +347,7 @@ h1 {
 }
 .pro-card p {
   font-size: 0.95rem;
-  color: var(--vp-c-text-1); /* FORCE LE TEXTE CLAIR */
+  color: var(--vp-c-text-1);
   margin-bottom: 1.5rem;
   flex-grow: 1;
 }

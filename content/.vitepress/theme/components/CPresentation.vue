@@ -3,57 +3,57 @@ import { ref } from 'vue'
 
 const techSpecs = ref([
   {
-    title: "Ownership & Borrowing",
-    desc: "Gestion mémoire unique au monde. Le compilateur vérifie la propriété des données, éliminant les erreurs de segmentation.",
+    title: "Gestion Mémoire Manuelle",
+    desc: "Contrôle total et granulaire via pointeurs, malloc et free. Aucune surcharge cachée (pas de Garbage Collector).",
+    category: "Bas Niveau"
+  },
+  {
+    title: "ABI Universelle",
+    desc: "L'interface binaire du C est le standard de facto. Presque tous les autres langages (Python, Rust, Java) s'interfacent avec le C.",
+    category: "Interopérabilité"
+  },
+  {
+    title: "Portabilité Absolue",
+    desc: "Compile sur pratiquement toutes les architectures processeur existantes, du supercalculateur au microcontrôleur 8-bit.",
     category: "Architecture"
   },
   {
-    title: "Sécurité (Memory Safety)",
-    desc: "Protection garantie contre les buffer overflows et les accès invalides, sans utiliser de Garbage Collector.",
-    category: "Sécurité"
-  },
-  {
-    title: "Interopérabilité C",
-    desc: "Peut appeler du code C (et être appelé par lui) sans surcoût de performance (Zero-cost FFI).",
-    category: "Intégration"
-  },
-  {
-    title: "Toolchain Cargo",
-    desc: "Un seul outil pour tout gérer : dépendances, compilation, tests, documentation et publication.",
-    category: "DevOps"
+    title: "Simplicité Syntaxique",
+    desc: "Un jeu d'instructions minimaliste. Le code fait exactement ce qui est écrit, facilitant la compréhension du fonctionnement machine.",
+    category: "Philosophie"
   }
 ])
 </script>
 
 <template>
-  <div class="rust-pro-wrapper">
+  <div class="c-pro-wrapper">
     
     <header class="header-split">
       <div class="header-text">
-        <div class="tag-pill">Langage Système</div>
-        <h1>Rust</h1>
+        <div class="tag-pill">Langage Fondateur</div>
+        <h1>C</h1>
         <p class="lead-text">
-          Le standard industriel pour la performance et la sécurité. <br>
-          Conçu pour les infrastructures critiques, la cybersécurité offensive et les systèmes embarqués.
+          La "Lingua Franca" du développement logiciel.<br>
+          Incontournable pour les <strong>systèmes d'exploitation</strong>, l'embarqué critique et la performance pure (proche du métal).
         </p>
         
         <div class="meta-row">
           <div class="meta-item">
-            <span class="meta-label">Version Stable</span>
-            <span class="meta-value">v1.83+</span>
+            <span class="meta-label">Standard</span>
+            <span class="meta-value">C17 / C23</span>
           </div>
           <div class="meta-sep"></div>
           <div class="meta-item">
-            <span class="meta-label">Licence</span>
-            <span class="meta-value">MIT / Apache 2.0</span>
+            <span class="meta-label">Paradigme</span>
+            <span class="meta-value">Impératif / Procédural</span>
           </div>
         </div>
       </div>
 
       <div class="header-logo">
         <img 
-          src="https://prev.rust-lang.org/logos/rust-logo-512x512.png" 
-          alt="Rust Logo" 
+          src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg" 
+          alt="C Logo" 
         />
       </div>
     </header>
@@ -76,54 +76,52 @@ const techSpecs = ref([
     </div>
 
     <section class="content-section">
-      <h2 class="section-title">Domaines d'Application</h2>
+      <h2 class="section-title">Domaines d'application</h2>
       
       <div class="cards-grid">
         <article class="pro-card">
           <div class="card-top">
-            <span class="card-icon">🛡️</span>
-            <h3>Cybersécurité & Recherche</h3>
+            <span class="card-icon">⚙️</span>
+            <h3>Systèmes & Kernels</h3>
           </div>
           <p>
-            Privilégié pour le <strong>développement d'outils offensifs</strong> (Red Teaming) et défensifs. 
-            Sa gestion mémoire stricte élimine mathématiquement les classes de vulnérabilités les plus courantes (CVEs).
+            Le langage des noyaux (Linux, Windows, macOS). 
+            Permet d'écrire des pilotes (drivers) et d'interagir directement avec le matériel sans couche d'abstraction.
           </p>
           <div class="tags-container">
-            <span class="tech-tag">Malware Dev</span>
-            <span class="tech-tag">Reverse Engineering</span>
-            <span class="tech-tag">Fuzzing</span>
+            <span class="tech-tag">Linux Kernel</span>
+            <span class="tech-tag">Drivers</span>
+            <span class="tech-tag">Unix</span>
           </div>
         </article>
 
         <article class="pro-card">
           <div class="card-top">
-            <span class="card-icon">⚙️</span>
-            <h3>Infrastructure & SysAdmin</h3>
+            <span class="card-icon">💾</span>
+            <h3>Embarqué & IoT</h3>
           </div>
           <p>
-            Remplace progressivement les outils GNU/Linux historiques et les scripts Python 
-            pour les tâches critiques nécessitant <strong>robustesse</strong> et faible empreinte ressources.
+            Standard absolu pour les microcontrôleurs et les systèmes temps réel (RTOS) où chaque octet de mémoire et chaque cycle CPU comptent.
           </p>
           <div class="tags-container">
-            <span class="tech-tag">CLI Tools</span>
-            <span class="tech-tag">Monitoring</span>
-            <span class="tech-tag">Virtualisation</span>
+            <span class="tech-tag">Arduino</span>
+            <span class="tech-tag">STM32</span>
+            <span class="tech-tag">Firmware</span>
           </div>
         </article>
 
         <article class="pro-card">
           <div class="card-top">
             <span class="card-icon">⚡</span>
-            <h3>Performance & Web</h3>
+            <h3>Bibliothèques Haute Perf</h3>
           </div>
           <p>
-            Architecture de backends scalables capable de traiter des milliers de requêtes/seconde. 
-            Support natif de <strong>WebAssembly</strong> pour le web haute performance.
+            Utilisé pour créer les briques de base nécessitant une vitesse maximale (moteurs graphiques, bases de données, interpréteurs Python/PHP).
           </p>
           <div class="tags-container">
-            <span class="tech-tag">Microservices</span>
-            <span class="tech-tag">Game Engine</span>
-            <span class="tech-tag">Wasm</span>
+            <span class="tech-tag">OpenGL/Vulkan</span>
+            <span class="tech-tag">SQLite</span>
+            <span class="tech-tag">FFmpeg</span>
           </div>
         </article>
       </div>
@@ -151,35 +149,35 @@ const techSpecs = ref([
           <thead>
             <tr>
               <th width="30%">Critère</th>
-              <th width="25%" class="highlight-header">Rust 🦀</th>
+              <th width="25%" class="highlight-header">C 🔵</th>
               <th width="25%">C++</th>
-              <th width="20%">Python</th>
+              <th width="20%">Rust</th>
             </tr>
           </thead>
           <tbody>
             <tr>
+              <td><strong>Abstraction</strong></td>
+              <td class="highlight-cell">Minimale (Procédural)</td>
+              <td>Élevée (OOP/Meta)</td>
+              <td>Moderne (Traits)</td>
+            </tr>
+            <tr>
               <td><strong>Gestion Mémoire</strong></td>
-              <td class="highlight-cell">Compile-time (Sûr)</td>
-              <td>Manuelle (Risquée)</td>
-              <td>Garbage Collector</td>
+              <td class="highlight-cell">Manuelle (Risquée)</td>
+              <td>RAII / Smart Ptrs</td>
+              <td>Borrow Checker (Sûre)</td>
             </tr>
             <tr>
-              <td><strong>Performance</strong></td>
-              <td class="highlight-cell">Native / Métal</td>
-              <td>Native / Métal</td>
-              <td>Interprétée (Lente)</td>
-            </tr>
-            <tr>
-              <td><strong>Erreurs Runtime</strong></td>
-              <td class="highlight-cell">Très Rares (Panic)</td>
-              <td>Segfaults fréquents</td>
-              <td>Exceptions fréquentes</td>
+              <td><strong>Temps de Compilation</strong></td>
+              <td class="highlight-cell">Très Rapide</td>
+              <td>Lent</td>
+              <td>Lent</td>
             </tr>
              <tr>
-              <td><strong>Déploiement</strong></td>
-              <td class="highlight-cell">1 Binaire Statique</td>
-              <td>Dépendances (DLL/SO)</td>
-              <td>Environnement Virtuel</td>
+              <td><strong>Taille Binaire</strong></td>
+              <td class="highlight-cell">Extrêmement Compact</td>
+              <td>Compact (Variable)</td>
+              <td>Moyen (Statique)</td>
             </tr>
           </tbody>
         </table>
@@ -191,10 +189,10 @@ const techSpecs = ref([
 
 <style scoped>
 /* --- CONTENEUR PRINCIPAL --- */
-.rust-pro-wrapper {
+.c-pro-wrapper {
   font-family: var(--vp-font-family-base, sans-serif);
   color: var(--vp-c-text-1);
-  max-width: 1200px; /* Large mais pas illimité pour garder la lecture fluide */
+  max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 1rem;
 }
@@ -208,13 +206,13 @@ h1, h2, h3, h4 {
 p {
   line-height: 1.6;
   margin: 0;
-  color: var(--vp-c-text-2); /* Fallback */
+  color: var(--vp-c-text-2);
 }
 
 /* --- HEADER --- */
 .header-split {
   display: flex;
-  flex-direction: column-reverse; /* Logo en haut sur mobile */
+  flex-direction: column-reverse;
   gap: 2rem;
   padding-bottom: 3rem;
   border-bottom: 1px solid var(--vp-c-divider);
@@ -239,7 +237,7 @@ p {
   display: inline-block;
   font-size: 0.75rem;
   font-weight: 700;
-  color: var(--vp-c-brand);
+  color: var(--vp-c-brand); /* Souvent bleu pour le C, ou couleur du site */
   background: rgba(var(--vp-c-brand-rgb), 0.1);
   padding: 4px 10px;
   border-radius: 4px;
@@ -257,7 +255,7 @@ h1 {
 
 .lead-text {
   font-size: 1.15rem;
-  color: var(--vp-c-text-1); /* Texte clair forcé */
+  color: var(--vp-c-text-1);
   margin-bottom: 2rem;
   max-width: 600px;
 }
@@ -288,7 +286,7 @@ h1 {
 }
 
 .header-logo img {
-  width: 160px;
+  width: 140px;
   height: auto;
   opacity: 0.9;
   filter: drop-shadow(0 0 30px rgba(0,0,0,0.2));
@@ -319,7 +317,7 @@ h1 {
 }
 
 .pro-card {
-  background-color: var(--vp-c-bg-alt); /* Fond alternatif plus clair */
+  background-color: var(--vp-c-bg-alt);
   border: 1px solid var(--vp-c-divider);
   padding: 1.5rem;
   border-radius: 8px;
@@ -347,7 +345,7 @@ h1 {
 }
 .pro-card p {
   font-size: 0.95rem;
-  color: var(--vp-c-text-1); /* FORCE LE TEXTE CLAIR */
+  color: var(--vp-c-text-1);
   margin-bottom: 1.5rem;
   flex-grow: 1;
 }

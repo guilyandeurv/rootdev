@@ -3,57 +3,57 @@ import { ref } from 'vue'
 
 const techSpecs = ref([
   {
-    title: "Ownership & Borrowing",
-    desc: "Gestion mémoire unique au monde. Le compilateur vérifie la propriété des données, éliminant les erreurs de segmentation.",
+    title: "Tout est Objet",
+    desc: "Un modèle objet pur. Même les nombres et les booléens sont des objets, permettant une syntaxe fluide et cohérente.",
     category: "Architecture"
   },
   {
-    title: "Sécurité (Memory Safety)",
-    desc: "Protection garantie contre les buffer overflows et les accès invalides, sans utiliser de Garbage Collector.",
-    category: "Sécurité"
+    title: "Convention over Configuration",
+    desc: "Philosophie portée par Ruby on Rails : le framework prend des décisions logiques par défaut, réduisant drastiquement le code superflu.",
+    category: "Philosophie"
   },
   {
-    title: "Interopérabilité C",
-    desc: "Peut appeler du code C (et être appelé par lui) sans surcoût de performance (Zero-cost FFI).",
-    category: "Intégration"
+    title: "Métaprogrammation",
+    desc: "Capacité unique à modifier ou créer du code à la volée (Runtime). Base de la 'magie' et de l'expressivité des DSL Ruby.",
+    category: "Flexibilité"
   },
   {
-    title: "Toolchain Cargo",
-    desc: "Un seul outil pour tout gérer : dépendances, compilation, tests, documentation et publication.",
-    category: "DevOps"
+    title: "Performance (YJIT)",
+    desc: "Depuis Ruby 3+, le compilateur YJIT (Yet Another JIT) écrit en Rust booste considérablement les performances des applications Web.",
+    category: "Performance"
   }
 ])
 </script>
 
 <template>
-  <div class="rust-pro-wrapper">
+  <div class="ruby-pro-wrapper">
     
     <header class="header-split">
       <div class="header-text">
-        <div class="tag-pill">Langage Système</div>
-        <h1>Rust</h1>
+        <div class="tag-pill">Langage Orienté Objet</div>
+        <h1>Ruby</h1>
         <p class="lead-text">
-          Le standard industriel pour la performance et la sécurité. <br>
-          Conçu pour les infrastructures critiques, la cybersécurité offensive et les systèmes embarqués.
+          Optimisé pour la productivité et le bonheur des développeurs.<br>
+          Le moteur des plus grandes plateformes SaaS (GitHub, Shopify, Airbnb) grâce au framework <strong>Ruby on Rails</strong>.
         </p>
         
         <div class="meta-row">
           <div class="meta-item">
             <span class="meta-label">Version Stable</span>
-            <span class="meta-value">v1.83+</span>
+            <span class="meta-value">v3.3+</span>
           </div>
           <div class="meta-sep"></div>
           <div class="meta-item">
             <span class="meta-label">Licence</span>
-            <span class="meta-value">MIT / Apache 2.0</span>
+            <span class="meta-value">Ruby License / BSD</span>
           </div>
         </div>
       </div>
 
       <div class="header-logo">
         <img 
-          src="https://prev.rust-lang.org/logos/rust-logo-512x512.png" 
-          alt="Rust Logo" 
+          src="https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg" 
+          alt="Ruby Logo" 
         />
       </div>
     </header>
@@ -81,49 +81,49 @@ const techSpecs = ref([
       <div class="cards-grid">
         <article class="pro-card">
           <div class="card-top">
-            <span class="card-icon">🛡️</span>
-            <h3>Cybersécurité & Recherche</h3>
+            <span class="card-icon">💎</span>
+            <h3>Web & SaaS (Rails)</h3>
           </div>
           <p>
-            Privilégié pour le <strong>développement d'outils offensifs</strong> (Red Teaming) et défensifs. 
-            Sa gestion mémoire stricte élimine mathématiquement les classes de vulnérabilités les plus courantes (CVEs).
+            Le choix n°1 pour lancer des startups ("The Startup Framework"). 
+            Permet de passer de l'idée au produit (MVP) plus vite que n'importe quelle autre technologie grâce à son écosystème mature.
           </p>
           <div class="tags-container">
-            <span class="tech-tag">Malware Dev</span>
-            <span class="tech-tag">Reverse Engineering</span>
-            <span class="tech-tag">Fuzzing</span>
+            <span class="tech-tag">MVC</span>
+            <span class="tech-tag">ActiveRecord</span>
+            <span class="tech-tag">Hotwire</span>
           </div>
         </article>
 
         <article class="pro-card">
           <div class="card-top">
-            <span class="card-icon">⚙️</span>
-            <h3>Infrastructure & SysAdmin</h3>
+            <span class="card-icon">🛍️</span>
+            <h3>E-commerce & Scale</h3>
           </div>
           <p>
-            Remplace progressivement les outils GNU/Linux historiques et les scripts Python 
-            pour les tâches critiques nécessitant <strong>robustesse</strong> et faible empreinte ressources.
+            Robuste pour gérer des transactions complexes et un trafic massif. 
+            C'est la technologie derrière Shopify, prouvant sa capacité à scaler horizontalement.
           </p>
           <div class="tags-container">
-            <span class="tech-tag">CLI Tools</span>
-            <span class="tech-tag">Monitoring</span>
-            <span class="tech-tag">Virtualisation</span>
+            <span class="tech-tag">Solidus</span>
+            <span class="tech-tag">Spree</span>
+            <span class="tech-tag">Sidekiq</span>
           </div>
         </article>
 
         <article class="pro-card">
           <div class="card-top">
-            <span class="card-icon">⚡</span>
-            <h3>Performance & Web</h3>
+            <span class="card-icon">🔧</span>
+            <h3>DevOps & Automatisation</h3>
           </div>
           <p>
-            Architecture de backends scalables capable de traiter des milliers de requêtes/seconde. 
-            Support natif de <strong>WebAssembly</strong> pour le web haute performance.
+            Historiquement le langage préféré pour l'infrastructure as code avant l'ère Go. 
+            Toujours très présent dans la gestion de configuration et les scripts de maintenance.
           </p>
           <div class="tags-container">
-            <span class="tech-tag">Microservices</span>
-            <span class="tech-tag">Game Engine</span>
-            <span class="tech-tag">Wasm</span>
+            <span class="tech-tag">Chef</span>
+            <span class="tech-tag">Puppet</span>
+            <span class="tech-tag">Vagrant</span>
           </div>
         </article>
       </div>
@@ -151,35 +151,35 @@ const techSpecs = ref([
           <thead>
             <tr>
               <th width="30%">Critère</th>
-              <th width="25%" class="highlight-header">Rust 🦀</th>
-              <th width="25%">C++</th>
-              <th width="20%">Python</th>
+              <th width="25%" class="highlight-header">Ruby 🔻</th>
+              <th width="25%">Python</th>
+              <th width="20%">PHP</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><strong>Gestion Mémoire</strong></td>
-              <td class="highlight-cell">Compile-time (Sûr)</td>
-              <td>Manuelle (Risquée)</td>
-              <td>Garbage Collector</td>
+              <td><strong>Priorité</strong></td>
+              <td class="highlight-cell">Expérience Développeur</td>
+              <td>Lisibilité / Science</td>
+              <td>Hébergement Facile</td>
             </tr>
             <tr>
-              <td><strong>Performance</strong></td>
-              <td class="highlight-cell">Native / Métal</td>
-              <td>Native / Métal</td>
-              <td>Interprétée (Lente)</td>
+              <td><strong>Framework Web</strong></td>
+              <td class="highlight-cell">Rails (Tout inclus)</td>
+              <td>Django (Tout inclus)</td>
+              <td>Laravel (Inspiré de Rails)</td>
             </tr>
             <tr>
-              <td><strong>Erreurs Runtime</strong></td>
-              <td class="highlight-cell">Très Rares (Panic)</td>
-              <td>Segfaults fréquents</td>
-              <td>Exceptions fréquentes</td>
+              <td><strong>Syntaxe</strong></td>
+              <td class="highlight-cell">Naturelle / Anglais</td>
+              <td>Stricte (Indentation)</td>
+              <td>Style C / Verbeuse</td>
             </tr>
              <tr>
-              <td><strong>Déploiement</strong></td>
-              <td class="highlight-cell">1 Binaire Statique</td>
-              <td>Dépendances (DLL/SO)</td>
-              <td>Environnement Virtuel</td>
+              <td><strong>Gestion Dépendances</strong></td>
+              <td class="highlight-cell">Bundler (Excellente)</td>
+              <td>Pip / Venv (Complexe)</td>
+              <td>Composer (Bonne)</td>
             </tr>
           </tbody>
         </table>
@@ -191,10 +191,10 @@ const techSpecs = ref([
 
 <style scoped>
 /* --- CONTENEUR PRINCIPAL --- */
-.rust-pro-wrapper {
+.ruby-pro-wrapper {
   font-family: var(--vp-font-family-base, sans-serif);
   color: var(--vp-c-text-1);
-  max-width: 1200px; /* Large mais pas illimité pour garder la lecture fluide */
+  max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 1rem;
 }
@@ -208,13 +208,13 @@ h1, h2, h3, h4 {
 p {
   line-height: 1.6;
   margin: 0;
-  color: var(--vp-c-text-2); /* Fallback */
+  color: var(--vp-c-text-2);
 }
 
 /* --- HEADER --- */
 .header-split {
   display: flex;
-  flex-direction: column-reverse; /* Logo en haut sur mobile */
+  flex-direction: column-reverse;
   gap: 2rem;
   padding-bottom: 3rem;
   border-bottom: 1px solid var(--vp-c-divider);
@@ -239,7 +239,7 @@ p {
   display: inline-block;
   font-size: 0.75rem;
   font-weight: 700;
-  color: var(--vp-c-brand);
+  color: var(--vp-c-brand); /* Idéalement rouge pour Ruby */
   background: rgba(var(--vp-c-brand-rgb), 0.1);
   padding: 4px 10px;
   border-radius: 4px;
@@ -257,7 +257,7 @@ h1 {
 
 .lead-text {
   font-size: 1.15rem;
-  color: var(--vp-c-text-1); /* Texte clair forcé */
+  color: var(--vp-c-text-1);
   margin-bottom: 2rem;
   max-width: 600px;
 }
@@ -288,7 +288,7 @@ h1 {
 }
 
 .header-logo img {
-  width: 160px;
+  width: 130px;
   height: auto;
   opacity: 0.9;
   filter: drop-shadow(0 0 30px rgba(0,0,0,0.2));
@@ -319,7 +319,7 @@ h1 {
 }
 
 .pro-card {
-  background-color: var(--vp-c-bg-alt); /* Fond alternatif plus clair */
+  background-color: var(--vp-c-bg-alt);
   border: 1px solid var(--vp-c-divider);
   padding: 1.5rem;
   border-radius: 8px;
@@ -347,7 +347,7 @@ h1 {
 }
 .pro-card p {
   font-size: 0.95rem;
-  color: var(--vp-c-text-1); /* FORCE LE TEXTE CLAIR */
+  color: var(--vp-c-text-1);
   margin-bottom: 1.5rem;
   flex-grow: 1;
 }

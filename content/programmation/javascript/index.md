@@ -1,9 +1,12 @@
 ---
-sidebar: auto
-redac: true
-date: 2024-*-*
+layout: page
+title: Le langage JavaScript
+sidebar: true
+footer: true
 ---
 
-## Liste des ressources
+<script setup>
+import ContentPage from '../../.vitepress/theme/components/JSPresentation.vue'
+</script>
 
-
+<ContentPage />

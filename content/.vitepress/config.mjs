@@ -43,9 +43,9 @@ export default defineConfig({
         items: [
          { text: "🔐 Cybersécurité", link: "/cybersecurite/index" },
          { text: "📟 Programmation", link: "/programmation/index" },
-         { text: "🎖️ Certifications", link: "/certification/introduction" },
-         { text: '🛜 Réseaux', link: '/reseaux/' },
-         { text: '🖥️ Environnement', link: '/environnement/linux/linux' },
+         { text: "🎖️ Certifications", link: "/certification/index" },
+         { text: '🛜 Réseaux', link: '/reseaux/index' },
+         { text: '🖥️ Environnement', link: '/environnement/index' },
          { text: '♾️ Voir tout →', link: '/content' },
         ],
       },
@@ -61,7 +61,7 @@ export default defineConfig({
         text: '🔐 Cybersécurité',
         collapsed:true,
         items: [
-          { text: '🔎 Introduction', link: '/cybersecurite/' },
+          { text: '🔎 Introduction', link: '/cybersecurite/intro' },
           { text: '📜 Définitions', link: '/cybersecurite/def' },
           { text: '🏛️ Gouvernance',
             collapsed:true,
@@ -172,19 +172,21 @@ export default defineConfig({
           { text: '<i class="fa-brands fa-square-js"></i> Javascript',
             collapsed:true,
             items: [
-              { text: '🔎 Introduction', link: '/programmation/javascript/index' },
+              { text: '❓ Présentation', link: '/programmation/javascript/index' },
+              { text: '🔎 Introduction', link: '/programmation/javascript/intro' },
               { text: '📦 Variables', link: '/programmation/javascript/variables' },
               { text: '🏗️ Fonctions', link: '/programmation/javascript/fonction' },
             ]},
           { text: '💎 Ruby',
             collapsed:true,
             items: [
-              { text: '🔎 Introduction', link: '/programmation/rust/index' },
+              { text: '❓ Présentation', link: '/programmation/ruby/index' },
+              { text: '🔎 Introduction', link: '/programmation/ruby/intro' },
             ]},
           { text: '<i class="fa-brands fa-rust"></i> Rust',
             collapsed:true,
             items: [
-              { text: '🔎 Introduction', link: '/programmation/rust/index' },
+              { text: '❓ Présentation', link: '/programmation/rust/index' },
               { text: '📦 Fondamentaux',
                 collapsed: true,
                 items: [
@@ -196,12 +198,14 @@ export default defineConfig({
           { text: '©️ Langage C',
             collapsed:true,
             items: [
-              { text: '🔎 Introduction', link: '/programmation/c/index' },
+              { text: '❓ Présentation', link: '/programmation/c/index' },
+              { text: '🔎 Introduction', link: '/programmation/c/intro' },
             ]},
           { text: '<i class="fa-brands fa-python"></i> Python',
             collapsed:true,
             items: [
-              { text: '🔎 Introduction', link: '/programmation/python/index' },
+              { text: '❓ Présentation', link: '/programmation/python/index' },
+              { text: '🔎 Introduction', link: '/programmation/python/intro' },
               { text: "🏗️ Fonctions d'origine", link: '/programmation/python/fonction-dorigine' },
               { text: '⚠️ Erreurs', link: '/programmation/python/erreurs' },
               { text: '🌐 Django', link: '/programmation/python/django' },
@@ -225,7 +229,7 @@ export default defineConfig({
         text: '🎖️ Certifications',
         collapsed:true,
         items: [
-          { text: '🔎Introduction', link: '/certification/introduction' },
+          { text: '🔎Introduction', link: '/certification/index' },
           { text: '📛 CompTia Security+ SYO-701',
               collapsed: true,
               items: [
@@ -342,7 +346,7 @@ export default defineConfig({
         text: '🛜 Réseaux',
         collapsed:true,
         items: [
-          { text: '📕 Fondamentaux', link: '/reseaux/' },
+          { text: '📕 Fondamentaux', link: '/reseaux/fondamentaux' },
           { text: '📶 LAN', link: '/reseaux/lan' },
           { text: '🌎 WAN', link: '/reseaux/wan' },
           { text: '🛎️ DNS', link: '/reseaux/dns' },
