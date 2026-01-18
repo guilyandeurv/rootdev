@@ -77,6 +77,7 @@ onMounted(() => {
   width: 100%;
   box-sizing: border-box;
   position: relative;
+  border: 1px solid var(--vp-c-border);
 }
 
 .info-content {

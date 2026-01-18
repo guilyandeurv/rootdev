@@ -2,6 +2,7 @@
 import { h } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
+import '@fortawesome/fontawesome-free/css/all.min.css'
 import './all.scss'
 import './badge.scss'
 import './button.scss'
@@ -12,7 +13,6 @@ import './home-links.scss'
 import './home.scss'
 import './icon.scss'
 import './picture.scss'
-import '@fortawesome/fontawesome-free/css/all.min.css'
 // Enhanced readabilities
 import { 
   NolebaseEnhancedReadabilitiesMenu, 
