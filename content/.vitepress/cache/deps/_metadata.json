@@ -1,55 +1,55 @@
 {
-  "hash": "3ab485a5",
+  "hash": "0567ea8a",
   "configHash": "0bb6d1b1",
-  "lockfileHash": "69fcae4b",
-  "browserHash": "52142c7d",
+  "lockfileHash": "e6ea122e",
+  "browserHash": "83df0dad",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "438b574f",
+      "fileHash": "ad925a76",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "295225ee",
+      "fileHash": "558da689",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "19f2b0ec",
+      "fileHash": "cbcdad34",
       "needsInterop": false
     },
     "vitepress > @vueuse/integrations/useFocusTrap": {
       "src": "../../../../node_modules/@vueuse/integrations/useFocusTrap.mjs",
       "file": "vitepress___@vueuse_integrations_useFocusTrap.js",
-      "fileHash": "d39aaf34",
+      "fileHash": "3626a750",
       "needsInterop": false
     },
     "vitepress > mark.js/src/vanilla.js": {
       "src": "../../../../node_modules/mark.js/src/vanilla.js",
       "file": "vitepress___mark__js_src_vanilla__js.js",
-      "fileHash": "2b33dcee",
+      "fileHash": "bff8a8c3",
       "needsInterop": false
     },
     "vitepress > minisearch": {
       "src": "../../../../node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "947da23c",
+      "fileHash": "e50cc8de",
       "needsInterop": false
     },
     "@nolebase/vitepress-plugin-highlight-targeted-heading/client": {
       "src": "../../../../node_modules/@nolebase/vitepress-plugin-highlight-targeted-heading/dist/client/index.mjs",
       "file": "@nolebase_vitepress-plugin-highlight-targeted-heading_client.js",
-      "fileHash": "0a2dd460",
+      "fileHash": "deb64c0e",
       "needsInterop": false
     },
     "lucide-vue-next": {
       "src": "../../../../node_modules/lucide-vue-next/dist/esm/lucide-vue-next.js",
       "file": "lucide-vue-next.js",
-      "fileHash": "d10ee686",
+      "fileHash": "825b4de9",
       "needsInterop": false
     }
   },
