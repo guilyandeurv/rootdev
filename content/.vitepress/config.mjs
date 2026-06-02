@@ -69,6 +69,7 @@ export default defineConfig({
               { text: '🔎 Introduction', link: '/cybersecurite/gouv/index' },
               { text: '📰 Normes internationales', link: '/cybersecurite/gouv/normes' },
               { text: '📰 Norme ISO 27001', link: '/cybersecurite/gouv/iso27001' },
+              { text: '📰 Norme ISO 21434', link: '/cybersecurite/gouv/iso21434' },
               { text: '🧑‍💼 ITIL', link: '/cybersecurite/gouv/itil' },
               { text: '✋ Autres référentiels de sécurité', link: '/cybersecurite/gouv/autres' },
               { text: '📃 PCA/PRA', link: '/cybersecurite/gouv/pca-pra' },

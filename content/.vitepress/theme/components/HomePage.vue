@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue';
-import { Shield, Code, BookOpen, Github, ExternalLink, Terminal, Zap, Lock, Network, Database, Cloud, Wrench, ArrowRight } from 'lucide-vue-next';
+import { Shield, Code, BookOpen, ExternalLink, Terminal, Zap, Lock, Network, Database, Cloud, Wrench, ArrowRight } from 'lucide-vue-next';
 
 const quickstarts = [
   { 
@@ -130,12 +130,12 @@ onUnmounted(() => {
             </div>
             <div class="connect-content">
               <div class="duration-badge github-badge">
-                <Github :size="16" />
+                <i class="fab fa-github fa-fw" style="font-size: 16px;"></i>
                 <span>Projet Open Source</span>
               </div>
               <div class="button-group">
                 <a href="https://github.com/guilyandeurv/rootdev" target="_blank" rel="noopener noreferrer" class="connect-button secondary">
-                  <Github :size="20" />
+                  <i class="fab fa-github fa-fw" style="font-size: 20px;"></i>
                   <span>Voir sur GitHub</span>
                   <ExternalLink :size="16" />
                 </a>
