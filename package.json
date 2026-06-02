@@ -17,7 +17,13 @@
     "@vitejs/plugin-vue": "^6.0.7",
     "lucide-vue-next": "^1.0.0",
     "patch-package": "^8.0.1",
+<<<<<<< HEAD
     "tar": "^7.5.16"
+=======
+    "tar": "^7.5.10",
+    "immutable": "^5.1.5",
+    "rollup": "^4.59.0"
+>>>>>>> cfdf4236e873c84e70c7c76c12d5cd98fcadb81b
   },
   "overrides": {
     "preact": "^10.26.10",
