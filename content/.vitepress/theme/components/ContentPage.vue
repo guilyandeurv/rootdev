@@ -1,345 +1,645 @@
 <script setup>
-import { ref, computed } from 'vue'
-import { useRouter } from 'vitepress'
+import { computed, ref, watch } from 'vue';
+import {
+  ArrowRight,
+  ArrowUpRight,
+  Award,
+  Code2,
+  Github,
+  LibraryBig,
+  Network,
+  Search,
+  Server,
+  ShieldCheck
+} from 'lucide-vue-next';
+import SiteFooter from './SiteFooter.vue';
 
-const router = useRouter()
-const activeCategory = ref('Tout')
-const searchQuery = ref('')
-const itemsToShow = ref(12)
+/* Une icône par domaine, dans le même trait que le reste du site. La couleur
+   n'est plus portée par la catégorie : toutes les cartes réagissent au survol
+   avec la seule couleur de marque, comme sur la page d'accueil. */
+const categoryIcons = {
+  Certifications: Award,
+  Cybersécurité: ShieldCheck,
+  Environnement: Server,
+  Programmation: Code2,
+  Réseaux: Network
+};
 
-// --- CONFIGURATION DES COULEURS ---
-const categoryConfig = {
-  'Certifications': { color: '#ef4444', icon: '🎖️' },
-  'Cybersécurité':  { color: '#3b82f6', icon: '🛡️' },
-  'Environnement':  { color: '#10b981', icon: '🏗️' },
-  'Programmation':  { color: '#f97316', icon: '💻' },
-  'Réseaux':        { color: '#8b5cf6', icon: '🔌' },
-  'Default':        { color: '#8b949e', icon: '📂' } 
-}
-
-const getThemeColor = (cat) => categoryConfig[cat]?.color || categoryConfig['Default'].color
-
-// --- DONNÉES ---
 const modules = [
-  // ... (Vos données restent identiques à la version précédente) ...
-  { title: "CompTIA Security+ SY0-701", category: "Certifications", desc: "Le socle fondamental : Menaces, Architecture, GRC et Opérations.", link: "/certification/securityplus", tags: ["CompTIA", "Fondamentaux"] },
-  { title: "Analyste SOC", category: "Certifications", desc: "Défense active : SIEM (Elastic/Splunk), logs Windows et réponse aux incidents.", link: "/certification/analyst-soc", tags: ["Blue Team", "SOC", "ELK"] },
-  { title: "CompTIA Pentest+", category: "Certifications", desc: "Méthodologie de test d'intrusion, scan de vulnérabilités et reporting.", link: "/certification/pentestplus", tags: ["Red Team", "CompTIA"] },
-  { title: "Red Team Analyst", category: "Certifications", desc: "Simulation d'adversaire, persistance et évasion de défense.", link: "/certification/redteam-analyst/index", tags: ["Red Team", "Advanced"] },
-  { title: "Gouvernance (GRC)", category: "Cybersécurité", desc: "Normes ISO 27001, Analyse de risques, ITIL et Plans de Continuité (PCA).", link: "/cybersecurite/gouv/index", tags: ["ISO", "Management"] },
-  { title: "Cyberdéfense & Splunk", category: "Cybersécurité", desc: "Architecture SOC, règles Snort, Hardening et maîtrise de Splunk (SPL).", link: "/cybersecurite/cyberdefense/soc", tags: ["Splunk", "Défense"] },
-  { title: "Attaques Web", category: "Cybersécurité", desc: "Injections SQL, XSS, SSRF, IDOR et contournement d'authentification.", link: "/cybersecurite/web/discovery", tags: ["OWASP", "Web"] },
-  { title: "Malware Dev", category: "Cybersécurité", desc: "Création de logiciels malveillants, obfuscation et Reverse Engineering.", link: "/cybersecurite/malware-dev/index", tags: ["Dev", "Virus"] },
-  { title: "Dark Web", category: "Cybersécurité", desc: "Compréhension, accès sécurisé et surveillance des menaces (CTI).", link: "/cybersecurite/darkweb/intro", tags: ["Tor", "Onion"] },
-  { title: "Outils de Hacking", category: "Cybersécurité", desc: "Maîtriser l'arsenal : Nmap, Burp Suite, Metasploit et Wireshark.", link: "/cybersecurite/outils/intro", tags: ["Tools", "Kali"] },
-  { title: "Linux & Bash", category: "Environnement", desc: "Administration système, ligne de commande et gestion des processus.", link: "/environnement/linux/linux", tags: ["Linux", "SysAdmin"] },
-  { title: "Windows Server", category: "Environnement", desc: "Active Directory, GPO, DNS/DHCP et Clustering de basculement.", link: "/environnement/winserv/admin/intro", tags: ["Microsoft", "AD"] },
-  { title: "Ansible (Automation)", category: "Environnement", desc: "Infrastructure as Code (IaC), Playbooks, Rôles et Vault.", link: "/environnement/linux/ansible/intro", tags: ["DevOps", "Python"] },
-  { title: "PowerShell", category: "Environnement", desc: "Scripting avancé, administration AD et automatisation Windows.", link: "/environnement/winserv/powershell/intro", tags: ["Scripting", "Windows"] },
-  { title: "Cisco & Réseau", category: "Environnement", desc: "Configuration d'équipements (IOS) et routage.", link: "/environnement/cisco", tags: ["Network", "Switching"] },
-  { title: "Virtualisation", category: "Environnement", desc: "Hyperviseurs, machines virtuelles et conteneurisation.", link: "/environnement/virtualisation", tags: ["VMware", "Docker"] },
-  { title: "Python & Outils", category: "Programmation", desc: "Langage polyvalent : Scripting offensif (Scanners, Brute-force) et Web (Django).", link: "/programmation/python/index", tags: ["Scripting", "Security"] },
-  { title: "JavaScript", category: "Programmation", desc: "Le langage du Web. Manipulation du DOM et logique client/serveur.", link: "/programmation/javascript/index", tags: ["Web", "Frontend"] },
-  { title: "Langage C", category: "Programmation", desc: "Programmation bas niveau, gestion mémoire et compréhension système.", link: "/programmation/c/index", tags: ["Low-level", "Kernel"] },
-  { title: "Rust", category: "Programmation", desc: "Performance et sécurité mémoire (Ownership) pour le système moderne.", link: "/programmation/rust/index", tags: ["System", "Safe"] },
-  { title: "Ruby", category: "Programmation", desc: "Scripting élégant et orienté objet.", link: "/programmation/ruby/index", tags: ["Scripting", "OOP"] },
-  { title: "Fondamentaux Réseau", category: "Réseaux", desc: "Modèles OSI & TCP/IP, topologies LAN/WAN et adressage.", link: "/reseaux/fondamentaux", tags: ["Théorie", "OSI"] },
-  { title: "Protocoles Web", category: "Réseaux", desc: "Fonctionnement profond de DNS, HTTP, NAT et des Firewalls.", link: "/reseaux/dns", tags: ["Web", "Flux"] },
-  { title: "Cryptographie & VPN", category: "Réseaux", desc: "Chiffrement (Sym/Asym), Hachage, PKI et tunnels IPsec.", link: "/reseaux/crypto/intro", tags: ["Crypto", "Sécurité"] },
-  { title: "Durcissement Réseau", category: "Réseaux", desc: "Sécurisation des switchs, architectures cloisonnées et SNMP.", link: "/reseaux/durcissement/intro", tags: ["Hardening", "Infra"] },
-  { title: "Dépannage & Wireshark", category: "Réseaux", desc: "Analyse de paquets et méthodologie de résolution d'incidents.", link: "/reseaux/depannage/intro", tags: ["Analyse", "PCAP"] },
-  { title: "Sécurité Avancée", category: "Réseaux", desc: "Zero Trust, Proxy, NIDS/NIPS et architectures résilientes.", link: "/reseaux/advanced/architecture", tags: ["Expert", "Architecture"] }
-]
+  { title: 'CompTIA Security+ SY0-701', category: 'Certifications', desc: 'Le socle fondamental : menaces, architecture, GRC et opérations.', link: '/certification/securityplus', tags: ['CompTIA', 'Fondamentaux'] },
+  { title: 'Analyste SOC', category: 'Certifications', desc: 'Défense active : SIEM (Elastic/Splunk), logs Windows et réponse aux incidents.', link: '/certification/analyst-soc/', tags: ['Blue Team', 'SOC', 'ELK'] },
+  { title: 'CompTIA Pentest+', category: 'Certifications', desc: "Méthodologie de test d'intrusion, scan de vulnérabilités et reporting.", link: '/certification/pentestplus', tags: ['Red Team', 'CompTIA'] },
+  { title: 'Red Team Analyst', category: 'Certifications', desc: "Simulation d'adversaire, persistance et évasion de défense.", link: '/certification/redteam-analyst/', tags: ['Red Team', 'Avancé'] },
+  { title: 'Gouvernance (GRC)', category: 'Cybersécurité', desc: 'Normes ISO 27001, analyse de risques, ITIL et plans de continuité (PCA).', link: '/cybersecurite/gouv/', tags: ['ISO', 'Management'] },
+  { title: 'Cyberdéfense & Splunk', category: 'Cybersécurité', desc: 'Architecture SOC, règles Snort, durcissement et maîtrise de Splunk (SPL).', link: '/cybersecurite/cyberdefense/soc', tags: ['Splunk', 'Défense'] },
+  { title: 'Attaques web', category: 'Cybersécurité', desc: "Injections SQL, XSS, SSRF, IDOR et contournement d'authentification.", link: '/cybersecurite/web/discovery', tags: ['OWASP', 'Web'] },
+  { title: 'Malware Dev', category: 'Cybersécurité', desc: 'Création de logiciels malveillants, obfuscation et rétro-ingénierie.', link: '/cybersecurite/malware-dev/', tags: ['Dev', 'Reverse'] },
+  { title: 'Dark web', category: 'Cybersécurité', desc: 'Compréhension, accès sécurisé et surveillance des menaces (CTI).', link: '/cybersecurite/darkweb/intro', tags: ['Tor', 'Onion'] },
+  { title: 'Outils de hacking', category: 'Cybersécurité', desc: "Maîtriser l'arsenal : Nmap, Burp Suite, Metasploit et Wireshark.", link: '/cybersecurite/outils/intro', tags: ['Outils', 'Kali'] },
+  { title: 'Linux & Bash', category: 'Environnement', desc: 'Administration système, ligne de commande et gestion des processus.', link: '/environnement/linux/linux', tags: ['Linux', 'SysAdmin'] },
+  { title: 'Windows Server', category: 'Environnement', desc: 'Active Directory, GPO, DNS/DHCP et clustering de basculement.', link: '/environnement/winserv/admin/intro', tags: ['Microsoft', 'AD'] },
+  { title: 'Ansible', category: 'Environnement', desc: 'Infrastructure as Code (IaC), playbooks, rôles et Vault.', link: '/environnement/linux/ansible/intro', tags: ['DevOps', 'Automatisation'] },
+  { title: 'PowerShell', category: 'Environnement', desc: 'Scripting avancé, administration AD et automatisation Windows.', link: '/environnement/winserv/powershell/intro', tags: ['Scripting', 'Windows'] },
+  { title: 'Cisco & réseau', category: 'Environnement', desc: "Configuration d'équipements (IOS) et routage.", link: '/environnement/cisco', tags: ['Réseau', 'Commutation'] },
+  { title: 'Virtualisation', category: 'Environnement', desc: 'Hyperviseurs, machines virtuelles et conteneurisation.', link: '/environnement/virtualisation', tags: ['VMware', 'Docker'] },
+  { title: 'Python', category: 'Programmation', desc: 'Scripting offensif (scanners, brute-force) et développement web (Django).', link: '/programmation/python/', tags: ['Scripting', 'Sécurité'] },
+  { title: 'JavaScript', category: 'Programmation', desc: 'Le langage du web : manipulation du DOM et logique client/serveur.', link: '/programmation/javascript/', tags: ['Web', 'Frontend'] },
+  { title: 'Langage C', category: 'Programmation', desc: 'Programmation bas niveau, gestion mémoire et compréhension système.', link: '/programmation/c/', tags: ['Bas niveau', 'Kernel'] },
+  { title: 'Rust', category: 'Programmation', desc: 'Performance et sécurité mémoire (ownership) pour le système moderne.', link: '/programmation/rust/', tags: ['Système', 'Sûreté'] },
+  { title: 'Ruby', category: 'Programmation', desc: 'Scripting élégant et orienté objet.', link: '/programmation/ruby/', tags: ['Scripting', 'POO'] },
+  { title: 'Fondamentaux réseau', category: 'Réseaux', desc: 'Modèles OSI et TCP/IP, topologies LAN/WAN et adressage.', link: '/reseaux/fondamentaux', tags: ['Théorie', 'OSI'] },
+  { title: 'Protocoles web', category: 'Réseaux', desc: 'Fonctionnement profond de DNS, HTTP, NAT et des pare-feux.', link: '/reseaux/dns', tags: ['Web', 'Flux'] },
+  { title: 'Cryptographie & VPN', category: 'Réseaux', desc: 'Chiffrement symétrique et asymétrique, hachage, PKI et tunnels IPsec.', link: '/reseaux/crypto/intro', tags: ['Crypto', 'PKI'] },
+  { title: 'Durcissement réseau', category: 'Réseaux', desc: 'Sécurisation des commutateurs, architectures cloisonnées et SNMP.', link: '/reseaux/durcissement/intro', tags: ['Durcissement', 'Infra'] },
+  { title: 'Dépannage & Wireshark', category: 'Réseaux', desc: 'Analyse de paquets et méthodologie de résolution d’incidents.', link: '/reseaux/depannage/intro', tags: ['Analyse', 'PCAP'] },
+  { title: 'Sécurité avancée', category: 'Réseaux', desc: 'Zero Trust, proxy, NIDS/NIPS et architectures résilientes.', link: '/reseaux/advanced/architecture', tags: ['Expert', 'Architecture'] }
+];
 
-const categories = ['Tout', ...new Set(modules.map(m => m.category))]
+const PAGE_SIZE = 12;
+
+const activeCategory = ref('Tout');
+const searchQuery = ref('');
+const itemsToShow = ref(PAGE_SIZE);
+
+const categories = [
+  { name: 'Tout', icon: LibraryBig, count: modules.length },
+  ...[...new Set(modules.map((m) => m.category))].map((name) => ({
+    name,
+    icon: categoryIcons[name],
+    count: modules.filter((m) => m.category === name).length
+  }))
+];
 
 const filteredModules = computed(() => {
-  return modules.filter(item => {
-    const matchCategory = activeCategory.value === 'Tout' || item.category === activeCategory.value
-    const matchSearch = item.title.toLowerCase().includes(searchQuery.value.toLowerCase()) || 
-                        item.desc.toLowerCase().includes(searchQuery.value.toLowerCase()) ||
-                        item.tags.some(tag => tag.toLowerCase().includes(searchQuery.value.toLowerCase()))
-    return matchCategory && matchSearch
-  })
-})
+  const query = searchQuery.value.trim().toLowerCase();
 
-const paginatedModules = computed(() => {
-  return filteredModules.value.slice(0, itemsToShow.value)
-})
+  return modules.filter((item) => {
+    const matchCategory =
+      activeCategory.value === 'Tout' || item.category === activeCategory.value;
 
-function loadMore() { itemsToShow.value += 9 }
-function navigate(link) { if(link) window.location.href = link }
+    if (!query) return matchCategory;
 
+    const haystack = [item.title, item.desc, item.category, ...item.tags]
+      .join(' ')
+      .toLowerCase();
+
+    return matchCategory && haystack.includes(query);
+  });
+});
+
+const paginatedModules = computed(() =>
+  filteredModules.value.slice(0, itemsToShow.value)
+);
+
+/* Toute nouvelle recherche ou nouveau filtre repart de la première page :
+   sinon on hérite du « voir plus » de la sélection précédente. */
+watch([searchQuery, activeCategory], () => {
+  itemsToShow.value = PAGE_SIZE;
+});
+
+function loadMore() {
+  itemsToShow.value += 9;
+}
 </script>
 
 <template>
-  <div class="tech-dashboard">
-    
-    <div class="bg-animation">
-      <div class="blob blob-blue"></div>
-      <div class="blob blob-purple"></div>
-      <div class="grid-overlay"></div>
-    </div>
+  <div class="content-page">
+    <section class="section">
+      <div class="shell">
+        <header class="page-head">
+          <h1 class="page-title">Tout le contenu</h1>
+          <p class="page-lead">
+            {{ modules.length }} modules répartis en {{ categories.length - 1 }}
+            domaines. Filtrez par thème ou cherchez un outil, une norme, un
+            concept.
+          </p>
+        </header>
 
-    <div class="content-wrapper">
-      
-      <div class="contrib-banner">
-        <div class="contrib-content">
-          <div class="contrib-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
-              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-            </svg>
+        <div class="toolbar">
+          <div class="search">
+            <Search class="search-icon" :size="16" aria-hidden="true" />
+            <input
+              v-model="searchQuery"
+              type="search"
+              class="search-input"
+              placeholder="Rechercher un module, un outil, un concept…"
+              aria-label="Rechercher un module"
+            />
           </div>
-          <div class="contrib-text">
-            <h3>Contribuez à ces cours !</h3>
-            <p>Ce projet est <strong>Open Source</strong>. Vous pouvez ajouter du contenu, corriger une erreur ou proposer une amélioration directement sur GitHub.</p>
-          </div>
+          <p class="toolbar-count" aria-live="polite">
+            {{ filteredModules.length }}
+            {{ filteredModules.length > 1 ? 'modules' : 'module' }}
+          </p>
         </div>
-        <a href="https://github.com/guilyandeurv/rootdev" target="_blank" class="contrib-btn">
-          Accéder au dépôt <span class="arrow">→</span>
-        </a>
-      </div>
 
-      <div class="search-section">
-        <div class="search-box">
-          <span class="search-icon">🔍</span>
-          <input 
-            v-model="searchQuery" 
-            type="text" 
-            placeholder="Rechercher un module, un outil, un concept..."
-          />
+        <nav class="filters" aria-label="Filtrer par domaine">
+          <button
+            v-for="cat in categories"
+            :key="cat.name"
+            type="button"
+            class="filter"
+            :class="{ 'filter-active': activeCategory === cat.name }"
+            :aria-pressed="activeCategory === cat.name"
+            @click="activeCategory = cat.name"
+          >
+            <component :is="cat.icon" :size="15" :stroke-width="1.75" />
+            <span>{{ cat.name }}</span>
+            <span class="filter-count">{{ cat.count }}</span>
+          </button>
+        </nav>
+
+        <TransitionGroup name="grid" tag="div" class="module-grid">
+          <a
+            v-for="item in paginatedModules"
+            :key="item.title"
+            :href="item.link"
+            class="module-card"
+          >
+            <span class="card-head">
+              <span class="tile" aria-hidden="true">
+                <component
+                  :is="categoryIcons[item.category]"
+                  :size="19"
+                  :stroke-width="1.75"
+                />
+              </span>
+              <span class="card-cat">{{ item.category }}</span>
+              <ArrowRight class="card-cue" :size="15" aria-hidden="true" />
+            </span>
+
+            <h2 class="card-title">{{ item.title }}</h2>
+            <p class="card-desc">{{ item.desc }}</p>
+
+            <span class="card-tags">
+              <span v-for="tag in item.tags" :key="tag" class="tag">{{ tag }}</span>
+            </span>
+          </a>
+        </TransitionGroup>
+
+        <div v-if="itemsToShow < filteredModules.length" class="more">
+          <button type="button" class="btn btn-ghost" @click="loadMore">
+            <span>Afficher plus</span>
+            <span class="more-left">
+              +{{ Math.min(9, filteredModules.length - itemsToShow) }}
+            </span>
+          </button>
+        </div>
+
+        <p v-if="filteredModules.length === 0" class="empty">
+          Aucun module ne correspond à cette recherche.
+        </p>
+      </div>
+    </section>
+
+    <!-- Appel à contribution : une carte au même filet que les autres, sans
+         dégradé ni couleur d'accent. -->
+    <section class="section section-bordered">
+      <div class="shell">
+        <div class="contrib">
+          <span class="tile" aria-hidden="true">
+            <Github :size="19" :stroke-width="1.75" />
+          </span>
+          <div class="contrib-body">
+            <h2 class="contrib-title">Contribuez à ces cours</h2>
+            <p class="contrib-desc">
+              Le projet est open source : ajoutez un module, corrigez une erreur
+              ou proposez une amélioration directement sur GitHub.
+            </p>
+          </div>
+          <a
+            class="btn btn-ghost contrib-btn"
+            href="https://github.com/guilyandeurv/rootdev"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>Voir le dépôt</span>
+            <ArrowUpRight :size="15" />
+          </a>
         </div>
       </div>
+    </section>
 
-      <div class="tabs-container">
-        <button 
-          v-for="cat in categories" 
-          :key="cat"
-          class="tab-btn"
-          :class="{ active: activeCategory === cat }"
-          :style="activeCategory === cat && cat !== 'Tout' ? { backgroundColor: getThemeColor(cat), borderColor: getThemeColor(cat), color: '#fff' } : {}"
-          @click="activeCategory = cat; itemsToShow = 12" 
-        >
-          {{ cat }}
-        </button>
-      </div>
-
-      <div class="results-count" v-if="searchQuery">
-        {{ filteredModules.length }} résultats trouvés
-      </div>
-
-      <TransitionGroup name="list" tag="div" class="grid-layout">
-        <div 
-          v-for="item in paginatedModules" 
-          :key="item.title" 
-          class="card"
-          :style="{ '--theme-color': getThemeColor(item.category) }"
-          @click="navigate(item.link)"
-        >
-          <div class="card-glow"></div>
-          
-          <div class="card-top">
-            <div class="icon-box">
-              {{ categoryConfig[item.category]?.icon || '📂' }}
-            </div>
-            <div class="category-pill">{{ item.category }}</div>
-          </div>
-          
-          <div class="card-body">
-            <h3>{{ item.title }}</h3>
-            <p>{{ item.desc }}</p>
-          </div>
-
-          <div class="card-footer">
-            <span v-for="tag in item.tags" :key="tag" class="tech-tag">#{{ tag }}</span>
-          </div>
-        </div>
-      </TransitionGroup>
-      
-      <div v-if="itemsToShow < filteredModules.length" class="load-more-container">
-        <button @click="loadMore" class="load-more-btn">Afficher plus ↓</button>
-      </div>
-
-      <div v-if="filteredModules.length === 0" class="empty-state">
-        <p>Aucun module trouvé pour "{{ searchQuery }}"</p>
-      </div>
-
-    </div>
+    <SiteFooter />
   </div>
 </template>
 
 <style scoped>
-/* --- Structure Globale --- */
-.tech-dashboard {
-  position: relative;
-  min-height: 85vh;
-  padding: 40px 20px;
-  background-color: var(--vp-c-bg); 
-  overflow: hidden;
-  font-family: var(--vp-font-family-base, sans-serif);
+/* --------------------------------------------------------------------------
+   Bases — mêmes jetons que la page d'accueil : un filet, un rayon, aucune
+   couleur portée par la donnée. Le fond du site reste visible.
+   -------------------------------------------------------------------------- */
+
+.content-page {
+  --shell: 1160px;
+  --radius: 12px;
+  --hairline: var(--vp-c-divider);
+
+  width: 100%;
   color: var(--vp-c-text-1);
-  transition: background-color 0.3s;
 }
 
-/* --- Background Animé --- */
-.bg-animation {
+.shell {
+  max-width: var(--shell);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 60px 0 72px;
+}
+
+.section-bordered {
+  border-top: 1px solid var(--hairline);
+}
+
+.tile {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--hairline);
+  border-radius: 9px;
+  color: var(--vp-c-text-2);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.module-card:hover .tile {
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1);
+}
+
+/* --------------------------------------------------------------------------
+   En-tête
+   -------------------------------------------------------------------------- */
+
+.page-head {
+  max-width: 620px;
+  margin-bottom: 32px;
+}
+
+.page-title {
+  margin: 0;
+  font-size: clamp(1.75rem, 4vw, 2.15rem);
+  font-weight: 650;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: var(--vp-c-text-1);
+}
+
+.page-lead {
+  margin: 12px 0 0;
+  font-size: 0.985rem;
+  line-height: 1.65;
+  color: var(--vp-c-text-2);
+}
+
+/* --------------------------------------------------------------------------
+   Recherche et filtres
+   -------------------------------------------------------------------------- */
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.search {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  max-width: 420px;
+}
+
+.search-icon {
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  z-index: 0;
+  top: 50%;
+  left: 13px;
+  color: var(--vp-c-text-3);
+  transform: translateY(-50%);
   pointer-events: none;
 }
 
-.grid-overlay {
-  position: absolute;
-  inset: 0;
-  background-image: 
-    linear-gradient(var(--vp-c-divider) 1px, transparent 1px),
-    linear-gradient(90deg, var(--vp-c-divider) 1px, transparent 1px);
-  background-size: 50px 50px;
-  opacity: 0.15;
-  mask-image: radial-gradient(circle at center, black 40%, transparent 95%);
+.search-input {
+  width: 100%;
+  height: 40px;
+  padding: 0 14px 0 38px;
+  border: 1px solid var(--hairline);
+  border-radius: 9px;
+  background-color: var(--vp-c-bg);
+  font-size: 0.885rem;
+  color: var(--vp-c-text-1);
+  transition: border-color 0.2s ease;
 }
 
-.blob {
-  position: absolute;
-  filter: blur(80px);
-  opacity: 0.2;
-  border-radius: 50%;
-  animation: float 15s infinite alternate ease-in-out;
+.search-input::placeholder {
+  color: var(--vp-c-text-3);
 }
 
-.blob-blue { top: -20%; left: -10%; width: 70vw; height: 70vw; background: #3b82f6; }
-.blob-purple { bottom: -20%; right: -10%; width: 60vw; height: 60vw; background: #8b5cf6; animation-delay: -5s; }
-
-@keyframes float {
-  0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(30px, 40px) scale(1.05); }
+.search-input:focus {
+  border-color: var(--vp-c-brand-1);
+  outline: none;
 }
 
-.content-wrapper { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; }
+.search-input::-webkit-search-cancel-button {
+  cursor: pointer;
+}
 
-/* --- BANNIERE OPEN SOURCE (Styles ajoutés) --- */
-.contrib-banner {
+.toolbar-count {
+  margin: 0 0 0 auto;
+  font-size: 0.83rem;
+  white-space: nowrap;
+  color: var(--vp-c-text-3);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  height: 34px;
+  padding: 0 13px;
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+  background-color: var(--vp-c-bg);
+  font-size: 0.855rem;
+  font-weight: 500;
+  color: var(--vp-c-text-2);
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.filter:hover {
+  border-color: var(--vp-c-text-3);
+  color: var(--vp-c-text-1);
+}
+
+.filter-active,
+.filter-active:hover {
+  border-color: var(--vp-c-brand-1);
+  background-color: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+}
+
+.filter-count {
+  font-size: 0.76rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--vp-c-text-3);
+}
+
+.filter-active .filter-count {
+  color: inherit;
+  opacity: 0.75;
+}
+
+/* --------------------------------------------------------------------------
+   Grille de modules
+   -------------------------------------------------------------------------- */
+
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(288px, 1fr));
+  gap: 14px;
+}
+
+.module-card {
   display: flex;
   flex-direction: column;
+  padding: 20px;
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  background-color: var(--vp-c-bg);
+  text-decoration: none;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.module-card:hover {
+  border-color: var(--vp-c-brand-1);
+  background-color: var(--vp-c-bg-soft);
+}
+
+.card-head {
+  display: flex;
   align-items: center;
-  gap: 1.5rem;
-  background: linear-gradient(to right, rgba(var(--vp-c-brand-rgb), 0.1), rgba(var(--vp-c-brand-rgb), 0.05));
-  border: 1px solid rgba(var(--vp-c-brand-rgb), 0.2);
-  border-radius: 12px;
-  padding: 1.5rem 2rem;
-  margin-bottom: 2rem; /* Espace avec la barre de recherche */
+  gap: 11px;
+  margin-bottom: 15px;
 }
 
-@media (min-width: 768px) {
-  .contrib-banner {
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
-  }
+.card-cat {
+  font-size: 0.755rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--vp-c-text-3);
 }
 
-.contrib-content { display: flex; align-items: center; gap: 1.5rem; flex: 1; }
+.card-cue {
+  margin-left: auto;
+  color: var(--vp-c-text-3);
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
 
-.contrib-icon {
-  display: flex; align-items: center; justify-content: center;
+.module-card:hover .card-cue {
+  color: var(--vp-c-brand-1);
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.card-title {
+  margin: 0;
+  font-size: 0.985rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+  color: var(--vp-c-text-1);
+}
+
+.card-desc {
+  margin: 7px 0 0;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--vp-c-text-2);
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+.tag {
+  padding: 2px 8px;
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+  font-size: 0.735rem;
+  white-space: nowrap;
+  color: var(--vp-c-text-3);
+}
+
+/* --------------------------------------------------------------------------
+   Pagination et état vide
+   -------------------------------------------------------------------------- */
+
+.more {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 16px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  font-size: 0.885rem;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-ghost {
+  border-color: var(--vp-c-divider);
   background-color: var(--vp-c-bg);
   color: var(--vp-c-text-1);
-  width: 56px; height: 56px; border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  flex-shrink: 0;
 }
 
-.contrib-text h3 { font-size: 1.1rem; font-weight: 700; margin: 0 0 0.25rem 0; color: var(--vp-c-text-1); }
-.contrib-text p { font-size: 0.95rem; margin: 0; color: var(--vp-c-text-2); line-height: 1.4; }
-.contrib-text strong { color: var(--vp-c-brand); }
+.btn-ghost:hover {
+  border-color: var(--vp-c-text-3);
+  background-color: var(--vp-c-bg-soft);
+}
+
+.more-left {
+  font-size: 0.79rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--vp-c-text-3);
+}
+
+.empty {
+  margin: 0;
+  padding: 48px 0;
+  text-align: center;
+  font-size: 0.915rem;
+  color: var(--vp-c-text-3);
+}
+
+/* --------------------------------------------------------------------------
+   Contribution
+   -------------------------------------------------------------------------- */
+
+.contrib {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px;
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  background-color: var(--vp-c-bg);
+}
+
+.contrib-body {
+  min-width: 0;
+}
+
+.contrib-title {
+  margin: 0;
+  font-size: 0.985rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--vp-c-text-1);
+}
+
+.contrib-desc {
+  margin: 6px 0 0;
+  font-size: 0.885rem;
+  line-height: 1.6;
+  color: var(--vp-c-text-2);
+}
 
 .contrib-btn {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  background-color: var(--vp-c-brand); color: var(--vp-c-bg);
-  font-weight: 600; padding: 0.75rem 1.5rem; border-radius: 8px;
-  text-decoration: none; transition: background-color 0.2s, transform 0.2s;
-  white-space: nowrap;
-}
-.contrib-btn:hover { background-color: var(--vp-c-brand-dark); transform: translateY(-2px); color: var(--vp-c-bg); }
-.contrib-btn .arrow { transition: transform 0.2s; }
-.contrib-btn:hover .arrow { transform: translateX(4px); }
-
-
-/* --- Recherche --- */
-.search-section { margin-bottom: 30px; margin-top: 10px; }
-.search-box { position: relative; max-width: 500px; margin: 0 auto; }
-.search-icon { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--vp-c-text-2); }
-.search-box input {
-  width: 100%; padding: 14px 14px 14px 48px; border-radius: 12px;
-  background: var(--vp-c-bg-alt); border: 1px solid var(--vp-c-divider);
-  color: var(--vp-c-text-1); font-size: 1rem; transition: all 0.2s;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-}
-.search-box input:focus {
-  border-color: #3b82f6; box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2); outline: none;
+  margin-left: auto;
 }
 
-/* --- Onglets --- */
-.tabs-container { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 30px; }
-.tab-btn {
-  background: var(--vp-c-bg-alt); border: 1px solid var(--vp-c-divider);
-  color: var(--vp-c-text-2); padding: 8px 18px; border-radius: 20px;
-  cursor: pointer; transition: all 0.3s; font-weight: 500;
-}
-.tab-btn:hover { background: var(--vp-c-bg-soft); color: var(--vp-c-text-1); border-color: var(--vp-c-text-3); }
-.tab-btn.active { font-weight: 600; transform: translateY(-1px); }
+/* --------------------------------------------------------------------------
+   Transitions de la grille
+   -------------------------------------------------------------------------- */
 
-.results-count { text-align: center; color: var(--vp-c-text-3); font-size: 0.85rem; margin-bottom: 20px; }
-
-/* --- Cartes --- */
-.grid-layout { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
-
-.card {
-  --theme-color: var(--vp-c-brand); 
-  background: var(--vp-c-bg-soft); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  border: 1px solid var(--vp-c-divider); border-radius: 16px; padding: 24px;
-  cursor: pointer; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  display: flex; flex-direction: column; position: relative; overflow: hidden; height: 100%;
-}
-.card-glow {
-  position: absolute; top: 0; right: 0; width: 150px; height: 150px;
-  background: radial-gradient(circle at top right, var(--theme-color), transparent 70%);
-  opacity: 0; transition: opacity 0.4s; pointer-events: none;
-}
-.card:hover { transform: translateY(-5px); border-color: var(--theme-color); box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.15); }
-.card:hover .card-glow { opacity: 0.2; }
-
-.card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
-.icon-box { font-size: 1.8rem; }
-.category-pill {
-  font-size: 0.7rem; text-transform: uppercase; font-weight: 700;
-  padding: 4px 10px; border-radius: 20px;
-  color: var(--theme-color); border: 1px solid var(--theme-color);
-  background: rgba(255, 255, 255, 0.05);
+.grid-enter-active,
+.grid-leave-active {
+  transition: opacity 0.18s ease, transform 0.18s ease;
 }
 
-.card-body h3 { font-size: 1.25rem; font-weight: 700; margin: 0 0 10px 0; color: var(--vp-c-text-1); }
-.card-body p { font-size: 0.95rem; color: var(--vp-c-text-2); line-height: 1.6; margin-bottom: 24px; flex-grow: 1; }
-
-.card-footer { display: flex; gap: 8px; flex-wrap: wrap; }
-.tech-tag {
-  font-size: 0.75rem; color: var(--vp-c-text-2); background: var(--vp-c-bg-alt);
-  padding: 3px 10px; border-radius: 6px; font-family: monospace; border: 1px solid transparent;
+.grid-enter-from,
+.grid-leave-to {
+  opacity: 0;
+  transform: translateY(6px);
 }
-.card:hover .tech-tag { color: var(--theme-color); background: rgba(255, 255, 255, 0.5); border-color: rgba(0,0,0,0.05); }
 
-/* --- Load More --- */
-.load-more-container { display: flex; justify-content: center; margin-top: 40px; }
-.load-more-btn {
-  background: var(--vp-c-bg-alt); color: var(--vp-c-text-1); 
-  border: 1px solid var(--vp-c-divider); padding: 10px 24px; border-radius: 20px;
-  cursor: pointer; transition: all 0.2s; font-weight: 600;
+.grid-leave-active {
+  position: absolute;
 }
-.load-more-btn:hover { background: var(--vp-c-bg-soft); border-color: var(--vp-c-text-2); }
-.empty-state { text-align: center; padding: 60px; color: var(--vp-c-text-3); font-style: italic; }
 
-@media (max-width: 640px) { .grid-layout { grid-template-columns: 1fr; } }
-.list-enter-active, .list-leave-active { transition: all 0.3s ease; }
-.list-enter-from, .list-leave-to { opacity: 0; transform: translateY(10px); }
+/* --------------------------------------------------------------------------
+   Petits écrans
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 640px) {
+  .shell {
+    padding: 0 20px;
+  }
+
+  .section {
+    padding: 44px 0 56px;
+  }
+
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .search {
+    max-width: none;
+  }
+
+  .toolbar-count {
+    margin-left: 0;
+  }
+
+  .module-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Sans survol, la flèche des cartes reste visible en permanence. */
+  .card-cue {
+    opacity: 1;
+    transform: none;
+  }
+
+  .contrib {
+    flex-wrap: wrap;
+  }
+
+  .contrib-btn {
+    width: 100%;
+    margin-left: 0;
+    justify-content: center;
+  }
+}
 </style>

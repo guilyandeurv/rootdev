@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import SiteFooter from './SiteFooter.vue'
 
 const gameConfig = {
   'Interface': { color: '#ec4899', icon: '🎨', gradient: 'linear-gradient(135deg, #ec4899 0%, #be185d 100%)' },
@@ -204,6 +205,10 @@ const techStack = [
       
     </div>
   </div>
+
+  <!-- Hors de .modern-game-page : le pied de page garde le fond du site
+       plutôt que celui, très sombre, de la page de jeu. -->
+  <SiteFooter />
 </template>
 
 <style scoped>

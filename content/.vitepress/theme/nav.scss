@@ -1,0 +1,677 @@
+/**
+ * Component: Nav — barre flottante "verre dépoli" (style iOS)
+ * --------------------------------------------------------------------------
+ *
+ * Principe : on ne touche pas au balisage de VitePress. La barre par défaut
+ * (`.VPNavBar`) sert de zone de positionnement transparente sur toute la
+ * largeur, et c'est son enfant `.container` qui devient la pastille en verre :
+ * détachée des bords, arrondie, floutée.
+ *
+ * `--vp-nav-height` reste la hauteur *réservée* dans la mise en page (VitePress
+ * s'en sert pour le décalage de la sidebar, du contenu, du sommaire et des
+ * ancres). On l'augmente juste assez pour loger la pastille + son écart en
+ * haut : tous les calculs internes de VitePress restent donc justes.
+ *
+ *   0 ───────────────────────────── haut de la fenêtre
+ *   │  --rd-nav-gap        (10px)   écart au-dessus de la pastille
+ *   ├───────────────────────────── ┐
+ *   │  --rd-nav-pill-height (56px)  │ la pastille en verre
+ *   ├───────────────────────────── ┘
+ *   │  respiration                  (6px)
+ *   └── --vp-nav-height    (72px)   début du contenu
+ *
+ * Note sur les `!important` : les styles de VitePress sont `scoped`, donc
+ * compilés en `.VPNavBar[data-v-xxxxxxx]`. Cet attribut leur donne une
+ * spécificité qu'une feuille externe ne peut pas égaler sans surenchère.
+ * `!important` est ici le levier prévu pour surcharger le thème par défaut, et
+ * il est réservé aux seules propriétés que VitePress pose lui-même.
+ */
+
+:root {
+  --vp-nav-height: 72px;
+
+  --rd-nav-pill-height: 56px;
+  --rd-nav-gap: 10px;
+  --rd-nav-radius: 18px;
+  --rd-nav-gutter: 16px;
+
+  /* Retrait haut de la sidebar. VitePress y réserve `--vp-nav-height` pour
+     loger le logo qui la surplombait ; la pastille étant passée à droite,
+     on retombe sur le retrait courant de la sidebar (32px comme ses côtés). */
+  --rd-sidebar-top: 32px;
+
+  /* Verre — mode clair */
+  --rd-nav-bg: rgba(255, 255, 255, 0.72);
+  --rd-nav-bg-top: rgba(255, 255, 255, 0.55);
+  --rd-nav-border: rgba(15, 23, 42, 0.08);
+  --rd-nav-highlight: rgba(255, 255, 255, 0.75);
+  --rd-nav-shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 12px 32px -14px rgba(15, 23, 42, 0.22);
+  --rd-nav-shadow-top: 0 1px 2px rgba(15, 23, 42, 0.03), 0 8px 24px -16px rgba(15, 23, 42, 0.16);
+  --rd-nav-blur: saturate(180%) blur(16px);
+
+  /* Panneaux flottants : menus de la barre et sommaire déroulant.
+     Plus transparents que la pastille, avec un flou plus large en compensation.
+     Au-delà de ~0,8 d'opacité, flouter les 20% restants d'une page sombre ne
+     produit qu'un aplat : l'effet de verre devient invisible et le panneau
+     paraît opaque. Le flou élargi préserve la lisibilité malgré ce fond léger. */
+  --rd-panel-bg: rgba(255, 255, 255, 0.62);
+  --rd-panel-blur: saturate(180%) blur(22px);
+
+  /* Le tiroir de la sidebar est bien plus grand et porte une longue liste :
+     on le laisse plus dense, sinon le texte de la page qui transparaît vient
+     concurrencer les entrées du menu. */
+  --rd-drawer-bg: rgba(255, 255, 255, 0.82);
+  --rd-panel-shadow: 0 2px 6px rgba(15, 23, 42, 0.06), 0 18px 44px -18px rgba(15, 23, 42, 0.3);
+}
+
+html.dark {
+  /* Verre — mode sombre */
+  --rd-nav-bg: rgba(22, 31, 50, 0.68);
+  --rd-nav-bg-top: rgba(22, 31, 50, 0.5);
+  --rd-nav-border: rgba(255, 255, 255, 0.09);
+  --rd-nav-highlight: rgba(255, 255, 255, 0.07);
+  --rd-nav-shadow: 0 1px 2px rgba(0, 0, 0, 0.24), 0 14px 34px -14px rgba(0, 0, 0, 0.55);
+  --rd-nav-shadow-top: 0 1px 2px rgba(0, 0, 0, 0.18), 0 10px 26px -18px rgba(0, 0, 0, 0.45);
+
+  --rd-panel-bg: rgba(22, 31, 50, 0.55);
+  --rd-drawer-bg: rgba(22, 31, 50, 0.78);
+  --rd-panel-shadow: 0 2px 6px rgba(0, 0, 0, 0.3), 0 20px 48px -18px rgba(0, 0, 0, 0.7);
+}
+
+/* VitePress remet ces valeurs à zéro quand la nav est masquée : on les
+   redéclare ici car notre `:root` passe après le sien dans la cascade. */
+.hide-nav {
+  --vp-nav-height: 0px;
+}
+
+.hide-nav .VPSidebar {
+  --vp-nav-height: 22px;
+}
+
+/* --------------------------------------------------------------------------
+ * 1. On efface la barre pleine largeur d'origine
+ * -------------------------------------------------------------------------- */
+
+.VPNav {
+  background-color: transparent !important;
+}
+
+.VPNavBar,
+.VPNavBar.top,
+.VPNavBar.home,
+.VPNavBar.screen-open,
+.VPNavBar:not(.home),
+.VPNavBar:not(.has-sidebar):not(.home.top) {
+  background-color: transparent !important;
+  border-bottom: none !important;
+}
+
+/* Le filet de séparation et le fond propre au bloc de droite n'ont plus de
+   sens : la pastille est une surface unique. */
+.VPNavBar .divider {
+  display: none !important;
+}
+
+/* `position: static` : VitePress passe `.content-body` en `relative` au-delà de
+   960px pour l'empiler au-dessus du titre. Le laisser ainsi ferait de lui le
+   bloc conteneur de la recherche en absolu, qui se centrerait alors sur la
+   zone de droite et non sur la pastille. */
+.VPNavBar .content-body {
+  position: static !important;
+  background-color: transparent !important;
+}
+
+.VPNavBarTitle .title {
+  border-bottom-color: transparent !important;
+}
+
+/* --------------------------------------------------------------------------
+ * 2. La pastille en verre
+ * -------------------------------------------------------------------------- */
+
+.VPNavBar .wrapper {
+  padding: 0 var(--rd-nav-gutter) !important;
+}
+
+/* Le combinateur d'enfant direct est obligatoire, pas cosmétique : le bouton
+   hamburger contient lui aussi un `<span class="container">` (VitePress s'en
+   sert pour masquer ses trois barres). Un simple `.VPNavBar .container` lui
+   appliquerait le verre, le rayon de 18px et la hauteur de 56px, ce qui
+   dessine une capsule parasite autour de l'icône. */
+.VPNavBar > .wrapper > .container {
+  position: relative;
+  margin: var(--rd-nav-gap) auto 0 !important;
+  padding: 0 6px 0 16px;
+  height: var(--rd-nav-pill-height) !important;
+  border: 1px solid var(--rd-nav-border);
+  border-radius: var(--rd-nav-radius);
+  pointer-events: auto !important;
+  transition: border-color 0.3s ease;
+}
+
+/* Le verre est porté par un pseudo-élément, pas par la pastille elle-même :
+   un élément qui floute son fond devient la « racine de fond » de ses
+   descendants, et les menus déroulants de la barre — qui sont ses enfants —
+   perdraient alors leur propre flou. En pseudo-élément, le verre devient leur
+   frère et chacun floute correctement la page. */
+.VPNavBar > .wrapper > .container::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-radius: inherit;
+  background-color: var(--rd-nav-bg);
+  box-shadow: var(--rd-nav-shadow), inset 0 1px 0 var(--rd-nav-highlight);
+  backdrop-filter: var(--rd-nav-blur);
+  -webkit-backdrop-filter: var(--rd-nav-blur);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Tout en haut de page, le verre s'allège — il se densifie au défilement. */
+.VPNavBar.top > .wrapper > .container::before {
+  background-color: var(--rd-nav-bg-top);
+  box-shadow: var(--rd-nav-shadow-top), inset 0 1px 0 var(--rd-nav-highlight);
+}
+
+/* Menu plein écran ouvert (mobile) : la pastille se fond dans un bandeau
+   pleine largeur opaque, en continuité avec `.VPNavScreen` qui s'ouvre juste
+   en dessous. Sans cela, un liseré de contenu apparaîtrait entre les deux. */
+.VPNavBar.screen-open {
+  background-color: var(--vp-c-bg) !important;
+}
+
+.VPNavBar.screen-open > .wrapper > .container {
+  border-color: transparent;
+}
+
+.VPNavBar.screen-open > .wrapper > .container::before {
+  background-color: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+/* --------------------------------------------------------------------------
+ * 3. Les enfants s'alignent sur la hauteur de la pastille, pas sur
+ *    `--vp-nav-height` (qui inclut désormais l'écart du haut).
+ * -------------------------------------------------------------------------- */
+
+.VPNavBar .title,
+.VPNavBarTitle .title,
+.VPNavBar .content-body,
+.VPNavBarHamburger,
+.VPFlyout .button {
+  height: var(--rd-nav-pill-height) !important;
+}
+
+.VPNavBarMenuLink,
+.VPFlyout .text {
+  line-height: var(--rd-nav-pill-height) !important;
+}
+
+/* Garde-fou : par défaut le titre ne se réduit pas (`flex-shrink: 0`), si bien
+   qu'à l'étroit il pousse les icônes de droite hors de la pastille — celle du
+   confort de lecture, dernière de la rangée, se retrouvait tronquée. On lui
+   permet de céder du terrain avant d'en arriver là. */
+.VPNavBar > .wrapper > .container > .title {
+  flex-shrink: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.VPNavBar > .wrapper > .container > .content {
+  min-width: 0;
+}
+
+/* Les menus déroulants s'ouvrent sous la pastille, plus en chevauchement.
+   L'écart visuel est obtenu par du `padding-top` et non par un décalage du
+   `top` : la boîte du menu reste ainsi collée au bouton, sinon le curseur
+   traverserait une zone morte et le survol se romprait avant d'atteindre le
+   menu. */
+.VPFlyout .menu {
+  top: var(--rd-nav-pill-height) !important;
+  padding-top: 10px;
+}
+
+/* --------------------------------------------------------------------------
+ * 4. Mise en page interne
+ *
+ *    Sur les pages à sidebar, VitePress éclate la barre en deux zones alignées
+ *    sur la sidebar (titre en absolu à gauche, contenu décalé de la largeur de
+ *    la sidebar). Dans une pastille unique, on revient à une simple ligne flex.
+ * -------------------------------------------------------------------------- */
+
+@media (min-width: 960px) {
+  /* La pastille se décale à droite de la sidebar au lieu de flotter par-dessus.
+     Elle s'aligne alors sur la colonne de contenu, comme `.VPContent`. */
+  .VPNavBar.has-sidebar > .wrapper {
+    padding-left: calc(var(--vp-sidebar-width) + var(--rd-nav-gutter)) !important;
+    padding-right: var(--rd-nav-gutter) !important;
+  }
+
+  .VPNavBar.has-sidebar > .wrapper > .container {
+    max-width: 100% !important;
+  }
+
+  /* Sélecteur d'enfant direct : `.VPNavBar.has-sidebar .title` visait aussi le
+     `.title` interne de `VPNavBarTitle`, et perdait face au `[data-v-…]` de
+     VitePress qui réserve ici `var(--vp-sidebar-width)`. Ce reliquat de la
+     disposition d'origine — où le titre surplombait la sidebar — poussait les
+     icônes de droite hors de la pastille. */
+  .VPNavBar.has-sidebar > .wrapper > .container > .title {
+    position: static !important;
+    z-index: auto !important;
+    padding: 0 !important;
+    width: auto !important;
+    background-color: transparent !important;
+  }
+
+  /* VitePress met `.content` en `position: relative` pour superposer le titre
+     à la sidebar. On le neutralise, sinon la recherche se centrerait sur la
+     zone de droite au lieu de la pastille entière. */
+  .VPNavBar.has-sidebar .content {
+    position: static !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
+}
+
+/* Recherche centrée sur la pastille.
+ *
+ * Sortie du flux, elle ne réserve plus sa place : la rangée d'icônes de droite
+ * (menu, thème, GitHub, confort de lecture) occupe environ 445px et reste collée
+ * au bord. Le centre de la pastille ne tombe donc à gauche de cette rangée que
+ * si la pastille dépasse ~1100px de large — en deçà, la recherche viendrait
+ * chevaucher le menu. Mesuré : chevauchement de 43px à 1085px de fenêtre, 86px
+ * à 1265px, alors qu'à partir de 1440px le compte est bon.
+ *
+ * On borne donc le centrage à 1440px, seuil qui est aussi celui où VitePress
+ * centre sa mise en page. En dessous, la recherche garde sa position d'origine
+ * dans le flux, juste avant le menu.
+ */
+@media (min-width: 1440px) {
+  .VPNavBar .VPNavBarSearch {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    padding-left: 0 !important;
+    width: clamp(200px, 17%, 240px);
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Champ de recherche : contours seuls, sans aplat de fond — il repose sur le
+   verre de la pastille, qui joue le rôle de surface. Un peu plus haut aussi,
+   pour équilibrer les 56px de la pastille.
+ *
+ * Texte, contours et icône prennent `--vp-c-text-1` — blanc cassé en mode
+ * sombre, gris foncé en mode clair. C'est la couleur des liens de la barre
+ * (« Accueil », « Contenu ») : la variable bascule seule selon le thème, il n'y
+ * a rien à dupliquer. Le survol vire à la couleur de marque, comme ces liens. */
+@media (min-width: 768px) {
+  .VPNavBar .DocSearch-Button {
+    height: 44px !important;
+    border-color: var(--vp-c-text-1) !important;
+    border-radius: 12px !important;
+    background: transparent !important;
+    color: var(--vp-c-text-1) !important;
+  }
+
+  /* Teinte translucide au survol : c'est l'aplat opaque d'origine qui n'est plus
+     souhaité, pas tout retour visuel. */
+  .VPNavBar .DocSearch-Button:hover {
+    border-color: var(--vp-c-brand-1) !important;
+    background: var(--vp-c-brand-soft) !important;
+  }
+
+  .VPNavBar .DocSearch-Button .DocSearch-Button-Placeholder {
+    color: var(--vp-c-text-1) !important;
+  }
+
+  .VPNavBar .DocSearch-Button:hover .DocSearch-Button-Placeholder {
+    color: var(--vp-c-brand-1) !important;
+  }
+
+  .VPNavBar .DocSearch-Button .DocSearch-Button-Key {
+    border-color: var(--vp-c-text-1) !important;
+    color: var(--vp-c-text-1) !important;
+  }
+}
+
+/* L'icône est un masque colorié par `currentColor`, d'où le `color` plutôt
+   qu'un `fill`. Hors media query : sur mobile le champ se réduit à cette seule
+   icône, qui doit suivre la même couleur. */
+.VPNavBar .DocSearch-Button .DocSearch-Search-Icon {
+  color: var(--vp-c-text-1) !important;
+}
+
+.VPNavBar .DocSearch-Button:hover .DocSearch-Search-Icon {
+  color: var(--vp-c-brand-1) !important;
+}
+
+/* Au-delà de 1440px, VitePress centre la mise en page : la sidebar n'est plus
+   collée au bord gauche. On reprend son propre calcul de décalage pour que la
+   pastille reste alignée sur la colonne de contenu. */
+@media (min-width: 1440px) {
+  .VPNavBar.has-sidebar > .wrapper {
+    padding-left: calc(
+      (100vw - var(--vp-layout-max-width)) / 2 + var(--vp-sidebar-width) + var(--rd-nav-gutter)
+    ) !important;
+    padding-right: calc(
+      (100vw - var(--vp-layout-max-width)) / 2 + var(--rd-nav-gutter)
+    ) !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+ * 5. Mobile — barre persistante au défilement
+ *
+ *    VitePress ne fixe la barre qu'à partir de 960px ; en dessous elle est en
+ *    `position: relative` et défile donc avec la page. On la fixe à toutes les
+ *    largeurs, puis on rend au flux les 72px qu'elle n'occupe plus.
+ *
+ *    La compensation est posée sur `.Layout` (le parent direct de VPNav, de
+ *    VPLocalNav et de VPContent) plutôt que sur le seul VPContent : VPLocalNav
+ *    est son frère et le précède dans le flux, il serait sinon resté sous la
+ *    barre. `.Layout` n'a aucune règle de base dans le thème, la marge
+ *    intérieure ne rentre donc en conflit avec rien.
+ * -------------------------------------------------------------------------- */
+
+@media (max-width: 959px) {
+  /* `!important` indispensable : une media query n'ajoute aucune spécificité,
+     et la règle scopée `.VPNav[data-v-…] { position: relative }` de VitePress
+     l'emporterait sinon. */
+  .VPNav {
+    position: fixed !important;
+  }
+
+  .Layout {
+    padding-top: var(--vp-nav-height);
+  }
+
+  /* Ni sommaire ni sidebar : la barre locale n'a rien à afficher et se
+     réduirait à un filet sous la pastille. VitePress la masque déjà ainsi
+     au-delà de 960px. */
+  .VPLocalNav.empty.fixed {
+    display: none;
+  }
+
+  /* --- Fusion de la barre locale avec la pastille -------------------------
+   *
+   * Sur une page de cours, VitePress empile sous la nav une seconde barre
+   * pleine largeur (« Menu » + « Sur cette page »), ce qui donne deux barres
+   * concurrentes. On lui donne la largeur, le verre et le rayon de la
+   * pastille pour qu'elles ne lisent plus que comme un seul bloc flottant.
+   *
+   * Impossible d'aller plus loin sans forker le `Layout.vue` de VitePress :
+   * `useSidebar()` recrée son `isOpen` à chaque appel, l'état d'ouverture
+   * n'est donc pas partageable avec un composant injecté dans un slot.
+   *
+   * La marge négative ramène la position statique de la barre (72px, soit la
+   * compensation posée sur `.Layout`) sur le bas réel de la pastille (66px) :
+   * sans elle, un écart de 6px apparaîtrait tant qu'on n'a pas défilé.
+   */
+  /* La marge négative ramène la position statique de la barre (72px, soit la
+     compensation posée sur `.Layout`) sur le bas réel de la pastille (66px) :
+     sans elle, un écart de 6px apparaîtrait tant qu'on n'a pas défilé.
+     Au-delà de 960px la barre part déjà de 0 et le `sticky` suffit. */
+  .VPLocalNav {
+    margin-top: calc(
+      var(--rd-nav-gap) + var(--rd-nav-pill-height) - var(--vp-nav-height)
+    ) !important;
+  }
+}
+
+/* La barre locale « Menu / Sur cette page » vient se loger exactement sous la
+   pastille, à toutes les largeurs. Calée sur `--vp-nav-height` (72px) elle
+   laissait passer un liseré de 6px de contenu défilant entre les deux ; on la
+   cale donc sur la géométrie réelle de la pastille. */
+.VPLocalNav {
+  top: calc(var(--rd-nav-gap) + var(--rd-nav-pill-height)) !important;
+}
+
+/* --------------------------------------------------------------------------
+ * 5 bis. Fusion de la barre locale avec la pastille
+ *
+ *   Sur une page de cours, VitePress empile sous la nav une seconde barre
+ *   pleine largeur (« Menu » + « Sur cette page »), ce qui donne deux barres
+ *   concurrentes. On lui donne la largeur, le verre et le rayon de la pastille
+ *   pour qu'elles ne lisent plus que comme un seul bloc flottant.
+ *
+ *   Impossible d'aller plus loin sans forker le `Layout.vue` de VitePress :
+ *   `useSidebar()` recrée son `isOpen` à chaque appel, l'état d'ouverture de
+ *   la sidebar n'est donc pas partageable avec un composant injecté dans un
+ *   slot de la barre de navigation.
+ *
+ *   Le seuil de 1279px est celui de VitePress, qui masque la barre locale
+ *   au-delà (le sommaire passe alors dans la colonne de droite).
+ * -------------------------------------------------------------------------- */
+
+@media (max-width: 1279px) {
+  /* Le verre est porté par un pseudo-élément, pas par `.VPLocalNav` lui-même :
+     un élément qui floute son fond devient la « racine de fond » de ses
+     descendants, et le sommaire déroulant — qui est son enfant — perdait alors
+     son propre flou. En pseudo-élément, le verre devient un frère du menu et
+     chacun floute correctement la page. */
+  .VPLocalNav {
+    margin-right: var(--rd-nav-gutter) !important;
+    margin-left: var(--rd-nav-gutter) !important;
+    width: auto !important;
+    border: 1px solid var(--rd-nav-border) !important;
+    border-radius: var(--rd-nav-radius) !important;
+    background-color: transparent !important;
+  }
+
+  .VPLocalNav::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    border-radius: inherit;
+    background-color: var(--rd-nav-bg);
+    backdrop-filter: var(--rd-nav-blur);
+    -webkit-backdrop-filter: var(--rd-nav-blur);
+  }
+
+  /* Accolée à la pastille : angles du haut droits et pas de bordure
+     supérieure, pour éviter un double filet à la jonction. */
+  .VPLocalNav.has-sidebar {
+    border-top: 0 !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+  }
+
+  .VPNavBar.has-sidebar > .wrapper > .container {
+    border-bottom: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  /* Les deux extrémités s'alignent sur le retrait intérieur de la pastille. */
+  .VPLocalNav .menu {
+    padding-left: 16px !important;
+  }
+
+  .VPLocalNavOutlineDropdown {
+    padding-right: 16px !important;
+  }
+}
+
+/* Entre 960 et 1279px, la sidebar est visible : la barre locale se décale
+   comme la pastille. VitePress y parvient par du `padding-left`, ce qui
+   étalerait son fond sous la sidebar — il faut donc une marge. */
+@media (min-width: 960px) and (max-width: 1279px) {
+  .VPLocalNav.has-sidebar {
+    margin-left: calc(var(--vp-sidebar-width) + var(--rd-nav-gutter)) !important;
+    padding-left: 0 !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+ * 6. Mobile — cibles tactiles
+ *
+ *    Recherche (48×55) et hamburger (48×56) occupaient toute la hauteur de la
+ *    pastille : leurs angles droits débordaient de son rayon de 18px, d'où
+ *    l'icône qui paraissait coupée. On les ramène à une cible carrée centrée,
+ *    qui respire dans la pastille tout en restant au-dessus du minimum
+ *    recommandé pour le tactile.
+ * -------------------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+  .VPNavBar .content-body .DocSearch-Button,
+  .VPNavBarHamburger {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 10px;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.2s ease;
+  }
+
+  .VPNavBar .content-body .DocSearch-Button:hover,
+  .VPNavBarHamburger:hover,
+  .VPNavBarHamburger.active {
+    background-color: var(--vp-c-bg-soft) !important;
+  }
+
+  /* Mêmes proportions pour les autres déclencheurs de la barre : menu « … »
+     et confort de lecture. */
+  .VPNavBar .content-body .VPFlyout .button {
+    height: 40px !important;
+    border-radius: 10px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+ * 7. Sidebar — retrait haut
+ *
+ *   VitePress réserve `--vp-nav-height` en haut de la sidebar pour laisser la
+ *   place au logo qui la surplombait. La pastille étant passée à droite, cet
+ *   espace n'a plus d'objet. Le `curtain` — bandeau collant qui masque les
+ *   entrées défilant vers le haut — doit suivre la même hauteur, sinon les
+ *   entrées réapparaîtraient au-dessus de lui au défilement.
+ * -------------------------------------------------------------------------- */
+
+@media (min-width: 960px) {
+  .VPSidebar {
+    padding-top: var(--rd-sidebar-top) !important;
+  }
+
+  /* `top` négatif, comme chez VitePress : avec `top: 0` le collage repousse le
+     bandeau sous le retrait, où il recouvrait la première entrée du menu. */
+  .VPSidebar .curtain {
+    top: calc(var(--rd-sidebar-top) * -1) !important;
+    margin-top: calc(var(--rd-sidebar-top) * -1) !important;
+    height: var(--rd-sidebar-top) !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+ * 8. Panneaux en verre : sommaire déroulant et tiroir de la sidebar
+ * -------------------------------------------------------------------------- */
+
+/* --- Sommaire « Sur cette page » ------------------------------------------
+ *
+ * VitePress compose ce menu avec deux blocs opaques (`.header`, `.outline`)
+ * séparés par un `gap: 1px` laissant voir le fond de `.items`. On rend les
+ * blocs transparents, on porte le verre sur `.items`, et le filet de séparation
+ * redevient une vraie bordure.
+ */
+.VPLocalNavOutlineDropdown .items {
+  gap: 0 !important;
+  border: 1px solid var(--rd-nav-border) !important;
+  border-radius: var(--rd-nav-radius) !important;
+  background-color: var(--rd-panel-bg) !important;
+  box-shadow: var(--rd-panel-shadow) !important;
+  backdrop-filter: var(--rd-panel-blur);
+  -webkit-backdrop-filter: var(--rd-panel-blur);
+}
+
+.VPLocalNavOutlineDropdown .header,
+.VPLocalNavOutlineDropdown .outline {
+  background-color: transparent !important;
+}
+
+.VPLocalNavOutlineDropdown .outline {
+  border-top: 1px solid var(--rd-nav-border);
+
+  /* UnoCSS, livré par les plugins Nolebase, définit un utilitaire `.outline`
+     qui pose `outline-style: solid`. Il percute la classe sémantique du même
+     nom chez VitePress et barre le menu d'un trait clair de 3px. Le défaut
+     préexiste à la refonte ; il ne saute aux yeux que maintenant que le fond
+     du panneau est translucide. */
+  outline-style: none;
+}
+
+/* `.items` se positionne en absolu par rapport à `.VPLocalNav`, désormais
+   encastré. Ses décalages d'origine (16px, ou la largeur de la sidebar) s'y
+   ajouteraient : mesuré à 1100px, le menu partait de 593px au lieu de 304px.
+   On le cale donc sur les bords du bloc en verre. */
+@media (max-width: 1279px) {
+  .VPLocalNavOutlineDropdown .items {
+    top: calc(100% + 8px) !important;
+    right: 0 !important;
+    left: 0 !important;
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1279px) {
+  .VPLocalNavOutlineDropdown .items {
+    right: auto !important;
+    width: 320px;
+  }
+}
+
+/* --- Menus déroulants de la barre ------------------------------------------
+ *
+ * `.VPMenu` sert de panneau aussi bien aux menus de VitePress (« Contenu », le
+ * menu « … ») qu'au réglage de confort de lecture de Nolebase : une seule règle
+ * couvre les deux. Les contrôles qu'ils contiennent gardent leur fond propre,
+ * ce qui les détache bien du verre.
+ */
+.VPNavBar .VPMenu {
+  border: 1px solid var(--rd-nav-border) !important;
+  border-radius: var(--rd-nav-radius) !important;
+  background-color: var(--rd-panel-bg) !important;
+  box-shadow: var(--rd-panel-shadow) !important;
+  backdrop-filter: var(--rd-panel-blur);
+  -webkit-backdrop-filter: var(--rd-panel-blur);
+}
+
+/* --- Tiroir de la sidebar (mobile) ---------------------------------------- */
+
+@media (max-width: 959px) {
+  .VPSidebar {
+    border-right: 1px solid var(--rd-nav-border);
+    border-radius: 0 var(--rd-nav-radius) var(--rd-nav-radius) 0;
+    background-color: var(--rd-drawer-bg) !important;
+    box-shadow: var(--rd-panel-shadow) !important;
+    backdrop-filter: var(--rd-panel-blur);
+    -webkit-backdrop-filter: var(--rd-panel-blur);
+  }
+}
+
+/* --------------------------------------------------------------------------
+ * 9. Accessibilité / dégradés gracieux
+ * -------------------------------------------------------------------------- */
+
+/* Navigateur sans `backdrop-filter` (anciens Firefox) : on compense par une
+   surface nettement plus opaque, sinon la barre devient illisible. */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .VPNavBar > .wrapper > .container::before,
+  .VPNavBar.top > .wrapper > .container::before,
+  .VPLocalNav::before,
+  .VPLocalNavOutlineDropdown .items,
+  .VPNavBar .VPMenu,
+  .VPSidebar {
+    background-color: var(--vp-c-bg) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .VPNavBar > .wrapper > .container,
+  .VPNavBar > .wrapper > .container::before {
+    transition: none;
+  }
+}

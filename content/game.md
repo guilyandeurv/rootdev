@@ -2,7 +2,7 @@
 layout: page
 title: Rootar.io
 sidebar: false
-footer: true
+footer: false
 ---
 
 <script setup>

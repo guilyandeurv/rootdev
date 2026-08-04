@@ -2,7 +2,7 @@
 layout: page
 title: Découverte
 sidebar: false
-footer: true
+footer: false
 ---
 
 <script setup>
