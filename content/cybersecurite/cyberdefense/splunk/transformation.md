@@ -3,5 +3,5 @@ sidebar: auto
 date: 2025-09-28
 ---
 
-# 🆕 Commandes de transformation
+# <RdIcon name="shuffle" /> Commandes de transformation
 <ais />

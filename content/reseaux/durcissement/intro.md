@@ -3,14 +3,14 @@ sidebar: auto
 date: 2025-09-29
 ---
 
-# 🔎 Introduction
+# <RdIcon name="ruler" /> Introduction
 <ais />
 
 ### **🎬 Introduction**
 
 L'informatique a transformé notre mode de vie, notamment avec l'essor du télétravail et des services numériques. Face aux menaces constantes dans ce monde connecté, une protection multicouche s'impose, incarnée par le principe de défense en profondeur.
 
-## **🏰 Défense en profondeur**
+## <RdIcon name="castle" /> Défense en profondeur
 
 Les mécanismes de sécurité sont nombreux et complémentaires, formant une **défense en profondeur**.
 
@@ -26,7 +26,7 @@ Il est donc essentiel d'**identifier les risques** majeurs pour concentrer les r
 
 Cette stratégie multicouche réduit ainsi le risque qu'une faille unique ne compromette l'ensemble du système d'information.
 
-## **📗 Politiques et procédures**
+## <RdIcon name="scroll-text" /> Politiques et procédures
 
 La protection du SI repose d'abord sur les utilisateurs. Les organisations mettent en place des formations et une *Politique de Sécurité du Système d'Information* (PSSI) définissant les bonnes pratiques. Des GPOs (Group Policy Objects) sont déployées pour faire respecter ces règles, notamment concernant les mots de passe.
 
@@ -34,11 +34,11 @@ En cybersécurité, une attaque est inévitable. Pour y faire face, les organisa
 
 Ces plans s'appliquent aussi aux incidents non-informatiques comme les incendies. Dans le contexte IT, on parle plutôt de *Plan de Continuité Informatique* (PCI) et *Plan de Reprise Informatique* (PRI).
 
-## **💪 Physique**
+## <RdIcon name="door-closed" /> Physique
 
 La barrière physique sécurise les locaux et contrôle l'accès aux zones sensibles via des badges, tout en empêchant les connexions réseau non autorisées.
 
-## **🛜 Réseau**
+## <RdIcon name="network" /> Réseau
 
 La protection du réseau comprend :
 
@@ -75,11 +75,11 @@ Types de segmentation :
     - Détection par signatures
 - **EDR** : Outil avancé de surveillance et protection des endpoints, offrant détection et réponse aux menaces en temps réel.
 
-## **📀 Les applications**
+## <RdIcon name="app-window" /> Les applications
 
 La sécurité des applications repose principalement sur **les mises à jour**. Chaque logiciel ayant des vulnérabilités, il faut maintenir un inventaire des applications pour suivre et appliquer les correctifs disponibles.
 
-## **💾 Les données**
+## <RdIcon name="database" /> Les données
 
 La protection des données nécessite un chiffrement adapté selon les bonnes pratiques.
 

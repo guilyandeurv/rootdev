@@ -2,9 +2,9 @@
 sidebar: auto
 date: 2024-12-23
 ---
-# Vulnérabilités SSRF 
+# <RdIcon name="server-crash" /> Vulnérabilités SSRF
 
-## Qu'est que ce SSRF ?
+## <RdIcon name="server-crash" /> Qu'est que ce SSRF ?
 
 Il s'agit d'une falsification de requête côté serveur, c'est une vulnérabilité qui permet à un attaquant de forcer l'application côté serveur à effectuer des requêtes vers un emplacement non prévu.
 
@@ -12,11 +12,11 @@ Dans une attaque SSRF classique, l'attaquant peut forcer le serveur à établir 
 
 ![SSRF schema](./img/server-side%20request%20forgery.svg)
 
-## Quel impact ?
+## <RdIcon name="triangle-alert" /> Quel impact ?
 
 Une attaque SSRF réussie peut souvent entraîner des actions ou un accès non autorisé aux données de la cible. Cela peut se produire dans l'application vulnérable ou sur d'autres systèmes back-end avec lesquels l'application peut communiquer. Dans certaines situations, la vulnérabilité SSRF peut permettre à un attaquant d'exécuter des commandes arbitraires. Un exploit SSRF qui provoque des connexions à des systèmes tiers externes peut entraîner des attaques malveillantes ultérieures. Celles-ci peuvent sembler provenir de l'organisation qui héberge l'application vulnérable.
 
-## Attaques SSRF courantes
+## <RdIcon name="server-crash" /> Attaques SSRF courantes
 
 Les attaques SSRF exploitent souvent les relations de confiance pour intensifier une attaque à partir de l'application vulnérable et effectuer des actions non autorisées. Ces relation de confiance peuvent exister en relation avec le serveur ou avec d'autres systèmes back-end au sein de la même organisation.
 
@@ -67,7 +67,7 @@ Content-Length: 118
 stockApi=http://192.168.0.68/admin
 ```
 
-## Contourner les défenses SSRF courantes
+## <RdIcon name="server-crash" /> Contourner les défenses SSRF courantes
 
 Il est fréquent de voir des applications contenant un comportement SSRF associé à des défenses visant à empêcher toute exploitation malveillante. Souvent, ces défenses peuvent être contournées.
 
@@ -122,7 +122,7 @@ stockApi=http://weliketoshop.net/product/nextProduct?currentProductId=6&path=htt
 
 Cet exploit SSRF fonctionne parce que l'application vérifie d'abord que l'URL `stockAPI` fournie se trouve sur un domaine autorisé, ce qui est le cas. L'application demande ensuite l'URL fournie, ce qui déclenche la redirection ouverte. Elle suit la redirection et fait une demande à l'URL interne choisie par l'attaquant. 
 
-## Vulnérabilités SSRF aveugles
+## <RdIcon name="server-crash" /> Vulnérabilités SSRF aveugles
 
 Les vulnérabilités SSRF aveugles se produisent si on peut amener une application à émettre une requête HTTP back-end vers une URL fournie, mais la réponse de la requête back-end n'est pas renvoyée dans la réponse front-end de l'application.
 
@@ -146,7 +146,7 @@ La simple identification d'une faille SSRF aveugle pouvant déclencher des requ�
 
 Une autre façon d'exploiter les vulnérabilités SSRF aveugles consiste à inciter l'application à se connecter à un système sous le contrôle de l'application et à renvoyer des réponses malveillantes au client HTTP qui établit la connexion. Si on parvient à exploiter une vulnérabilité sérieuse côté client dans l'implémentation HTTP du serveur, on peut peut-être exécuter du code à distance au sein de l'infrastructure de l'application.
 
-## Trouver une surface d'attaque cachée pour les vulnérabilités SSRF
+## <RdIcon name="server-crash" /> Trouver une surface d'attaque cachée pour les vulnérabilités SSRF
 
 De nombreuses vulnérabilités de falsification de requête côté serveur sont faciles à trouver, car le trafic normal de l'application implique des paramètres de requête contenant des URL complètes. D'autres exemples de SSRF sont plus difficiles à localiser.
 

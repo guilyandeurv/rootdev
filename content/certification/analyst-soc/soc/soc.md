@@ -3,16 +3,16 @@ sidebar: auto
 date: 2024-12-04
 ---
 
-# Analyse SOC : Security Operation Center (SOC)
+# <RdIcon name="castle" /> Analyse SOC : Security Operation Center (SOC)
 <ESDInfo />
 
-## Définition du SOC
+## <RdIcon name="building-2" /> Définition du SOC
 
 ### De quoi s'agit-il ?
 
 Le ***SOC*** (Security Operation Center) est un service d'analyste en cybersécurité qui surveille, détecte, analyse et qualifie et répond aux événements et incidents de sécurité. Le ***SOC*** est aussi un ensemble de technologies et d'équipements permettant la centralisation, le traitement et l'affichage d'incidents de sécurité.
 
-## Avantages & évolution du SOC 
+## <RdIcon name="trending-up" /> Avantages & évolution du SOC
 
 Le ***SOC*** est composé d'une équipe d'experts en cybersécurité chargée de :
 * La centralisation de la défense
@@ -28,7 +28,7 @@ La chaîne de valeur est un système qui décrit comment les composants et activ
 
 Il est également possible de faire qualifier un SOC par l'ANSSI à travers la qualification PDIS (Prestataires de Détection d'Incidents et de Sécurité) afin de pouvoir travailler avec les opérateurs d'importance vitale. [PDIS](https://cyber.gouv.fr/prestataires-de-detection-dincidents-de-securite-pdis)
 
-## Comment sommes-nous arrivés au SOC ?
+## <RdIcon name="history" /> Comment sommes-nous arrivés au SOC ?
 
 La sécurité informatique évolue chaque année. La genèse et les protections dites "Endpoint" sont:
 

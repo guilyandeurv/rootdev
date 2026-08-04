@@ -3,14 +3,14 @@ sidebar: auto
 date: 2024-12-19
 ---
 
-# Analyse SOC : Services communs : DHCP, DNS
+# <RdIcon name="route" /> Analyse SOC : Services communs : DHCP, DNS
 <ESDInfo />
 
-## DHCP, l'ami du rogue
+## <RdIcon name="route" /> DHCP, l'ami du rogue
 
 Sécuriser le DHCP n'est pas une chose simple, un attaquant peut facilement se faire passer pour un serveur DHCP et ainsi proposer une mauvaise configuration réseau à ses victimes. L'idéal est d'intégrer un service tel que le NAC (*Network Access Control*) et du 802.1X.
 
-## Le NAC
+## <RdIcon name="shield-ban" /> Le NAC
 
 Le ***NAC*** (*Network Access Control*) est une approche de sécurité qui vise à contrôler l'accès des dispositifs réseau à un réseau informatique. Il permet d'assurer que seuls les utilisateurs et dispositifs autorisés puissent accéder aux ressources du réseau, tout en maintenant la conformité aux politiques de sécurité définies.
 
@@ -27,7 +27,7 @@ Le ***NAC*** (*Network Access Control*) est une approche de sécurité qui vise 
 
 En résumé, le NAC est un outil essentiel pour renforcer la sécurité d'un réseau en s'assurant que seuls les dispositifs conformes et autorisés peuvent y accéder, réduisant ainsi le risque d'intrusion et de compromission.
 
-## Le 802.1X
+## <RdIcon name="key-round" /> Le 802.1X
 
 Le 802.1X est un standard de réseau qui fournit un cadre pour le contrôle d'accès aux réseaux informatiques. Il est principalement utilisé dans les environnements Ethernet et Wi-Fi pour sécuriser l'accès au réseau en authentifiant les dispositifs avant de leur permettre d'accéder à des ressources réseau.
 
@@ -45,7 +45,7 @@ Le 802.1X est un standard de réseau qui fournit un cadre pour le contrôle d'ac
 
 En résumé, le 802.1X est une méthode efficace pour sécuriser l'accès aux réseaux en demandant une authentification préalable, ce qui contribue à protéger les ressources réseau contre les accès non autorisés.
 
-## DNS, une collecte très lourde
+## <RdIcon name="signpost-big" /> DNS, une collecte très lourde
 
 Le DNS représente une grande partie du réseau légitime dans une organisation. Il est sollicité en permanence mais peut être central à une cyberattaque.
 

@@ -3,16 +3,16 @@ sidebar: auto
 date: 2026-01-17
 ---
 
-# 🥽 Proxy / Serveur mandataire
+# <RdIcon name="split" /> Proxy / Serveur mandataire
 <ais />
 
-## 🙏 **Serveurs mandataires**
+## <RdIcon name="split" /> **Serveurs mandataires**
 
 Les serveurs mandataires (ou proxies) interceptent et retransmettent les paquets vers leurs destinations à la place de l'émetteur. On utilisera [Squid](https://www.squid-cache.org/), une solution open source.
 
 ![](img/proxy.png)
 
-## 🤸 **Les usages**
+## <RdIcon name="list-checks" /> **Les usages**
 
 Les serveurs mandataires ont diverses applications, dont certaines vont au-delà de la sécurité. Leur usage initial visait à contrôler la navigation web en entreprise. Aujourd'hui, ils servent principalement à restreindre l'accès aux sites de confiance et à prévenir le phishing.
 
@@ -26,7 +26,7 @@ La supervision est un autre usage majeur des serveurs mandataires en entreprise,
 
 Enfin, l'anonymisation est possible en utilisant des serveurs mandataires distants, bien que cet usage soit peu courant en entreprise. De ce fait, de nombreux sites limitent l'accès aux utilisateurs de proxy pour prévenir les abus.
 
-## 🙊 **Filtrer avec un proxy**
+## <RdIcon name="filter" /> **Filtrer avec un proxy**
 
 Pour se familiariser avec l'usage de proxy, on va manipuler un proxy Squid installé sur le Firewall Pfsense. On se rend donc dans le menu du *service Squid*, une fois celui-ci installé sur une instance de Pfsense.
 

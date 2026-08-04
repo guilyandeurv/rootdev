@@ -1,7 +1,7 @@
 ---
 sidebar: auto
 ---
-# Méthodologie du développement
+# <RdIcon name="git-pull-request" /> Méthodologie du développement
 <Badge type="tip" text="Rédigé le */*/2024" />
 <Badge type="danger" text="<--- à mettre à jour" />
 <Badge type="warning" text="En cours de rédaction" />

@@ -3,7 +3,7 @@ sidebar: auto
 date: 2024-12-06
 ---
 
-# 🛡️ Red Teaming : définitions
+# <RdIcon name="book-type" /> Red Teaming : définitions
 ::: tip Utilisation
 Utilisez la barre de recherche en haut de cette page, ou bien utilisez le raccourci clavier `CTRL` + `F` pour rechercher la définition voulue.
 :::

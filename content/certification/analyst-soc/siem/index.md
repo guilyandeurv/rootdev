@@ -3,14 +3,14 @@ sidebar: auto
 date: 2024-12-20
 ---
 
-# Analyse SOC : Tour d'horizon d'un SIEM
+# <RdIcon name="layers" /> Analyse SOC : Tour d'horizon d'un SIEM
 <ESDInfo />
 
-## Contexte d'un SIEM
+## <RdIcon name="layers" /> Contexte d'un SIEM
 
 Les risques cyber étant de plus en plus présents et menaçants, les organisations ont besoin de surveillances en permancences de leurs systèmes d'informations. L'identification des actions malveillantes qui les menacent permettent de se prémunir de potentielles attaques avant qu'elles ne causent de graves dommages. Le ***SIEM*** (***S***ecurity ***I***nformation and ***E***vent ***M***anagement) représente un ensemble de composants permettant de détecter des cyber-menaces, permet également aux organisations de disposer d'une vue globale de l'état de leur sécurité informatique.
 
-## Solutions existante
+## <RdIcon name="wrench" /> Solutions existante
 
 ### Choix d'une solution
 
@@ -57,7 +57,7 @@ Elastic est une solution open source, avec un dashboard interactif et avancé, d
 
 ![Elastic interface](./img/elastic-interface.jpg)
 
-## Principe de fonctionnement d'un SIEM
+## <RdIcon name="cog" /> Principe de fonctionnement d'un SIEM
 
 Le principe d'un SIEM est d'agréger des données émanantes de plusieurs sources :
 * Pare-feu
@@ -80,7 +80,7 @@ Chaque équipement dispose d'une horloge interne qui lui permet d'horodater les 
 * Utilisent des serveurs de temps pour garder les équipements synchronisés
 * Protocole NTP (***N***etwork ***T***ime ***P***rotocole)
 
-## Objectifs d'un SIEM
+## <RdIcon name="target" /> Objectifs d'un SIEM
 
 ### Fonctionnalités apportées par le SIEM :
 

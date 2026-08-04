@@ -3,5 +3,5 @@ sidebar: auto
 date: 2025-09-28
 ---
 
-# <i class="fa-solid fa-ethernet"></i> Service DHCP
+# <RdIcon name="ethernet-port" /> Service DHCP
 <ais />

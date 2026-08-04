@@ -3,14 +3,14 @@ sidebar: auto
 date: 2024-11-29
 ---
 
-# 🛡️ Red Teaming : comprendre la sécurité offensive
+# <RdIcon name="drama" /> Red Teaming : comprendre la sécurité offensive
 ::: danger Avertissement
 Ce cours est à but éducatif uniquement.
 
 Les techniques présentées doivent être utilisées uniquement dans un cadre légal et éthique, avec une autorisation explicite.
 :::
 
-## Qu'est-ce que le Red Teaming ?
+## <RdIcon name="circle-help" /> Qu'est-ce que le Red Teaming ?
 
 Le Red Teaming est une simulation de cyberattaque réaliste qui a pour but de:
 
@@ -22,7 +22,7 @@ Ils performent différents types d'attaque, tel que le Social Engineering, les a
 
 Les opérations de Red Team sont similaires aux Pentest mais de façon mieux encadrées et avec une cible bien précise, en employant les techniques utilisées par un réel attaquant. le but va être d'accéder à des informations sensibles, de n'importe quelle manière, de façon la plus discrète possible sans laisser de trace derrière eux.
 
-## Quelles différences avec le Pentest ?
+## <RdIcon name="door-open" /> Quelles différences avec le Pentest ?
 
 |Pentest|Red Teaming|
 |-|-|
@@ -32,7 +32,7 @@ Les opérations de Red Team sont similaires aux Pentest mais de façon mieux enc
 |Fait des suppositions sur l'environnement, peut ne pas tester là où on ne lui a pas dit d'aller.|Ne fait aucune supposition, tente de faire des compromissions partout, pivote et change de stratégie et de techniques si nécessaire.|
 |Utilise les outils présents au moment du test|Recherche constante de nouveaux exploits, de vulnérabilités et mise en œuvre d'attaques avec de nouveaux outils dès qu'elles sont découvertes.|
 
-## Cycle d'une attaque
+## <RdIcon name="repeat" /> Cycle d'une attaque
 
 ![Lifecycle](./img/rt-lifecycle.png)
 
@@ -94,7 +94,7 @@ On parle de mouvement latéral lorsqu'un attaquant compromet ou prend le contrô
   - Archiver les données collectées : Un adversaire peut compresser et/ou crypter les données collectées avant de les exfiltrer.
   - Données du presse-papiers : Les attaquants peuvent collecter des données stockées dans le presse-papiers des utilisateurs qui copient des informations au sein d'une application ou d'une application à l'autre. 
 
-## Les infrastructure d'un opérateur Red Team
+## <RdIcon name="swords" /> Les infrastructure d'un opérateur Red Team
 
 ***Serveur C2*** : il est utilisé par les attaquants pour maintenir la communication avec les systèmes compromis au sein d'un réseau cible. 
 
@@ -112,7 +112,7 @@ Les acteurs de la menace n'utilisent pas un seul système pour lancer des attaqu
 
 Il protège l'emplacement d'origine du serveur de l'équipe.
 
-## Processus d'authentification de Kerberos
+## <RdIcon name="key-round" /> Processus d'authentification de Kerberos
 
 ::: info Authentification Kerberos
 Dans l'environnement Active Directory, toutes les requêtes et le processus d'authentification sont effectués par le biais de tickets. Par conséquent, aucun mot de passe n'est utilisé pour accéder au réseau.

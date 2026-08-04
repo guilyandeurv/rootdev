@@ -3,10 +3,10 @@ sidebar: auto
 date: 2024-12-30
 ---
 
-# 🇫🇷 Cyberdéfense : La cybersécurité en France
+# <RdIcon name="flag" /> 🇫🇷 Cyberdéfense : La cybersécurité en France
 <ESDInfo />
 
-## Introduction aux menaces
+## <RdIcon name="shield-alert" /> Introduction aux menaces
 
 Ces dernières années, les entreprises et les institutions ont été victimes de nombreux types d'attaques plus ou moins complexes à détecter et à arrêter. Même si les approches peuvent rester similaires, il existe un nombre important de variantes permettant ces attaques.
 
@@ -72,7 +72,7 @@ Cette dernière catégorie peut avoir des connaissances et moyens financiers plu
 
 Au vu des différents profils, certains groupes d'attaquants ont ces dernières années été mis en lumière "grâce" aux différents impacts qui ont pu être dégagés de leurs attaques. La difficulté principale des différentes équipes de défense est le repérage et la mise en place de mécanismes de protection adaptés aux attaques des différents profils précédemment cités.
 
-## Vision des dirigeant vis-à-vis de la cybersécurité
+## <RdIcon name="briefcase" /> Vision des dirigeant vis-à-vis de la cybersécurité
 
 Les notions de cybersécurité ont été pendant longtemps associées uniquement à l'aspect informatique. Mais depuis plusieurs années, que cela soit mis en avant par le biais d'attaques sur des grands groupes, des secteurs d'activités spécifiquement ciblés, ou par divers médias, la cybersécurité a pris une place forte dans les réflexions stratégiques des organisations.
 
@@ -108,7 +108,7 @@ Parmi ces différents sujets, plusieurs reviennent de manière assez constante :
 
 Le business des différents organisations étant l'élément clé pour les dirigeants, il convient de mettre en oeuvre une approche de la cybersécurité en lien direct avec la stratégie de l'organisation, afin de créer un alignement et une compréhension claire et synthétique des différents risques encourus vis-à-vis des impacts qui pourraient en être dégagés.
 
-## Les différents corps d'état liés à la cybersécurité française
+## <RdIcon name="landmark" /> Les différents corps d'état liés à la cybersécurité française
 
 Depuis plusieurs années, l'état français a renforcé l'ensemble de ses branches liées à la cybersécurité, de sorte à pouvoir intervenir et répondre aux différentes problématiques (lutte informatique défensive / lutte informatique offensive).
 
@@ -133,7 +133,7 @@ Mais son rôle principal est l'anticipation, la détection et la réponse aux in
 Ce ministère est affilié au *Premier Ministre*, il est en charge de la lutte contre la criminalité numérique (*C3N* & *SDLC*), enquête sur les fraudes aux technologies de l'information (*BEFTI*), conduit les investigations sur Internet. Il est également en charge de la lutte contre la cybermenace interne, pilote et coordonne la lutte contre la cybercriminalité.
 La lutte contre la cybercriminilatié vise les institutions, les intérêts nationaux, les acteurs économiques, les collectivitiés publiques et particuliers, contrairement à l'ANSSI qui ne s'occupe pas des particuliers.
 
-## Zoom sur l'ANSSI
+## <RdIcon name="landmark" /> Zoom sur l'ANSSI
 
 Créé par décret en juillet 2009, l'ANSSI (***A***gence ***N***ationale de la ***S***écurité des ***S***ystèmes d'***I***nformation) est un service français, rattaché au secrétarait général de la défense de la sécurité nationale (***SGDSN***). Il s'git d'une autorité chargée d'assister le Premier Ministre dans l'exercice de ses responsabilités en matière de défense et de sécurité nationale. L'ANSSI remplace la Direction Centrale de la Sécurité des Systèmes d'Information (***DCSSI***).
 

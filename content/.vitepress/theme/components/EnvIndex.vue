@@ -1,9 +1,13 @@
 <script setup>
 import { ref } from 'vue'
+import RdIcon from '../../components/RdIcon.vue'
 
+// `icon` reprend le nom porté par la même section dans la barre latérale
+// (cf. `icons/registry.mjs`).
 const envModules = ref([
   {
-    title: "🐧 Linux & Open Source",
+    icon: "brand-linux",
+    title: "Linux & Open Source",
     description: "Administration système, du noyau aux services réseaux critiques.",
     topics: [
       { title: "Introduction & Histoire", link: "/environnement/linux/linux", intro: "Philosophie GNU/Linux et distributions." },
@@ -14,7 +18,8 @@ const envModules = ref([
     ]
   },
   {
-    title: "🪟 Windows Server",
+    icon: "brand-windows",
+    title: "Windows Server",
     description: "Gestion d'infrastructures Microsoft d'entreprise.",
     topics: [
       { title: "Active Directory (AD DS)", link: "/environnement/winserv/admin/ad", intro: "Contrôleurs de domaine, Forêts et GPO." },
@@ -25,7 +30,8 @@ const envModules = ref([
     ]
   },
   {
-    title: "🪄 Ansible (IaC)",
+    icon: "brand-ansible",
+    title: "Ansible (IaC)",
     description: "Automatisation et gestion de configuration sans agent.",
     topics: [
       { title: "Introduction & Architecture", link: "/environnement/linux/ansible/intro", intro: "Fonctionnement SSH et idempotence." },
@@ -35,7 +41,8 @@ const envModules = ref([
     ]
   },
   {
-    title: "🐚 PowerShell",
+    icon: "brand-powershell",
+    title: "PowerShell",
     description: "Scripting et administration avancée pour Windows.",
     topics: [
       { title: "Introduction & Cmdlets", link: "/environnement/winserv/powershell/intro", intro: "La puissance du shell objet." },
@@ -45,7 +52,8 @@ const envModules = ref([
     ]
   },
   {
-    title: "🌐 Réseau & Infrastructure",
+    icon: "server",
+    title: "Réseau & Infrastructure",
     description: "Les couches basses et l'abstraction matérielle.",
     topics: [
       { title: "Cisco (IOS)", link: "/environnement/cisco", intro: "Configuration de routeurs et switchs." },
@@ -114,7 +122,7 @@ const envModules = ref([
       <div class="modules-grid">
         <div v-for="(module, mIndex) in envModules" :key="mIndex" class="module-card">
           <div class="module-header">
-            <h3>{{ module.title }}</h3>
+            <h3><RdIcon :name="module.icon" class="module-icon" />{{ module.title }}</h3>
             <p>{{ module.description }}</p>
           </div>
           
@@ -298,6 +306,10 @@ h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 1rem; letter-spacing: -
 }
 .module-header h3 { font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--vp-c-brand); }
 .module-header p { font-size: 0.9rem; }
+
+/* L'icône remplace l'emoji qui ouvrait chaque titre : même rôle de repère,
+   mais elle suit la taille et la couleur du titre. */
+.module-icon { margin-right: 0.5rem; font-size: 1.1rem; vertical-align: -0.06em; }
 
 /* LIENS */
 .module-links {

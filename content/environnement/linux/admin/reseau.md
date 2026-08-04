@@ -3,10 +3,10 @@ sidebar: auto
 date: 2026-01-25
 ---
 
-# 📶 Maitriser le réseau & les firewalls
+# <RdIcon name="antenna" /> Maitriser le réseau & les firewalls
 <ais />
 
-## 📖 Qu'est-ce qu'une interface réseau ?
+## <RdIcon name="network" /> Qu'est-ce qu'une interface réseau ?
 
 Une interface réseau est le point de contact entre une machine et un réseau pour l'échange de données. Il existe deux types : **physiques** et **virtuelles**.
 
@@ -30,7 +30,7 @@ Créées par le système pour gérer des connexions spécifiques :
 
 Les interfaces virtuelles sont essentielles pour les environnements virtualisés et conteneurisés modernes.
 
-## 🔗 Lien interface-IP
+## <RdIcon name="link" /> Lien interface-IP
 
 Une **adresse IP** est l'identifiant unique d'un appareil sur un réseau, fonctionnant comme une "adresse postale" numérique.
 
@@ -47,7 +47,7 @@ L'adresse IP est l'**identité** d'une interface sur le réseau. Sans elle, pas 
     - IP locale (`192.168.1.10`)
     - IP globale (publique/NAT)
 
-## 🕵️‍♂️ Identifier les interfaces
+## <RdIcon name="network" /> Identifier les interfaces
 
 Les commandes `ip` et `ping` gèrent les paramètres réseau.
 
@@ -94,7 +94,7 @@ Points clés :
 >
 > Pour identifier la passerelle locale d'une machine virtuelle, on utilise la commande : `ip route show default`
 
-## ❓ Comment configurer une interface réseau ?
+## <RdIcon name="settings-2" /> Comment configurer une interface réseau ?
 
 Pour configurer une interface réseau, on doit **identifier**, **modifier** et **optimiser** ses paramètres pour une connexion réseau efficace.
 
@@ -147,7 +147,7 @@ Un rappel des premières commandes vues, essentielles pour valider la configurat
 
 Ces commandes simples mais puissantes permettent de diagnostiquer rapidement les problèmes ou de valider une configuration réseau. Toujours les garder en tête lors du travail sur les interfaces réseau.
 
-## 📌 Configurer une adresse IP statique de manière permanente
+## <RdIcon name="route" /> Configurer une adresse IP statique de manière permanente
 
 Pour une adresse IP persistante après redémarrage, on la configure de façon permanente via **Netplan** sous Ubuntu.
 
@@ -196,7 +196,7 @@ Pour une adresse IP persistante après redémarrage, on la configure de façon p
     ```
     
 
-## Comment évaluer et diagnostiquer les performances réseau ?
+## <RdIcon name="gauge" /> Comment évaluer et diagnostiquer les performances réseau ?
 
 Voici les principaux outils pour vérifier et analyser un réseau.
 
@@ -245,7 +245,7 @@ sudo journalctl -u systemd-networkd
 
 > ✅ **À retenir :** Ces outils permettent d'observer et diagnostiquer le réseau sans le modifier, via la table de routage (`ip route`), l'analyse du trafic (`tcpdump`) et les journaux système (`journalctl`).
 
-## 🧱 Pare-feu et sécurité réseau
+## <RdIcon name="brick-wall" /> Pare-feu et sécurité réseau
 
 Un pare-feu est un outil de sécurité qui régule le trafic réseau. Linux utilise principalement **iptables** et **nftables** pour protéger contre les menaces.
 
@@ -263,7 +263,7 @@ Un pare-feu filtre le trafic réseau selon des règles définies :
 - **Chaînes** : points de contrôle du trafic (`INPUT`, `OUTPUT`)
 - **Règles** : définissent le traitement du trafic
 
-## 🏓 Outils principaux
+## <RdIcon name="wrench" /> Outils principaux
 
 ### **📌 `iptables`**
 
@@ -348,7 +348,7 @@ sudo nft add rule ip filter input tcp dport 22 accept
 sudo nft list ruleset
 ```
 
-## 🌟 Bonnes pratiques en sécurité réseau
+## <RdIcon name="thumbs-up" /> Bonnes pratiques en sécurité réseau
 
 - **Bloquer les ports inutilisés** : Réduire la surface d’attaque en autorisant uniquement les ports nécessaires.
 - **Utiliser le principe du moindre privilège** : Par défaut, bloquer tout le trafic et ouvrir uniquement ce qui est requis.

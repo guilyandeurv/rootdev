@@ -4,9 +4,9 @@ redac: true
 date: 2024-10-15
 ---
 
-# Introduction au langage C
+# <RdIcon name="memory-stick" /> Introduction au langage C
 
-## Hello World !
+## <RdIcon name="sparkles" /> Hello World !
 
 En **C**, on utilise la fonction `printf()` pour afficher du texte à l'écran. Tout ce qui se trouve entre les guillemets "" sera affiché. Le caractère \n permet de faire un retour à la ligne.
 
@@ -23,7 +23,7 @@ int main()
 
 `main()` : la fonction principale de l'application. Elle est appelée lorsque l'exécutable est lancé.
 
-## Opérateurs mathématiques
+## <RdIcon name="sigma" /> Opérateurs mathématiques
 
 |Opérateur|Syntaxe|Exemple|
 |-|-|-|
@@ -53,7 +53,7 @@ int main() {
 L'import du module `math.h` permet d'obtenir une valeur précise de pi.
 Le symbole `*` permet de multiplier. Le symbole pour la division est la barre oblique `/`. La fonction `pow()` permet de calculer la puissance.
 
-## Opérateurs de comparaison
+## <RdIcon name="equal" /> Opérateurs de comparaison
 
 |Opérateur|Syntaxe|
 |-|-|
@@ -64,7 +64,7 @@ Le symbole `*` permet de multiplier. Le symbole pour la division est la barre ob
 |Plus grand ou égal à|`>=`|
 |Plus petit ou égal à|`<=`|
 
-## Opérateurs booléens
+## <RdIcon name="toggle-left" /> Opérateurs booléens
 
 |Opérateur|Syntaxe|
 |-|-|
@@ -72,7 +72,7 @@ Le symbole `*` permet de multiplier. Le symbole pour la division est la barre ob
 |Une seule condition de la déclaration doit être vraie|`||`|
 |Si une condition est l'opposé d'un argument|`!`|
 
-## Types de variable
+## <RdIcon name="shapes" /> Types de variable
 
 
 ### Types entiers
@@ -135,7 +135,7 @@ Le symbole `*` permet de multiplier. Le symbole pour la division est la barre ob
 
 `enum` : énumération (peut contenir plusieurs valeurs constantes)
 
-## Les variables
+## <RdIcon name="box" /> Les variables
 
 En C, les variables sont déclarées avec un type de données spécifique. Voici quelques types de base :
 
@@ -166,7 +166,7 @@ Ici, nous avons déclaré une variable marque de type `char[]` (tableau de carac
 
 Pour concaténer des variables dans un `printf()`, on utilise les spécificateurs de format `%s` pour les chaînes de caractères et `%d` pour les entiers.
 
-## Les tableaux
+## <RdIcon name="table-2" /> Les tableaux
 
 En **C**, les tableaux sont déclarés avec une taille fixe, tel que sur l'exemple suivant :
 
@@ -204,7 +204,7 @@ int main() {
 
 Ici, nous avons déclaré un tableau de taille variable, et nous avons ensuite demandé à l'utilisateur de saisir la taille du tableau. Avec la boucle `for` on a ensuite parcouru le tableau et on a demandé à l'utilisateur de saisir chaque valeur du tableau, qui sont ensuite affichées une par une.
 
-## Les conditions
+## <RdIcon name="git-branch" /> Les conditions
 
 Avec le langage C, on utilise les instructions `if`, `else` et `else if` pour implémenter des conditions.
 
@@ -225,7 +225,7 @@ int main() {
 
 Ici, **si** l'argent dans mon portefeuille est ***inférieur au prix***, alors je ne peux pas acheter le produit. **Sinon**, je peux acheter le produit.
 
-## Les boucles
+## <RdIcon name="repeat" /> Les boucles
 
 En C, on utilise les boucles `for` et `while` pour itérer sur des éléments.
 
@@ -264,7 +264,7 @@ int main() {
 
 Ici, `siteweb` est une liste comprenant les valeurs *rootdev.fr*, *tryhackme.fr* et *udemy.fr*. ***Pour chaque*** élément *(site)*, `printf` l'élement.
 
-## Les structures
+## <RdIcon name="shapes" /> Les structures
 
 Les **structures** ou "*Structs*" sont des types de données définis par l'utilisateur qui permettent de regrouper des éléments de données liés de différents types de données en une seule unité. Les **structures** peuvent être utilisées pour stocker des données liées à un objet particulier. Elles aident à organiser de grandes quantités de données connexes de manière à ce qu'elles soient facilement accessibles et manipulables. Chaque élément au sein d'une structure est appelé un "***membre***" ou "***élément***".
 
@@ -352,7 +352,7 @@ printf("Le membre ID de la structure est maintenant : %d \n", structpointer->ID)
 
 L'opérateur flèche peut être converti en format point. Par exemple, `structpointer->ID` est équivalent à `(*structpointer).ID.` C'est-à-dire que `structurepointer` est déréférencé puis accédé directement.
 
-## Énumération (***enum***)
+## <RdIcon name="list-tree" /> Énumération (***enum***)
 
 ### Définition et syntaxe
 
@@ -491,7 +491,7 @@ Dans cet exemple, les drapeaux `GRAS` et `SOULIGNE` sont combinés à l'aide de 
 
 En utilisant les énumérations, on peut rendre son code plus lisible, maintenable et efficace, notamment lorsqu'on traite avec des ensembles de constantes nommées ou de drapeaux.
 
-## L'union
+## <RdIcon name="combine" /> L'union
 
 Dans le langage de programmation **C**, une ***Union*** est un type de données qui permet le stockage de différents types de données au même emplacement mémoire. Les unions offrent un moyen efficace d'utiliser un seul emplacement mémoire à des fins multiples. Bien qu'elles ne soient pas couramment utilisées, on peut les voir dans certaines structures définies par Windows.
 
@@ -557,7 +557,7 @@ Dans cet exemple, on peut voir comment l'affectation d'une valeur à `VariableFl
 
 Les unions sont particulièrement utiles lorsqu'on a besoin de stocker différents types de données à différents moments, mais qu'on veut économiser de l'espace mémoire en ne réservant qu'un seul emplacement pour toutes ces données.
 
-## Les opérateurs de décalage
+## <RdIcon name="binary" /> Les opérateurs de décalage
 
 Les opérateurs de décalage permettent de déplacer les bits d'un nombre de bits donné d'un emplacement à un autre. Ils sont utilisés pour effectuer des manipulations de bits sur des variables numériques.
 

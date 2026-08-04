@@ -3,5 +3,5 @@ sidebar: auto
 date: 2025-09-28
 ---
 
-# 🧾 Audit d'un SI
+# <RdIcon name="clipboard-check" /> Audit d'un SI
 <ais />

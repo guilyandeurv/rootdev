@@ -4,9 +4,9 @@ redac: true
 date: 2024-12-23
 ---
 
-# Attaques d'API
+# <RdIcon name="webhook" /> Attaques d'API
 
-## Reconnaissance de l'API
+## <RdIcon name="search-code" /> Reconnaissance de l'API
 
 Pour démarrer les tests d'API, il faut d'abord rechercher autant d'informations que possible sur l'API, afin de découvrir sa surface d'attaque. Pour commencer on doit identifier les points de terminaison de l'API. Il s'agit des emplacements où une API reçoit des requêtes concernant une ressource spécifique sur son serveur. Par exemple, on considère la requête `GET` suivante :
 
@@ -23,7 +23,7 @@ Une fois les points de terminaison identifiés, on doit déterminer comment int�
 * Les types de requêtes acceptées par l'API, y compris les méthodes HTTP et les formats multimédias pris en charge.
 * Limites de débit et mécanismes d'authentification.
 
-## Documentation de l'API
+## <RdIcon name="file-text" /> Documentation de l'API
 
 Les API sont généralement documentées afin que les développeurs sachent comment les utiliser et les intégrer. La documentation peut être sous forme lisible par l'homme ou par une machine. La documentation lisible par l'homme est conçue pour que les développeurs comprennent comment utiliser l'API. Elle peut inclure des explications détaillées, des exemples et des scénarios d'utilisation. La documentation lisible par machine est conçue pour être traitée par un logiciel afin d'automatiser des tâches telles que l'intégration et la validation d'API. Elle est écrite dans des formats structurés tels que JSON ou XML.
 

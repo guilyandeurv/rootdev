@@ -2,7 +2,7 @@
 sidebar: auto
 date: 2024-04-19
 ---
-# Les intérêts du Dark Web
+# <RdIcon name="circle-help" /> Les intérêts du Dark Web
 
 Le Dark Web présente également des avantages, en particulier dans des contextes légitimes.
 
@@ -25,7 +25,7 @@ Bien que le Dark Web ne garantisse pas un anonymat absolu, il offre une plus gra
 
 En résumé, le Dark Web présente des avantages significatifs pour la collecte de renseignements, les opérations de maintien de l'ordre, la liberté d'expression et la confidentialité en ligne, bien que son utilisation puisse également être associée à des activités illicites et à des risques potentiels.
 
-## Activités légales
+## <RdIcon name="scale" /> Activités légales
 
 Il est essentiel de comprendre que les entreprises ou individus qui collectent et vendent des informations sur les menaces provenant du Dark Web doivent agir dans le cadre de la loi et respecter les réglementations en vigueur dans leur juridiction. 
 
@@ -41,7 +41,7 @@ Il est essentiel de comprendre que les entreprises ou individus qui collectent e
 
     Les entreprises peuvent se faire passer pour des criminels sur les forums du Dark Web afin de recueillir des renseignements légitimes. Cependant, cela doit être bien documenté pour que les forces de l'ordre sachent qu'il s'agit d'une activité légitime et non d'une réelle activité criminelle.
 
-## Utilisation par les forces de l'ordre
+## <RdIcon name="gavel" /> Utilisation par les forces de l'ordre
 
 Chacun sait que les forces de l'ordre du monde entier surveillent le Dark Web, infiltrent des sites et des forums privés et collectent des renseignements et des preuves qui peuvent être utilisés pour poursuivre les criminels qui se cachent derrière l'anonymat apparent fourni par TOR et le darkweb.
 
@@ -57,7 +57,7 @@ Les enquêteurs néerlandais ont découvert l'identité de deux administrateurs 
 
 Cette opération a été considérée comme « l'une des attaques les plus réussies de sa courte histoire contre le Dark Web : des millions de dollars de bitcoins ont été confisqués, plus d'une douzaine d'arrestations et le décompte des principaux trafiquants de drogue du site, et une vaste base de données d'informations sur les utilisateurs de Hansa qui, selon les autorités, devrait hanter tous ceux qui ont acheté ou vendu sur le site au cours de son dernier mois en ligne ».
 
-## Utilisation par les sociétés de recherche de menaces
+## <RdIcon name="search" /> Utilisation par les sociétés de recherche de menaces
 
 Les équipes de sécurité peuvent bénéficier des informations collectées sur le Dark Web :
 
@@ -83,7 +83,7 @@ En explorant le cas de [Recorded Future](https://www.recordedfuture.com), une en
 
 Recorded Future parvient à accéder à des forums privés et cachés sur le Dark Web pour extraire des informations exploitables pour leurs clients. Leur capacité à fournir des alertes précoces sur les cyberattaques imminentes, des renseignements stratégiques sur les ventes de malwares et d'outils de piratage, ainsi que des informations sur les données piratées, est précieuse pour les équipes de sécurité des entreprises.
 
-## Activités illégales
+## <RdIcon name="triangle-alert" /> Activités illégales
 
 Il est important de souligner qu'il existe des activités illégales que les entreprises ou individus ne doivent pas entreprendre, telles que :
 

@@ -4,5 +4,5 @@ redac: true
 date: 2025-09-29
 ---
 
-# 🔐 VPN & certificats
+# <RdIcon name="shield-user" /> VPN & certificats
 <ais />

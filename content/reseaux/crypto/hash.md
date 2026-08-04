@@ -3,5 +3,5 @@ sidebar: auto
 date: 2025-09-28
 ---
 
-# #️⃣ Fonction de hachage
+# <RdIcon name="hash" /> Fonction de hachage
 <ais />

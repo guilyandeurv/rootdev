@@ -1,10 +1,10 @@
 ---
 sidebar: auto
 ---
-# Comprendre l'attaque
+# <RdIcon name="brain" /> Comprendre l'attaque
 <Badge type="tip" text="Rédigé le 06/04/2024" />
 
-## Les différents types d'attaquants en cybersécurité
+## <RdIcon name="users-round" /> Les différents types d'attaquants en cybersécurité
 
 Les professionnels de la sécurité doivent défendre leurs organisations contre de nombreux types de menaces différents. Au fur et à mesure que l'on avance dans une carrière en cybersécurité, on rencontre probablement différents types d'attaquants avec différentes ressources et motivations.
 
@@ -31,7 +31,7 @@ Les attaquants varient en termes de sophistication, d'accès aux ressources, de 
 3. Black hat hackers : Agissent sans permission et ont des intentions malveillantes.
 
 
-## La menace venant de l'intérieur
+## <RdIcon name="shield-alert" /> La menace venant de l'intérieur
 
 Bien que de nombreuses menaces proviennent de l'extérieur de l'organisation, les menaces les plus dangereuses se cachent parfois à l'intérieur des murs de l'entreprise. Les attaques les plus coûteuses et les plus dangereuses sont souvent perpétrées par des individus de confiance. 
 
@@ -57,7 +57,7 @@ Pour se protéger contre les attaques internes, il est recommandé d'utiliser de
 
 Enfin, les employés peuvent représenter une menace pour la cybersécurité en introduisant de la technologie "Shadow IT" dans l'organisation sans l'approbation des responsables de la technologie. Cela peut exposer les données de l'organisation à un niveau de risque inacceptable.
 
-## Les vecteurs d'attaque en cybersécurité
+## <RdIcon name="crosshair" /> Les vecteurs d'attaque en cybersécurité
 
 Avant qu'un attaquant puisse accéder à des systèmes ou réseaux, il doit trouver un moyen d'entrer. Les vecteurs d'attaque sont les chemins que les attaquants utilisent pour obtenir cet accès initial.
 
@@ -81,7 +81,7 @@ Les cartes à bande magnétique sont également très vulnérables aux attaques.
 
 Les services cloud peuvent également être utilisés comme vecteur d'attaque. Les attaquants numérisent régulièrement les services cloud populaires à la recherche de fichiers avec des contrôles d'accès inappropriés, de systèmes présentant des failles de sécurité, ou de clés API ou de mots de passe publiés par accident.
 
-## Les vulnérabilités "Zero-Day"
+## <RdIcon name="bug" /> Les vulnérabilités "Zero-Day"
 
 Les attaques se produisent souvent lorsqu'une organisation **néglige d'appliquer des correctifs de sécurité**, les laissant ainsi vulnérables à un attaquant qui sait exploiter le correctif manquant. La solution à cette situation est simple. Les organisations doivent **appliquer les mises à jour de sécurité dès qu'elles sont disponibles** auprès des fournisseurs de systèmes d'exploitation et d'applications pour renforcer leurs systèmes contre les attaques.
 

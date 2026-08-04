@@ -1,3 +1,4 @@
+@use './aside.scss';
 @use './icon.scss';
 @use './button.scss';
 @use './colors.scss';
@@ -6,5 +7,8 @@
 @use './home-links.scss';
 @use './home.scss';
 @use './nav.scss';
+// Après `colors.scss` : le modal doit pouvoir neutraliser le verre que celui-ci
+// pose sur les blocs de code, qui se retrouvent ici empilés sur un autre verre.
+@use './search.scss';
 @use './picture.scss';
 @use './badge.scss';

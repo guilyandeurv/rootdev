@@ -3,9 +3,9 @@ sidebar: auto
 redac: true
 date: 2024-03-24
 ---
-# Nmap
+# <RdIcon name="scan" /> Nmap
 
-## Introduction & explications
+## <RdIcon name="signpost" /> Introduction & explications
 
 <img src="./img/nmap.png" width="100" height="100">
 
@@ -15,7 +15,7 @@ Par exemple, l’un d’eux exécute peut-être un serveur Web et un autre agit 
 
 Chaque ordinateur dispose d'***un total de 65 535 ports*** disponibles. Cependant, bon nombre d'entre eux sont enregistrés comme ports standard. Par exemple, un Webservice HTTP se trouve presque toujours sur le port 80 du serveur. Un service Web HTTPS peut être trouvé sur le port 443. Windows NETBIOS peut être trouvé sur le port 139 et SMB peut être trouvé sur le port 445. 
 
-## Options de Nmap
+## <RdIcon name="scan" /> Options de Nmap
 
 Nmap est accessible en tapant `nmap` dans la ligne de commande du terminal, suivi de certaines des "options" (arguments de commande qui indiquent à un programme de faire différentes choses).
 
@@ -31,7 +31,7 @@ EXAMPLES:
   nmap -v -iR 10000 -Pn -p 80
 ```
 
-## Options principales
+## <RdIcon name="settings-2" /> Options principales
 
 * Analyse UDP `-sU`
 * Analyse TCP `-sT`
@@ -50,7 +50,7 @@ Lors d'une analyse des ports, il y a trop types d'analyse de base :
 * SYN "Half-open" Scans `-sS`
 * UDP Scans `-sU`
 
-## Analyse SYN vs TCP vs UDP
+## <RdIcon name="shuffle" /> Analyse SYN vs TCP vs UDP
 
 L'analyse **TCP** Connect (`-sT`) et l'analyse **SYN** (`-sS`) sont toutes deux des méthodes pour scanner les ports TCP sur une ou plusieurs cibles, mais elles fonctionnent différemment.
 
@@ -97,7 +97,7 @@ Caractéristiques de l'analyse UDP avec Nmap:
 
 En résumé, l'analyse des connexions UDP avec Nmap nécessite une approche différente en raison de la nature sans état de UDP et de la complexité de la reconnaissance des ports ouverts.
 
-## Analyses NULL, FIN & Xmas
+## <RdIcon name="shuffle" /> Analyses NULL, FIN & Xmas
 
 Les analyses de ports TCP **NULL**, **FIN** et **Xmas** sont moins couramment utilisées que les analyses plus traditionnelles comme les analyses TCP Connect ou SYN. Cependant, elles *offrent une certaine furtivité supplémentaire*, bien que relativement parlant, par rapport aux analyses SYN furtives.
 
@@ -122,7 +122,7 @@ L'objectif principal de ces analyses est de **contourner les pare-feu qui bloque
 
 Il est également important de noter que la réponse attendue pour les ports ouverts est similaire à celle des analyses UDP : aucune réponse. Cependant, cela peut également se produire si le port est protégé par un pare-feu, donc ces analyses ne peuvent pas toujours faire la distinction entre un port ouvert et un port protégé.
 
-## Analyse ICMP
+## <RdIcon name="search-code" /> Analyse ICMP
 
 Effectuer un balayage de ping est souvent la première étape lors de l'exploration d'un réseau dans le cadre d'un test de pénétration ou d'une évaluation de la sécurité. Cela permet d'identifier les hôtes actifs sur le réseau. 
 
@@ -144,7 +144,7 @@ En plus des requêtes ICMP, l'option `-sn` peut également inclure l'envoi de pa
 
 Une fois que le balayage est terminé, Nmap affichera une liste des adresses IP qui ont répondu aux requêtes ICMP ou aux requêtes ARP, indiquant ainsi les hôtes actifs sur le réseau. Cela fournit une carte de la structure du réseau, qui peut être utilisée comme point de départ pour des analyses plus poussées.
 
-## Scripts NSE
+## <RdIcon name="scan" /> Scripts NSE
 
 Le moteur de script Nmap (NSE) offre une polyvalence impressionnante à Nmap, lui permettant d'effectuer une gamme étendue de tâches de reconnaissance et de sécurité. Les scripts NSE sont écrits dans le langage de programmation ***Lua*** et peuvent être utilisés pour effectuer diverses tâches : de la recherche de vulnérabilités à l'automatisation de leurs exploits.
 
@@ -216,7 +216,7 @@ Si un script recherché est manquant localement, il peut être installé de deux
 
 Il est important de noter que la même commande "**updatedb**" est nécessaire si les utilisateurs créent leurs propres scripts NSE et les ajoutent à Nmap. Cette tâche est gérable avec des connaissances de base en Lua.
 
-## Esquiver les firewall
+## <RdIcon name="shield-off" /> Esquiver les firewall
 
 Contourner les configurations de pare-feu est crucial lors de l'exécution de scans de sécurité avec Nmap. Voici quelques techniques et options de commutation utiles pour contourner les pare-feu courants :
 

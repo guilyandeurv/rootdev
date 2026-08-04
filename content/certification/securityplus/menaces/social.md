@@ -1,10 +1,10 @@
 ---
 sidebar: auto
 ---
-# Attaques de Social Engineering
+# <RdIcon name="users-round" /> Attaques de Social Engineering
 <Badge type="tip" text="Rédigé le 18/04/2024" />
 
-## Techniques d'ingénierie sociale
+## <RdIcon name="users-round" /> Techniques d'ingénierie sociale
 
 Les menaces numériques ne sont pas les seules préoccupations des professionnels de la sécurité de l'information. Parmi les risques les plus dangereux figurent ceux de l'ingénierie sociale, des tactiques qui **exploitent la psychologie humaine** pour obtenir des informations sensibles. Ces tactiques sont parmi les plus difficiles à contrer, car elles exploitent les failles de l'humain plutôt que des systèmes informatiques.
 
@@ -36,7 +36,7 @@ Les individus ont **tendance à dire oui à ceux qu'ils apprécient**. Les ingé
 
 La meilleure défense contre l'ingénierie sociale est l'éducation des utilisateurs. Tous les membres de l'organisation doivent être **sensibilisés aux tactiques utilisées par les ingénieurs sociaux** et être **vigilants contre les tentatives de manipulation**. En reconnaissant et en comprenant ces tactiques, les individus peuvent mieux se protéger contre les menaces humaines qui peuvent compromettre la sécurité de l'organisation.
 
-## Utilisation des hoax et de la tromperie
+## <RdIcon name="drama" /> Utilisation des hoax et de la tromperie
 
 *Hoax : information fausse, périmée ou invérifiable propagée par internet.*
 
@@ -70,7 +70,7 @@ Les attaques de smishing utilisent les services de messagerie instantanée pour 
 
 Les attaquants sont persistants et ingénieux dans leurs tentatives d'infiltration des entreprises par le biais de messages frauduleux. Alors que bon nombre de leurs tentatives peuvent sembler simplistes, d'autres sont sophistiquées. L'éducation et la sensibilisation sont les outils les plus efficaces pour se défendre contre les attaques d'ingénierie sociale, car une seule victime peut suffire à la réussite d'une attaque de phishing.
 
-## Les crimes d'identité
+## <RdIcon name="id-card" /> Les crimes d'identité
 
 Les crimes d'identité sont insidieux. Au lieu de cibler de grandes entreprises, les attaquants ciblent les individus, tentant de voler leurs identités pour ouvrir des comptes frauduleux, voler des fonds ou se livrer à d'autres activités illégales. Les statistiques autour des crimes d'identité sont alarmantes, comme le montre ce tableau de bord public du réseau [Consumer Sentinel de la Federal Trade Commission](https://public.tableau.com/app/profile/federal.trade.commission/viz/ConsumerSentinel/Infographic), qui suit les fraudes, le vol d'identité et les crimes connexes :
 
@@ -106,7 +106,7 @@ Le pretexting est difficile à défendre car il nécessite la sécurité à chaq
 
 En adoptant une approche proactive et en investissant dans la sensibilisation des employés et des mesures de sécurité robustes, les organisations peuvent réduire leur vulnérabilité aux attaques de pretexting et protéger efficacement leurs données et leurs actifs contre les usurpateurs d'identité.
 
-## Les attaques Watering Hole
+## <RdIcon name="droplet" /> Les attaques Watering Hole
 
 Les attaques Watering Hole sont des tactiques rusées utilisées pour attirer des utilisateurs peu méfiants et infecter leurs systèmes avec des logiciels malveillants.
 
@@ -126,7 +126,7 @@ Pour se prémunir contre les attaques Watering Hole, il est crucial de maintenir
 
 Les attaques Watering Hole sont une menace sérieuse, mais une vigilance constante et une mise à jour régulière des systèmes peuvent contribuer à réduire leur impact et à protéger les utilisateurs contre les logiciels malveillants.
 
-## Les attaques de génie social physique
+## <RdIcon name="users-round" /> Les attaques de génie social physique
 
 Les ingénieurs sociaux réalisent souvent leurs attaques par des moyens électroniques, mais parfois ils **passent à l'action dans le monde réel** et se livrent à des attaques physiques. Trois méthodes courantes sont le "*shoulder surfing*" (espionnage par-dessus l'épaule), le "*dumpster diving*" (plongée dans les poubelles) et le "*tailgating*" (suivi rapproché).
 

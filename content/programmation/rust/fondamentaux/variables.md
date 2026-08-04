@@ -3,9 +3,9 @@ sidebar: auto
 date: 2025-12-28
 ---
 
-# 🗃️ Variables en Rust
+# <RdIcon name="package" /> Variables en Rust
 
-## 🆎 Déclaration de type
+## <RdIcon name="shapes" /> Déclaration de type
 
 Une fois qu'une variable est déclarée avec un certain type, elle ne peut contenir que des valeurs de ce type. Par exemple, une variable `i32` ne peut contenir que des valeurs entières, et une variable `String` ne peut contenir que du texte.
 
@@ -30,7 +30,7 @@ age = 26;  // OK : assignation d'un nouvel entier
 name = "Jane";  // OK : assignation d'une nouvelle chaîne de texte
 ```
 
-## 📛 Conventions de nommage
+## <RdIcon name="tags" /> Conventions de nommage
 
 En Rust, il existe plusieurs conventions de nommage que l'on doit suivre pour rendre le code plus lisible et maintenable. Elles sont largement acceptées par la communauté Rust.
 
@@ -42,7 +42,7 @@ Voici quelques conventions de nommage courantes :
 * Les noms doivent commencer par une lettre ou un underscore `_`.
 * Les compteurs de base utilisent généralement une seule lettre comme `i`, `j`, bien qu'il vaille la peine de noter que des noms plus descriptifs pourraient être meilleurs lorsque le contexte est plus complexe.
 
-## 🔲 Inférence de type
+## <RdIcon name="shapes" /> Inférence de type
 
 En Rust, l'inférence de type permet au compilateur de **déduire automatiquement le type d'une variable** en se basant sur sa valeur et son utilisation. Cela signifie que l'on n'a souvent pas besoin de spécifier explicitement le type lors de la déclaration d'une variable, rendant le code plus concis et plus facile à lire.
 
@@ -66,7 +66,7 @@ Dans ces exemples, on n'a pas spécifié les types de `x`, `y`, `message` et `is
 
 L'inférence de type n'est pas seulement pratique, mais elle aide également à prévenir les erreurs. Le compilateur vérifie comment les variables sont utilisées et s'assure que les types inférés sont cohérents tout au long du code. S'il y a un conflit, le compilateur générera une erreur.
 
-## 🔀 Conversion de type
+## <RdIcon name="shapes" /> Conversion de type
 
 Le casting de type est le processus de conversion d'une valeur d'un type de données à un autre. En Rust, on utilise le mot-clé `as` pour le casting de type explicite *(également connu sous le nom de conversion de type)*. 
 

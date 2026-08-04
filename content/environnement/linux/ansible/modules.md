@@ -3,16 +3,16 @@ sidebar: auto
 date: 2025-10-11
 ---
 
-# 🚀 Les modules et commandes ad hoc
+# <RdIcon name="component" /> Les modules et commandes ad hoc
 <ais />
 
-## Présentation
+## <RdIcon name="presentation" /> Présentation
 
 Les modules sont des unités de code autonomes avec des fonctionnalités spécifiques, utilisées comme **couche fonctionnelle** dans les tâches de playbook.
 
 Ils simplifient l'automatisation en masquant la complexité technique, permettant aux utilisateurs d'être plus productifs.
 
-## Implémentation
+## <RdIcon name="cog" /> Implémentation
 
 Exemple d'utilisation du module `apt` :
 
@@ -76,7 +76,7 @@ OPTIONS (= is mandatory):
 
 Les modules récents font partie des [collections](https://docs.ansible.com/ansible/latest/user_guide/collections_using.html), incluant rôles, modules, plugins et playbooks. La collection [Ansible.Builtin](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/index.html#plugins-in-ansible-builtin) contient les modules de base, avec d'autres disponibles dans la [collection](https://docs.ansible.com/ansible/latest/collections/index.html#list-of-collections).
 
-## Modules courants
+## <RdIcon name="blocks" /> Modules courants
 
 Voici les principaux modules Ansible :
 
@@ -186,7 +186,7 @@ Les modules `command` et `shell` exécutent des commandes. On utilisera plutôt 
 
 On peut créer nos propres modules en renvoyant du JSON. Il faut d'abord vérifier qu'un module existant ne répond pas déjà au besoin.
 
-## Bonnes pratiques sur les modules Ansible
+## <RdIcon name="thumbs-up" /> Bonnes pratiques sur les modules Ansible
 
 - **Utilisation des modules spécialisés au lieu de `shell`/`command`** :
 
@@ -220,7 +220,7 @@ On crée une interface claire avec des arguments bien définis et simples. On ut
 
 Il faut inclure des exemples, documenter les dépendances et les retours. Tester rigoureusement avec des rôles et playbooks avant publication.
 
-## Les commandes `ad hoc`
+## <RdIcon name="terminal" /> Les commandes `ad hoc`
 
 Les commandes `ad hoc` sont des commandes Ansible exécutées **directement** depuis le terminal sur un ou **plusieurs** clients. Elles permettent d'effectuer rapidement des actions **ponctuelles** ou des tests.
 

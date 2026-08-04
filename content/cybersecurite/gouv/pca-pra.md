@@ -3,5 +3,5 @@ sidebar: auto
 date: 2025-09-28
 ---
 
-# 📃 PCA/PRA
+# <RdIcon name="life-buoy" /> PCA/PRA
 <ais />

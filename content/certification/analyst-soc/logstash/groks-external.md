@@ -3,10 +3,10 @@ sidebar: auto
 date: 2024-12-22
 ---
 
-# Analyse SOC : Filtres Groks & sources externes
+# <RdIcon name="regex" /> Analyse SOC : Filtres Groks & sources externes
 <ESDInfo />
 
-## Structure des événements
+## <RdIcon name="scroll-text" /> Structure des événements
 
 Lors du traitement d'un log dans un pipeline Logstash, celui-ci est **parsé** avec des champs par défaut :
 * ***@timestamp*** : date à laquelle logstash a collecté le message
@@ -17,7 +17,7 @@ Il sera alors possible d'ajouter, modifier ou supprimer des champs afin de pouvo
 
 ![Structure des événements](./img/pipeline.png)
 
-## Filters Groks
+## <RdIcon name="regex" /> Filters Groks
 
 Le filtre **Grok** se base sur des expressions régulières, il permet d'extraire des informations et de les ranger dans le champs "*fields*" de l'événement. Logstash inclut un grand nombre d'expressions régulières prédéfinies. Il existe 2 syntaxes :
 * La syntaxe "built-in" qui est la plus simple et permet de définir des expressions régulières simples

@@ -3,9 +3,9 @@ sidebar: auto
 redac: true
 date: 2024-04-02
 ---
-# Les Firewall
+# <RdIcon name="brick-wall" /> Les Firewall
 
-## Introduction
+## <RdIcon name="signpost" /> Introduction
 
 Le Firewall a pour objectif de déterminer quel trafic est autorisé à entrer & sortir du réseau. Il peut être configuré de façon à ce que l'entrée ou la sortie du trafic soit autorisée ou refusée selon les facteurs suivants :
 * La provenance du trafic *(Le pare-feu a-t-il reçu l’ordre d’accepter/refuser le trafic provenant d’un réseau spécifique ?)*
@@ -47,7 +47,7 @@ L'en-tête TCP est illustré dans la figure ci-dessous. On remarque qu'il existe
 
 ![Schéma d'en-tête TCP](./img/tcp-header.png)
 
-## Types de Firewall
+## <RdIcon name="brick-wall" /> Types de Firewall
 
 ### Les différents types de Firewall
 

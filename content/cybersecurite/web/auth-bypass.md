@@ -3,11 +3,11 @@ sidebar: auto
 redac: true
 date: 2024-06-27
 ---
-# Contournement de l'authentification 
+# <RdIcon name="lock-open" /> Contournement de l'authentification
 
 Ces failles, connues pour leur criticité, permettent le contournement de l'authentification du client. Cela peut amener à des fuites de données personnelles, et donc leur correction est primordial.
 
-## Énumération du nom d'utilisateur
+## <RdIcon name="user-check" /> Énumération du nom d'utilisateur
 
 À moins que l'on ait déjà un nom d'utilisateur auquel on souhaite tenter de se connecter, un exercice simple est de créer une liste des noms d'utilisateur valides.
 Pour cela, il suffit de se rendre sur la page d'inscription du site ciblé, et de vérifier si celui-ci indique lorsque l'on entre un nom d'utilisateur déjà existant, si oui, on note les noms d'utilisateur trouvés.
@@ -62,7 +62,7 @@ admin                   [Status: 200, Size: 3720, Words: 992, Lines: 77, Duratio
 robert                  [Status: 200, Size: 3720, Words: 992, Lines: 77, Duration: 125ms]
 ```
 
-## Bruteforce
+## <RdIcon name="key-round" /> Bruteforce
 
 
 

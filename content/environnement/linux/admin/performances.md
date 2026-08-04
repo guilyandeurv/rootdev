@@ -3,5 +3,5 @@ sidebar: auto
 date: 2025-09-28
 ---
 
-# 👌 Gérer les performances
+# <RdIcon name="gauge" /> Gérer les performances
 <ais />

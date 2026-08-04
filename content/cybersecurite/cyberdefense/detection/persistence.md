@@ -4,5 +4,5 @@ redac: true
 date: 2025-09-28
 ---
 
-# 🕵️ Investigation - Persistence
+# <RdIcon name="anchor" /> Investigation - Persistence
 <ais />

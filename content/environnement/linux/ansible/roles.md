@@ -3,10 +3,10 @@ sidebar: auto
 date: 2025-10-11
 ---
 
-# 🔢 Rôles
+# <RdIcon name="user-round-cog" /> Rôles
 <ais />
 
-## Présentation
+## <RdIcon name="presentation" /> Présentation
 
 **Les rôles permettent de réutiliser et partager le code Ansible**. Ils structurent les tâches, variables, gestionnaires et autres fichiers de manière organisée, permettant leur réutilisation dans plusieurs projets via quelques lignes de code.
 
@@ -16,7 +16,7 @@ Les rôles offrent une meilleure organisation que les playbooks seuls, ce qui de
 
 Cette approche permet une organisation logique des projets et favorise la séparation des responsabilités. Elle améliore aussi la collaboration, car les équipes peuvent travailler sur des **rôles** différents simultanément.
 
-## Structure de rôle Ansible
+## <RdIcon name="folder-tree" /> Structure de rôle Ansible
 
 Chaque rôle a son propre répertoire contenant des sous-répertoires spécifiques selon leur fonction. Un rôle nécessite au moins un de ces répertoires standards.
 
@@ -60,7 +60,7 @@ Les répertoires principaux sont :
 
 Le répertoire optionnel **bibliothèque** peut contenir des modules et plugins personnalisés. Un fichier `README.md` permet de documenter le rôle.
 
-## Création de rôles
+## <RdIcon name="user-round-cog" /> Création de rôles
 
 La méthode courante est de convertir un playbook en rôle en réorganisant son contenu dans les répertoires appropriés.
 
@@ -72,7 +72,7 @@ Ansible cherche les rôles dans le répertoire du playbook, le dossier `roles` o
     - role: "/homes/rootdev/chemin-du-role"
 ```
 
-## Ansible Galaxy
+## <RdIcon name="wand-sparkles" /> Ansible Galaxy
 
 Ansible Galaxy est un référentiel en ligne pour les rôles et collections Ansible. Il permet d'obtenir rapidement des composants développés par la communauté, notamment des **rôles** d'entreprises comme **AWS**, **Azure** et **Heroku**.
 

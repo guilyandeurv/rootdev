@@ -3,5 +3,5 @@ sidebar: auto
 date: 2025-09-28
 ---
 
-# 💾 Stockage des données
+# <RdIcon name="archive" /> Stockage des données
 <ais />

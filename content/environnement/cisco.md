@@ -3,13 +3,13 @@ sidebar: auto
 redac: true
 date: 2024-03-17
 ---
-# L'environnement Cisco
+# <RdIcon name="brand-cisco" /> L'environnement Cisco
 <Badge type="tip" text="Rédigé le 17/03/2024" />
 <Badge type="warning" text="En cours de rédaction" />
 
 Avant de commencer la configuration, il faut avoir un accès console à l'appareil Cisco. On peut utiliser un câble console et un programme de terminal tel que *PuTTY* ou *Tera Term* pour se connecter à l'appareil. Une fois connecté, il faut s'identifier avec un nom d'utilisateur et un mot de passe si la configuration de sécurité l'exige.
 
-## Commandes de base
+## <RdIcon name="terminal" /> Commandes de base
 
 ### Accès au mode configuration :
 ```shell
@@ -114,7 +114,7 @@ Switch# clock set 16:58:30 17 Mar 2024 # les mois sont en anglais
 ```
 
 
-## Configuration d'un switch
+## <RdIcon name="toggle-right" /> Configuration d'un switch
 
 ### Configuration d'un VLAN :
 
@@ -146,7 +146,7 @@ Switch# switchport mode trunk # défini le port comme appartenant à plusieurs V
 Switch# switchport trunk encapsulation dot1q # les trames seront taguées suivant la norme 802.1q. Le port concerné véhiculera donc les trames de n'importe quel VLAN. 
 ```
 
-## Configuration d'un routeur
+## <RdIcon name="router" /> Configuration d'un routeur
 
 ### Configurer le nom de domaine :
 
@@ -170,7 +170,7 @@ Switch# ip route 192.168.1.0 255.255.255.0 s0/0 192.168.0.0 # le réseau 192.168
 Switch# ip route 192.168.0.0 255.255.255.0 s0/1 192.168.1.0 # lé réseau 192.168.1.0 est connecté depuis le port Serial au réseau 192.168.0.0
 ```
 
-## Terminologie
+## <RdIcon name="book-a" /> Terminologie
 
 1. **Spinning Tree** : Le but de cette configuration est, dans le cas qu’un câble soit déconnecté pour n‘importe quelle raison, que la liaison entre les switchs ne soient pas coupées et que les informations circulent par un autre chemin. Le principe de ce protocole est de vérifier qu’aucune boucle n’est créée dans le réseau, car elles sont fatales pour celui-ci.
 

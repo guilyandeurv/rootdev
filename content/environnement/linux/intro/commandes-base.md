@@ -3,10 +3,10 @@ sidebar: auto
 date: 2026-01-18
 ---
 
-# ⌨️ Commandes de base
+# <RdIcon name="command" /> Commandes de base
 <ais />
 
-## 🕹️ À quoi ressemble une commande ?
+## <RdIcon name="terminal" /> À quoi ressemble une commande ?
 
 Pour effectuer diverses actions sur un système Linux *(comme lancer un programme, naviguer dans l’arborescence des fichiers, ou modifier les permissions d’un fichier ou d’un dossier)*, des **commandes** sont utilisées. Ces commandes sont généralement structurées de la manière suivante :
 
@@ -24,7 +24,7 @@ ls -l /home
 
 Dans cet exemple, `ls` est la commande pour lister le contenu d’un répertoire, `-l` est une option pour obtenir une liste détaillée, et `/home` est l’argument qui spécifie le répertoire à lister.
 
-## Liste non exhaustive des commandes couramment utilisées
+## <RdIcon name="wrench" /> Liste non exhaustive des commandes couramment utilisées
 
 ### 📂 Trouver le répertoire courant
 
@@ -104,7 +104,7 @@ La commande `cd` *(change directory)* permet de naviguer entre les répertoires.
 cd /
 ```
 
-## 🫳 Manipulation de fichiers et dossiers
+## <RdIcon name="folder-open" /> Manipulation de fichiers et dossiers
 
 ### 📁 Créer un fichier
 
@@ -228,7 +228,7 @@ ou
 tail -n 10 content.txt
 ```
 
-## 💬 Les éditeurs de texte
+## <RdIcon name="file-code" /> Les éditeurs de texte
 
 **`Nano`** et **`Vim`** : ces outils permettent de modifier des fichiers directement en ligne de commande. 
 
@@ -272,7 +272,7 @@ vim content.txt
 
 Pratique régulière recommandée pour maîtriser ces commandes de base.
 
-## 🔀 Les flux de redirection
+## <RdIcon name="terminal" /> Les flux de redirection
 
 ### ➡️ Redirections des sorties
 
@@ -348,7 +348,7 @@ python3 nom.py < prenom
 Sans l'entrée standard, le programme demanderait le prénom avant d'afficher le message de bienvenue.
 
 
-## 🔹 Opérateur pipe `|`
+## <RdIcon name="terminal" /> Opérateur pipe `|`
 
 L'opérateur `|` permet d'utiliser la sortie d'une commande comme entrée d'une autre.
 

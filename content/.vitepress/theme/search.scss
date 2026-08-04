@@ -1,0 +1,282 @@
+/**
+ * Component: Modal de recherche — panneau en verre
+ * --------------------------------------------------------------------------
+ *
+ * Le modal du moteur local (`VPLocalSearchBox`) est téléporté dans `<body>` :
+ * il ne dépend d'aucun conteneur de la mise en page, d'où ce fichier séparé de
+ * `nav.scss` — dont il réutilise en revanche les variables (`--rd-panel-*`,
+ * `--rd-search-*`). Les propriétés personnalisées étant résolues à l'exécution,
+ * l'ordre des `@use` dans `all.scss` n'a aucune importance.
+ *
+ * Le fil conducteur : le bouton de la barre et le champ du modal doivent être
+ * lus comme un seul et même objet, l'un étant le dépliement de l'autre. Ils
+ * partagent donc le même puits encastré (`--rd-search-bg` + `--rd-search-inset`)
+ * et le même rayon. Le panneau qui l'entoure reprend, lui, le verre des menus
+ * déroulants — la recherche n'introduit aucun matériau nouveau.
+ *
+ * Sur les `!important` : les styles de VitePress sont `scoped`, donc compilés
+ * en `.shell[data-v-xxxxxxx]`. Une feuille externe ne peut pas dépasser cette
+ * spécificité sans surenchère (cf. la note détaillée en tête de `nav.scss`).
+ * Ils sont réservés aux seules propriétés que VitePress pose lui-même.
+ */
+
+:root {
+  /* Voile de fond. Plus dense que le `rgba(0, 0, 0, 0.6)` de VitePress en
+     sombre, plus léger en clair : le flou fait déjà une partie du travail de
+     mise à distance, la teinte n'a pas à tout porter. */
+  --rd-search-backdrop: rgba(15, 23, 42, 0.32);
+  --rd-search-backdrop-blur: blur(4px);
+
+  /* Résultat survolé ou sélectionné : une teinte de marque très diluée. Un
+     aplat franc trancherait sur le verre du panneau. */
+  --rd-search-hit-bg: rgba(15, 23, 42, 0.04);
+  --rd-search-hit-selected-bg: var(--vp-c-brand-soft);
+}
+
+html.dark {
+  --rd-search-backdrop: rgba(0, 0, 0, 0.55);
+  --rd-search-hit-bg: rgba(255, 255, 255, 0.05);
+}
+
+/* --------------------------------------------------------------------------
+ * 1. Fond et panneau
+ * -------------------------------------------------------------------------- */
+
+/* Le voile est floué : la page recule franchement au lieu d'être simplement
+   assombrie. C'est ce qui distingue un modal posé sur la page d'un modal qui
+   la met à distance. */
+.VPLocalSearchBox .backdrop {
+  background: var(--rd-search-backdrop) !important;
+  backdrop-filter: var(--rd-search-backdrop-blur);
+  -webkit-backdrop-filter: var(--rd-search-backdrop-blur);
+}
+
+.VPLocalSearchBox .shell {
+  gap: 14px !important;
+  padding: 14px !important;
+  border: 1px solid var(--rd-nav-border);
+  border-radius: var(--rd-nav-radius) !important;
+  background: var(--rd-panel-bg) !important;
+  box-shadow: var(--rd-panel-shadow);
+  backdrop-filter: var(--rd-panel-blur);
+  -webkit-backdrop-filter: var(--rd-panel-blur);
+}
+
+/* --------------------------------------------------------------------------
+ * 2. Le champ — même puits que le bouton de la barre
+ * -------------------------------------------------------------------------- */
+
+.VPLocalSearchBox .search-bar {
+  border: 1px solid var(--rd-search-border) !important;
+  border-radius: 12px !important;
+  padding: 0 8px 0 4px !important;
+  background: var(--rd-search-bg);
+  box-shadow: var(--rd-search-inset);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* À la saisie, le puits remonte au niveau du verre et prend la couleur de
+   marque — même grammaire que le survol du bouton de la barre. */
+.VPLocalSearchBox .search-bar:focus-within {
+  border-color: var(--vp-c-brand-1) !important;
+  box-shadow: 0 0 0 3px var(--vp-c-brand-soft);
+}
+
+.VPLocalSearchBox .search-input {
+  color: var(--vp-c-text-1);
+}
+
+.VPLocalSearchBox .search-input::placeholder {
+  color: var(--vp-c-text-3);
+}
+
+/* `type="search"` : WebKit ajoute sa propre croix d'effacement, qui ferait
+   doublon avec le bouton dédié de VitePress juste à côté. */
+.VPLocalSearchBox .search-input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.VPLocalSearchBox .search-icon,
+.VPLocalSearchBox .search-actions button {
+  color: var(--vp-c-text-2);
+}
+
+/* Les actions (extraits, effacer, retour) reçoivent une cible arrondie plutôt
+   qu'un simple changement de couleur : sur du verre, la couleur seule ne
+   dessine pas assez la zone cliquable. */
+.VPLocalSearchBox .search-actions button {
+  border-radius: 8px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.VPLocalSearchBox .search-actions button:not([disabled]):hover {
+  background: var(--rd-search-key-bg);
+  color: var(--vp-c-brand-1);
+}
+
+/* --------------------------------------------------------------------------
+ * 3. Les résultats
+ * -------------------------------------------------------------------------- */
+
+/* La bordure de 2px de VitePress est conservée dans la boîte (elle réserve la
+   place du liseré de sélection, sinon les lignes sauteraient d'un cran au
+   changement de sélection) mais rendue invisible au repos. */
+.VPLocalSearchBox {
+  --vp-local-search-result-border: transparent;
+  --vp-local-search-result-selected-border: var(--vp-c-brand-1);
+}
+
+.VPLocalSearchBox .result {
+  border-radius: 12px !important;
+  background: transparent;
+  transition: background-color 0.15s ease, border-color 0.15s ease !important;
+}
+
+.VPLocalSearchBox .result:hover {
+  background: var(--rd-search-hit-bg);
+}
+
+.VPLocalSearchBox .result.selected {
+  background: var(--rd-search-hit-selected-bg);
+}
+
+/* Les termes trouvés : l'aplat de marque à texte inversé de VitePress est très
+   sonore, et il se répète parfois cinq fois par ligne. Une teinte diluée et le
+   texte en couleur de marque suffisent à les repérer. */
+.VPLocalSearchBox .titles mark,
+.VPLocalSearchBox .excerpt mark {
+  border-radius: 4px !important;
+  padding: 0 3px !important;
+  background-color: var(--vp-c-brand-soft) !important;
+  color: var(--vp-c-brand-1) !important;
+  font-weight: 600;
+}
+
+/* Le fondu bas de l'extrait était obtenu par deux blocs en dégradé vers
+   `--vp-local-search-result-bg`, une couleur opaque : sur un panneau
+   translucide, ils repeignaient une bande pleine en travers du verre. Un
+   masque produit le même fondu sans rien peindre — il retire de l'opacité au
+   lieu d'ajouter de la matière. */
+.VPLocalSearchBox .excerpt-gradient-top,
+.VPLocalSearchBox .excerpt-gradient-bottom {
+  display: none;
+}
+
+.VPLocalSearchBox .excerpt {
+  mask-image: linear-gradient(to bottom, #000 calc(100% - 28px), transparent);
+  -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 28px), transparent);
+}
+
+/* Les blocs de code des extraits héritent du verre + flou posé sur
+   `div[class*='language-']` par `colors.scss`. Empilé sur le verre du panneau,
+   le rendu devient laiteux et illisible. On les repose sur une surface neutre
+   le temps de l'aperçu. */
+.VPLocalSearchBox .excerpt div[class*='language-'] {
+  border-radius: 8px !important;
+  background-color: var(--rd-search-hit-bg) !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.VPLocalSearchBox .no-results {
+  padding: 24px 12px !important;
+  color: var(--vp-c-text-2);
+}
+
+/* Ascenseur discret : la barre native, large et opaque, coupe le bord droit du
+   panneau en verre. */
+.VPLocalSearchBox .results {
+  scrollbar-width: thin;
+  scrollbar-color: var(--rd-search-key-bg) transparent;
+}
+
+.VPLocalSearchBox .results::-webkit-scrollbar {
+  width: 8px;
+}
+
+.VPLocalSearchBox .results::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background-clip: content-box;
+  background-color: var(--rd-search-key-bg);
+}
+
+/* --------------------------------------------------------------------------
+ * 4. Le pied — raccourcis clavier
+ * -------------------------------------------------------------------------- */
+
+/* Mêmes étiquettes que le « Ctrl K » de la barre : aplat translucide, sans
+   bordure ni ombre portée. Les touches en relief de VitePress ajoutaient un
+   troisième matériau au panneau. */
+.VPLocalSearchBox .search-keyboard-shortcuts {
+  padding: 0 2px;
+  opacity: 1 !important;
+  color: var(--vp-c-text-3);
+}
+
+.VPLocalSearchBox .search-keyboard-shortcuts kbd {
+  border: 0 !important;
+  border-radius: 5px !important;
+  padding: 4px 6px !important;
+  background: var(--rd-search-key-bg) !important;
+  box-shadow: none !important;
+  color: var(--vp-c-text-2);
+  font-family: var(--vp-font-family-base);
+  font-size: 11px;
+  line-height: 1;
+}
+
+/* « esc » est écrit en dur dans le template de VitePress — seul son
+   `aria-label` passe par les traductions. On substitue le libellé en CSS,
+   exactement comme VitePress le fait lui-même pour la touche « Ctrl » du
+   bouton de la barre. Le `kbd` gardant son `aria-label` traduit, les lecteurs
+   d'écran annoncent bien « Échap ». */
+.VPLocalSearchBox .search-keyboard-shortcuts kbd[aria-label]:not(:has(span)) {
+  font-size: 0 !important;
+}
+
+.VPLocalSearchBox .search-keyboard-shortcuts kbd[aria-label]:not(:has(span))::after {
+  content: 'Échap';
+  font-size: 11px;
+}
+
+/* --------------------------------------------------------------------------
+ * 5. Mobile — le modal occupe tout l'écran
+ * -------------------------------------------------------------------------- */
+
+/* Plein cadre, le verre n'a plus de bord à montrer : bordure et rayon
+   n'auraient plus de sens, et le flou n'aurait plus rien à révéler puisque
+   aucune page ne transparaît sur les côtés. */
+@media (max-width: 767px) {
+  .VPLocalSearchBox .shell {
+    border: 0;
+    border-radius: 0 !important;
+    background: var(--vp-c-bg) !important;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+ * 6. Dégradés gracieux
+ * -------------------------------------------------------------------------- */
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .VPLocalSearchBox .shell {
+    background: var(--vp-c-bg) !important;
+  }
+
+  .VPLocalSearchBox .backdrop {
+    background: rgba(0, 0, 0, 0.6) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .VPLocalSearchBox .search-bar,
+  .VPLocalSearchBox .search-actions button,
+  .VPLocalSearchBox .result {
+    transition: none !important;
+  }
+}

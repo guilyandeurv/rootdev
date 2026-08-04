@@ -3,15 +3,17 @@ sidebar: auto
 date: 2025-06-11
 redac: true
 ---
+
+# <RdIcon name="brand-wireshark" /> Wireshark
 <img src="./img/wireshark.svg" width="270" height="270">
 
-## 🏰 Historique
+## <RdIcon name="history" /> Historique
 
 Dans les années 90, Gerald Combs se penche sur une solution d’analyse de paquets et crée en 1998 **Ethereal**. Huit ans plus tard, le projet est renommé pour devenir ce que l’on connaît aujourd’hui sous le nom de **Wireshark**.
 
 Wireshark est un logiciel open source, c'est-à-dire qu'il permet un accès libre au code source et la création de travaux dérivés. Si 30 ans après le projet Wireshark est toujours aussi populaire c'est grace à sa communauté qui compte près de 2000 contributeurs en 2024 (dont Gerard Combs) qui continuent de faire vivre Wireshark et proposent des améliorations continues. Ainsi Wireshark peut bénéficier encore aujourd'hui de mise à jour environ tous les mois.
 
-## **📱 L'interface Wireshark**
+## <RdIcon name="app-window" /> L'interface Wireshark
 
 Une fois ouvert, voici la fenêtre principale.
 

@@ -1,7 +1,7 @@
 ---
 sidebar: auto
 ---
-# Pratiques de développement sécurisé
+# <RdIcon name="lock-keyhole" /> Pratiques de développement sécurisé
 <Badge type="tip" text="Rédigé le */*/2024" />
 <Badge type="danger" text="<--- à mettre à jour" />
 <Badge type="warning" text="En cours de rédaction" />

@@ -4,7 +4,7 @@ redac: true
 date: 2024-10-24
 ---
 <br>
-# Tests des composants
+# <RdIcon name="file-code" /> Tests des composants
 
 <FileTree content="
 - astro.config.mjs // lol

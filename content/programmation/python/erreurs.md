@@ -3,10 +3,10 @@ sidebar: auto
 redac: true
 date: 2024-08-18
 ---
-# La gestion des erreurs
+# <RdIcon name="triangle-alert" /> La gestion des erreurs
 
 
-## Try & Except
+## <RdIcon name="triangle-alert" /> Try & Except
 
 Lorsqu'une erreur se produit, ou également appelée *exception*, Python s'arrête et génère un message d'erreur.
 Ces exceptions peuvent être gérées grâce à l'instruction ***Try***.
@@ -33,7 +33,7 @@ while True:
 
 
 
-## Erreurs dans la déclaration d'une variable
+## <RdIcon name="triangle-alert" /> Erreurs dans la déclaration d'une variable
 
 ```python
 list = range(3)

@@ -3,11 +3,11 @@ sidebar: auto
 redac: true
 date: 2024-08-18
 ---
-# Les fonctions d'origine
+# <RdIcon name="parentheses" /> Les fonctions d'origine
 
 Les fonctions "d'origine", familièrement appelées, sont les fonctions disponibles dans Python dès son installation. Plusieurs ont été citées plus haut, elles ont un intérêt dans la conception des programmes, que ce soit pour organiser des listes, vérifier des données, etc.
 
-## La fonction `split()`
+## <RdIcon name="square-function" /> La fonction `split()`
 
 Permet de séparer la chaîne de caractère en plusieurs éléments, en opérant la séparation sur un caractère.
 Exemple :
@@ -21,7 +21,7 @@ print(chaineListe)
 
 Ici, la fonction `split()` a transformé la variable `str` en une liste. Les éléments de cette liste ont été identifiés par chaque séparation ", ", indiqué comme argument dans la fonction.
 
-## La fonction `sort()`
+## <RdIcon name="square-function" /> La fonction `sort()`
 
 Permet de trier les valeurs de façon croissante.
 
@@ -38,7 +38,7 @@ Antho, Ludo, Olivier, Théo, Thomas# [!code ++]
 
 Dans l'exemple ci-dessus, on peut s'apercevoir que les prénoms ont été triés dans l'ordre alphabétique.
 
-## La fonction `join()`
+## <RdIcon name="square-function" /> La fonction `join()`
 Permet joindre différents éléments d'une liste par une chaîne de caractère. 
 Exemple : 
 
@@ -51,7 +51,7 @@ Antho, Ludo, Olivier, Théo, Thomas# [!code ++]
 
 Dans l'exemple ci-dessus, on comprend que la liste `chaine` est devenue une `str`, chaque élément de la liste ont été séparés par l'argument précédent la fonction `join()`, ici ", ".
 
-## La fonction `isdigit()`
+## <RdIcon name="square-function" /> La fonction `isdigit()`
 
 Renvoie une valeur `True` ou `False` selon l'argument entré dans la fonction si oui ou non il s'agit de nombres.
 Exemple :
@@ -66,7 +66,7 @@ else:
 
 Dans l'exemple ci-dessus, on demande à l'utilisateur d'entrer une valeur numérique, si celui-ci entre une valeur en `str`, `isdigit(valeur)` renverra `False` et passera à la ligne `else`, sinon, il "printera" la valeur donnée par l'utilisateur.
 
-## La fonction `list()` & `range()`
+## <RdIcon name="square-function" /> La fonction `list()` & `range()`
 
 Permet la création rapide d'une liste de nombre selon une échelle donnée.
 La fonction `list` permet elle de créer une liste selon un argument donné, ici la variable `liste`.
@@ -90,7 +90,7 @@ Si on veut créer une liste de nombres pairs, on peut donner un écart entre cha
 
 Ici ce sera le dernier arguement de la fonction `range()` qui définira l'écart.
 
-## La fonction `random()`
+## <RdIcon name="square-function" /> La fonction `random()`
 
 Permet de générer une valeur aléatoire.
 Exemple : 
@@ -108,7 +108,7 @@ for _ in range(5):
 5# [!code ++]
 ```
 
-## La fonction `count()`
+## <RdIcon name="square-function" /> La fonction `count()`
 
 Permet de compteur le nombre d'un argument choisi.
 Exemple : 
@@ -127,7 +127,7 @@ Cependant, si on a une phrase contenant des "O" majuscules, ceux-ci ne seront pa
 <br>
 `x = phrase.lower(phrase.count(lettre_a_chercher))`
 
-## Les fonctions de casse (`lower()`, `upper()`, `title()` & `capitalize()`)
+## <RdIcon name="square-function" /> Les fonctions de casse (`lower()`, `upper()`, `title()` & `capitalize()`)
 
 Permet de transformer une chaine de caractère en une autre, en fonction de la casse.
 Exemple :
@@ -152,7 +152,7 @@ La fonction `upper()` va transformer la chaine de caractère en majuscules.
 La fonction `title()` va transformer ajouter le premier caractère de chaque mot en majuscule.
 La fonction `capitalize()` va transformer la première lettre de chaque phrase en majuscule.
 
-## La fonction `replace()` 
+## <RdIcon name="square-function" /> La fonction `replace()`
 
 Permet de remplacer une chaine de caractère par une autre.
 Exemple :
@@ -170,7 +170,7 @@ print(bon)
 
 La fonction `replace()` va remplacer toutes les occurences de la chaine de caractère que l'on veut remplacer par la chaine de caractère que l'on veut remplacer.
 
-## La fonction `strip()`
+## <RdIcon name="square-function" /> La fonction `strip()`
 
 La fonction `strip()` permet de supprimer les caractères spécifiés dans une chaine de caractère. Elle commence par analyser la chaine de caractère par le début puis parcourt la chaine de caractère jusqu'à la fin, en supprimant les caractères spécifiés. Elle s'arrête une fois qu'elle ne trouve plus de caractères spécifiés, puis recommence à la fin de la chaine de caractère.
 

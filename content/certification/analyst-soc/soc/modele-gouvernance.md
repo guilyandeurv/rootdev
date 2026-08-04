@@ -3,10 +3,10 @@ sidebar: auto
 date: 2024-12-07
 ---
 
-# Analyse SOC : Modèle de gouvernance
+# <RdIcon name="git-merge" /> Analyse SOC : Modèle de gouvernance
 <ESDInfo />
 
-## Les métiers du SOC
+## <RdIcon name="briefcase" /> Les métiers du SOC
 
 | |Tâches|Métiers|
 |-|-|-|
@@ -16,13 +16,13 @@ date: 2024-12-07
 |Reporting|Reporting|Dépend de l'organisation|
 
 
-## Le SOC et l'escalade
+## <RdIcon name="trending-up" /> Le SOC et l'escalade
 
 ![Escalade](./img/escalade.png)
 
 Quand l'analyste SOC niveau 1 ne trouve pas de réponse procédurée, il escalade l'incident à un analyste SOC niveau 2, qui lui même peut escalader vers des partenaires externes à un niveau 3 en cas de besoin.
 
-## 3 types de SOC
+## <RdIcon name="building-2" /> 3 types de SOC
 
 1. Les SOC opérés et internes : 
     * Le SOC est opéré par l'organisation
@@ -37,7 +37,7 @@ Quand l'analyste SOC niveau 1 ne trouve pas de réponse procédurée, il escalad
     * Le SOC est géré par un prestataire
     * Le SOC est administré par l'organisation
 
-## CERT ? CSIRT ?
+## <RdIcon name="shield-alert" /> CERT ? CSIRT ?
 
 Le ***CERT (Computer Emergency Response Team)*** ou ***CSIRT (Computer Security Incident Response Team)*** est un centre d'alerte et de réaction aux attaques informatiques, destiné aux entreprises ou aux administrations, mais dont les informations sont généralement accessibles à tous.
 
@@ -47,7 +47,7 @@ Répondre aux incidents de sécurité est sa première mission, mais elle peut �
 
 Le CSIRT est la même chose sans les accréditations et la marque déposée.
 
-## Avoir un SOC fonctionnel
+## <RdIcon name="building-2" /> Avoir un SOC fonctionnel
 
 Pour qu'un SOC fonctionne, il faut :
 * Des formations adaptées

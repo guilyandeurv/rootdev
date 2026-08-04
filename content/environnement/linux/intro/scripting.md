@@ -3,10 +3,10 @@ sidebar: auto
 date: 2026-01-18
 ---
 
-# 👨‍💻 Scripting
+# <RdIcon name="file-code" /> Scripting
 <ais />
 
-## 🏗️ Structure de base d'un script Bash
+## <RdIcon name="file-code" /> Structure de base d'un script Bash
 
 ### Le “shebang”
 
@@ -39,7 +39,7 @@ Deux méthodes d'exécution :
 
 La première méthode utilise Bash directement, la seconde utilise l'interpréteur défini dans le shebang.
 
-## 🔲 Les bases en Bash
+## <RdIcon name="terminal" /> Les bases en Bash
 
 ### 💬 Les commentaires
 
@@ -114,7 +114,7 @@ echo $my_variable
 
 Ici, `my_variable` contiendra le résultat de la commande `ls -l`.
 
-## 🧮 Opérations mathématiques
+## <RdIcon name="sigma" /> Opérations mathématiques
 
 En Bash, les opérations mathématiques peuvent être réalisées de différentes manières. Bien que Bash ne soit pas conçu pour des calculs avancés, il permet d’effectuer des opérations simples comme l'addition, la soustraction, la multiplication, la division et l'exponentiation.
 
@@ -192,7 +192,7 @@ d=$(expr $c / 2) # Division : d = 6 echo $a $b $c $d
 
 3. **Penser aux espaces dans les expressions** : avec `let` et `expr`, chaque opérateur et opérande doit être séparé par un espace pour éviter les erreurs.
 
-## 🖼️ Tableaux
+## <RdIcon name="table-2" /> Tableaux
 
 En Bash, les tableaux (*arrays*) permettent de stocker plusieurs valeurs dans une seule variable, chaque élément étant accessible via un index. Cela s’avère pratique pour manipuler des listes de données.
 
@@ -265,7 +265,7 @@ Bash fournit des opérations pour obtenir des informations sur le tableau. Pour 
  echo ${#my_array[*]}  # Affiche "5"
 ```
 
-## ➰ Boucles et conditions
+## <RdIcon name="repeat" /> Boucles et conditions
 
 Les boucles et conditions permettent de contrôler le déroulement d'un script en fonction de certaines conditions ou d'exécuter des actions de manière répétée. Elles sont essentielles pour automatiser des tâches et adapter le comportement d'un script en fonction des besoins.
 
@@ -376,7 +376,7 @@ done
 
 Cette commande imprime les valeurs de 1 à 5, permettant de boucler sur une suite d’entiers définie.
 
-## 🧠 Fonctions
+## <RdIcon name="square-function" /> Fonctions
 
 Les fonctions en Bash permettent de regrouper du code réutilisable en définissant des blocs d’instructions qui peuvent être appelés à tout moment dans le script. Elles sont particulièrement utiles pour organiser et simplifier le code. Il existe deux façons de définir une fonction : deux syntaxes sont possibles pour déclarer une fonction :
 
@@ -415,7 +415,7 @@ afficher_arguments "Bonjour" "le monde"
 > Second argument : le monde
 ```
 
-## 🤸 JQ
+## <RdIcon name="braces" /> JQ
 
 `JQ` est un outil en ligne de commande qui permet de manipuler et transformer des données **JSON**. Simple et flexible, il aide les développeurs et analystes à explorer et traiter les données **JSON**.
 

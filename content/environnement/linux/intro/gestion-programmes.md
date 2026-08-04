@@ -3,10 +3,10 @@ sidebar: auto
 date: 2026-01-18
 ---
 
-# ⚡ Gestion des programmes
+# <RdIcon name="app-window" /> Gestion des programmes
 <ais />
 
-## 📦 Gestionnaires de paquets et dépôts de logiciels
+## <RdIcon name="package" /> Gestionnaires de paquets et dépôts de logiciels
 
 ### ❓ Qu’est-ce qu’un gestionnaire de paquets ?
 
@@ -88,7 +88,7 @@ apt show wget
 > [...]
 ```
 
-## 📝 Gestion des processus
+## <RdIcon name="cpu" /> Gestion des processus
 
 Lorsqu’un programme est exécuté, un processus est créé, une instance active du programme, qui fonctionne dans un environnement dédié. Cet environnement contient tout ce qui est nécessaire pour permettre au programme de fonctionner sans interférer directement avec d’autres processus.
 
@@ -201,7 +201,7 @@ PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
 L'interface de **`top`** permet également de terminer des processus directement à partir de cette vue, en utilisant leur **PID**.
 
 
-## 🤖 Automatisation des tâches avec Crontab
+## <RdIcon name="calendar-clock" /> Automatisation des tâches avec Crontab
 
 Pour automatiser des tâches sous Linux, deux éléments essentiels sont à comprendre : le programme **Cron** et le fichier **Crontab**. Ces deux éléments agissent en tandem pour permettre la programmation et l’exécution automatique de tâches à des intervalles définis.
 

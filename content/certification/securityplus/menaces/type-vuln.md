@@ -1,10 +1,10 @@
 ---
 sidebar: auto
 ---
-# Les types de vulnérabilité
+# <RdIcon name="shield-x" /> Les types de vulnérabilité
 <Badge type="tip" text="Rédigé le 01/05/2024" />
 
-## L'impact des vulnérabilités
+## <RdIcon name="triangle-alert" /> L'impact des vulnérabilités
 
 L'impact des vulnérabilités dans l'infrastructure, les systèmes et les applications d'une organisation peut être considérable, car elles exposent ladite organisation au risque de violation de sécurité. Avant d'entrer dans les détails des vulnérabilités, il est essentiel de comprendre les objectifs généraux de la cybersécurité et les différents types de risques impliqués.
 
@@ -24,7 +24,7 @@ L'impact d'un incident de sécurité peut être catégorisé dans plusieurs doma
 
 Lors de l'analyse des vulnérabilités, il est essentiel de prendre en compte ces différents types de risques et leurs impacts potentiels sur l'organisation. L'évaluation des vulnérabilités implique de comprendre comment les attaquants pourraient les exploiter et les conséquences d'une telle exploitation sur la confidentialité, l'intégrité, la disponibilité, les finances, la réputation, les objectifs stratégiques, l'efficacité opérationnelle et la conformité réglementaire.
 
-## Gestion des vulnérabilités dans la chaîne d'approvisionnement
+## <RdIcon name="link" /> Gestion des vulnérabilités dans la chaîne d'approvisionnement
 
 ### Les fournisseurs externes
 
@@ -60,7 +60,7 @@ Lorsque l'organisation dépend des fournisseurs pour les services cloud, la resp
 
 Pour atténuer les risques associés à la perte d'accès aux données fournies par un fournisseur, des stratégies telles que la conservation de sauvegardes dans des environnements d'exploitation indépendants peuvent être mises en place.
 
-## Vulnérabilités de configuration
+## <RdIcon name="settings-2" /> Vulnérabilités de configuration
 
 ### Impact des erreurs de configuration
 
@@ -82,7 +82,7 @@ La gestion des correctifs garantit que les systèmes et les applications reçoiv
 
 Enfin, la gestion des comptes est une tâche incroyablement importante pour les professionnels de la sécurité. Si un compte est configuré de manière incorrecte avec des autorisations excessives, l'utilisateur de ce compte peut utiliser ces privilèges supplémentaires pour causer des dommages. Souvenez-vous du principe du moindre privilège : un utilisateur ne devrait avoir que le minimum nécessaire de permissions requises pour accomplir sa fonction.
 
-## Vulnérabilités architecturales
+## <RdIcon name="drafting-compass" /> Vulnérabilités architecturales
 
 ### Conception inappropriée de systèmes complexes
 

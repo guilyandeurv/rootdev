@@ -2,14 +2,14 @@
 sidebar: auto
 date: 2024-02-26
 ---
-# PRINCIPES DE SECURITE 
+# <RdIcon name="book-open-text" /> PRINCIPES DE SECURITE
 
 ::: tip Bases de la cybersécurité
 On va décrire ici les principaux fondamentaux de la sécurité, notamment les cadres utilisés pour protéger les données et les systèmes.
 Les mesures, cadres & protocoles que l'on va découvrir sont utiles au rôle de la "défense en profondeur", qui consiste à utiliser plusieurs couches de sécurité variées pour les systèmes et les données d'une organisation, afin qu'elles assurent la redondance de la sécurisation d'une organisation.
 :::
 
-## La triade de la CIA
+## <RdIcon name="shield-check" /> La triade de la CIA
 
 Il s'agit d'un modèle de la sécurité (comme le modèle OSI pour le réseau) qui est utilisé tout au long de la création d'une politique de sécurité.
 Ce modèle est plutôt ancien (98), car il ne commence et/ou ne se termine pas avec la cybersécurité, mais s’applique plutôt à des scénarios tels que le classement, le stockage des enregistrements, etc.
@@ -39,7 +39,7 @@ Il faut donc prendre des mesures afin que ces données ne soient pas susceptible
 Afin que ces données soient utiles, elles doivent pouvoir être disponibles & accessibles par les utilisateurs dont l'accès leur est autorisé.
 La disponibilité est un facteur clé d'une organisation : celles qui proposent des services web par exemple, doivent avoir des accès disponibles à ses utilisateurs en permanence, lorsqu'il ne l'est pas, cela entraîne une atteinte à la réputation de celle-ci et potentiellement une perte financière.
 
-## Principes de privilèges
+## <RdIcon name="key-round" /> Principes de privilèges
 
 Notamment afin de garantir la triade de la CIA, il est essential de correctement définir les différents niveaux d'accès à un système selon les besoins des utilisateurs.
 Ces rôles sont accordés selon deux critères :
@@ -60,7 +60,7 @@ On ne donne pas la gestion des comptes à l'agent d'entretien, tout comme on ne 
 
 Seulement les accès nécessaire à l'aboutissement des fonctions des utilisateurs.
 
-## Modelisation des menaces & réponse aux incidents
+## <RdIcon name="ambulance" /> Modelisation des menaces & réponse aux incidents
 
 Il s'agit d'un processus d'examen, d'amélioration & de test des protocoles de sécurité mis en place dans l'infrastructure et services d'une organisation.
 Elle consiste à identifier les menaces probables auxquelles une application ou un système peut-être confronté, ainsi que ses vulnérabilités.
@@ -94,7 +94,7 @@ Impact élevé & urgence élevée : **P1**
 Impact faible & urgence faible : **P5**
 :::
 
-## Méthodologie de test d'intrusion
+## <RdIcon name="door-open" /> Méthodologie de test d'intrusion
 
 Les tests d’intrusion peuvent avoir une grande variété d’objectifs et de cibles dans le champ d’application. Pour cette raison, aucun test d’intrusion n’est identique et il n’y a pas de cas unique quant à la façon dont un testeur d’intrusion doit l’aborder.
 
@@ -170,7 +170,7 @@ Le cadre s’applique aux organisations considérées comme fournissant des « s
 | Ce cadre permet l’accréditation. | Le cadre est basé sur des principes et des idées et n’est pas aussi direct que d’avoir des règles comme d’autres cadres. |
 | Ce cadre couvre quatorze principes qui vont de la sécurité à la réponse. | X |
 
-## Les tests d'intrusion sous forme de boîte
+## <RdIcon name="box" /> Les tests d'intrusion sous forme de boîte
 
 ![logo des box d'intrusion](./img/box.svg)
 
@@ -182,7 +182,7 @@ Il existe trois champs d’application principaux lors du test d’une applicati
 | Boîte grise | Connaissance limitée des composants de l’application ou du service. Néanmoins, il interagira avec l’application comme si elle était un scénario de boîte noire, puis utilise ses connaissances de l’application pour essayer de résoudre les problèmes au fur et à mesure qu’il les trouve. |
 | Boîte blanche | Connaissance complète de l’application et de son comportement attendu et disposera de beaucoup plus de temps plus consommant que les tests en boîte noire. La connaissance complète d’un scénario de test en boîte blanche fournit une approche de test qui garantit que l’ensemble de la surface d’attaque peut être validée. |
 
-## La pyramide de douleur
+## <RdIcon name="target" /> La pyramide de douleur
 
 La pyramide de douleur est un modèle utilisé en cybersécurité pour classer les risques et les menaces informatiques en fonction de leur impact potentiel sur une organisation. Cette pyramide se compose de trois niveaux, chacun représentant un niveau croissant de gravité et de perturbation pour l'organisation.
 
@@ -206,7 +206,7 @@ La pyramide de douleur en cybersécurité aide les organisations à prioriser le
 TryHackMe reprend parfaitement ce concept dans son cours "Pyramid of Pain" disponible [ici](https://tryhackme.com/room/pyramidofpainax) *(gratuit)*.
 :::
 
-## Cyber ​​Kill Chain
+## <RdIcon name="link" /> Cyber ​​Kill Chain
 
 La chaîne d'attaque cybernétique est un modèle développé pour décrire les phases d'une attaque informatique, permettant ainsi d'identifier et de contrer les menaces à chaque étape. Ce modèle est souvent utilisé par les professionnels de la cybersécurité pour améliorer la détection et la réponse aux attaques. Voici une exploration des étapes de la chaîne d'attaque, avec des exemples pour illustrer chaque phase.
 

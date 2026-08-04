@@ -4,6 +4,8 @@ redac: true
 date: 2024-*-*
 ---
 
-## Liste des ressources
+# <RdIcon name="play" /> Introduction
+
+## <RdIcon name="list" /> Liste des ressources
 
 

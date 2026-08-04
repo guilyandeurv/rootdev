@@ -3,5 +3,5 @@ sidebar: auto
 date: 2025-09-28
 ---
 
-# 🏠 Les index
+# <RdIcon name="database" /> Les index
 <ais />

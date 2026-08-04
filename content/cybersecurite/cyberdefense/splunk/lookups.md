@@ -3,5 +3,5 @@ sidebar: auto
 date: 2025-09-28
 ---
 
-# 👁️ Les lookups
+# <RdIcon name="table-2" /> Les lookups
 <ais />

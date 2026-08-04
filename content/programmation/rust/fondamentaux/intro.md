@@ -4,11 +4,11 @@ date: 2025-12-28
 redac: true
 ---
 
-# <i class="fa-brands fa-rust"></i> Introduction à Rust
+# <RdIcon name="milestone" /> Introduction à Rust
 
 Rust est un langage de programmation système moderne conçu avec un accent sur les performances, la sécurité mémoire et la concurrence. Il permet aux développeurs de créer des logiciels fiables et efficaces, des systèmes d'exploitation aux applications web.
 
-## 👋 Hello World !
+## <RdIcon name="sparkles" /> Hello World !
 
 Le *"Hello World!"* est un programme simple qui affiche Hello World! sur l'écran.
 
@@ -22,7 +22,7 @@ fn main() {
 }
 ```
 
-## 💬 Commentaires
+## <RdIcon name="message-square" /> Commentaires
 
 Les commentaires sont des lignes dans le code qui sont ignorées par le compilateur. Ils sont utilisés pour expliquer le code et le rendre plus lisible. En Rust, les commentaires commencent par deux barres obliques `//`.
 
@@ -52,7 +52,7 @@ fn main() {
 }
 ```
 
-## 🧱 Structure de base
+## <RdIcon name="list-tree" /> Structure de base
 
 En Rust, chaque programme exécutable commence par la fonction `main`. Cette fonction est le point d'entrée du programme, et c'est là que l'exécution commence. La fonction `main` est définie à l'aide du mot-clé `fn` suivi de `main` et d'une paire de parenthèses `()`. Le code à exécuter est placé entre des accolades `{}`.
 
@@ -66,7 +66,7 @@ fn main() { // Fonction Main
 
 > Note importante : En Rust, chaque instruction doit se terminer par un point-virgule `;`. Le point-virgule est obligatoire et indique à Rust que l'on atteint la fin d'une instruction. Oublier d'ajouter un point-virgule ***entraînera une erreur de compilation***. Cependant, il faut noter que les blocs de code entourés d'accolades `{}` *(comme les déclarations de fonctions)* n'ont pas besoin de points-virgules.
 
-## 🗃️ Variables
+## <RdIcon name="box" /> Variables
 
 ### 0️⃣ Nombres
 
@@ -150,7 +150,7 @@ Dans l'exemple ci-dessus, deux variables booléennes nommées `variable_true` et
 
 Les booléens sont les briques de base pour créer de la logique dans les programmes que l'on écrit. On a un chapitre entier sur la logique et les conditions.
 
-## 🔀 Variables mutables
+## <RdIcon name="box" /> Variables mutables
 
 En Rust, les variables sont *immuables* par défaut. Cela signifie qu'une fois que l'on assigne une valeur à une variable, on ne peut pas changer cette valeur. Cependant, on peut rendre une variable *mutable* en utilisant le mot-clé `mut` lors de sa déclaration.
 
@@ -173,7 +173,7 @@ x = 15; // Cela provoquera une erreur car x est immuable
 Retrouvez la suite des explications sur la varible [ici](/programmation/rust/fondamentaux/variables)
 :::
 
-## ➕ Opérateurs arithmétiques
+## <RdIcon name="sigma" /> Opérateurs arithmétiques
 
 Opérateurs sont utilisés pour effectuer des opérations sur des valeurs.
 

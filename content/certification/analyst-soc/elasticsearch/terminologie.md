@@ -3,10 +3,10 @@ sidebar: auto
 date: 2024-12-30
 ---
 
-# Analyse SOC : ElasticSearch
+# <RdIcon name="brand-elasticsearch" /> Analyse SOC : ElasticSearch
 <ESDInfo />
 
-## Terminologie
+## <RdIcon name="book-a" /> Terminologie
 
 La structure des données ElasticSearch est souvent associée à la strcture d'une BDD relationnelle :
 
@@ -17,7 +17,7 @@ La structure des données ElasticSearch est souvent associée à la strcture d'u
 |Table|Index|La cible contre laquelle les requêtes sont exécutées|
 |Database|Instance|Serveur hébergeant les données (Node)|
 
-## Syntaxe Lucene
+## <RdIcon name="search-code" /> Syntaxe Lucene
 
 Elasticsearch repose sur Lucene, une librairie de recherche d'Apache.
 
@@ -101,7 +101,7 @@ Les opérateurs booléens sont toujours écrits en majuscules.
 
 Il est aussi possible d'intéragir directement avec ElasticSearch via des requêtes HTTP, afin de pouvoir obtenir des données (GET), ajouter des données (PUT), et supprimer des données (DELETE).
 
-## SIGMA & ElastAlert
+## <RdIcon name="bookmark" /> SIGMA & ElastAlert
 
 ### SIGMA
 

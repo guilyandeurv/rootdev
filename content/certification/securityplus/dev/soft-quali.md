@@ -1,7 +1,7 @@
 ---
 sidebar: auto
 ---
-# Développer qualitativement
+# <RdIcon name="check-check" /> Développer qualitativement
 <Badge type="tip" text="Rédigé le */*/2024" />
 <Badge type="danger" text="<--- à mettre à jour" />
 <Badge type="warning" text="En cours de rédaction" />

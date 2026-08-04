@@ -3,10 +3,10 @@ sidebar: auto
 date: 2024-12-19
 ---
 
-# Analyse SOC : EDR, XDR
+# <RdIcon name="monitor-dot" /> Analyse SOC : EDR, XDR
 <ESDInfo />
 
-## Les alertes à prendre au sérieux
+## <RdIcon name="bell-ring" /> Les alertes à prendre au sérieux
 
 Les EDR permettent de détecter les événements suivants :
 

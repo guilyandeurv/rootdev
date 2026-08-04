@@ -3,10 +3,10 @@ sidebar: auto
 date: 2025-10-12
 ---
 
-# ⛑️ Architecture sécurisée
+# <RdIcon name="fingerprint" /> Architecture sécurisée
 <ais />
 
-## Introduction
+## <RdIcon name="signpost" /> Introduction
 
 Ce chapitre présente les différents principes permettant de définir l'architecture d'une passerelle d'interconnexion sécurisée.
 
@@ -19,7 +19,7 @@ Pour illustrer cela, le contexte sera une petite entreprise disposant d'un rése
 
 Ce chapitre n’édicte pas de règle impérative, mais décrit un ensemble de concepts ou de recommandations que chacun pourra adapter en fonction de ses contraintes et de ses enjeux.
 
-## Analyse succincte des menaces
+## <RdIcon name="shield-alert" /> Analyse succincte des menaces
 
 Les principales menaces considérées sont :
 
@@ -38,7 +38,7 @@ La sécurité du réseau interne (postes utilisateurs, serveurs et administratio
 6. Mettre en place une surveillance et des logs
 7. Former les utilisateurs aux risques
 
-## Principes généraux et démarche
+## <RdIcon name="compass" /> Principes généraux et démarche
 
 La mise en place d'une passerelle d'interconnexion nécessite d'identifier les fonctions de sécurité requises et leur position dans l'architecture.
 
@@ -91,7 +91,7 @@ Les équipements de niveau 2 (hubs, switches) ne sont pas toujours représentés
 Les zones réseau doivent être physiquement séparées. On évite toute connexion directe entre LAN et WAN (wifi, 3G, etc.) contournant la passerelle.
 :::
 
-## Études d'architecture
+## <RdIcon name="drafting-compass" /> Études d'architecture
 
 ### Architecture basique
 
@@ -205,7 +205,7 @@ Cette configuration limite les risques en permettant uniquement les flux nécess
 
 <img src="./img/figure7.png" width="700" height="700">
 
-## Problématiques rencontrées
+## <RdIcon name="triangle-alert" /> Problématiques rencontrées
 
 ### Problématique de l'adressage IP
 

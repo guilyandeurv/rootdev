@@ -3,10 +3,10 @@ sidebar: auto
 date: 2024-12-19
 ---
 
-# Analyse SOC : Indicateur Windows
+# <RdIcon name="brand-windows" /> Analyse SOC : Indicateur Windows
 <ESDInfo />
 
-## Processus Windows & événement 4688
+## <RdIcon name="lock-keyhole" /> Processus Windows & événement 4688
 
 L'**événement 4688** activé dans les stratégies d'audit Windows permet de lire les arguements de ligne de commande pour tout processus créé avec succès. Il se montre utile pour une recherche de techniques de persistances.
 
@@ -28,7 +28,7 @@ Des listes, il en existe plusieurs, mais l'idéal restera toujours d'adapter la 
 
 [Liste de Tony Phipps : complète sur les IDs à surveiller](https://github.com/TonyPhipps/SIEM/blob/master/Notable-Event-IDs.md)
 
-## Lolbas
+## <RdIcon name="terminal" /> Lolbas
 
 Les lolbas sont une famille composée de binaires signés donc jugés légitimes et présent nativement sur un OS (lolbin). Il peut être judicieux de surveiller les Lolbas :
 
@@ -71,7 +71,7 @@ Les lolbas sont une famille composée de binaires signés donc jugés légitimes
 |***wmic.exe***|Permet de faire des requêtes sur un système et permet également d'interagir avec des systèmes distants|
 :::
 
-## Autres surveillances à mettre en place
+## <RdIcon name="eye" /> Autres surveillances à mettre en place
 
 * ***Extensions des fichiers*** : Il peut être intéressant de surveiller les extensions de fichier car certains ransomware utilisent parfois des extensions particulières. 
 * ***Office et commande*** : Les exécutables Offices utilisent rarement des commandes "shell" derrière des commutateurs (ex : application.exe -c commande)

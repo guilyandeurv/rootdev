@@ -3,5 +3,5 @@ sidebar: auto
 date: 2025-09-28
 ---
 
-# 🔍 Search Head
+# <RdIcon name="search" /> Search Head
 <ais />

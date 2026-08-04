@@ -4,6 +4,7 @@
    sur les pages « pleine largeur ». Ces pages doivent donc déclarer
    `footer: false` dans leur frontmatter, sinon les deux se superposent. */
 import { ArrowUpRight, Mail, ShieldAlert } from 'lucide-vue-next';
+import RdIcon from '../../components/RdIcon.vue';
 
 /* Trois colonnes plutôt qu'une liste unique, pour séparer clairement le
    contenu, les parcours et le projet lui-même. */
@@ -78,7 +79,7 @@ const currentYear = new Date().getFullYear();
               aria-label="Dépôt GitHub"
               title="Dépôt GitHub"
             >
-              <i class="fab fa-github fa-fw" aria-hidden="true"></i>
+              <RdIcon name="brand-github" :size="16" />
             </a>
             <a
               class="footer-social-btn"

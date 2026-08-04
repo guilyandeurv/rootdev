@@ -4,10 +4,10 @@ redac: true
 date: 2025-09-29
 ---
 
-# 🔂 Sécurisation des commutateurs
+# <RdIcon name="toggle-right" /> Sécurisation des commutateurs
 <ais />
 
-## **⚙️ Les commutateurs dans le SI**
+## <RdIcon name="toggle-right" /> Les commutateurs dans le SI
 
 <br>
 
@@ -23,7 +23,7 @@ Il existe trois principaux types de commutateurs :
 
 Ces types diffèrent par leur usage, leurs capacités techniques, leurs débits et leurs ports.
 
-## **🏢 Administration**
+## <RdIcon name="settings-2" /> Administration
 
 Un réseau dédié à l'administration des équipements du SI est recommandé, séparé des réseaux de données métier. Un port physique spécifique doit être réservé à l'administration du commutateur.
 
@@ -57,7 +57,7 @@ Utiliser uniquement des comptes nominatifs pour tracer les actions administrativ
 
 Désactiver la commande enable et utiliser uniquement des comptes administrateurs nominatifs pour éviter la gestion complexe de mots de passe partagés.
 
-## **🏠 Comptes locaux et centralisés**
+## <RdIcon name="users" /> Comptes locaux et centralisés
 
 Deux types de comptes existent :
 
@@ -93,7 +93,7 @@ Les mots de passe doivent respecter la PSSI de l'entité.
 
 Les bannières de connexion sont à éviter car elles peuvent révéler des informations sensibles aux attaquants.
 
-## **⭕ Cloisonnement des réseaux**
+## <RdIcon name="layers-3" /> Cloisonnement des réseaux
 
 Privilégier le cloisonnement physique. Si impossible, utiliser les VLAN en restant simple pour limiter les erreurs de configuration.
 
@@ -151,7 +151,7 @@ Le VLAN par défaut ne doit jamais être utilisé.
 
 Ne pas utiliser pour le trafic métier ou d'administration.
 
-## **🔐 Private VLAN (PVLAN)**
+## <RdIcon name="layers-3" /> Private VLAN (PVLAN)
 
 Le PVLAN ajoute un niveau de compartimentation dans les VLAN. Il économise les adresses IP et améliore la sécurité via le VLAN isolé.
 
@@ -189,7 +189,7 @@ Le Private VLAN isolé est préférable car il agit globalement. Si impossible, 
 
 Le Protected Port étant local, deux machines sur différents commutateurs peuvent encore communiquer directement.
 
-## **🛣️ Routage**
+## <RdIcon name="route" /> Routage
 
 ### **🚗 Routage par les commutateurs**
 

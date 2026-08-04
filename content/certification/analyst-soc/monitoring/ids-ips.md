@@ -3,10 +3,10 @@ sidebar: auto
 date: 2024-12-19
 ---
 
-# Analyse SOC : IDS/IPS
+# <RdIcon name="shield-ban" /> Analyse SOC : IDS/IPS
 <ESDInfo />
 
-## L'indispensable du SOC
+## <RdIcon name="building-2" /> L'indispensable du SOC
 
 L'IDS permet d'alerter la **blue team** sur la détection, notamment :
 * de Command and Control (C2)

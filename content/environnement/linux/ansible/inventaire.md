@@ -3,10 +3,10 @@ sidebar: auto
 date: 2025-10-11
 ---
 
-# 📦 Inventaire
+# <RdIcon name="clipboard-pen" /> Inventaire
 <ais />
 
-## Présentation
+## <RdIcon name="presentation" /> Présentation
 
 Ansible pilote plusieurs hôtes en parallèle via un fichier d'inventaire. Par défaut, Ansible utilise son propre fichier, mais on peut en spécifier un **différent** avec les **paramètres** en ligne de commande.
 
@@ -14,7 +14,7 @@ L'inventaire est **configurable** et permet l'utilisation simultanée de plusieu
 
 Ce fichier liste les hôtes et groupes d'hôtes pour les commandes et playbooks. Selon les **environnements** et **plugins**, il peut être en format `ini`, `yaml` ou `json`.
 
-## Les types d'inventaires
+## <RdIcon name="list-tree" /> Les types d'inventaires
 
 Ansible propose deux types d'inventaires :
 
@@ -25,7 +25,7 @@ L'inventaire dynamique utilise des scripts Python, tandis que l'inventaire stati
 
 Dans ce cours, seul l'inventaire statique sera examiné.
 
-## Les composants d'un fichier d'inventaire
+## <RdIcon name="clipboard-pen" /> Les composants d'un fichier d'inventaire
 
 Un fichier d'inventaire contient plusieurs éléments :
 
@@ -35,7 +35,7 @@ Un fichier d'inventaire contient plusieurs éléments :
 - **Groupes de groupes** : Hiérarchie de groupes avec leurs variables associées.
 - **Groupes par défaut** : Deux groupes automatiques : `all` (tous les hôtes) et `ungrouped` (hôtes sans groupe spécifique).
 
-## Création d'un fichier d'inventaire
+## <RdIcon name="clipboard-pen" /> Création d'un fichier d'inventaire
 
 L'inventaire Ansible se trouve par défaut dans `/etc/ansible/hosts`, mais peut être créé ailleurs.
 
@@ -94,7 +94,7 @@ Les groupes peuvent être organisés hiérarchiquement avec le mot-clé `childre
 
 Le format YAML, disponible depuis Ansible 2.4, offre une meilleure lisibilité et est recommandé. Les hôtes sont référencés par des alias comme `serveurweb1.rootdev.fr`.
 
-## _Les paramètres `ansible`_
+## <RdIcon name="settings-2" /> _Les paramètres `ansible`_
 
 Voici les principaux paramètres Ansible :
 

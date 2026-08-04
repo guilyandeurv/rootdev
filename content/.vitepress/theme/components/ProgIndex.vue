@@ -1,9 +1,13 @@
 <script setup>
 import { ref } from 'vue'
+import RdIcon from '../../components/RdIcon.vue'
 
+// `icon` reprend le nom porté par le même langage dans la barre latérale : les
+// logos viennent de Simple Icons (cf. `icons/registry.mjs`).
 const modules = ref([
   {
-    title: "🟨 JavaScript (web)",
+    icon: "brand-javascript",
+    title: "JavaScript (web)",
     description: "Le langage incontournable pour le développement Frontend et Backend.",
     topics: [
       { title: "Présentation générale", link: "/programmation/javascript/index", intro: "Pourquoi choisir JS ? Écosystème et V8." },
@@ -13,7 +17,8 @@ const modules = ref([
     ]
   },
   {
-    title: "🐍 Python (general & web)",
+    icon: "brand-python",
+    title: "Python (general & web)",
     description: "Syntaxe claire pour l'automatisation, la data et le web avec Django.",
     topics: [
       { title: "Présentation Générale", link: "/programmation/python/index", intro: "Philosophie et domaines d'application." },
@@ -24,7 +29,8 @@ const modules = ref([
     ]
   },
   {
-    title: "🦀 Rust (système)",
+    icon: "brand-rust",
+    title: "Rust (système)",
     description: "Performance et sécurité mémoire sans Garbage Collector.",
     topics: [
       { title: "Présentation générale", link: "/programmation/rust/index", intro: "Le remplaçant moderne du C++." },
@@ -33,7 +39,8 @@ const modules = ref([
     ]
   },
   {
-    title: "🔵 Langage C (bas niveau)",
+    icon: "brand-c",
+    title: "Langage C (bas niveau)",
     description: "Comprendre le fonctionnement de la machine et de la mémoire.",
     topics: [
       { title: "Présentation générale", link: "/programmation/c/index", intro: "Le pilier de l'informatique moderne." },
@@ -41,7 +48,8 @@ const modules = ref([
     ]
   },
   {
-    title: "💎 Ruby (scripting)",
+    icon: "brand-ruby",
+    title: "Ruby (scripting)",
     description: "Un langage conçu pour le bonheur du développeur.",
     topics: [
       { title: "Présentation générale", link: "/programmation/ruby/index", intro: "Objet pur et philosophie Rails." },
@@ -122,7 +130,7 @@ const pythonTools = ref([
       <div class="modules-grid">
         <div v-for="(module, mIndex) in modules" :key="mIndex" class="module-card">
           <div class="module-header">
-            <h3>{{ module.title }}</h3>
+            <h3><RdIcon :name="module.icon" class="module-icon" />{{ module.title }}</h3>
             <p>{{ module.description }}</p>
           </div>
           
@@ -138,13 +146,15 @@ const pythonTools = ref([
     </section>
 
     <section class="content-section">
-      <h2 class="section-title">🐍 Python : Outils Offensifs</h2>
+      <h2 class="section-title">
+        <RdIcon name="brand-python" class="section-icon" />Python : outils offensifs
+      </h2>
       <p class="section-subtitle">Application du langage à la cybersécurité (Black Hat Python).</p>
       
       <div class="tools-grid">
         <div class="module-card special-card-full">
           <div class="module-header header-dark">
-            <h3>🛠️ Scripting de Sécurité</h3>
+            <h3><RdIcon name="toy-brick" class="module-icon" />Scripting de sécurité</h3>
             <p>Création d'outils d'attaque et d'analyse réseau "from scratch".</p>
           </div>
           <div class="module-links grid-links">
@@ -250,6 +260,11 @@ h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 1rem; letter-spacing: -
 }
 .module-header h3 { font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--vp-c-brand); }
 .module-header p { font-size: 0.9rem; }
+
+/* Les icônes remplacent les emojis qui ouvraient les titres : même rôle de
+   repère, mais elles suivent la taille et la couleur du titre. */
+.module-icon { margin-right: 0.5rem; font-size: 1.1rem; vertical-align: -0.06em; }
+.section-icon { margin-right: 0.5rem; vertical-align: -0.08em; }
 
 /* LIENS */
 .module-links {

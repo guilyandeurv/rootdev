@@ -2,9 +2,9 @@
 sidebar: auto
 date: 2024-04-17
 ---
-# Protocole SMB
+# <RdIcon name="folder-open" /> Protocole SMB
 
-## Introduction à SMB
+## <RdIcon name="folder-open" /> Introduction à SMB
 
 SMB (***S***erver ***M***essage ***B***lock Protocol) est un protocole de communication client-serveur utilisé pour partager l'accès à des fichiers, des imprimantes, des ports série et d'autres ressources sur un réseau. Il facilite l'échange de messages entre les systèmes client et serveur pour permettre diverses fonctionnalités de partage de ressources réseau.
 
@@ -29,7 +29,7 @@ https://fr.wikipedia.org/wiki/NetBEUI
 
 En exploitant SMB, les organisations peuvent partager efficacement des ressources sur leur infrastructure réseau, améliorant la collaboration et la productivité entre les utilisateurs.
 
-## Énumération
+## <RdIcon name="list-tree" /> Énumération
 L'énumération est le processus de collecte d'informations sur une cible afin de trouver des vecteurs d'attaque potentiels et d'aider à l'exploitation.
 
 Ce processus est essentiel pour la réussite d'une attaque, car perdre du temps avec des exploits qui ne fonctionnent pas ou qui peuvent faire planter le système peut être une perte d'énergie. L'énumération peut être utilisée pour collecter des noms d'utilisateur, des mots de passe, des informations réseau, des noms d'hôtes, des données d'application, des services, ou toute autre information qui peut être précieuse pour un attaquant.
@@ -273,7 +273,7 @@ Sur celui de Enum4Linux, on prend connaissance de plusieurs choses :
 * Les stratégies de sécurité des mots de passe
 [...]
 
-## Types d'exploits SMB
+## <RdIcon name="folder-open" /> Types d'exploits SMB
 Bien qu'il existe des vulnérabilités telles que [CVE-2017-7494](https://www.cvedetails.com/cve/CVE-2017-7494/) qui peuvent permettre l'exécution de code à distance en exploitant SMB, on est plus susceptible de rencontrer une situation où le meilleur moyen d'accéder à un système est dû à des erreurs de configuration dans le système. Dans ce cas, on peut exploiter l'accès anonyme aux partages SMB - une erreur de configuration courante qui peut nous permettre de recueillir des informations menant à un shell.
 
 ### Décomposition de la méthode

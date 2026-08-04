@@ -3,9 +3,9 @@ sidebar: auto
 redac: true
 date: 2024-06-02
 ---
-# Burp Suite 
+# <RdIcon name="brand-burpsuite" /> Burp Suite
 
-## Introduction
+## <RdIcon name="signpost" /> Introduction
 
 BurpSuite est un outil populaire de test de sécurité des applications Web, développé par PortSwigger. Il est largement utilisé par les professionnels de la sécurité pour identifier et exploiter les vulnérabilités dans les applications Web. 
 

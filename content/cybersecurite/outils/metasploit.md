@@ -3,7 +3,7 @@ sidebar: auto
 redac: true
 date: 2024-*-*
 ---
-# Metasploit
+# <RdIcon name="brand-metasploit" /> Metasploit
 <Badge type="tip" text="Rédigé le */*/2024" />
 <Badge type="danger" text="<---- mettre à jour" />
 <Badge type="warning" text="En cours de rédaction" />

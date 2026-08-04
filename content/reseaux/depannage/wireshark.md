@@ -3,10 +3,10 @@ sidebar: auto
 date: 2025-09-29
 ---
 
-# 🦈 Wireshark
+# <RdIcon name="brand-wireshark" /> Wireshark
 <ais />
 
-## **🏰 Historique**
+## <RdIcon name="history" /> Historique
 
 Dans les années 90, Gerald Combs se penche sur une solution d’analyse de paquets et crée en 1998 **Ethereal**. Huit ans plus tard, le projet est renommé pour devenir ce que l’on connaît aujourd’hui sous le nom de **Wireshark**.
 
@@ -16,7 +16,7 @@ Wireshark est un logiciel open source, c'est-à-dire qu'il permet un accès libr
 
 *Logo de Wireshark*
 
-## **📱 L'interface Wireshark**
+## <RdIcon name="app-window" /> L'interface Wireshark
 
 Une fois ouvert, voici la fenêtre principale.
 
@@ -116,7 +116,7 @@ Ce graphique visualise les connexions et les flux de données entre les hôtes d
 
 <img src="./img/flux.png" width="900" height="900">
 
-## **🌐 Où placer ses sondes réseaux ?**
+## <RdIcon name="radar" /> Où placer ses sondes réseaux ?
 
 Selon l'endroit où est placé son analyseur, les informations capturées seront différentes. Il est donc primordial de bien identifier les informations que l'on cherche pour savoir où se placer. Pour bien comprendre la différence, on va les placer dans un réseau relativement simple.
 
@@ -155,7 +155,7 @@ Types de TAP :
 1. **TAP passif**: Divise le signal sans modification. Risque de perte sur longue distance. 
 2. **TAP actif**: Amplifie les signaux, filtre et équilibre la charge. 
 
-## **📏 Les règles de filtrage**
+## <RdIcon name="brick-wall" /> Les règles de filtrage
 
 Pour bénéficier pleinement de la puissance de Wireshark, il est essentiel d'utiliser les règles de filtrage. Ces règles de filtrage sont basées sur différents critères, tels que :
 
@@ -211,7 +211,7 @@ Astuces supplémentaires :
 - On crée des boutons de filtres personnalisés dans les préférences
 - On utilise l'outil de suivi du flux TCP pour voir tous les échanges
 
-## **🔍 Identifier la latence**
+## <RdIcon name="gauge" /> Identifier la latence
 
 La latence mesure le délai entre l'envoi d'une requête et sa réponse. Elle peut provenir de trois sources :
 
@@ -282,7 +282,7 @@ Attention, cette approche atteint rapidement ses limites. Dans une capture rése
 
 L’indicateur **TCP Delta Time** est alors utile, car il permet de suivre la latence d’une communication TCP spécifique, sans se baser uniquement sur le paquet reçu précédemment.
 
-## **📦 La perte de paquet**
+## <RdIcon name="package-x" /> La perte de paquet
 
 La perte de paquets survient quand des données n'atteignent pas leur destination, impactant les performances du réseau. Son identification nécessite une bonne connaissance du réseau et de ses protocoles.
 
@@ -292,7 +292,7 @@ Avec TCP, les paquets perdus sont automatiquement retransmis et apparaissent com
 
 Avec UDP, protocole sans connexion, la détection est plus difficile car il n'y a pas de retransmission. Il faut comparer le nombre de requêtes envoyées et reçues.
 
-## **🧪 Analyse paquet ICMP**
+## <RdIcon name="search-code" /> Analyse paquet ICMP
 
 Dans les modules précédents sur les outils de dépannage réseau, le protocole ICMP a été abordé. Bien qu’il puisse sembler simple au premier abord, il devient souvent plus complexe dès que l’on évoque les notions de type et de code, qui peuvent rapidement dérouter. Cette difficulté est renforcée par le fait que ces informations ne sont pas visibles lorsque vous utilisez la commande `ping` dans un terminal.
 

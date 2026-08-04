@@ -3,10 +3,10 @@ sidebar: auto
 date: 2024-12-19
 ---
 
-# Analyse SOC : Hardware : USB, HDD externe, SD...
+# <RdIcon name="usb" /> Analyse SOC : Hardware : USB, HDD externe, SD...
 <ESDInfo />
 
-## USB pour l'exfiltration ou un accès initial
+## <RdIcon name="usb" /> USB pour l'exfiltration ou un accès initial
 
 Windows enregistre les événements liés à l'USB par défaut dans le journal des événements Windows. Ils sont enregistrés dans *Système/Sécurité* ou bien Services/Microsoft/Windows dans l'observateur d'événements.
 

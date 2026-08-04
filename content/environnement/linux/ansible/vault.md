@@ -3,10 +3,10 @@ sidebar: auto
 date: 2025-10-11
 ---
 
-# 🏦 Vault
+# <RdIcon name="vault" /> Vault
 <ais />
 
-## Présentation
+## <RdIcon name="presentation" /> Présentation
 
 Ansible Vault est une fonctionnalité d'Ansible qui permet de **protéger** les données sensibles en chiffrant les `playbook` contenant des informations confidentielles.
 
@@ -18,7 +18,7 @@ Les secrets chiffrés peuvent être stockés en sécurité dans un gestionnaire 
 
 Le chiffrement s'applique aux variables (déchiffrées à la demande) et aux fichiers (toujours déchiffrés à l'exécution).
 
-## Gestion des données sensibles
+## <RdIcon name="file-lock" /> Gestion des données sensibles
 
 Pour créer un nouveau fichier chiffré :
 

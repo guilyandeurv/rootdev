@@ -3,7 +3,7 @@ sidebar: auto
 redac: true
 date: 2024-03-24
 ---
-# Le modèle OSI (Open Systems Interconnection)
+# <RdIcon name="layers-3" /> Le modèle OSI (Open Systems Interconnection)
 
 OSI est un modèle standardisé qui est utilisé pour démontrer la théorie derrière les réseaux informatiques. En pratique, il s'agit du [modèle TCP/IP](tcp) le plus "compact" sur lequel est basé le réseau du monde réel.
 
@@ -23,33 +23,33 @@ Ce modèle est composé de sept couches :
 |2|Liaison|
 |1|Physique|
 
-## La couche 7 : Application
+## <RdIcon name="app-window" /> La couche 7 : Application
 
 La couche application du modèle OSI fournit essentiellement des options de mise en réseau aux programmes exécutés sur un ordinateur. Il fonctionne presque exclusivement avec des applications, leur fournissant une interface à utiliser pour transmettre des données. La couche application est la couche dans laquelle des protocoles et des règles sont en place pour déterminer la manière dont l'utilisateur doit interagir avec les données envoyées ou reçues.
 
 Les applications quotidiennes telles que les clients de messagerie, les navigateurs ou les logiciels de navigation sur serveur de fichiers tels que FileZilla fournissent une interface utilisateur graphique (**GUI**) conviviale permettant aux utilisateurs d'interagir avec les données envoyées ou reçues. D'autres protocoles incluent DNS (**D***omain **N**ame **S**ystem), qui permet de traduire les adresses de sites Web en adresses IP.
 
-## La couche 6 : Présentation
+## <RdIcon name="presentation" /> La couche 6 : Présentation
 
 La couche de présentation traduit les données dans un format standardisé et gère tout chiffrement, compression ou autre transformation des données. Une fois cette opération terminée, les données sont transmises à la couche session. Étant donné que les développeurs de logiciels peuvent développer différemment n'importe quel logiciel tel qu'un client de messagerie, les données doivent toujours être traitées de la même manière, quel que soit le fonctionnement du logiciel.
 
 Cette couche agit comme un traducteur des données vers et depuis la couche application (couche 7). L'ordinateur récepteur comprendra également les données envoyées à un ordinateur dans un format destiné à un autre format. Les fonctionnalités de sécurité telles que le chiffrement des données (comme HTTPS lors de la visite d'un site sécurisé) se produisent au niveau de cette couche.
 
-## La couche 5 : Session
+## <RdIcon name="link" /> La couche 5 : Session
 
 Lorsque la couche session reçoit les données correctement formatées de la couche présentation, elle regarde si elle peut établir une connexion avec l'autre ordinateur sur le réseau. Si elle ne peut pas, elle renvoie une erreur et le processus ne va pas plus loin. Si une session peut être établie, il appartient à la couche session de la maintenir et de coopérer avec la couche session de l'ordinateur distant afin de synchroniser les communications. Lorsque la couche session a réussi à établir une connexion entre l'hôte et l'ordinateur distant, les données sont transmises à la couche 4 : la couche de transport.
 
-## La couche 4 : Transport
+## <RdIcon name="arrow-left-right" /> La couche 4 : Transport
 
 La couche transport est une couche très intéressante qui remplit de nombreuses fonctions importantes. Son premier objectif est de choisir le protocole sur lequel les données doivent être transmises. Les deux protocoles les plus courants dans la couche transport sont **TCP** *(**T**ransmission **C**ontrol **P**rotocol)* et **UDP** *(**U**ser **D**atagram **P**rotocol)*. Avec **TCP**, la transmission est basée sur la connexion, ce qui signifie qu'une connexion entre les ordinateurs est établie et maintenue pendant *toute la durée* de la requête. Cela permet une transmission fiable, car la connexion peut être utilisée pour garantir que ***tous les paquets***  arrivent au bon endroit. Une connexion **TCP** permet aux deux ordinateurs de rester en communication constante pour garantir que les données sont envoyées à une vitesse acceptable et que toutes les données perdues sont renvoyées. Avec **UDP**, c’est le contraire; les paquets de données sont essentiellement envoyés à l'ordinateur récepteur - s'il ne peut pas suivre, **c'est son problème**. Cela signifie que **TCP** serait généralement choisi pour les situations où la précision est privilégiée par rapport à la vitesse (par exemple, le transfert de fichiers ou le chargement d'une page Web), et **UDP** serait utilisé dans les situations où la vitesse est plus importante (par exemple, le streaming vidéo).
 
 Une fois le protocole sélectionné, la couche de transport divise ensuite la transmission en petits morceaux (sur **TCP**, on les appelle ***segments***, sur **UDP**, on les appelle ***datagrammes***), ce qui facilite la transmission réussie du message. 
 
-## La couche 3 : Réseau
+## <RdIcon name="network" /> La couche 3 : Réseau
 
 La couche réseau est chargée de *localiser la destination* de la demande. C'est la couche réseau qui prend l'adresse IP de source et détermine le meilleur itinéraire à emprunter pour la destination. À ce stade, c'est ce que l'on appelle l'adressage logique *(les adresses IP)*. Les adresses logiques sont utilisées pour ***ordonner les réseaux***, les ***catégoriser*** et nous ***permettre de les trier*** correctement. Actuellement, la forme d'adressage logique la plus courante est le format IPV4.
 
-## La couche 2 : Liaison
+## <RdIcon name="link" /> La couche 2 : Liaison
 
 La couche liaison de données se concentre sur l'*adressage physique de la transmission*. Il reçoit un paquet de la couche réseau (qui inclut l'adresse IP de l'ordinateur distant) et ajoute l'adresse physique (**MAC**) du point de terminaison de réception. Les adresses MAC sont définies par le fabricant et littéralement gravées dans la carte; ils ne peuvent pas être modifiés, bien qu'ils  puissent *être usurpés*. Lorsque des informations sont envoyées sur un réseau, c'est en fait l'adresse physique qui est utilisée pour identifier où exactement envoyer les informations. 
 
@@ -57,11 +57,11 @@ De plus, il incombe également à la couche liaison de données de présenter le
 
 La couche liaison de données remplit également une fonction importante lorsqu'elle reçoit des données, car elle **vérifie les informations reçues** pour s'assurer qu'elles n'ont pas été corrompues lors de la transmission, ce qui pourrait bien se produire lorsque les données sont transmises par la couche 1 : la couche physique.
 
-## La couche 1 : Physique
+## <RdIcon name="cable" /> La couche 1 : Physique
 
 La couche physique va jusqu’au matériel de l’ordinateur. C'est là que les impulsions électriques qui constituent le transfert de données sur un réseau sont envoyées et reçues. C'est le travail de la couche physique de convertir les données binaires de la transmission en signaux et de les transmettre à travers le réseau, ainsi que de recevoir les signaux entrants et de les reconvertir en données binaires.
 
-## L'encapsulation
+## <RdIcon name="package" /> L'encapsulation
 
 Au fur et à mesure que les données sont transmises à chaque couche du modèle, davantage d'informations contenant des détails spécifiques à la couche en question sont ajoutées au début de la transmission. À titre d'exemple, l'en-tête ajouté par la couche réseau inclurait des éléments tels que les **adresses IP source et de destination**, et l'en-tête ajouté par la couche transport inclurait des informations spécifiques au **protocole utilisé**. La couche liaison de données ajoute également un élément à la fin de la transmission qui permet de **vérifier que les données n'ont pas été corrompues** lors de la transmission; cela présente également l'avantage supplémentaire d'une sécurité accrue, car les données ne peuvent pas être interceptées et falsifiées sans casser la chaine. L'ensemble de ce processus est appelé ***encapsulation***; le processus par lequel les données peuvent être envoyées d’un ordinateur à un autre.
 

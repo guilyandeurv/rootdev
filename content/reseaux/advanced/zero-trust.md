@@ -3,10 +3,10 @@ sidebar: auto
 date: 2026-01-17
 ---
 
-# 0️⃣ Zero Trust
+# <RdIcon name="circle-slash" /> Zero Trust
 <ais />
 
-## **📑 Aperçu des principes**
+## <RdIcon name="compass" /> Aperçu des principes
 
 Les principes clés de Zero Trust.
 
@@ -26,13 +26,13 @@ Les principes clés de Zero Trust.
 
 **8. Services compatibles** : Utiliser des solutions conçues pour Zero Trust.
 
-## 🎬 Introduction au Zero Trust
+## <RdIcon name="circle-slash" /> Introduction au Zero Trust
 
 Une architecture à confiance zéro supprime la confiance inhérente au réseau. Le réseau est considéré hostile et chaque demande d'accès est vérifiée selon une politique stricte.
 
 La fiabilité d'une demande repose sur l'authentification forte, l'autorisation, l'état de l'appareil et la sensibilité des données.
 
-## 🎯 Concepts clés
+## <RdIcon name="key" /> Concepts clés
 
 Les principes Zero Trust s'appuient sur des concepts fondamentaux.
 
@@ -53,7 +53,7 @@ Les principes Zero Trust s'appuient sur des concepts fondamentaux.
 
 **Par exemple**, l'accès aux données sensibles nécessite une authentification forte et un appareil sécurisé de l'organisation, tandis que l'accès à des informations basiques comme le menu du jour est plus souple.
 
-## 📋 Terminologie
+## <RdIcon name="book-a" /> Terminologie
 
 Lorsque l'on parle d'architectures de confiance zéro, il est utile d'avoir un vocabulaire commun. Ci-dessous certains termes utilisés dans les principes de la confiance zéro.
 
@@ -64,7 +64,7 @@ Lorsque l'on parle d'architectures de confiance zéro, il est utile d'avoir un v
 - **Point d'application de la politique** - Médiation des demandes d'un utilisateur ou d'un appareil vers un service ou des données à l'aide du moteur de politique afin de déterminer si les demandes peuvent être autorisées.
 - **Santé de l'appareil** - Confiance dans le fait qu'un appareil est conforme aux politiques de configuration et qu'il est en bon état. Par exemple, les derniers correctifs ont été installés ou une fonction comme le démarrage sécurisé est activée.
 
-## 👨‍💻 Connaître son architecture
+## <RdIcon name="waypoints" /> Connaître son architecture
 
 Dans le modèle Zero Trust, une connaissance approfondie de tous les composants est essentielle : utilisateurs, appareils, services et données.
 
@@ -84,7 +84,7 @@ Après la découverte des actifs, on commence par une évaluation des risques in
 
 L'atténuation dépend de la criticité des actifs. On évalue leur importance pour définir les protections nécessaires. Si certains risques ne peuvent être atténués par Zero Trust, on conserve les contrôles de sécurité existants.
 
-## 🏛️ Connaître les identités des utilisateurs, des services et des appareils
+## <RdIcon name="fingerprint" /> Connaître les identités des utilisateurs, des services et des appareils
 
 L'identité est un facteur critique pour les décisions d'accès dans un réseau Zero Trust.
 
@@ -145,7 +145,7 @@ La fiabilité de l'identité dépend de l'appareil :
 - **Sur un appareil non géré**, les clés logicielles offrent une confiance minimale.
 - **L'identification inter-organisations** nécessite des accords techniques et de gouvernance.
 
-## 🎓 Évaluer le comportement des utilisateurs et l'état des systèmes
+## <RdIcon name="user-check" /> Évaluer le comportement des utilisateurs et l'état des systèmes
 
 Le comportement des utilisateurs et l'état des appareils et services sont des indicateurs clés pour la sécurité des systèmes. Une surveillance continue permet d'évaluer leur fiabilité et d'alimenter les décisions d'accès via un moteur de politiques.
 
@@ -195,7 +195,7 @@ La surveillance de l'état de santé de l'infrastructure *(sur site ou IaaS)* s'
 
 Cette surveillance permet de détecter les menaces comme les appareils malveillants, les flux de données non autorisés ou les processus suspects.
 
-## 📚 Utiliser les politiques pour autoriser les demandes
+## <RdIcon name="scroll-text" /> Utiliser les politiques pour autoriser les demandes
 
 Chaque demande d'accès doit être validée par une politique.
 
@@ -281,7 +281,7 @@ Les moteurs de politique évaluent la confiance accordée aux utilisateurs et ap
 > Après la définition des politiques d'accès, évaluer leur impact sur la disponibilité. Commencer par une phase d'observation sans blocage pour valider le fonctionnement.
 > Pendant cette phase, auditer régulièrement les journaux et réagir rapidement aux tentatives malveillantes. Une période de transition peut être nécessaire, où les contrôles traditionnels restent actifs pendant l'évaluation des nouvelles politiques.
 
-## 📃 Authentifier et autoriser partout
+## <RdIcon name="key-round" /> Authentifier et autoriser partout
 
 On doit considérer le réseau comme hostile - authentifier et autoriser chaque connexion aux données et services. On doit utiliser une authentification forte et intégrer un moteur de politique dans les applications.
 
@@ -309,7 +309,7 @@ Les services s'authentifient entre eux via des **jetons d'API**, **OAuth 2.0** o
 
 L'authentification mutuelle garantit que les deux services sont légitimes, essentiel pour établir des listes d'autorisation basées sur l'identité.
 
-## 🚔 Concentrer la surveillance sur les utilisateurs, les appareils et les services
+## <RdIcon name="eye" /> Concentrer la surveillance sur les utilisateurs, les appareils et les services
 
 Une surveillance complète est essentielle pour protéger les appareils et services contre les attaques. Dans une architecture Zero Trust, la surveillance se concentre sur trois éléments clés : *les utilisateurs*, *les appareils* et *les services*. Cette approche permet d'évaluer leur cyber santé.
 
@@ -335,7 +335,7 @@ Malgré l'hostilité présumée du réseau, sa surveillance reste cruciale pour 
 
 Combinée à la surveillance des appareils, elle améliore la visibilité en permettant de retracer l'origine des connexions.
 
-## 🚨 Ne faites confiance à aucun réseau, y compris le vôtre
+## <RdIcon name="circle-slash" /> Ne faites confiance à aucun réseau, y compris le vôtre
 
 En Zero Trust, tout réseau est considéré hostile. La confiance doit être établie au niveau des utilisateurs, appareils et services. Les communications doivent utiliser un transport sécurisé (`TLS`) sur tous les réseaux, même locaux.
 
@@ -355,7 +355,7 @@ La disponibilité et la sécurité de ces services doivent être évaluées.
 
 Malgré la méfiance envers le réseau, une bonne hygiène cyber reste nécessaire. La surveillance des hôtes non autorisés et la mise à jour des composants réseau garantissent performance et disponibilité.
 
-## 💼 Choisir des services conçus pour une Zero Trust
+## <RdIcon name="circle-slash" /> Choisir des services conçus pour une Zero Trust
 
 Privilégier les services intégrant nativement la prise en charge Zero Trust. Ces services doivent être conçus pour se protéger contre toutes les sources d'attaque potentielles, y compris l'internet.
 

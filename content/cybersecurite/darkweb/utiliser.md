@@ -2,9 +2,9 @@
 sidebar: auto
 date: 2024-04-19
 ---
-# Accéder au Dark Web
+# <RdIcon name="brand-tor" /> Accéder au Dark Web
 
-## TOR
+## <RdIcon name="brand-tor" /> TOR
 
 Le développement de Tor représente une étape cruciale dans la protection de la vie privée en ligne. Fondé par des chercheurs du Laboratoire de recherche navale des États-Unis, David Goldschlag, Mike Reed et Paul Syverson, Tor a été conçu pour répondre à l'absence de sécurité sur Internet dans les années 1990 et pour contrer la facilité avec laquelle la surveillance en ligne pouvait être effectuée.
 
@@ -14,7 +14,7 @@ Pour que Tor fonctionne, il a besoin d'un réseau décentralisé composé de nom
 
 L'Electronic Frontier Foundation (EFF), une organisation à but non lucratif dédiée à la défense des libertés civiles dans le monde numérique, a reconnu l'importance du réseau Tor dès 2004 et a commencé à financer les travaux de Roger Dingledine et Nick Mathewson. En 2006, ils ont créé The Tor Project, Inc., une organisation à but non lucratif, pour recevoir des financements et poursuivre le développement et la maintenance de Tor.
 
-## Disclaimer
+## <RdIcon name="triangle-alert" /> Disclaimer
 
 Il est crucial de souligner que l'***anonymat sur le Dark Web n'est pas absolu***, car les forces de l'ordre surveillent activement ses activités et s'efforcent d'identifier les utilisateurs impliqués dans des activités illicites. Les risques associés à la navigation sur le Dark Web sont bien réels, allant des opérations illégales aux contenus explicites.
 
@@ -28,7 +28,7 @@ Pour garantir sa sécurité, il est fortement conseillé de prendre certaines me
 
 Il est crucial de reconnaître que naviguer sur le Dark Web comporte des risques considérables, tant sur le plan légal que sur le plan de la sécurité informatique. Suivre des protocoles stricts de sécurité, tels que ceux énumérés, est essentiel pour minimiser ces risques.
 
-## Accéder au Dark Web
+## <RdIcon name="venetian-mask" /> Accéder au Dark Web
 
 Depuis Debian, on peut installer Tor avec la commande `torbrowser-launcher `:
 

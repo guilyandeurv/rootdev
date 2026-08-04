@@ -1,10 +1,10 @@
 ---
 sidebar: auto
 ---
-# Attaques d'applications
+# <RdIcon name="smartphone" /> Attaques d'applications
 <Badge type="tip" text="Rédigé le 24/03/2024" />
 
-## Implémentation de protocoles sécurisés (Objectif 3.1)
+## <RdIcon name="lock-keyhole" /> Implémentation de protocoles sécurisés (Objectif 3.1)
 
 #### Voix et vidéo :
 1. ***Secure Real-Time Transport Protocol*** (SRTP) : Assure la sécurité des communications audio et vidéo.
@@ -49,7 +49,7 @@ sidebar: auto
 
 Ces protocoles sont essentiels pour garantir la sécurité des communications, des transferts de données et de la gestion des réseaux dans les environnements informatiques. Maîtriser leur utilisation et leur mise en œuvre est crucial pour réussir l'examen Security+.
 
-## Solutions de sécurité pour les hôtes et les applications (Objectif 3.2)
+## <RdIcon name="shield-check" /> Solutions de sécurité pour les hôtes et les applications (Objectif 3.2)
 
 Implémentation de solutions de sécurité pour les hôtes ou les applications.
 
@@ -87,7 +87,7 @@ Implémentation de solutions de sécurité pour les hôtes ou les applications.
 
 Ces solutions sont essentielles pour assurer la sécurité des hôtes et des applications dans un environnement informatique. Il est important de comprendre leur mise en œuvre pour réussir l'examen Security Plus.
 
-## Conception de réseaux sécurisés (Objectif 3.3)
+## <RdIcon name="waypoints" /> Conception de réseaux sécurisés (Objectif 3.3)
 Implémentation de conceptions de réseaux sécurisées
 
 ### Équilibrage de charge (Load Balancing)
@@ -130,7 +130,7 @@ Implémentation de conceptions de réseaux sécurisées
 
 Ces éléments sont essentiels pour concevoir des réseaux sécurisés et protéger les données et les systèmes contre les menaces. Comprendre leur mise en œuvre est crucial pour réussir l'examen Security+.
 
-## Installation et configuration des paramètres de sécurité sans fil (Objectif 3.4)
+## <RdIcon name="wifi" /> Installation et configuration des paramètres de sécurité sans fil (Objectif 3.4)
 
 ### Protocoles cryptographiques
 1. ***Wired Equivalent Privacy*** (WEP) : Considéré comme obsolète et non sécurisé.
@@ -153,7 +153,7 @@ Ces éléments sont essentiels pour concevoir des réseaux sécurisés et proté
 
 Ces paramètres sont cruciaux pour assurer la sécurité des réseaux sans fil et minimiser les risques d'accès non autorisés. Une compréhension approfondie est essentielle pour réussir l'examen Security Plus.
 
-## Implémentation de solutions sobiles sécurisées (Objectif 3.5)
+## <RdIcon name="smartphone" /> Implémentation de solutions sobiles sécurisées (Objectif 3.5)
 
 ### Méthodes de connexion mobiles
 1. ***Réseaux cellulaires et Wifi*** : Connectivité à large bande pour accéder à Internet.
@@ -183,7 +183,7 @@ Ces paramètres sont cruciaux pour assurer la sécurité des réseaux sans fil e
 
 En comprenant et en appliquant ces concepts, vous pouvez garantir la sécurité des solutions mobiles dans votre organisation. Ces connaissances sont essentielles pour réussir l'examen Security+.
 
-## Application de solutions de cybersécurité dans le Cloud (Objectif 3.6)
+## <RdIcon name="cloud" /> Application de solutions de cybersécurité dans le Cloud (Objectif 3.6)
 
 En développant des solutions cloud sécurisées, plusieurs considérations clés doivent être prises en compte :
 
@@ -208,7 +208,7 @@ En développant des solutions cloud sécurisées, plusieurs considérations clé
 
 En comprenant et en appliquant ces concepts, vous pouvez renforcer la posture de sécurité de votre organisation dans le cloud. Ces connaissances sont essentielles pour réussir l'examen Security Plus.
 
-## Mise en œuvre des contrôles de gestion des identités et des comptes (Objectif 3.7)
+## <RdIcon name="user-cog" /> Mise en œuvre des contrôles de gestion des identités et des comptes (Objectif 3.7)
 
 La gestion des identités constitue l'un des éléments fondamentaux d'un programme de sécurité. Sans la capacité d'identifier et d'authentifier les utilisateurs, il est impossible de prendre des décisions de sécurité éclairées. Les solutions de gestion des identités et des accès (**IAM**) reposent sur les concepts de sujets et d'objets. Les sujets sont les personnes, les systèmes ou les services qui souhaitent accéder à des ressources, tandis que les objets sont les ressources auxquelles ils souhaitent accéder.
 
@@ -230,7 +230,7 @@ Les systèmes de gestion des identités peuvent également prendre en compte d'a
 
 Ces politiques vous permettent de créer un environnement solide de gestion des identités et des accès, où vous pouvez verrouiller et désactiver les comptes en cas d'activité suspecte, ainsi que d'effectuer des audits réguliers pour garantir que l'activité des utilisateurs correspond à vos attentes. Ces connaissances sont essentielles pour réussir l'examen Security Plus.
 
-## Mettre en œuvre des solutions d'authentification et d'autorisation (Objectif 3.8)
+## <RdIcon name="key-round" /> Mettre en œuvre des solutions d'authentification et d'autorisation (Objectif 3.8)
 
 Protéger les informations d'identification est crucial, et des technologies telles que les coffres-forts de mots de passe, les TPM (Trusted Platform Modules) et les HSM (Hardware Security Modules) aident à protéger les mots de passe et les clés d'accès.
 
@@ -254,7 +254,7 @@ Gère et surveille les comptes privilégiés pour renforcer la sécurité.
 
 Comprendre ces concepts et technologies est essentiel pour la préparation à l'examen Security+ et pour la mise en œuvre de solutions d'authentification et d'autorisation robustes dans les organisations.
 
-## Implémentation d'une infrastructure à clé publique (PKI) (Objectif 3.9)
+## <RdIcon name="key-square" /> Implémentation d'une infrastructure à clé publique (PKI) (Objectif 3.9)
 
 La PKI repose sur la cryptographie asymétrique et permet aux utilisateurs de partager leurs clés publiques de manière sécurisée avec d'autres et de fournir à ces derniers l'assurance que ces clés sont légitimes.
 

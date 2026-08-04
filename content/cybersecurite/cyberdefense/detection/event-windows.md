@@ -4,5 +4,5 @@ redac: true
 date: 2025-09-28
 ---
 
-# 📰 Journaux d'événements Windows
+# <RdIcon name="scroll-text" /> Journaux d'événements Windows
 <ais />

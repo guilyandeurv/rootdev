@@ -1,10 +1,10 @@
 ---
 sidebar: auto
 ---
-# Attaques courantes
+# <RdIcon name="zap" /> Attaques courantes
 <Badge type="tip" text="Rédigé le 29/04/2024" />
 
-## Attaques de mots de passe
+## <RdIcon name="key-round" /> Attaques de mots de passe
 
 Les mots de passe sécurisent la grande majorité des systèmes aujourd'hui. Cette approche, éprouvée par le temps, offre une sécurité adéquate pour de nombreux usages, mais présente de nombreux inconvénients.
 
@@ -22,7 +22,7 @@ Les fichiers de mots de passe sur les systèmes Linux contiennent les informatio
 ### Problème de la collision
 Le problème d'anniversaire indique que les collisions deviennent très courantes lorsque l'échantillon devient suffisamment grand. Les algorithmes de hachage doivent être soigneusement conçus pour éviter le problème de l'anniversaire.
 
-## Types d'attaques sur les mots de passe
+## <RdIcon name="key-round" /> Types d'attaques sur les mots de passe
 
 ### Attaque par force brute
 
@@ -107,7 +107,7 @@ L'utilisation de mots de passe longs et complexes reste essentielle pour renforc
 ### Conclusion
 Les mots de passe sont un mécanisme d'authentification courant mais présentent des failles de sécurité sérieuses s'ils ne sont pas implémentés correctement. Les professionnels de la sécurité doivent veiller à ce que les algorithmes de hachage de mots de passe soient robustes et que les fichiers soient protégés. Lorsque la sécurité est primordiale, les mots de passe ne devraient être qu'un composant d'un système d'authentification multi-facteurs.
 
-## Autres types d'attaques
+## <RdIcon name="swords" /> Autres types d'attaques
 
 ### Attaques par pulvérisation de mots de passe
 
@@ -126,7 +126,7 @@ L'authentification multi-facteurs est une autre défense efficace contre les att
 
 En exigeant un facteur d'authentification supplémentaire au-delà du mot de passe, l'authentification multi-facteurs arrête ces attaques à mi-chemin du processus d'authentification.
 
-## Introduction à l'apprentissage automatique et à l'intelligence artificielle
+## <RdIcon name="brain" /> Introduction à l'apprentissage automatique et à l'intelligence artificielle
 
 ### Définition de l'apprentissage automatique
 

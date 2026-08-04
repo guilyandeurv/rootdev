@@ -3,19 +3,19 @@ sidebar: auto
 redac: true
 date: 2024-03-14
 ---
-# Les fondamentaux de l'Active Directory
+# <RdIcon name="folder-git-2" /> Les fondamentaux de l'Active Directory
 
 <ais />
 
 L'Active Directory (AD) est un service d'annuaire développé par Microsoft pour les réseaux basés sur Windows. Il est utilisé pour gérer les ressources réseau telles que les utilisateurs, les ordinateurs, les groupes et les politiques de groupe. L'Active Directory est un composant central dans de nombreux environnements réseau Windows. En comprenant ses fonctionnalités de base telles que les domaines, les groupes, les politiques de groupe et les méthodes d'authentification, on peut mieux gérer et sécuriser des infrastructures réseaux.
 
-## Domaine
+## <RdIcon name="building-2" /> Domaine
 
 Un domaine dans l'Active Directory est une unité d'organisation logique qui regroupe des objets tels que des utilisateurs, des ordinateurs, des groupes et des politiques de groupe. Les domaines permettent une gestion centralisée des ressources réseau.
 
 ![Exemple d'un domaine](./../../img/domain.png)
 
-## Groupe et Utilisateur
+## <RdIcon name="users" /> Groupe et Utilisateur
 
 ### Utilisateur
 
@@ -35,11 +35,11 @@ Les groupes sont des collections d'utilisateurs et d'autres groupes. Ils simplif
 | Domain Computers | Inclut tous les ordinateurs existants dans le domaine. |
 | Domain Controllers | Inclut tous les contrôleurs de domaine existants sur le domaine. |
 
-## Ordinateurs
+## <RdIcon name="laptop" /> Ordinateurs
 
 Les ordinateurs dans l'Active Directory sont des appareils qui font partie du domaine. Ils peuvent être des ordinateurs de bureau, des serveurs ou d'autres types d'appareils réseau. Les ordinateurs rejoignent le domaine pour bénéficier de la gestion centralisée des comptes utilisateurs et des politiques de groupe.
 
-## Group Policies (Politiques de Groupe)
+## <RdIcon name="folder-cog" /> Group Policies (Politiques de Groupe)
 
 Les politiques de groupe sont des règles de configuration qui peuvent être appliquées à des utilisateurs et des ordinateurs dans un domaine. Elles permettent de contrôler divers aspects de la configuration du système, tels que les paramètres de sécurité, les restrictions logicielles et les paramètres du système d'exploitation.
 
@@ -47,7 +47,7 @@ Les politiques de groupe sont des règles de configuration qui peuvent être app
 
 Par exemple, ci-dessus se trouve les politiques de mot de passe.
 
-## Méthodes d'Authentification
+## <RdIcon name="key-round" /> Méthodes d'Authentification
 
 L'Active Directory prend en charge plusieurs méthodes d'authentification, notamment :
 
@@ -55,7 +55,7 @@ L'Active Directory prend en charge plusieurs méthodes d'authentification, notam
 - **Kerberos** : Protocole d'authentification réseau sécurisé qui utilise des tickets pour valider les utilisateurs et les services.
 - **NTLM** : Ancien protocole d'authentification Windows qui utilise un hachage de mot de passe pour vérifier l'accès.
 
-## Arbres et Forêts
+## <RdIcon name="trees" /> Arbres et Forêts
 
 ### Arbres
 

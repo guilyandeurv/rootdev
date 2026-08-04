@@ -2,9 +2,9 @@
 sidebar: auto
 date: 2024-02-26
 ---
-# PRINCIPALES DEFINTIONS DE LA CYBERSECURITE 
+# <RdIcon name="book-a" /> PRINCIPALES DEFINTIONS DE LA CYBERSECURITE
 
-## L'authentification
+## <RdIcon name="key-round" /> L'authentification
 
 L'authentification, c'est la preuve de l'identification de l'utilisateur, selon un facteur d'authentification :
 
@@ -19,7 +19,7 @@ On nomme **authentification forte** celle qui fait usage de plusieurs facteurs :
 
 Une **authentification simple** serait un usage d'un seul facteur, généralement mémoriel.
 
-## Terminologie du chiffrement
+## <RdIcon name="key" /> Terminologie du chiffrement
 
 * *<span style="color:#7897ea">Texte en clair</span>* : texte **non chiffré**
 * *<span style="color:#7897ea">Texte chiffré</span>* : résultat du **chiffrement** sur un **texte en clair**

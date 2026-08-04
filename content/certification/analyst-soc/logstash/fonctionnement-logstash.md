@@ -3,10 +3,10 @@ sidebar: auto
 date: 2024-12-22
 ---
 
-# Analyse SOC : Fonctionnement de Logstash
+# <RdIcon name="filter" /> Analyse SOC : Fonctionnement de Logstash
 <ESDInfo />
 
-## Introduction
+## <RdIcon name="signpost" /> Introduction
 
 ***Logstash*** est un outil de collecte de données et de traitement de données, il permet de collecter des données provenant de divers sources et de les traiter afin de les mettre en forme et de les exporter dans des formats standardisés.
 
@@ -18,7 +18,7 @@ Il existe un autre processus de traitement appelé ***ELT*** (***E***xecution, *
 
 ![ELT](./img/elt.png)
 
-## Configuration
+## <RdIcon name="settings-2" /> Configuration
 
 Logstash se configure au travers des fichiers suivants : 
 * logstash.yml
@@ -26,7 +26,7 @@ Logstash se configure au travers des fichiers suivants :
 * pipeline.yml 
 * `/conf.d/ <pipeline files>.conf`
 
-## Fonctionnement
+## <RdIcon name="cog" /> Fonctionnement
 
 ### Pipeline
 
@@ -53,7 +53,7 @@ Pour utiliser plusieurs pipelines, on doit modifier les fichiers `pipelines.yml`
 
 L'utilisation de plusieurs pipelines permet de séparer les flux logiques différents. Cela permet de réduire considérablmeent la complexité et la quantité de conditions utilisées. Ainsi, il est plus facile de régler et de préserver la configuration. Les données qui passent dans le pipeline deviennent alors de plus en plus homogènes. Cela permet d'améliorer les gains de performance, car les plug-ins de sortie peuvent être utilisés plus efficacement.
 
-## Les plugins Input
+## <RdIcon name="file-input" /> Les plugins Input
 
 Ils permettent de recevoir les données dans logstash, quelques uns des plus utilisés sont :
 * ***file*** : lecture d'un fichier sur un système de fichier
@@ -94,7 +94,7 @@ input {
   }
 }
 ```
-## Les plugins Filter
+## <RdIcon name="filter" /> Les plugins Filter
 
 Ce plugin est intermédiaire, non obligatoire, qui permet de combiner des filtres et des conditions pour effectuer une action sur un événement si celui-ci répond à certains critères. On retrouve les plugins suivants :
 * ***grok*** : parse et structure un événement
@@ -135,7 +135,7 @@ filter {
 }
 ```
 
-## Les plugins Output
+## <RdIcon name="file-output" /> Les plugins Output
 
 Ils représentent la phase finale du pipeline Logstash. Une fois l'étape de sortie terminée, l'événement a terminé son exéctuion, voici quelques exemples :
 * ***elasticsearch*** : exporte les événements vers Elasticsearch
@@ -156,7 +156,7 @@ output {
 }
 ```
 
-## Exemple de configuration de Logstash
+## <RdIcon name="file-code" /> Exemple de configuration de Logstash
 
 ```YAML
 input {

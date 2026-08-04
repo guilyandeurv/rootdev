@@ -3,16 +3,16 @@ sidebar: auto
 redac: true
 date: 2024-03-23
 ---
-# Les réseaux étendus (WAN)
+# <RdIcon name="earth" /> Les réseaux étendus (WAN)
 
 WAN : Wide Area Network
 
 
-## Introduction aux réseaux étendus
+## <RdIcon name="earth" /> Introduction aux réseaux étendus
 
 Un réseau étendu (WAN) est un type de réseau informatique qui s'étend sur une grande distance géographique, reliant plusieurs réseaux locaux (LAN) entre eux. Les WAN sont utilisés pour permettre la communication entre des sites distants, par exemple entre des succursales d'une entreprise situées dans différentes villes ou pays.
 
-## Caractéristiques des réseaux WAN
+## <RdIcon name="earth" /> Caractéristiques des réseaux WAN
 
 Les réseaux étendus se distinguent par les caractéristiques suivantes :
 
@@ -21,7 +21,7 @@ Les réseaux étendus se distinguent par les caractéristiques suivantes :
 * Interopérabilité : Les WAN doivent être compatibles avec différentes technologies et équipements provenant de différents fournisseurs.
 * Gestion centralisée : En raison de leur taille et de leur complexité, les WAN sont souvent gérés de manière centralisée à partir d'un emplacement principal.
 
-## Technologies WAN courantes
+## <RdIcon name="earth" /> Technologies WAN courantes
 
 Plusieurs technologies sont utilisées pour implémenter des réseaux étendus.
 
@@ -53,6 +53,6 @@ HDLC est un protocole de couche liaison de données utilisé pour la communicati
 
 BGP est un protocole de routage utilisé pour l'échange de routes entre les différents réseaux autonomes sur Internet. Il est essentiel pour assurer la connectivité entre les réseaux WAN et pour garantir le routage efficace des données à travers Internet.
 
-## Conclusion
+## <RdIcon name="circle-check-big" /> Conclusion
 
 Les réseaux étendus (WAN) jouent un rôle crucial dans la connectivité des entreprises et des organisations à l'échelle mondiale. Ils permettent la communication entre des sites distants et offrent des fonctionnalités avancées pour garantir la fiabilité, la sécurité et la qualité de service. En comprenant les caractéristiques, les technologies et les protocoles associés aux réseaux WAN, les professionnels des réseaux peuvent concevoir, mettre en œuvre et gérer efficacement des infrastructures réseau à grande échelle.

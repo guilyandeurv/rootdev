@@ -3,5 +3,5 @@ sidebar: auto
 date: 2025-09-28
 ---
 
-# #️⃣ Serveur DNS
+# <RdIcon name="contact" /> Serveur DNS
 <ais />

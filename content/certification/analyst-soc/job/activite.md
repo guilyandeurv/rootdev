@@ -3,10 +3,10 @@ sidebar: auto
 date: 2024-12-09
 ---
 
-# Analyse SOC : Quel travail au quotidien ?
+# <RdIcon name="briefcase" /> Analyse SOC : Quel travail au quotidien ?
 <ESDInfo />
 
-## Compétences recherchées
+## <RdIcon name="graduation-cap" /> Compétences recherchées
 
 Les compétences recherchées sont pour un tel poste sont :
 
@@ -34,7 +34,7 @@ Les compétences recherchées sont pour un tel poste sont :
 * Etre curieux
 * Avoir le souci du détail
 
-## Activité quotidienne
+## <RdIcon name="calendar-clock" /> Activité quotidienne
 
 L'analyste SOC est un expert en sécurité informatique qui travaille dans un SOC (Security Operation Center) pour surveiller, analyser et répondre aux incidents de sécurité. 
 
@@ -48,13 +48,13 @@ L'activité quotidienne de l'analyste SOC est la suivante :
 - Etudier les nouvelles menaces, les rapports des CERTs
 - Recherche de traces de compromission sur les systèmes d'information
 
-## Trier les alertes
+## <RdIcon name="filter" /> Trier les alertes
 
 L'analyste SOC a comme principale tâche de trier en temps réel les alertes de sécurité et de les remonter au niveau 2 s'il estime que ce n'est pas un faux positif. 
 
 ![triage](./img/triage.png)
 
-## Vérification du bon fonctionnement
+## <RdIcon name="circle-check-big" /> Vérification du bon fonctionnement
 
 Il est important de vérifier le bon fonctionnement du SOC quotidiennement, ces actions peuvent être réalisées :
 
@@ -62,7 +62,7 @@ Il est important de vérifier le bon fonctionnement du SOC quotidiennement, ces 
 - Contrôler l'état du trafic réseau
 - Vérifier le volume des logs
 
-## Rapport & ticket
+## <RdIcon name="file-chart-column" /> Rapport & ticket
 
 L'analyste SOC doit être capable de remonter un incident, et pour cela il a besoin d'avoir une méthodologie, comme par exemple :
 
@@ -73,7 +73,7 @@ L'analyste SOC doit être capable de remonter un incident, et pour cela il a bes
 
 L'idée ici est de remonter l'incident, en indiquant les zones identifiées comme potentiellement attaquées ou vulnérables.
 
-## Threat hunting
+## <RdIcon name="crosshair" /> Threat hunting
 
 La "chasse aux menaces" est une tactique permettant de connaître précisément le degré de risque de cyberattaque auquel est soumise une société. La méthode consiste à dresser un portrait général de la surface d'attaque, tout en identifiant les attaquants potentiels, leurs motifs et leurs façons de faire.
 

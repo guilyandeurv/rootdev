@@ -3,10 +3,10 @@ sidebar: auto
 date: 2025-09-28
 ---
 
-# 🖥️ Virtualisation
+# <RdIcon name="brand-vmware" /> Virtualisation
 <ais />
 
-## 📕 Fondamentaux
+## <RdIcon name="compass" /> Fondamentaux
 
 ### **🔍 Qu'est-ce que la virtualisation ?**
 
@@ -59,7 +59,7 @@ En résumé, la virtualisation vous permet de créer plusieurs environnements in
 - **Messagerie :** Gmail et Outlook utilisent la virtualisation pour gérer les emails de millions d'utilisateurs.
 - **Applications en ligne :** Microsoft 365 et Google Workspace fonctionnent sur des serveurs virtuels dans le cloud.
 
-## 🪛 Outils de Virtualisation
+## <RdIcon name="boxes" /> Outils de Virtualisation
 
 ### **VMware Workstation**
 <br>
@@ -130,7 +130,7 @@ Voici un tableau comparatif des principaux outils de virtualisation :
 | Parallels Desktop | Type 2 | macOS | Windows, Linux | Payant | Utilisateurs Mac, compatibilité Windows |
 | KVM | Type 1 | Linux | Windows, Linux | Gratuit | Déploiements Linux, virtualisation à grande échelle |
 
-## 📂 Les fichiers de virtualisation
+## <RdIcon name="hard-drive" /> Les fichiers de virtualisation
 
 ### **Fichiers d'appliances et de packaging**
 
@@ -213,7 +213,7 @@ Voici le tableau mis à jour pour inclure le format **VBOX** :
 | **QCOW2** | QEMU, KVM | Peut être converti en VMDK, VHD, RAW | Gestion d'images disque avec snapshots et réduction d'espace |
 | **VBOX** | VirtualBox | Exclusif à VirtualBox | Configuration des machines virtuelles dans VirtualBox |
 
-## ↔️ Communication entre les VM
+## <RdIcon name="network" /> Communication entre les VM
 
 ### **NAT (Network Address Translation)**
 

@@ -3,14 +3,14 @@ sidebar: auto
 redac: true
 date: 2024-03-16
 ---
-# L'HyperText Transfer Protocol (HTTP)
+# <RdIcon name="arrow-left-right" /> L'HyperText Transfer Protocol (HTTP)
 
-## HTTP & HTTPS
+## <RdIcon name="arrow-left-right" /> HTTP & HTTPS
 
 HTTP est le protocol utilisé n'importe quand lorsque l'on visite un site web. L'HTTP est pourvu de plusieurs règles utilisées pour communiquer avec les serveurs web pour la transmission des données des pages (l'HTML, les images, etc...)
 HTTPS est la version sécurisée de l'HTTP. Les données sont chiffrées de façon à ce que personne ne puisse visionner celles que vous recevez & envoyez. Il donne également l'assurance de communiquer avec le bon serveur web et non pas une usurpation.
 
-## Les requêtes & réponses
+## <RdIcon name="arrow-left-right" /> Les requêtes & réponses
 
 Lorsque l'on visite un site web, le navigateur doit faire une requête au serveur web pour pouvoir télécharger l'HTML, les images, etc...
 Avant cela, on doit dire au navigateur où et comment accéder à ces ressources : c'est là que l'URL entre en jeu.
@@ -38,7 +38,7 @@ Les méthodes HTTP sont un moyen pour le client d'afficher l'action prévue lors
 3. ***PUT*** : Ceci est utilisé pour soumettre des données à un serveur Web afin de mettre à jour les informations.
 4. ***DELETE*** : Ceci est utilisé pour supprimer des informations/enregistrements d’un serveur Web.
 
-## Les codes d'état
+## <RdIcon name="list-checks" /> Les codes d'état
 
 Les codes d'état correspondent aux réponses données par un serveur HTTP. La première ligne de la réponse contient toujours un code d'état informant le client du résultat de sa requête et éventuellement de la manière de la gérer.
 
@@ -65,7 +65,7 @@ Les codes d'état correspondent aux réponses données par un serveur HTTP. La p
 |500|Erreur de service interne|
 |503|Service indisponible|
 
-## Les en-têtes
+## <RdIcon name="file-text" /> Les en-têtes
 
 Les en-têtes sont des bits de données supplémentaires que l'on peut envoyer au serveur Web lors de requêtes. Bien qu'aucun en-tête ne soit strictement requis lors d'une requête HTTP, on aura du mal à afficher correctement un site Web.
 

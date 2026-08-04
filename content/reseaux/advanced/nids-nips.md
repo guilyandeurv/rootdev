@@ -3,16 +3,16 @@ sidebar: auto
 date: 2026-01-17
 ---
 
-# 🤖 NIDS & NIPS
+# <RdIcon name="scan-eye" /> NIDS & NIPS
 <ais />
 
-## **🚨 Les sondes réseaux**
+## <RdIcon name="radar" /> Les sondes réseaux
 
 Une sonde réseau analyse les flux du LAN pour détecter des comportements problématiques. Ces équipements sont puissants mais génèrent beaucoup de faux positifs et d'informations qui peuvent devenir ingérables sans configuration optimisée.
 
 Ce module familiarisera avec Snort, une sonde réseau open source maintenue par **Cisco Systems**.
 
-## **🆚 NIDS vs NIPS**
+## <RdIcon name="shield-ban" /> NIDS vs NIPS
 
 Il existe deux types de sondes réseaux :
 
@@ -31,7 +31,7 @@ Les NIDS sont plus simples à déployer, mais les NIPS gagnent en popularité vi
 
 > Snort **peut fonctionner dans les deux modes** selon la configuration choisie.
 
-## **🗺 Le positionnement des sondes**
+## <RdIcon name="radar" /> Le positionnement des sondes
 
 Le placement des sondes réseaux est une décision stratégique qui dépend des besoins en supervision. Quatre emplacements sont possibles : LAN, DMZ, en amont du Firewall ou sur le Firewall.
 
@@ -49,7 +49,7 @@ Pour alimenter un NIDS en données (contrairement au NIPS qui est en coupure), d
 
 - ***Le TAP*** : équipement dédié qui copie les flux plus efficacement, mais attention à sa sécurisation s'il est administrable sur le réseau.
 
-## 📏 **Règles de détections**
+## <RdIcon name="siren" /> **Règles de détections**
 
 Dans cette partie, on se concentre sur les règles de détection chez Snort. Si la syntaxe de ces règles peut varier d'un éditeur à un autre, la logique, elle, reste toujours la même, il est donc important de se familiariser avec. De plus, la création de règles adéquates est un élément clef de l'optimisation de la sonde réseau.
 

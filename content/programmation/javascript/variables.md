@@ -4,11 +4,11 @@ redac: true
 date: 2024-03-20
 ---
 
-# Tutoriel sur les Variables en JavaScript
+# <RdIcon name="box" /> Tutoriel sur les Variables en JavaScript
 
 Les variables en JavaScript sont utilisées pour stocker des données. Elles peuvent contenir différents types de valeurs, tels que des nombres, des chaînes de caractères, des booléens, des tableaux et des objets. Dans ce tutoriel, nous allons explorer les bases des variables en JavaScript.
 
-## Déclaration des variables
+## <RdIcon name="box" /> Déclaration des variables
 
 En JavaScript, il existe trois façons de déclarer une variable : `var`, `let`, et `const`.
 
@@ -16,7 +16,7 @@ En JavaScript, il existe trois façons de déclarer une variable : `var`, `let`,
 - `let` est utilisé pour déclarer des variables dont la portée est limitée au bloc dans lequel elles sont définies.
 - `const` est utilisé pour déclarer des variables constantes dont la valeur ne peut pas être modifiée une fois qu'elle est attribuée.
 
-## Types de données
+## <RdIcon name="shapes" /> Types de données
 
 Les variables en JavaScript peuvent contenir différents types de données :
 
@@ -26,7 +26,7 @@ Les variables en JavaScript peuvent contenir différents types de données :
 - **Array**: pour stocker plusieurs valeurs dans une seule variable.
 - **Object**: pour stocker des collections de données.
 
-## Utilisation des variables
+## <RdIcon name="box" /> Utilisation des variables
 
 Les variables peuvent être utilisées pour stocker des valeurs et effectuer des opérations sur ces valeurs. Voici quelques exemples :
 

@@ -3,10 +3,10 @@ sidebar: auto
 redac: true
 date: 2024-08-19
 ---
-# Le framework Django
+# <RdIcon name="brand-django" /> Le framework Django
 
 
-## Introduction
+## <RdIcon name="signpost" /> Introduction
 Django est un framework Python qui permet de créer des applications web rapidement et facilement. Il est conçu pour être facile à utiliser et à personnaliser. Il est composé de plusieurs modules qui peuvent être utilisés pour créer des applications web. 
 
 #### Les versions de Django selon Python
@@ -21,7 +21,7 @@ Django est un framework Python qui permet de créer des applications web rapidem
 |5.1	|3.10, 3.11, 3.12|
 
 
-## Créer un premier projet
+## <RdIcon name="rocket" /> Créer un premier projet
 
 Afin de séparer les packages Django des autres projets, on peut lancer un environnement virtuel avec la commande `python -m venv <nom-du-projet>` et l'activer avec `source <nom-du-projet>/bin/activate`.<br>
 Ensuite, on peut installer Django avec `python -m pip install Django`.<br>
@@ -81,7 +81,7 @@ Not Found: /favicon.ico
 
 ![Page d'accueil Django](./img/django_app.png)
 
-## Création de la base de données
+## <RdIcon name="database" /> Création de la base de données
 
 Lorsque l'on a démarré le serveur, on a les lignes suivantes :
 
@@ -112,7 +112,7 @@ Suite à la création de la base de données, on aperçoit désormais le fichier
 Si vous utilisez Git pour suivre votre code source, il est recommandé d'ajouter `db.sqlite3` à votre fichier `.gitignore`, afin qu'il ne soit pas suivi dans votre repository. Il s'agit d'une bonne pratique pour les vrais projets.
 :::
 
-## Générer le code de base de l'application
+## <RdIcon name="file-code" /> Générer le code de base de l'application
 
 Dans Django, une application est une sous-section du projet entier. Django encourage à compartimenter le projet entier Django en applications, pour deux raisons principales :
 * cela permet de garder le projet organisé et gérable au fur et à mesure qu'il se développe 
@@ -166,7 +166,7 @@ On a le répertoire racine de notre repository `Projet/`, qui contient les fichi
 - manage.py
 "/>
 
-## Création d'une nouvelle page
+## <RdIcon name="file-plus" /> Création d'une nouvelle page
 
 Pour créer une nouvelle page, on va ouvrir le fichier `listings/views.py` et éditer le code suivant :
 

@@ -3,11 +3,11 @@ sidebar: auto
 redac: true
 date: 2024-03-13
 ---
-# Les réseaux locaux (LAN) 
+# <RdIcon name="router" /> Les réseaux locaux (LAN)
 
 LAN : Local Area Network
 
-## Topologies du réseau local
+## <RdIcon name="network" /> Topologies du réseau local
 
 Avec le temps, plusieurs mises en oeuvre diverses de conception de réseaux ont vu le jour. La topologie d'un réseau signifie sa conception, ci-dessous voici les différents types :
 
@@ -38,7 +38,7 @@ Une topologie comme celle-ci fonctionne en envoyant les données le long de l'an
 
 Il n'y a qu'un seul sens de circulation des données, donc si celui-ci vient à se mettre en défaut, il devient assez facile de résoudre l'incident, mais celui-ci est coupé le temps de sa résolution. Cependant, la communication peut également se trouver longue selon le nombre de dispositifs présent dans l'anneau.
 
-## Les équipements réseau
+## <RdIcon name="router" /> Les équipements réseau
 
 ### Les switchs/commutateurs
 
@@ -56,7 +56,7 @@ Et bien les PC pourront communiquer entre eux car ils feront tous parti du même
 Les routeurs ont comme mission de connecter les réseaux entre eux et de transmettre les données, pour ce faire, ils utilisent le **routage**.
 Le routage c'est le processus de transmission des données à travers les réseaux. Le routage implique la création d'un chemin entre les réseaux afin que ces données puissent être transmises avec succès.
 
-## Les sous-réseaux
+## <RdIcon name="network" /> Les sous-réseaux
 
  Le sous-réseau est le terme utilisé pour *diviser un réseau en réseaux miniatures* plus petits au sein de lui-même. Il consiste à réserver une partie du réseau à un département, exemple : le département de la comptabilité, de la finance...
  Le sous-réseau est obtenu en divisant le nombre d'hôtes pouvant tenir dans le réseau, représenté par un nombre appelé masque de sous-réseau :
@@ -86,7 +86,7 @@ Prenons le café typique de la rue. Ce café aura deux réseaux :
 * Un pour les employés, les caisses enregistreuses et autres appareils de l'établissement
 * Un pour le grand public à utiliser comme hotspot
 
-## Le protocole ARP
+## <RdIcon name="lock-keyhole" /> Le protocole ARP
 
 Les dispositifs peuvent avoir deux identifiants : l'adresse **MAC** et l'adresse **IP**.
 
@@ -101,7 +101,7 @@ Lorsqu'une requête ARP est envoyée, un message est diffusé à tous les autres
 
 ![Schéma ARP](./img/arp.png)
 
-## Le protocole DHCP
+## <RdIcon name="route" /> Le protocole DHCP
 
 Les adresses IP peuvent être configurées de deux manières différents sur un réseau :
 * Manuellement, en configurant l'adresse depuis les paramètres de l'appareil
@@ -111,7 +111,7 @@ DHCP pour **D**ynamic **H**ost **C**onfiguration **P**rotocol.
 
 Un nouvel appareil se connecte sur le réseau sans adresse IP. Il va donc faire une demande au serveur DHCP afin qu'il lui en attribue une, celui-ci lui fait une **offre** : il propose une adresse IP disponible et invite l'appareil à l'utiliser.
 
-## La redirection des ports
+## <RdIcon name="route" /> La redirection des ports
 
 La redirection de port est un élément essentiel dans la connexion des applications et des services à Internet. Sans redirection de port, les applications et services tels que les serveurs Web ne sont disponibles que pour les appareils appartenant au même réseau direct.
 

@@ -2,7 +2,8 @@
 import { h } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
-import '@fortawesome/fontawesome-free/css/all.min.css'
+// Jeu d'icônes du site (Lucide + Simple Icons), généré par `icons/build.mjs`.
+import '../icons/icons.generated.css'
 import './all.scss'
 import './badge.scss'
 import './button.scss'
@@ -25,6 +26,10 @@ import {
 } from '@nolebase/vitepress-plugin-highlight-targeted-heading/client'
 // Page info
 import PageInfo from '../components/PageInfo.vue'
+// Focus mode
+import FocusMode from '../components/FocusMode.vue'
+// Sommaire iconé (remplace le sommaire natif dans le panneau de droite)
+import TocOutline from '../components/TocOutline.vue'
 // Reading progress
 import Layout from './Layout.vue'
 import ReadingProgress from '../components/ReadingProgress.vue'
@@ -36,6 +41,8 @@ import TreeItem from '../components/TreeItem.vue'
 import ESDInfo from '../components/ESDInfo.vue'
 //AIS
 import ais from '../components/ais.vue'
+// Icône du jeu maison, utilisable dans les pages Markdown comme dans le thème
+import RdIcon from '../components/RdIcon.vue'
 // Page ContentPage
 import ContentPage from './components/ContentPage.vue'
 // Page Rootar.io
@@ -56,8 +63,12 @@ export default {
       'layout-top': () => [ 
         h(NolebaseHighlightTargetedHeading), h(ReadingProgress),
       ],
-      // Page info
+      // Panneau de droite : infos de page en tête, mode focus en pied, notre
+      // sommaire iconé entre les deux (le sommaire natif reste calculé pour
+      // le menu déroulant mobile, mais masqué ici — cf. `theme/aside.scss`).
       'aside-top': () => h(PageInfo),
+      'aside-outline-before': () => h(TocOutline),
+      'aside-outline-after': () => h(FocusMode),
     })
   },
   enhanceApp({ app, router, siteData }) {
@@ -66,6 +77,7 @@ export default {
     app.component('TreeItem', TreeItem)
     app.component('ESDInfo', ESDInfo)
     app.component('ais', ais)
+    app.component('RdIcon', RdIcon)
     app.component('ContentPage', ContentPage)
     app.component('GameRootario', GameRootario)
     app.component('RustPresentation', RustPresentation)

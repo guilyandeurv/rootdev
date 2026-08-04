@@ -3,5 +3,5 @@ sidebar: auto
 date: 2025-09-28
 ---
 
-# 🪖 Défense alignée aux attaques
+# <RdIcon name="swords" /> Défense alignée aux attaques
 <ESDInfo />

@@ -3,5 +3,5 @@ sidebar: auto
 date: 2025-09-28
 ---
 
-# 🔎 Introduction
+# <RdIcon name="book-lock" /> Introduction
 <ais />

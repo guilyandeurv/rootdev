@@ -1,0 +1,317 @@
+/**
+ * Component: Aside — panneau "verre dépoli" du sommaire
+ * --------------------------------------------------------------------------
+ *
+ * La colonne de droite portait trois blocs de grammaires différentes : la carte
+ * d'infos de page (fond opaque, radius 8), le sommaire natif (nu, sans fond) et
+ * un gros bouton plein de mode focus. On les soude en une seule carte de verre,
+ * dans le même langage que la pastille de nav (cf. `nav.scss`).
+ *
+ *   ╭──────────────────────────────╮
+ *   │  méta : mots · durée · date  │  ← <PageInfo>       (slot aside-top)
+ *   ├──────────────────────────────┤
+ *   │  SUR CETTE PAGE              │  ← VPDocAsideOutline (natif)
+ *   │  │ ISO 19011                 │
+ *   ├──────────────────────────────┤
+ *   │  🔍 Mode focus         ( ●)  │  ← <FocusMode> (slot aside-outline-after)
+ *   ╰──────────────────────────────╯
+ *
+ * La surface (fond, flou, bordure, arrondi, ombre) est portée par le conteneur
+ * `.VPDocAside` lui-même, et non répétée sur chaque bloc : une seule bordure,
+ * un seul arrondi, aucune couture visible entre les sections, qui ne posent
+ * qu'un filet de séparation. Les composants Vue n'ont donc pas de `<style>` :
+ * tout l'habillage du panneau se lit ici.
+ *
+ * Note : c'est aussi ce qui règle le "carré blanc" du mode focus. La version
+ * précédente peignait un calque opaque en `::before` sur `.VPDocAside`, qui
+ * s'étire sur toute la hauteur de la fenêtre — d'où un aplat de la taille du
+ * viewport. Ici la carte épouse son contenu (`flex-grow: 0`), donc rien ne peut
+ * plus déborder.
+ */
+
+/* --------------------------------------------------------------------------
+ * 1. La carte
+ * -------------------------------------------------------------------------- */
+
+.VPDocAside {
+  /* VitePress étire l'aside sur toute la hauteur de `.aside-content` pour
+     pousser ses encarts (sponsors, pub) en bas de colonne. On ne s'en sert pas,
+     et une carte de la hauteur du viewport serait un aplat : on la laisse
+     épouser son contenu. `!important` car le style de VitePress est `scoped`,
+     donc plus spécifique qu'une feuille externe (cf. note dans `nav.scss`). */
+  flex-grow: 0 !important;
+
+  background-color: var(--rd-panel-bg);
+  backdrop-filter: var(--rd-panel-blur);
+  -webkit-backdrop-filter: var(--rd-panel-blur);
+  border: 1px solid var(--rd-nav-border);
+  border-radius: var(--rd-nav-radius);
+  box-shadow: var(--rd-nav-shadow-top);
+
+  /* Les sections internes n'ont pas d'arrondi : c'est la carte qui rogne
+     leurs angles. */
+  overflow: hidden;
+}
+
+/* Le rideau de VitePress est un dégradé opaque (`--vp-c-bg`) fixé en bas de la
+   colonne pour estomper le sommaire qui déborde. Sur du verre, il repeint un
+   aplat en travers de la carte : on l'efface. Un sommaire trop long se coupe
+   simplement au bas de la fenêtre, la colonne restant défilable. */
+.VPDoc .aside-curtain {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
+ * 2. Section « infos de page »
+ * -------------------------------------------------------------------------- */
+
+.VPDocAside .page-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 16px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--vp-c-text-2);
+}
+
+.VPDocAside .page-info-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.VPDocAside .page-info-icon {
+  font-size: 14px;
+  color: var(--vp-c-text-3);
+}
+
+/* L'état « brouillon » était une bannière centrée en gras doublée d'une bordure
+   d'alerte sur toute la carte. Dans un panneau unifié, la bordure appartient à
+   la carte : le statut se dit en pastille. */
+.VPDocAside .page-info-draft {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 6px;
+  margin-top: 2px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background-color: var(--vp-c-warning-soft);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--vp-c-warning-1);
+}
+
+/* --------------------------------------------------------------------------
+ * 3. Section « sommaire »
+ *
+ * Le sommaire natif de VitePress affiche le texte des titres via
+ * `textContent`, ce qui ignore forcément l'icône posée dans chaque `<h2>` :
+ * impossible d'y accrocher une icône sans réécrire le rendu des liens. On le
+ * masque donc ici (il reste néanmoins calculé et utilisé tel quel dans le
+ * menu déroulant mobile, ailleurs dans la page) et on le remplace par
+ * `<TocOutline>` (`components/TocOutline.vue`), qui reprend le même filet de
+ * séparation, la même carte, et ajoute l'icône de chaque section.
+ * -------------------------------------------------------------------------- */
+
+.VPDocAside .VPDocAsideOutline {
+  display: none !important;
+}
+
+.VPDocAside .rd-toc {
+  padding: 12px 16px 14px;
+  border-top: 1px solid var(--rd-nav-border);
+}
+
+/* Si les infos de page ne sont pas encore montées (le comptage de mots attend
+   le DOM), le sommaire ouvre la carte : pas de filet en haut. */
+.VPDocAside .rd-toc:first-child {
+  border-top: 0;
+}
+
+.rd-toc-title {
+  margin-bottom: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--vp-c-text-3);
+}
+
+.rd-toc-body {
+  position: relative;
+  padding-left: 12px;
+  border-left: 1px solid var(--rd-nav-border);
+}
+
+/* Le curseur qui glisse jusqu'au lien actif, même principe que la pastille de
+   nav (cf. `nav.scss`) : une barre de 2px positionnée en JS sur `top`. */
+.rd-toc-marker {
+  position: absolute;
+  top: 0;
+  left: -1px;
+  z-index: 1;
+  width: 2px;
+  height: 18px;
+  border-radius: 2px;
+  background-color: var(--vp-c-brand-1);
+  opacity: 0;
+  transition: top 0.25s cubic-bezier(0, 1, 0.5, 1), opacity 0.25s;
+}
+
+.rd-toc-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.rd-toc-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 0 0 4px;
+  line-height: 32px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--vp-c-text-2);
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: color 0.25s;
+}
+
+.rd-toc-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rd-toc-icon {
+  flex: none;
+  font-size: 13px;
+  color: var(--vp-c-text-3);
+  transition: color 0.25s;
+}
+
+.rd-toc-link:hover,
+.rd-toc-link.active {
+  color: var(--vp-c-text-1);
+}
+
+.rd-toc-link:hover .rd-toc-icon,
+.rd-toc-link.active .rd-toc-icon {
+  color: var(--vp-c-brand-1);
+}
+
+/* --------------------------------------------------------------------------
+ * 4. Section « mode focus »
+ * -------------------------------------------------------------------------- */
+
+.VPDocAside .focus-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  padding: 11px 16px;
+  border: 0;
+  border-top: 1px solid var(--rd-nav-border);
+  background-color: transparent;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--vp-c-text-2);
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.25s, background-color 0.25s;
+}
+
+.VPDocAside .focus-toggle:first-child {
+  border-top: 0;
+}
+
+.VPDocAside .focus-toggle:hover {
+  background-color: var(--rd-nav-highlight);
+  color: var(--vp-c-text-1);
+}
+
+.VPDocAside .focus-toggle[aria-checked='true'] {
+  color: var(--vp-c-brand-1);
+}
+
+.VPDocAside .focus-toggle-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.VPDocAside .focus-toggle-icon {
+  font-size: 15px;
+}
+
+/* L'interrupteur : 34x20 bord compris, pastille de 14 qui glisse de 16px
+   (32px d'espace intérieur − 2px de retrait − 14px de pastille). */
+.VPDocAside .focus-toggle-track {
+  position: relative;
+  flex: none;
+  box-sizing: border-box;
+  width: 34px;
+  height: 20px;
+  border: 1px solid var(--rd-nav-border);
+  border-radius: 999px;
+  background-color: var(--vp-c-default-soft);
+  transition: background-color 0.25s, border-color 0.25s;
+}
+
+.VPDocAside .focus-toggle-knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--vp-c-bg);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.25);
+  transition: transform 0.25s cubic-bezier(0, 1, 0.5, 1);
+}
+
+.VPDocAside .focus-toggle[aria-checked='true'] .focus-toggle-track {
+  border-color: transparent;
+  background-color: var(--vp-c-brand-1);
+}
+
+.VPDocAside .focus-toggle[aria-checked='true'] .focus-toggle-knob {
+  transform: translateX(16px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .VPDocAside .focus-toggle-knob {
+    transition: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+ * 5. Mode focus actif
+ *
+ * On estompe ce qui entoure la lecture — nav et sidebar — et on laisse au texte
+ * toute la largeur. Le panneau de droite reste net : c'est lui qui porte le
+ * bouton permettant de sortir du mode.
+ * -------------------------------------------------------------------------- */
+
+.focus-mode-active .VPSidebar,
+.focus-mode-active .VPNavBar {
+  filter: blur(5px);
+  transition: filter 0.3s ease;
+}
+
+.focus-mode-active .VPDoc {
+  max-width: 100% !important;
+}
+
+.focus-mode-active .VPDocAside {
+  /* Au-dessus des voisins floutés, dont l'ombre portée déborde. */
+  position: relative;
+  z-index: 10;
+}

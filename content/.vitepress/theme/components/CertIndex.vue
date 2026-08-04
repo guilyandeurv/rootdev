@@ -1,9 +1,13 @@
 <script setup>
 import { ref } from 'vue'
+import RdIcon from '../../components/RdIcon.vue'
 
+// `icon` reprend le nom porté par la même section dans la barre latérale
+// (cf. `icons/registry.mjs`).
 const certModules = ref([
   {
-    title: "📛 CompTIA Security+ (SY0-701)",
+    icon: "medal",
+    title: "CompTIA Security+ (SY0-701)",
     description: "La certification fondamentale pour valider ses connaissances en cybersécurité.",
     topics: [
       { title: "Introduction & Concepts", link: "certification/securityplus", intro: "Architecture, design et terminologie de base." },
@@ -14,7 +18,8 @@ const certModules = ref([
     ]
   },
   {
-    title: "🧑‍💼 Analyste SOC : Fondamentaux",
+    icon: "eye",
+    title: "Analyste SOC : fondamentaux",
     description: "Le métier de la défense active : surveiller, analyser et qualifier les alertes.",
     topics: [
       { title: "Le métier d'Analyste", link: "certification/analyst-soc/job/activite", intro: "Missions quotidiennes et compétences." },
@@ -24,7 +29,8 @@ const certModules = ref([
     ]
   },
   {
-    title: "🔬 Engineering SIEM (Suite Elastic)",
+    icon: "brand-elastic",
+    title: "Engineering SIEM (Suite Elastic)",
     description: "Maîtrise technique de la stack ELK pour la centralisation des logs.",
     topics: [
       { title: "Elasticsearch & Index", link: "certification/analyst-soc/elasticsearch/terminologie", intro: "Le moteur de recherche et stockage." },
@@ -34,7 +40,8 @@ const certModules = ref([
     ]
   },
   {
-    title: "🏰 Windows Security & AD",
+    icon: "monitor-cog",
+    title: "Windows Security & AD",
     description: "Durcissement et surveillance des environnements Microsoft.",
     topics: [
       { title: "Active Directory", link: "certification/analyst-soc/windows/ou-gpo", intro: "GPO, OU et intégration au domaine." },
@@ -44,7 +51,8 @@ const certModules = ref([
     ]
   },
   {
-    title: "⚔️ Offensive (Red Team / Pentest)",
+    icon: "skull",
+    title: "Offensive (Red Team / Pentest)",
     description: "Simuler l'adversaire pour éprouver les défenses.",
     topics: [
       { title: "CompTIA Pentest+", link: "/certification/pentestplus", intro: "Méthodologie de test d'intrusion standardisée." },
@@ -112,7 +120,7 @@ const certModules = ref([
       <div class="modules-grid">
         <div v-for="(module, mIndex) in certModules" :key="mIndex" class="module-card">
           <div class="module-header">
-            <h3>{{ module.title }}</h3>
+            <h3><RdIcon :name="module.icon" class="module-icon" />{{ module.title }}</h3>
             <p>{{ module.description }}</p>
           </div>
           
@@ -296,6 +304,10 @@ h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 1rem; letter-spacing: -
 }
 .module-header h3 { font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--vp-c-brand); }
 .module-header p { font-size: 0.9rem; }
+
+/* L'icône remplace l'emoji qui ouvrait chaque titre : même rôle de repère,
+   mais elle suit la taille et la couleur du titre. */
+.module-icon { margin-right: 0.5rem; font-size: 1.1rem; vertical-align: -0.06em; }
 
 /* LIENS */
 .module-links {

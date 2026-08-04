@@ -3,5 +3,5 @@ sidebar: auto
 date: 2025-09-28
 ---
 
-# ⏩ Les forwarders
+# <RdIcon name="forward" /> Les forwarders
 <ais />

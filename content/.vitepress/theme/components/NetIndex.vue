@@ -1,9 +1,13 @@
 <script setup>
 import { ref } from 'vue'
+import RdIcon from '../../components/RdIcon.vue'
 
+// `icon` reprend le nom porté par la même section dans la barre latérale
+// (cf. `icons/registry.mjs`).
 const networkModules = ref([
   {
-    title: "📕 Fondamentaux & Architecture",
+    icon: "compass",
+    title: "Fondamentaux & Architecture",
     description: "Les bases théoriques et physiques de la communication numérique.",
     topics: [
       { title: "Introduction Réseaux", link: "/reseaux/fondamentaux", intro: "Concepts de base : IP, MAC, Topologies." },
@@ -14,7 +18,8 @@ const networkModules = ref([
     ]
   },
   {
-    title: "⚙️ Protocoles & Services",
+    icon: "arrow-left-right",
+    title: "Protocoles & Services",
     description: "Les mécanismes qui font tourner le web et les infrastructures.",
     topics: [
       { title: "DNS", link: "/reseaux/dns", intro: "Résolution de noms de domaine (Domain Name System)." },
@@ -25,7 +30,8 @@ const networkModules = ref([
     ]
   },
   {
-    title: "🔐 Cryptographie & VPN",
+    icon: "key",
+    title: "Cryptographie & VPN",
     description: "Sécuriser la confidentialité et l'intégrité des échanges.",
     topics: [
       { title: "Introduction Crypto", link: "/reseaux/crypto/intro", intro: "Histoire et objectifs de la cryptographie." },
@@ -36,7 +42,8 @@ const networkModules = ref([
     ]
   },
   {
-    title: "🛡️ Durcissement (Hardening)",
+    icon: "construction",
+    title: "Durcissement (Hardening)",
     description: "Réduire la surface d'attaque des équipements réseaux.",
     topics: [
       { title: "Architecture Sécurisée", link: "/reseaux/durcissement/architecture", intro: "Segmentation, DMZ et zones de confiance." },
@@ -46,7 +53,8 @@ const networkModules = ref([
     ]
   },
   {
-    title: "💎 Sécurité Avancée",
+    icon: "shield-plus",
+    title: "Sécurité avancée",
     description: "Stratégies de défense périmétrique et zéro confiance.",
     topics: [
       { title: "Architecture Avancée", link: "/reseaux/advanced/architecture", intro: "Conception résiliente et redondante." },
@@ -57,7 +65,8 @@ const networkModules = ref([
     ]
   },
   {
-    title: "🔧 Dépannage (Troubleshooting)",
+    icon: "stethoscope",
+    title: "Dépannage (Troubleshooting)",
     description: "Identifier et résoudre les incidents de connectivité.",
     topics: [
       { title: "Méthodologie", link: "/reseaux/depannage/intro", intro: "Approche descendante ou montante (OSI)." },
@@ -125,7 +134,7 @@ const networkModules = ref([
       <div class="modules-grid">
         <div v-for="(module, mIndex) in networkModules" :key="mIndex" class="module-card">
           <div class="module-header">
-            <h3>{{ module.title }}</h3>
+            <h3><RdIcon :name="module.icon" class="module-icon" />{{ module.title }}</h3>
             <p>{{ module.description }}</p>
           </div>
           
@@ -309,6 +318,10 @@ h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 1rem; letter-spacing: -
 }
 .module-header h3 { font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--vp-c-brand); }
 .module-header p { font-size: 0.9rem; }
+
+/* L'icône remplace l'emoji qui ouvrait chaque titre : même rôle de repère,
+   mais elle suit la taille et la couleur du titre. */
+.module-icon { margin-right: 0.5rem; font-size: 1.1rem; vertical-align: -0.06em; }
 
 /* LIENS */
 .module-links {

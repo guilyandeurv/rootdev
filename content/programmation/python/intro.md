@@ -3,16 +3,16 @@ sidebar: auto
 redac: true
 date: 2024-04-02
 ---
-# Introduction à Python
+# <RdIcon name="rocket" /> Introduction à Python
 
-## Hello World !
+## <RdIcon name="sparkles" /> Hello World !
 
 ```python:line-numbers=1
 print("Hello World !")
 ```
 On peut contrôler ce qui est affiché à l'écran en utilisant l'instruction  `print()`. Tout ce qui se trouve entre parenthèses `()` sera affiché. Cependant, comme on imprime une chaîne, on doit les mettre entre guillemets `""`.
 
-## Opérateurs mathématiques
+## <RdIcon name="sigma" /> Opérateurs mathématiques
 
 |Opérateur|Syntaxe|Exemple|
 |-|-|-|
@@ -37,7 +37,7 @@ print(volume)
 L'import du module `math` permet d'obtenir une valeur précise de pi.
 Le symbole `*` permet de multiplier, tandis que le symbole `**` permet de calculer le rayon puissance 3. Le symbole pour la division est la barre oblique `/`.
 
-## Opérateurs de comparaison
+## <RdIcon name="equal" /> Opérateurs de comparaison
 
 |Opérateur|Syntaxe|
 |-|-|
@@ -48,7 +48,7 @@ Le symbole `*` permet de multiplier, tandis que le symbole `**` permet de calcul
 |Plus grand ou égal à|`>=`|
 |Plus petit ou égal à|`<=`|
 
-## Opérateurs booléens
+## <RdIcon name="toggle-left" /> Opérateurs booléens
 
 |Opérateur|Syntaxe|
 |-|-|
@@ -56,7 +56,7 @@ Le symbole `*` permet de multiplier, tandis que le symbole `**` permet de calcul
 |Une seule condition de la déclaration doit être vraie|`OR`|
 |Si une condition est l'opposé d'un argument|`NOT`|
 
-## Variables
+## <RdIcon name="box" /> Variables
 
 Les variables permettent de stocker et de mettre à jour des données dans un programme informatique. Il s'agit d'une valeur stockée sous un nom :
 
@@ -152,7 +152,7 @@ print("Total dans le portefeuille : {}".format(portefeuille))
 ```
 Ici, l'arguement `format` va convertir la valeur de la variable de `int` à `string`. La valeur sera placée à la place de `{}`, ils sont appelés **placeholders**.
 
-## Types de données
+## <RdIcon name="shapes" /> Types de données
 
 1. ***Chaîne de caractère*** (String) : utilisée pour les combinaisons de caractères, tels que des lettres ou des symboles.
 2. ***Entier*** (Integer) : Nombres entiers
@@ -167,7 +167,7 @@ Ici, l'arguement `format` va convertir la valeur de la variable de `int` à `str
 ![Exemples types](./img/types.png)
 
 
-## Les listes
+## <RdIcon name="list" /> Les listes
 
 Pour déclarer une liste, on utilise la syntaxe suivante :
 ```python:line-numbers=1
@@ -236,7 +236,7 @@ Yamaha Guitare Clarinet
 
 
 
-## Les conditions
+## <RdIcon name="git-branch" /> Les conditions
 
 L'utilisation des conditions `if`, `elif` et `else` permettent aux programmes de prendre des décisions.
 
@@ -260,7 +260,7 @@ else:
     portefeuille = input("Combien avez-vous dans votre portefeuille ?")
 ```
 
-## Les boucles
+## <RdIcon name="repeat" /> Les boucles
 
 En programmation, les boucles permettent aux programmes d’itérer et d’effectuer des actions un certain nombre de fois. Il existe deux types de boucles : `for` et `while`.
 

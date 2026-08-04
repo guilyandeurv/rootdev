@@ -3,5 +3,5 @@ sidebar: auto
 date: 2025-09-28
 ---
 
-# 👥 Gestion des utilisateurs, groupes et processus
+# <RdIcon name="user-cog" /> Gestion des utilisateurs, groupes et processus
 <ais />

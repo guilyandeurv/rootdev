@@ -4,9 +4,9 @@ redac: true
 date: 2025-12-20
 ---
 
-# Documentation Rootar.io
+# <RdIcon name="gamepad-2" /> Documentation Rootar.io
 
-## 📂 Structure du projet
+## <RdIcon name="file-code" /> Structure du projet
 
 Le projet suit une architecture React moderne basée sur Vite.
 
@@ -24,7 +24,7 @@ Le projet suit une architecture React moderne basée sur Vite.
 │   └── main.jsx           # Point d'entrée React
 ```
 
-## 🚀 Composants système
+## <RdIcon name="cpu" /> Composants système
 `App.jsx` : C'est le noyau (Kernel) de l'application. Il gère l'état global qui ne doit pas être perdu lors de la fermeture d'une fenêtre.
 
 Fonctions Clés :
@@ -41,7 +41,7 @@ Fonctions Clés :
 
 * Moniteurs : Affiche les barres de progression pour la Trace, la Chaleur (Heat) et l'XP.
 
-## 💻 Applications principales
+## <RdIcon name="app-window" /> Applications principales
 
 `Terminal.jsx` : L'interface d'interaction principale. Elle gère trois modes : IDLE, SCANNING, et HACKING.
 
@@ -57,7 +57,7 @@ Fonctions Clés :
 * **Physique du signal** : Utilise `requestAnimationFrame` pour gérer un déplacement fluide et chaotique du curseur.
 * **Lien thermique** : Si `temp > 100`, la zone cible devient plus petite et le "drift" (dérive) s'accentue.
 
-## 🛠️ Configuration du jeu (`data/gameConfig.js`)
+## <RdIcon name="gamepad-2" /> Configuration du jeu (`data/gameConfig.js`)
 
 Ce fichier contient l'équilibrage du jeu. ***Ne modifiez pas la logique des composants, modifiez ces constantes pour ajuster la difficulté.***
 
@@ -68,7 +68,7 @@ Ce fichier contient l'équilibrage du jeu. ***Ne modifiez pas la logique des com
 |`XP_TABLE`|Les seuils d'XP requis pour monter de niveau.|
 |`HACK_DICT`|Liste des mots/commandes utilisés pendant le mini-jeu de hack.|
 
-## ⌨️ Commandes administrateur (`sudo`)
+## <RdIcon name="terminal" /> Commandes administrateur (`sudo`)
 
 Accessibles via le Terminal, à des fins de test des composants, fonctionnalités... :
 
@@ -77,7 +77,7 @@ Accessibles via le Terminal, à des fins de test des composants, fonctionnalité
 * `sudo untrace` : Réinitialise immédiatement la barre de Trace.
 * `sudo reset` : Déclenche le protocole de nettoyage complet du profil.
 
-## 🔊 Système audio
+## <RdIcon name="volume-2" /> Système audio
 
 Les sons sont chargés dynamiquement depuis des URLs distantes pour alléger le build.
 

@@ -3,10 +3,10 @@ sidebar: auto
 date: 2024-12-20
 ---
 
-# Analyse SOC : Les agents BEATS, sysmon
+# <RdIcon name="activity" /> Analyse SOC : Les agents BEATS, sysmon
 <ESDInfo />
 
-## Beats
+## <RdIcon name="activity" /> Beats
 
 <img src="./img/beats.png" width="150" height="150">
 
@@ -64,7 +64,7 @@ output.logstach:
 hosts: ["logstash_srv:5045"]
 ```
 
-## Sysmon
+## <RdIcon name="activity" /> Sysmon
 
 L'outil ***Sysmon*** permet de *générer des logs supplémentaires* dans un environnement Windows, ces indicateurs peuvent apporter des informations précises dans le cas d'une activité malveillante sur un système :
 * Création de processus

@@ -11,6 +11,7 @@ import {
   ShieldCheck,
   Terminal
 } from 'lucide-vue-next';
+import RdIcon from '../../components/RdIcon.vue';
 import SiteFooter from './SiteFooter.vue';
 
 /* Points d'entrée concrets — des pages précises, à ne pas confondre avec la
@@ -155,7 +156,7 @@ const sources = [
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i class="fab fa-github fa-fw" aria-hidden="true"></i>
+                    <RdIcon name="brand-github" :size="15" />
                     <span>Voir le dépôt</span>
                     <ArrowUpRight :size="15" />
                   </a>

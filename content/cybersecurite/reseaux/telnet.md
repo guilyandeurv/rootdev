@@ -2,10 +2,10 @@
 sidebar: auto
 date: 2024-04-21
 ---
-# Protocole Telnet
+# <RdIcon name="terminal" /> Protocole Telnet
 <Badge type="tip" text="Rédigé le 21/04/2024" />
 
-## Introduction à Telnet
+## <RdIcon name="terminal" /> Introduction à Telnet
 
 Telnet est un protocole d'application permettant de se connecter à une machine distante via un réseau. Il fonctionne sur la couche d'application du modèle TCP/IP, facilitant la communication textuelle entre deux appareils.
 
@@ -22,7 +22,7 @@ Il est important de noter que Telnet présente des vulnérabilités de sécurit�
 
 Pour se connecter à un serveur Telnet, on utilise généralement la syntaxe en ligne de commande : `telnet [nom d'hôte ou adresse IP] [port]`. Par exemple, `telnet exemple.com 23` tenterait d'établir une connexion Telnet à un serveur au nom d'hôte spécifié (exemple.com) sur le port 23.
 
-## Énumération
+## <RdIcon name="list-tree" /> Énumération
 
 L'énumération des clés peut être cruciale dans l'exploitation d'un service réseau mal configuré. Cependant, les vulnérabilités qui pourraient être potentiellement triviales à exploiter ne sautent pas toujours aux yeux. Pour cette raison, notamment en ce qui concerne l'énumération des services réseau, on doit être méthodiques dans notre approche.
 
@@ -54,7 +54,7 @@ On se rend compte ici de l'importance de prendre le temps de tout scanner, cela 
 
 Dans les résultats de ce scan, on peut lire `SKIDY'S BACKDOOR. Type .HELP to view commands`, ce qui signifie que ce port peut potentiellement être utilisé pour insérer une Backdoor.
 
-## Exploiter Telnet
+## <RdIcon name="terminal" /> Exploiter Telnet
 
 Telnet, en tant que protocole, est intrinsèquement non sécurisé pour les raisons évoquées précédemment. Il manque de chiffrement, ce qui signifie que ***toutes les communications sont envoyées en texte clair***, et pour la plupart, il présente de faibles contrôles d'accès. Des CVE (Vulnérabilités et Expositions Communes) existent pour les systèmes clients et serveurs Telnet, ce qui permet de vérifier ces vulnérabilités sur des bases de données telles que :
 

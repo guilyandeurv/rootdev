@@ -4,11 +4,11 @@ redac: true
 date: 2024-03-20
 ---
 
-# Tutoriel sur les Fonctions en JavaScript
+# <RdIcon name="square-function" /> Tutoriel sur les Fonctions en JavaScript
 
 Les fonctions sont des blocs de code réutilisables qui effectuent une tâche spécifique. Elles permettent d'organiser le code en le divisant en tâches distinctes et en les réutilisant au besoin. Dans ce tutoriel, nous allons explorer les bases des fonctions en JavaScript.
 
-## Déclaration des Fonctions
+## <RdIcon name="square-function" /> Déclaration des Fonctions
 
 En JavaScript, il existe deux principales façons de déclarer une fonction : en utilisant la déclaration de fonction `function` ou en utilisant les expressions de fonction.
 
@@ -26,7 +26,7 @@ const sayHello = function() {
 };
 ```
 
-## Appel des fonctions
+## <RdIcon name="square-function" /> Appel des fonctions
 
 Une fois qu'une fonction est déclarée, elle peut être appelée pour exécuter le code à l'intérieur de celle-ci.
 
@@ -34,7 +34,7 @@ Une fois qu'une fonction est déclarée, elle peut être appelée pour exécuter
 sayHello(); // Appelle la fonction sayHello et affiche "Bonjour !" dans la console.
 ```
 
-## Paramètres & arguments
+## <RdIcon name="square-function" /> Paramètres & arguments
 
 Les fonctions peuvent accepter des paramètres, qui sont des variables utilisées pour recevoir des valeurs lors de l'appel de la fonction. Ces valeurs sont appelées des arguments.
 
@@ -46,7 +46,7 @@ function greet(name) {
 greet("Alice"); // Affiche "Bonjour, Alice !" dans la console.
 ```
 
-## Valeur de retour
+## <RdIcon name="square-function" /> Valeur de retour
 
 Les fonctions peuvent également renvoyer une valeur à partir de l'endroit où elles sont appelées à l'aide du mot-clé return.
 
@@ -59,6 +59,6 @@ const result = add(3, 5);
 console.log(result); // Affiche 8 dans la console.
 ```
 
-## Conclusion
+## <RdIcon name="circle-check-big" /> Conclusion
 
 Les fonctions sont un élément fondamental de JavaScript, permettant de réutiliser efficacement le code et d'organiser la logique de manière modulaire. En comprenant comment déclarer, appeler, et utiliser des fonctions avec des paramètres et des valeurs de retour, vous serez en mesure d'écrire un code JavaScript plus propre et plus efficace.

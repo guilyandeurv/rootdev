@@ -3,10 +3,10 @@ sidebar: auto
 date: 2024-12-19
 ---
 
-# Analyse SOC : L'antivirus et EPP
+# <RdIcon name="shield-half" /> Analyse SOC : L'antivirus et EPP
 <ESDInfo />
 
-## L'antivirus, l'indispensable
+## <RdIcon name="shield-half" /> L'antivirus, l'indispensable
 
 Les remontées d'un antivirus peuvent se montrer intéressantes sur les items suivants :
 * détection d'AV, programmes non désirés
@@ -14,7 +14,7 @@ Les remontées d'un antivirus peuvent se montrer intéressantes sur les items su
 * mise à jour non réussie
 * plusieurs infections dans un temps très court
 
-## Logs Windows Defender
+## <RdIcon name="shield-half" /> Logs Windows Defender
 
 Liste non exhaustive des logs Windows Defender :
 

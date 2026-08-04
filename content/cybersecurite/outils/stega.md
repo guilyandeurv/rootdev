@@ -3,13 +3,13 @@ sidebar: auto
 redac: true
 date: 2024-10-13
 ---
-# Stéganographie 
+# <RdIcon name="image-off" /> Stéganographie
 
-## Introduction
+## <RdIcon name="signpost" /> Introduction
 
 La stéganographie est un procédé de dissimulation d'un message au sein de données. Grossomodo : cacher un fichier texte par exemple, dans une image, un fichier audio, etc. Pour cela, on utilise des logiciels de stéganographie tel que steghide. Cependant, ce procédé est populaire, et donc des outils pour extraire les données sont disponibles, d'où l'importance de chiffrer les données.
 
-## Fonctionnalités de *Steghide*
+## <RdIcon name="image-off" /> Fonctionnalités de *Steghide*
 
 * **Compression des données embarquées** ** : Steghide permet de compresser les données avant de les cacher, ce qui peut réduire l'espace de stockage nécessaire. On peut spécifier le niveau de compression entre 1 (meilleure vitesse) et 9 (meilleure compression).
 * **Chiffrement des données embarquées** : Les données cachées peuvent être chiffrées à l'aide de divers algorithmes de chiffrement, notamment Rijndael (AES) et Blowfish.

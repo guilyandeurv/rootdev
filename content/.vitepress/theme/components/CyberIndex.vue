@@ -1,10 +1,13 @@
 <script setup>
 import { ref } from 'vue'
+import RdIcon from '../../components/RdIcon.vue'
 
-// Données structurées pour les modules de cours
+// Données structurées pour les modules de cours. `icon` reprend le nom porté
+// par la même section dans la barre latérale (cf. `icons/registry.mjs`).
 const modules = ref([
   {
-    title: "🏛️ Gouvernance & gestion (GRC)",
+    icon: "landmark",
+    title: "Gouvernance & gestion (GRC)",
     description: "Le cadre organisationnel, juridique et normatif de la sécurité.",
     topics: [
       { title: "Normes Internationales", link: "/cybersecurite/gouv/normes", intro: "Vue d'ensemble des standards ISO et règlements." },
@@ -14,7 +17,8 @@ const modules = ref([
     ]
   },
   {
-    title: "🛡️ Cyberdéfense (Blue Team)",
+    icon: "shield",
+    title: "Cyberdéfense (Blue Team)",
     description: "Protéger les infrastructures, durcir les systèmes et organiser la réponse.",
     topics: [
       { title: "La cybersécurité en France", link: "/cybersecurite/cyberdefense/cyber-france", intro: "Acteurs (ANSSI), lois et écosystème national." },
@@ -24,7 +28,8 @@ const modules = ref([
     ]
   },
   {
-    title: "⚠️ Détection & investigation",
+    icon: "siren",
+    title: "Détection & investigation",
     description: "Repérer les menaces dans les logs et analyser les traces numériques.",
     topics: [
       { title: "Règles SNORT", link: "/cybersecurite/cyberdefense/detection/snort", intro: "Écriture de signatures pour IDS/IPS." },
@@ -34,7 +39,8 @@ const modules = ref([
     ]
   },
   {
-    title: "🧩 Maîtriser Splunk (SIEM)",
+    icon: "brand-splunk",
+    title: "Maîtriser Splunk (SIEM)",
     description: "Cours complet sur l'outil leader d'analyse de logs.",
     topics: [
       { title: "Architecture Splunk", link: "/cybersecurite/cyberdefense/splunk/intro", intro: "Indexers, Forwarders et Search Heads." },
@@ -44,7 +50,8 @@ const modules = ref([
     ]
   },
   {
-    title: "🌐 Attaques Web & Pentest",
+    icon: "globe",
+    title: "Attaques Web & Pentest",
     description: "Comprendre les vulnérabilités OWASP pour mieux les parer.",
     topics: [
       { title: "Injections SQL", link: "/cybersecurite/web/sql-inject", intro: "Manipulation de bases de données." },
@@ -54,7 +61,8 @@ const modules = ref([
     ]
   },
   {
-    title: "🔧 Outils & réseaux",
+    icon: "wrench",
+    title: "Outils & réseaux",
     description: "L'arsenal technique et les protocoles fondamentaux.",
     topics: [
       { title: "Nmap", link: "/cybersecurite/outils/nmap", intro: "Cartographie réseau et scan de ports." },
@@ -123,7 +131,7 @@ const modules = ref([
       <div class="modules-grid">
         <div v-for="(module, mIndex) in modules" :key="mIndex" class="module-card">
           <div class="module-header">
-            <h3>{{ module.title }}</h3>
+            <h3><RdIcon :name="module.icon" class="module-icon" />{{ module.title }}</h3>
             <p>{{ module.description }}</p>
           </div>
           
@@ -138,20 +146,26 @@ const modules = ref([
         
         <div class="module-card special-card">
           <div class="module-header">
-            <h3>💀 Sujets avancés & recherche</h3>
+            <h3><RdIcon name="skull" class="module-icon" />Sujets avancés &amp; recherche</h3>
             <p>Zones d'ombre et ingénierie complexe.</p>
           </div>
           <div class="module-links">
             <a href="/cybersecurite/darkweb/intro" class="topic-link">
-              <span class="topic-title">🌑 Dark Web</span>
+              <span class="topic-title">
+                <RdIcon name="venetian-mask" class="topic-icon" />Dark Web
+              </span>
               <span class="topic-intro">Fonctionnement de Tor et onion routing.</span>
             </a>
             <a href="/cybersecurite/malware-dev/index" class="topic-link">
-              <span class="topic-title">🦠 Développement de malwares</span>
+              <span class="topic-title">
+                <RdIcon name="bug" class="topic-icon" />Développement de malwares
+              </span>
               <span class="topic-intro">Création de logiciels malveillants à des fins éducatives.</span>
             </a>
             <a href="/cybersecurite/reverse-engineering/index" class="topic-link">
-              <span class="topic-title">👨‍💻 Reverse Engineering</span>
+              <span class="topic-title">
+                <RdIcon name="microscope" class="topic-icon" />Reverse Engineering
+              </span>
               <span class="topic-intro">Désassemblage et analyse de binaires.</span>
             </a>
           </div>
@@ -250,6 +264,11 @@ h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 1rem; letter-spacing: -
 .module-header h3 { font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--vp-c-brand); }
 .module-header p { font-size: 0.9rem; }
 
+/* L'icône remplace l'emoji qui ouvrait chaque titre : même rôle de repère,
+   mais elle suit la taille et la couleur du titre au lieu d'y coller un
+   pictogramme couleur venu du système. */
+.module-icon { margin-right: 0.5rem; font-size: 1.1rem; vertical-align: -0.06em; }
+
 /* LIENS INTERNES */
 .module-links {
   display: flex;
@@ -273,8 +292,11 @@ h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 1rem; letter-spacing: -
   margin-bottom: 0.25rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 0.5rem;
 }
+
+/* Icône de tête de ligne, dans la carte « sujets avancés ». */
+.topic-icon { color: var(--vp-c-brand); }
 .topic-intro {
   font-size: 0.85rem;
   color: var(--vp-c-text-2);

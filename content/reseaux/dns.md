@@ -3,11 +3,11 @@ sidebar: auto
 redac: true
 date: 2024-03-16
 ---
-# Le Domain Name System (DNS)
+# <RdIcon name="signpost-big" /> Le Domain Name System (DNS)
 
 Le DNS permet de communiquer avec les appareils sur Internet sans nous souvenir de nombres complexes. Quand on veut visiter un site web, il n'est pas vraiment pratique de se souvenir de son adresse IP, et c'est là que le DNS peut aider. Donc au lieu de vous souvenir de 104.26.10.110, on se souvient de rootdev.fr à la place.
 
-## Le TLD (Top-Level Domain)
+## <RdIcon name="signpost-big" /> Le TLD (Top-Level Domain)
 
 Le TLD est la partie la plus à droite du nom de domaine, pour *rootdev.fr*, le TLD est **.fr**. Il y a deux types de TLD :
 * le **gTLD** pour **G**eneric **T**op **L**evel
@@ -20,18 +20,18 @@ Seulement, suite à une demande trop importante, plusieurs nouveaux gTLD ont vu 
 
 *Liste complète des TLD : https://data.iana.org/TLD/tlds-alpha-by-domain.txt*
 
-## Le SLD (Second Level Domain)
+## <RdIcon name="signpost-big" /> Le SLD (Second Level Domain)
 
 Le SLD est la partie précédent le TLD : *rootdev*.fr, rootdev est le SLD.
 Lorsque l'on enregistre un nom de domaine, celui-ci est limité à 63 caractères, tout comme le TLD peut uniquement contenir des lettres, des chiffres et des traits d'union (-) (Les traits d'union ne peuvent se trouver au début ni à la fin, ni se succéder).
 
-## Le sous-domaine
+## <RdIcon name="building-2" /> Le sous-domaine
 
 Le sous-domaine est la partie qui précède le SLD : **admin**.rootdev.fr, admin est le sous-domaine, qui est séparé du nom de domaine par un point (.).
 On peut utiliser plusieurs sous-domaines pour créer de plus longs noms, comme par exemple **serveur.france.**rootdev.fr
 Tout comme le SLD, celui-ci est limité à 63 caractères et ne peut utiliser que des lettres, des chiffres et des traits d'union.
 
-## Que se passe-t-il lors d'une requête DNS ?
+## <RdIcon name="signpost-big" /> Que se passe-t-il lors d'une requête DNS ?
 
 1. Lorsqu'on demande un nom de domaine, l'ordinateur vérifie d'abord son cache local pour voir si la recherche de l'adresse a déjà été faite; sinon, une demande à au serveur DNS récursif sera faite.
 2. Le serveur DNS est généralement fourni par le fournisseur d'accès internet, mais celui-ci peut être choisi. Ce serveur dispose lui aussi d'un cache local de noms de domaine recherchés précédemment. Si le résultat est trouvé localement, il est alors envoyé au client (l'ordinateur qui a fait la recherche), cependant, si ce n'est pas le cas, alors un traffic commence à se faire jusqu'à trouver la réponse, en commençant par les serveurs DNS racines d'Internet.

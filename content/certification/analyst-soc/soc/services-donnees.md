@@ -3,10 +3,10 @@ sidebar: auto
 date: 2024-12-05
 ---
 
-# Analyse SOC : Services intégrés & données collectées
+# <RdIcon name="database-backup" /> Analyse SOC : Services intégrés & données collectées
 <ESDInfo />
 
-## Les éléments d'un SOC
+## <RdIcon name="building-2" /> Les éléments d'un SOC
 
 |Prévention|Détection|Réaction|
 |---|---|---|
@@ -20,13 +20,13 @@ En second service, la **détection**, qui regroupe les aspects de test d'intrusi
 
 Puis enfin le service de **réaction**, qui regroupe les aspects de l'investigation étendue, de la lutte défensive et de la réponse active. Il est considéré comme étant celui qui intervient à la suite d'un événement de sécurité. On y retrouve l'aspect forensics étant l'enquête post incident, ou l'aspect de réponse active, qui est la rédaction de règles, tests et optimisations de ces dernières, et l'aspect de lutte défensive ou la recherche de solution de défenses perfectionnées et adaptées aux menaces en constantes évolutions.
 
-## Le SIEM, central au SOC
+## <RdIcon name="layers" /> Le SIEM, central au SOC
 
 ![SIEM](./img/siem.png)
 
 Les ***Security Information and Event Management (SIEM)*** prennent en entrée les événements collectés du SI, les journaux systèmes des équipements : pare-feux, routeurs, serveurs, bases de données, etc... et les centralisent dans une plateforme de gestion de ces événements.
 
-## L'importance d'une analyse des risques
+## <RdIcon name="scale" /> L'importance d'une analyse des risques
 
 Une analyse des risques en amont du projet permet :
 1. Une mise en place du SOC en priorisant les budgets et la défense
@@ -35,7 +35,7 @@ Une analyse des risques en amont du projet permet :
 
 L'utilisation d'EBIOS Risk Manager peut être intéressante car son approche vise à identifier la partie conformité, hygiène SSI et à la fois les risques de haut niveau numérique. De ce fait, cet outil permet d'avoir un aperçu des point névralgiques de la défense à intégrer dans le SI et permet une aide à la configuration du SOC.
 
-## Les processus
+## <RdIcon name="cpu" /> Les processus
 
 De nombreux processus doivent être définis au sein du SOC, ici limités à ceux liés à la supervision des événements de sécurité :
 1. Processus de détection :
@@ -54,7 +54,7 @@ De nombreux processus doivent être définis au sein du SOC, ici limités à ceu
 4. Processus de veille :
     - La veille est donc une fonction centrale du SOC pour garder un tempo de défense convenable. Tous les membres du SOC doivent être impliqués dans ce processus.
 
-## Quels équipements ?
+## <RdIcon name="router" /> Quels équipements ?
 
 Dans la plupart des cas, ces solutions sont en place bien avant la création d'un SOC, et opérées par différents services :
 * Anti-malware classique
@@ -65,7 +65,7 @@ Dans la plupart des cas, ces solutions sont en place bien avant la création d'u
 * IDS, IPS
 * Scanneurs de vulnérabilités
 
-## Le machine learning
+## <RdIcon name="brain" /> Le machine learning
 
 Le machine learning permet de détecter, trier et qualifier plus rapidement les alertes. Un humain vérifiera les alertes, les incidents avérés et les faux positifs. L'exemple le plus connu est la détection de spam.
 
@@ -74,13 +74,13 @@ L'algorithme bayésien permet une prise de décision rapide en fonction des prob
 ![Machine Learning](./img/machine-learning.png)
 
 
-## Les outils d'analyse comportementale (UBA)
+## <RdIcon name="activity" /> Les outils d'analyse comportementale (UBA)
 
 Il s'agit de solutions distinctes interopérables avec les SIEM actuels, présents dans les solutions SIEM "2.0", et permettent des analyses plus fines. L'objectif est de détection des APT et autres malwares sophistiqués. Ils s'appuient sur des techniques de machine learning en apprenant les usages du SI en régime "normal" et en comparant les comportements avec les usages "anormaux".
 
 *UBA* est un acronyme pour *User and Entity Behavior Analytics*.
 
-## Quelles données collecter ?
+## <RdIcon name="database" /> Quelles données collecter ?
 
 * Authentification du matériel réseau
 * Transaction DHCP, DNS
@@ -92,7 +92,7 @@ Il s'agit de solutions distinctes interopérables avec les SIEM actuels, présen
 
 Il n'y a pas de liste exhaustive des données à collecter, cela dépend de l'organisation et de ses besoins.
 
-## Les Playbooks
+## <RdIcon name="square-play" /> Les Playbooks
 
 Les playbooks sont des listes de contrôles, étapes et actions à réaliser en cas d'incident afin d'y répondre avec succès, selon les types d'incidents et de menaces spécifiques. Ils aident à établir des processus et des procédures de réponse aux incidents formalisés.
 

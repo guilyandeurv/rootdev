@@ -4,5 +4,5 @@ redac: true
 date: 2025-09-29
 ---
 
-# 🖥️ Sécurisation des équipements
+# <RdIcon name="settings-2" /> Sécurisation des équipements
 <ais />

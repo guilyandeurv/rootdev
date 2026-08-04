@@ -2,7 +2,7 @@
 sidebar: auto
 date: 2024-04-19
 ---
-# Dark Web
+# <RdIcon name="moon" /> Dark Web
 <Badge type="tip" text="Rédigé le 19/04/2024" />
 
 Internet est divisé en trois sections : le ***Clear Web***, le ***Deep Web*** ainsi que le ***Dark web***.
@@ -11,7 +11,7 @@ Il est important de se rendre compte de son intérêt, et comment celui-ci peut 
 
 ![Iceberg d'Internet](./img/iceberg.png)
 
-## Le Clear Web
+## <RdIcon name="globe" /> Le Clear Web
 
 Cette partie est souvent appelée le *Web visible* ou le *Web indexé*. Elle est constituée de sites Web et de pages Web qui sont accessibles au public et qui sont indexés par les moteurs de recherche. Ces sites comprennent des plateformes populaires comme Facebook, Google, YouTube et Reddit, ainsi que de nombreux autres sites que les gens visitent quotidiennement.
 
@@ -23,7 +23,7 @@ Le Clear Web contient des sites accessibles au public, conçus pour être utilis
 
 Les sites juridiques font partie de cette catégorie, offrant des informations et des services juridiques destinés au grand public. Ils ne nécessitent généralement pas de procédures d'accès complexes et peuvent être consultés par quiconque a accès à Internet, bien que certains d'entre eux puissent exiger un enregistrement pour accéder à certaines fonctionnalités ou contenus.
 
-## Le Deep Web
+## <RdIcon name="waves" /> Le Deep Web
 
 Le Deep Web, aussi connu sous le nom de *Web souterrain* ou *Web invisible*, représente la partie d'Internet qui **n'est pas indexée par les moteurs de recherche** classiques comme Google ou Bing. Cette section du Web est immense et comprend une grande quantité de données et de pages qui ne sont pas accessibles au public de manière conventionnelle.
 
@@ -31,7 +31,7 @@ Les propriétaires de sites du Deep Web peuvent avoir **empêché l'indexation**
 
 Il est important de noter que ***le Dark Web et le Deep Web sont des termes distincts***. Bien que souvent confondus, le Dark Web se réfère à une partie spécifique du Deep Web qui est intentionnellement cachée et où les activités illicites sont souvent associées. Le Deep Web, en revanche, englobe toutes les données et pages non indexées, qu'elles soient légitimes ou non. En résumé, le Deep Web peut inclure des informations privées et sensibles qui ne sont pas destinées à être publiques, mais il ne se limite pas nécessairement à des activités illégales.
 
-## Le Dark Web
+## <RdIcon name="venetian-mask" /> Le Dark Web
 
 Le Dark Web est une section distincte et souvent mal comprise d'Internet, utilisée pour diverses activités, y compris l'anonymat, les opérations illégales et la collecte de renseignements sensibles.
 
@@ -41,7 +41,7 @@ Quant à la légalité de visiter le Dark Web, cela dépend principalement des a
 
 Par conséquent, bien que l'accès au Dark Web puisse être légal, l'engagement dans des activités illégales sur cette plateforme *peut entraîner des conséquences juridiques graves*. Il est donc essentiel pour les utilisateurs de comprendre les risques associés à l'utilisation du Dark Web et de **veiller à respecter les lois** en vigueur dans leur juridiction. Une sensibilisation aux dangers potentiels et la prise de mesures pour rester en sécurité en ligne sont également cruciales lors de l'exploration de cette partie d'Internet.
 
-## Activitées associées
+## <RdIcon name="calendar-clock" /> Activitées associées
 
 L'accès au Dark Web est généralement limité et peu recommandé pour la plupart des utilisateurs, mais certains professionnels de la sécurité informatique peuvent être amenés à y accéder dans le cadre de leur travail.
 

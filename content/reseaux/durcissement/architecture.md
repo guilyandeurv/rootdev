@@ -4,10 +4,10 @@ redac: true
 date: 2025-09-29
 ---
 
-# 📐 Architecture
+# <RdIcon name="waypoints" /> Architecture
 <ais />
 
-## **🎬 Introduction**
+## <RdIcon name="signpost" /> Introduction
 
 Les architectes et administrateurs réseau doivent pouvoir visualiser et présenter la structure de leurs réseaux, en identifiant les connexions et l'emplacement des composants.
 
@@ -23,7 +23,7 @@ En pratique, il est souvent nécessaire de revoir la configuration des VLAN et d
 
 Une bonne planification réseau initiale est essentielle pour éviter ces problèmes et permettre une croissance fluide.
 
-## **🛕 Les types d'architecture réseau**
+## <RdIcon name="waypoints" /> Les types d'architecture réseau
 
 Une architecture réseau doit être facilement compréhensible pour tous les administrateurs, permettant un dépannage rapide.
 
@@ -72,7 +72,7 @@ Composants principaux :
 
 <img src="./img/archi_physique.png" width="700" height="700">
 
-## **🪪 Schéma d'adressage IP**
+## <RdIcon name="route" /> Schéma d'adressage IP
 
 Chaque équipement réseau nécessite une adresse IP pour communiquer. Dans un réseau d'entreprise, il est essentiel de sélectionner des plages d'adresses IP privées spécifiques selon les bonnes pratiques du domaine.
 

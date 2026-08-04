@@ -1,1 +1,85 @@
-@use "../../../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
+/**
+ * Component: Icônes — jeu unique du site
+ * --------------------------------------------------------------------------
+ *
+ * Les icônes viennent de deux bibliothèques libres et gratuites :
+ *
+ *   Lucide       (ISC) — concepts, actions, objets   → https://lucide.dev
+ *   Simple Icons (CC0) — logos de marques et langages → https://simpleicons.org
+ *
+ * Elles ne sont ni une webfont ni un `<svg>` inline : `icons/build.mjs` fabrique
+ * une règle par icône, où le dessin est un data-URI posé en `mask`. La forme
+ * découpe donc un aplat de `currentColor`, ce qui donne trois propriétés utiles :
+ *
+ *   - l'icône hérite de la couleur du texte — thème clair, thème sombre, état
+ *     actif de la sidebar et survol sont gérés sans une seule règle de plus ;
+ *   - elle se dimensionne en `1em`, donc suit la taille du libellé qu'elle
+ *     accompagne (titre de section, lien, carte) ;
+ *   - aucune requête réseau, aucun FOIT/FOUT, et seul le sous-ensemble
+ *     réellement utilisé est embarqué (cf. `icons/registry.mjs`).
+ *
+ * La classe de base `.rd-i` et les variantes `.rd-i-<nom>` sont générées dans
+ * `icons/icons.generated.css`, importé par `theme/index.ts` ; ce fichier ne
+ * porte que leur mise en page dans le thème.
+ */
+
+/* --------------------------------------------------------------------------
+ * 1. Icône accolée à un libellé
+ *
+ * Utilisée par la barre latérale et la barre de navigation, où VitePress rend
+ * `text` en `v-html` : le libellé est la chaîne « <span class="rd-i…"></span>
+ * Texte » construite par `icons/label.mjs`.
+ * -------------------------------------------------------------------------- */
+
+.rd-i-label {
+  margin-right: 0.5em;
+  /* Le trait de Lucide est fin : à couleur égale, l'icône pèse visuellement
+     moins que le texte. On la laisse donc à pleine opacité et c'est la taille,
+     très légèrement inférieure au cadratin, qui l'assied sur la ligne. */
+  width: 0.95em;
+  height: 0.95em;
+}
+
+/* --------------------------------------------------------------------------
+ * 2. Barre latérale
+ *
+ * Les titres de section (niveau 0) sont en gras et plus gros : leur icône suit
+ * mécaniquement. On l'atténue en revanche sur les liens non actifs, pour que la
+ * colonne se lise comme une liste de textes et non comme une grille de
+ * pictogrammes.
+ * -------------------------------------------------------------------------- */
+
+.VPSidebarItem .text > .rd-i-label {
+  color: var(--vp-c-text-3);
+  transition: color 0.25s;
+}
+
+.VPSidebarItem.is-link:hover .text > .rd-i-label,
+.VPSidebarItem.is-active > .item .text > .rd-i-label {
+  color: var(--vp-c-brand-1);
+}
+
+/* Un titre de section porte son icône à la couleur du titre : c'est le repère
+   du domaine, il doit rester lisible même replié. */
+.VPSidebarItem.level-0 > .item .text > .rd-i-label {
+  color: var(--vp-c-text-1);
+}
+
+/* --------------------------------------------------------------------------
+ * 3. Barre de navigation
+ * -------------------------------------------------------------------------- */
+
+.VPNavBarMenuLink .rd-i-label,
+.VPMenuLink .rd-i-label,
+.VPNavScreenMenuLink .rd-i-label,
+.VPNavScreenMenuGroupLink .rd-i-label {
+  color: var(--vp-c-text-3);
+  transition: color 0.25s;
+}
+
+.VPNavBarMenuLink:hover .rd-i-label,
+.VPNavBarMenuLink.active .rd-i-label,
+.VPMenuLink a:hover .rd-i-label,
+.VPNavScreenMenuLink:hover .rd-i-label {
+  color: var(--vp-c-brand-1);
+}

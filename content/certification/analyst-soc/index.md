@@ -3,10 +3,10 @@ sidebar: auto
 date: 2024-12-02
 ---
 
-# Analyse SOC : Comprendre la détection et la réponse aux incidents
+# <RdIcon name="book-open-check" /> Analyse SOC : Comprendre la détection et la réponse aux incidents
 <ESDInfo />
 
-## 🔍 Qu'est-ce qu'un Analyste SOC ?
+## <RdIcon name="eye" /> Qu'est-ce qu'un Analyste SOC ?
 
 Un Analyste SOC est un expert en cybersécurité qui a pour mission de :
 
@@ -14,7 +14,7 @@ Un Analyste SOC est un expert en cybersécurité qui a pour mission de :
 * Détecter les menaces et incidents de sécurité
 * Répondre rapidement aux cyberattaques
 
-## 🚀 Composantes clés du Travail SOC
+## <RdIcon name="briefcase" /> Composantes clés du Travail SOC
 
 ### 1. Surveillance des systèmes
 * Monitoring des logs
@@ -38,13 +38,13 @@ Un Analyste SOC est un expert en cybersécurité qui a pour mission de :
 * IDS/IPS
 * Plateformes de threat hunting
 
-## ⚠️ Responsabilités Critiques
+## <RdIcon name="triangle-alert" /> Responsabilités Critiques
 * Veille permanente
 * Corrélation des événements
 * Analyse forensique
 * Remédiation des vulnérabilités
 
-## 🛠️ Outils Essentiels pour Analyste SOC
+## <RdIcon name="wrench" /> Outils Essentiels pour Analyste SOC
 ### SIEM (Security Information and Event Management)
 1. Splunk
 

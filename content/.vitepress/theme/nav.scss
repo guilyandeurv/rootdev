@@ -62,6 +62,16 @@
      concurrencer les entrées du menu. */
   --rd-drawer-bg: rgba(255, 255, 255, 0.82);
   --rd-panel-shadow: 0 2px 6px rgba(15, 23, 42, 0.06), 0 18px 44px -18px rgba(15, 23, 42, 0.3);
+
+  /* Champ de recherche — un creux dans le verre, pas une boîte posée dessus.
+     Le fond est une teinte du texte, jamais une couleur en dur : il se pose
+     donc sur la pastille sans introduire d'aplat qui la percerait. */
+  --rd-search-bg: rgba(15, 23, 42, 0.045);
+  --rd-search-bg-hover: rgba(15, 23, 42, 0.07);
+  --rd-search-border: rgba(15, 23, 42, 0.09);
+  --rd-search-inset: inset 0 1px 2px rgba(15, 23, 42, 0.07),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.55);
+  --rd-search-key-bg: rgba(15, 23, 42, 0.06);
 }
 
 html.dark {
@@ -76,6 +86,13 @@ html.dark {
   --rd-panel-bg: rgba(22, 31, 50, 0.55);
   --rd-drawer-bg: rgba(22, 31, 50, 0.78);
   --rd-panel-shadow: 0 2px 6px rgba(0, 0, 0, 0.3), 0 20px 48px -18px rgba(0, 0, 0, 0.7);
+
+  --rd-search-bg: rgba(255, 255, 255, 0.05);
+  --rd-search-bg-hover: rgba(255, 255, 255, 0.09);
+  --rd-search-border: rgba(255, 255, 255, 0.09);
+  --rd-search-inset: inset 0 1px 2px rgba(0, 0, 0, 0.28),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.05);
+  --rd-search-key-bg: rgba(255, 255, 255, 0.08);
 }
 
 /* VitePress remet ces valeurs à zéro quand la nav est masquée : on les
@@ -302,41 +319,75 @@ html.dark {
   }
 }
 
-/* Champ de recherche : contours seuls, sans aplat de fond — il repose sur le
-   verre de la pastille, qui joue le rôle de surface. Un peu plus haut aussi,
-   pour équilibrer les 56px de la pastille.
+/* Champ de recherche : un puits encastré dans le verre.
  *
- * Texte, contours et icône prennent `--vp-c-text-1` — blanc cassé en mode
- * sombre, gris foncé en mode clair. C'est la couleur des liens de la barre
- * (« Accueil », « Contenu ») : la variable bascule seule selon le thème, il n'y
- * a rien à dupliquer. Le survol vire à la couleur de marque, comme ces liens. */
+ * Le contour à `--vp-c-text-1` d'avant traçait le champ *par-dessus* la
+ * pastille — un rectangle à contraste maximal, aux arêtes nettes, sur une
+ * surface justement diffuse : les deux registres se contredisaient.
+ *
+ * On inverse la logique : plus de trait appuyé, mais un léger renfoncement.
+ * Un voile sombre très faible, un filet à peine visible, et une ombre interne
+ * en haut doublée d'un reflet en bas — la lumière rase du haut de la pastille
+ * (`inset 0 1px 0` sur `::before`) devient une ombre portée dans le creux.
+ * Le champ paraît alors creusé dans le verre plutôt que collé dessus.
+ *
+ * Le texte et l'icône repassent en `--vp-c-text-2` (gris intermédiaire) : ce
+ * n'est qu'une invite, elle n'a pas à peser autant que les liens du menu.
+ * `--vp-c-text-1` est réservé au survol, où le champ s'éclaircit et remonte. */
 @media (min-width: 768px) {
   .VPNavBar .DocSearch-Button {
-    height: 44px !important;
-    border-color: var(--vp-c-text-1) !important;
+    height: 40px !important;
+    border: 1px solid var(--rd-search-border) !important;
     border-radius: 12px !important;
-    background: transparent !important;
-    color: var(--vp-c-text-1) !important;
+    padding: 0 8px 0 12px !important;
+    background: var(--rd-search-bg) !important;
+    box-shadow: var(--rd-search-inset);
+    transition: background-color 0.25s ease, border-color 0.25s ease,
+      box-shadow 0.25s ease;
   }
 
-  /* Teinte translucide au survol : c'est l'aplat opaque d'origine qui n'est plus
-     souhaité, pas tout retour visuel. */
+  /* Au survol le puits s'éclaire et l'ombre interne s'efface : le champ
+     « remonte » au niveau du verre au lieu d'y être enfoncé. */
   .VPNavBar .DocSearch-Button:hover {
+    border-color: var(--rd-search-border) !important;
+    background: var(--rd-search-bg-hover) !important;
+    box-shadow: none;
+  }
+
+  .VPNavBar .DocSearch-Button:focus-visible {
+    outline: none !important;
     border-color: var(--vp-c-brand-1) !important;
-    background: var(--vp-c-brand-soft) !important;
+    box-shadow: 0 0 0 3px var(--vp-c-brand-soft);
   }
 
   .VPNavBar .DocSearch-Button .DocSearch-Button-Placeholder {
-    color: var(--vp-c-text-1) !important;
+    padding-right: 12px !important;
+    color: var(--vp-c-text-2) !important;
   }
 
   .VPNavBar .DocSearch-Button:hover .DocSearch-Button-Placeholder {
-    color: var(--vp-c-brand-1) !important;
+    color: var(--vp-c-text-1) !important;
   }
 
+  /* VitePress dessine les deux touches comme un seul bloc, en supprimant la
+     bordure mitoyenne et en arrondissant les extrémités opposées. On garde ce
+     découpage mais on troque les traits contre un aplat translucide : la
+     pastille « Ctrl K » devient une étiquette douce, pas un cadre de plus. */
   .VPNavBar .DocSearch-Button .DocSearch-Button-Key {
-    border-color: var(--vp-c-text-1) !important;
-    color: var(--vp-c-text-1) !important;
+    margin-top: 0 !important;
+    border-color: transparent !important;
+    padding-left: 7px;
+    background: var(--rd-search-key-bg);
+    color: var(--vp-c-text-2) !important;
+  }
+
+  .VPNavBar .DocSearch-Button .DocSearch-Button-Key + .DocSearch-Button-Key {
+    padding-right: 7px;
+    padding-left: 0;
+  }
+
+  .VPNavBar .DocSearch-Button .DocSearch-Button-Key:first-child::after {
+    color: inherit;
   }
 }
 
@@ -344,11 +395,11 @@ html.dark {
    qu'un `fill`. Hors media query : sur mobile le champ se réduit à cette seule
    icône, qui doit suivre la même couleur. */
 .VPNavBar .DocSearch-Button .DocSearch-Search-Icon {
-  color: var(--vp-c-text-1) !important;
+  color: var(--vp-c-text-2) !important;
 }
 
 .VPNavBar .DocSearch-Button:hover .DocSearch-Search-Icon {
-  color: var(--vp-c-brand-1) !important;
+  color: var(--vp-c-text-1) !important;
 }
 
 /* Au-delà de 1440px, VitePress centre la mise en page : la sidebar n'est plus
@@ -671,7 +722,8 @@ html.dark {
 
 @media (prefers-reduced-motion: reduce) {
   .VPNavBar > .wrapper > .container,
-  .VPNavBar > .wrapper > .container::before {
+  .VPNavBar > .wrapper > .container::before,
+  .VPNavBar .DocSearch-Button {
     transition: none;
   }
 }

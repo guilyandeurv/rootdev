@@ -3,11 +3,11 @@ sidebar: auto
 redac: true
 date: 2024-03-14
 ---
-# Les fondamentaux de Linux
+# <RdIcon name="monitor-check" /> Les fondamentaux de Linux
 <Badge type="tip" text="Rédigé le 14/03/2024" />
 <Badge type="warning" text="En cours de rédaction" />
 
-## Commandes de base
+## <RdIcon name="terminal" /> Commandes de base
 
 Afficher le répertoire actuel
 ```shell
@@ -167,7 +167,7 @@ sudo passwd <nom_utilisateur>
 sudo deluser <nom_utilisateur>
 ```
 
-## Fichiers systèmes
+## <RdIcon name="folder-open" /> Fichiers systèmes
 ### Structure de répertoires principaux
 * /bin: Contient les programmes essentiels du système.
 * /etc: Fichiers de configuration système.
@@ -179,7 +179,7 @@ sudo deluser <nom_utilisateur>
 * /etc/group: Informations sur les groupes d'utilisateurs.
 * /etc/fstab: Table de montage des systèmes de fichiers.
 
-## Droits d'accès sur les fichiers
+## <RdIcon name="lock" /> Droits d'accès sur les fichiers
 ### Commandes de gestion des droits
 ```shell
 # Change les permissions d'accès à un fichier ou un répertoire
@@ -225,7 +225,7 @@ Supposons que nous voulons changer le groupe du fichier exemple.txt au groupe co
 chgrp comptabilite exemple.txt
 ```
 
-## Transfert de fichiers depuis un hôte - SCP (SSH)
+## <RdIcon name="file-up" /> Transfert de fichiers depuis un hôte - SCP (SSH)
 
 La copie sécurisée, ou SCP, n'est que cela : un **moyen de copier des fichiers en toute sécurité**. Contrairement à la commande cp classique, cette commande permet de transférer des fichiers entre deux ordinateurs à l'aide du protocole ***SSH*** pour fournir à la fois l'authentification et le chiffrement.
 

@@ -1,10 +1,10 @@
 ---
 sidebar: auto
 ---
-# Menaces, attaques, et vulnérabilités
+# <RdIcon name="flame" /> Menaces, attaques, et vulnérabilités
 <Badge type="tip" text="Rédigé le 24/03/2024" />
 
-## Ingénierie sociale (Objectif 1.1)
+## <RdIcon name="users-round" /> Ingénierie sociale (Objectif 1.1)
 
 ### Techniques d'ingénierie sociale distante
 
@@ -58,7 +58,7 @@ sidebar: auto
 
 Comprendre ces techniques et principes est crucial pour mettre en œuvre des mesures de sécurité efficaces afin de réduire les risques associés aux attaques d'ingénierie sociale.
 
-## Malwares (Objectif 1.2)
+## <RdIcon name="bug" /> Malwares (Objectif 1.2)
 
 Les malwares sont des logiciels malveillants qui peuvent affecter nos organisations en exploitant des vulnérabilités ou en incitant un utilisateur à installer du code malveillant.
 
@@ -92,7 +92,7 @@ Altération des données d'entraînement des algorithmes d'apprentissage automat
 1. ***Attaques par collision*** : Deux fichiers ayant la même valeur de hashage.
 2. ***Attaques par dégradation*** (Downgrade attack) : Baisse de la sophistication du chiffrement utilisé dans les communications, pouvant rendre le chiffrement plus vulnérable.
 
-## Attaques d'applications (Objectif 1.3)
+## <RdIcon name="smartphone" /> Attaques d'applications (Objectif 1.3)
 
 L'objectif 1.3 de l'examen Security+ consiste à analyser les indicateurs potentiels associés aux attaques d'applications. 
 
@@ -120,7 +120,7 @@ Assure que les données entrées correspondent au type attendu et ne contiennent
 
 En utilisant une validation des entrées robuste, de nombreux types d'attaques d'applications peuvent être atténués.
 
-## Attaques réseau (Objectif 1.4)
+## <RdIcon name="network" /> Attaques réseau (Objectif 1.4)
 
 L'objectif 1.4 de l'examen Security+ consiste à analyser les indicateurs associés aux attaques réseau.
 
@@ -149,7 +149,7 @@ L'objectif 1.4 de l'examen Security+ consiste à analyser les indicateurs associ
 
 Ces types d'attaques réseau sont essentiels à connaître pour l'examen Security+.
 
-## Acteurs des menaces (Objectif 1.5)
+## <RdIcon name="users-round" /> Acteurs des menaces (Objectif 1.5)
 
 Dans l'objectif 1.5 de l'examen Security+, il est important de comprendre les différents acteurs des menaces, les vecteurs de menace et les sources de renseignements.
 
@@ -176,7 +176,7 @@ Dans l'objectif 1.5 de l'examen Security+, il est important de comprendre les di
 
 Il est essentiel pour les équipes de cybersécurité de comprendre les évolutions du paysage des menaces et de recueillir des renseignements sur ceux-ci. Cela afin de concevoir des mesures de sécurité efficaces contre ces menaces en constante évolution.
 
-## Vulnérabilités et risques associés (Objectif 1.6)
+## <RdIcon name="triangle-alert" /> Vulnérabilités et risques associés (Objectif 1.6)
 
 Dans l'objectif 1.6 de l'examen Security+, il est crucial de comprendre les préoccupations en matière de sécurité associées à différents types de vulnérabilités, tant sur site que dans le cloud.
 
@@ -200,7 +200,7 @@ Cela implique la mise en œuvre de bonnes pratiques de gestion des correctifs, l
 
 En comprenant ces vulnérabilités et en mettant en œuvre des mesures appropriées pour les gérer, les organisations peuvent réduire les risques liés à la sécurité et protéger efficacement leurs systèmes et leurs données.
 
-## Techniques d'évaluation de la sécurité (Objectif 1.7)
+## <RdIcon name="scan-search" /> Techniques d'évaluation de la sécurité (Objectif 1.7)
 
 L'objectif 1.7 de l'examen Security+ consiste à résumer les techniques utilisées dans les évaluations de sécurité, qui peuvent être divisées en quatre grandes catégories :
 
@@ -223,7 +223,7 @@ Les vulnérabilités sont souvent notées selon leur gravité à l'aide du Commo
 
 En utilisant ces techniques, les équipes de sécurité peuvent identifier, évaluer et atténuer les risques de sécurité pour protéger efficacement les systèmes et les données de leur organisation.
 
-## Techniques de test de pénétration :
+## <RdIcon name="door-open" /> Techniques de test de pénétration :
 
 L'objectif 1.8 de l'examen Security+ consiste à expliquer les techniques utilisées dans les tests de pénétration.
 

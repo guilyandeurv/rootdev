@@ -1,10 +1,10 @@
 ---
 sidebar: auto
 ---
-# Opérations et réponses aux incidents
+# <RdIcon name="ambulance" /> Opérations et réponses aux incidents
 <Badge type="tip" text="Rédigé le 25/03/2024" />
 
-## Utilisation d'outils appropriés pour évaluer la sécurité organisationnelle (Objectif 4.1)
+## <RdIcon name="scroll-text" /> Utilisation d'outils appropriés pour évaluer la sécurité organisationnelle (Objectif 4.1)
 
 Dans cet objectif, il est essentiel d'être familiarisé avec un large éventail d'outils de sécurité. 
 
@@ -58,7 +58,7 @@ Ces commandes sont couramment utilisées sur les systèmes Linux :
 
 Ces outils sont essentiels pour préparer l'examen Security+ et pour mener à bien les opérations de sécurité dans une organisation.
 
-## Importance des politiques, processus et procédures (Objectif 4.2)
+## <RdIcon name="scroll-text" /> Importance des politiques, processus et procédures (Objectif 4.2)
 
 La mise en place d'un plan de réponse aux incidents est essentielle pour toute organisation afin de détecter et de répondre efficacement aux incidents de sécurité. Le processus de réponse aux incidents standard comprend six étapes principales :
 
@@ -108,7 +108,7 @@ Tous les enregistrements générés pendant la réponse à l'incident doivent ê
 
 En résumé, comprendre l'importance des politiques, processus et procédures de réponse aux incidents est crucial pour réussir l'examen Security+.
 
-## Utilisation de sources de données appropriées pour soutenir une enquête (Objectif 4.3)
+## <RdIcon name="search" /> Utilisation de sources de données appropriées pour soutenir une enquête (Objectif 4.3)
 
 Les intervenants en cas d'incident disposent d'une grande quantité d'informations, notamment les résultats des analyses de vulnérabilités. Ces résultats sont cruciaux pour aider les intervenants à comprendre comment un intrus aurait pu accéder aux systèmes et identifier d'autres systèmes susceptibles d'être vulnérables aux mêmes exploits.
 
@@ -133,7 +133,7 @@ L'analyse et la corrélation des données provenant de différentes sources peuv
 
 Comprendre l'utilisation des sources de données appropriées pour soutenir une enquête est essentiel pour réussir l'examen Security+. Ces informations permettent aux intervenants en cas d'incident de comprendre la portée et l'impact d'un incident de sécurité et de prendre les mesures nécessaires pour y répondre de manière appropriée.
 
-## Application de techniques d'atténuation ou de contrôles pour sécuriser un environnement (Objectif 4.4)
+## <RdIcon name="shield-check" /> Application de techniques d'atténuation ou de contrôles pour sécuriser un environnement (Objectif 4.4)
 
 L'objectif principal de ce sujet est la récupération, la restauration des opérations d'une organisation, non seulement à l'état dans lequel elles étaient avant un incident, mais à un état encore plus sécurisé qui ne soit pas vulnérable au même type d'incident.
 
@@ -158,7 +158,7 @@ Les plates-formes SOAR utilisent des livres d'exécution et des scénarios pour 
 
 Comprendre les techniques d'atténuation et de contrôles pour sécuriser un environnement pendant un incident de sécurité est essentiel pour réussir l'examen Security+. Ces mesures garantissent la restauration des opérations de l'organisation dans un état sécurisé et protègent contre de futures attaques similaires.
 
-## Explication des aspects clés de la cyberforensique (Objectif 4.5)
+## <RdIcon name="search-code" /> Explication des aspects clés de la cyberforensique (Objectif 4.5)
 
 Les professionnels de la sécurité doivent être familiers avec les normes de documentation pour les preuves collectées lors d'une intervention en cas d'incident. Cela inclut la garantie que les preuves collectées seront admissibles en justice, tout en maintenant une chaîne de garde qui documente le processus utilisé pour collecter les preuves et chaque personne ayant eu contact avec ces preuves depuis leur collecte jusqu'à leur présentation en justice.
 

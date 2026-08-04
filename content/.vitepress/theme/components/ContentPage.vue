@@ -5,18 +5,18 @@ import {
   ArrowUpRight,
   Award,
   Code2,
-  Github,
   LibraryBig,
   Network,
   Search,
   Server,
   ShieldCheck
 } from 'lucide-vue-next';
+import RdIcon from '../../components/RdIcon.vue';
 import SiteFooter from './SiteFooter.vue';
 
-/* Une icône par domaine, dans le même trait que le reste du site. La couleur
-   n'est plus portée par la catégorie : toutes les cartes réagissent au survol
-   avec la seule couleur de marque, comme sur la page d'accueil. */
+/* Une icône par domaine, pour les filtres. La couleur n'est pas portée par la
+   catégorie : toutes les cartes réagissent au survol avec la seule couleur de
+   marque, comme sur la page d'accueil. */
 const categoryIcons = {
   Certifications: Award,
   Cybersécurité: ShieldCheck,
@@ -25,34 +25,37 @@ const categoryIcons = {
   Réseaux: Network
 };
 
+/* Chaque module porte sa propre icône, reprise de celle que la barre latérale
+   donne à la même section — la carte et le lien de gauche se répondent. Les
+   noms viennent du registre maison (cf. `icons/registry.mjs`). */
 const modules = [
-  { title: 'CompTIA Security+ SY0-701', category: 'Certifications', desc: 'Le socle fondamental : menaces, architecture, GRC et opérations.', link: '/certification/securityplus', tags: ['CompTIA', 'Fondamentaux'] },
-  { title: 'Analyste SOC', category: 'Certifications', desc: 'Défense active : SIEM (Elastic/Splunk), logs Windows et réponse aux incidents.', link: '/certification/analyst-soc/', tags: ['Blue Team', 'SOC', 'ELK'] },
-  { title: 'CompTIA Pentest+', category: 'Certifications', desc: "Méthodologie de test d'intrusion, scan de vulnérabilités et reporting.", link: '/certification/pentestplus', tags: ['Red Team', 'CompTIA'] },
-  { title: 'Red Team Analyst', category: 'Certifications', desc: "Simulation d'adversaire, persistance et évasion de défense.", link: '/certification/redteam-analyst/', tags: ['Red Team', 'Avancé'] },
-  { title: 'Gouvernance (GRC)', category: 'Cybersécurité', desc: 'Normes ISO 27001, analyse de risques, ITIL et plans de continuité (PCA).', link: '/cybersecurite/gouv/', tags: ['ISO', 'Management'] },
-  { title: 'Cyberdéfense & Splunk', category: 'Cybersécurité', desc: 'Architecture SOC, règles Snort, durcissement et maîtrise de Splunk (SPL).', link: '/cybersecurite/cyberdefense/soc', tags: ['Splunk', 'Défense'] },
-  { title: 'Attaques web', category: 'Cybersécurité', desc: "Injections SQL, XSS, SSRF, IDOR et contournement d'authentification.", link: '/cybersecurite/web/discovery', tags: ['OWASP', 'Web'] },
-  { title: 'Malware Dev', category: 'Cybersécurité', desc: 'Création de logiciels malveillants, obfuscation et rétro-ingénierie.', link: '/cybersecurite/malware-dev/', tags: ['Dev', 'Reverse'] },
-  { title: 'Dark web', category: 'Cybersécurité', desc: 'Compréhension, accès sécurisé et surveillance des menaces (CTI).', link: '/cybersecurite/darkweb/intro', tags: ['Tor', 'Onion'] },
-  { title: 'Outils de hacking', category: 'Cybersécurité', desc: "Maîtriser l'arsenal : Nmap, Burp Suite, Metasploit et Wireshark.", link: '/cybersecurite/outils/intro', tags: ['Outils', 'Kali'] },
-  { title: 'Linux & Bash', category: 'Environnement', desc: 'Administration système, ligne de commande et gestion des processus.', link: '/environnement/linux/linux', tags: ['Linux', 'SysAdmin'] },
-  { title: 'Windows Server', category: 'Environnement', desc: 'Active Directory, GPO, DNS/DHCP et clustering de basculement.', link: '/environnement/winserv/admin/intro', tags: ['Microsoft', 'AD'] },
-  { title: 'Ansible', category: 'Environnement', desc: 'Infrastructure as Code (IaC), playbooks, rôles et Vault.', link: '/environnement/linux/ansible/intro', tags: ['DevOps', 'Automatisation'] },
-  { title: 'PowerShell', category: 'Environnement', desc: 'Scripting avancé, administration AD et automatisation Windows.', link: '/environnement/winserv/powershell/intro', tags: ['Scripting', 'Windows'] },
-  { title: 'Cisco & réseau', category: 'Environnement', desc: "Configuration d'équipements (IOS) et routage.", link: '/environnement/cisco', tags: ['Réseau', 'Commutation'] },
-  { title: 'Virtualisation', category: 'Environnement', desc: 'Hyperviseurs, machines virtuelles et conteneurisation.', link: '/environnement/virtualisation', tags: ['VMware', 'Docker'] },
-  { title: 'Python', category: 'Programmation', desc: 'Scripting offensif (scanners, brute-force) et développement web (Django).', link: '/programmation/python/', tags: ['Scripting', 'Sécurité'] },
-  { title: 'JavaScript', category: 'Programmation', desc: 'Le langage du web : manipulation du DOM et logique client/serveur.', link: '/programmation/javascript/', tags: ['Web', 'Frontend'] },
-  { title: 'Langage C', category: 'Programmation', desc: 'Programmation bas niveau, gestion mémoire et compréhension système.', link: '/programmation/c/', tags: ['Bas niveau', 'Kernel'] },
-  { title: 'Rust', category: 'Programmation', desc: 'Performance et sécurité mémoire (ownership) pour le système moderne.', link: '/programmation/rust/', tags: ['Système', 'Sûreté'] },
-  { title: 'Ruby', category: 'Programmation', desc: 'Scripting élégant et orienté objet.', link: '/programmation/ruby/', tags: ['Scripting', 'POO'] },
-  { title: 'Fondamentaux réseau', category: 'Réseaux', desc: 'Modèles OSI et TCP/IP, topologies LAN/WAN et adressage.', link: '/reseaux/fondamentaux', tags: ['Théorie', 'OSI'] },
-  { title: 'Protocoles web', category: 'Réseaux', desc: 'Fonctionnement profond de DNS, HTTP, NAT et des pare-feux.', link: '/reseaux/dns', tags: ['Web', 'Flux'] },
-  { title: 'Cryptographie & VPN', category: 'Réseaux', desc: 'Chiffrement symétrique et asymétrique, hachage, PKI et tunnels IPsec.', link: '/reseaux/crypto/intro', tags: ['Crypto', 'PKI'] },
-  { title: 'Durcissement réseau', category: 'Réseaux', desc: 'Sécurisation des commutateurs, architectures cloisonnées et SNMP.', link: '/reseaux/durcissement/intro', tags: ['Durcissement', 'Infra'] },
-  { title: 'Dépannage & Wireshark', category: 'Réseaux', desc: 'Analyse de paquets et méthodologie de résolution d’incidents.', link: '/reseaux/depannage/intro', tags: ['Analyse', 'PCAP'] },
-  { title: 'Sécurité avancée', category: 'Réseaux', desc: 'Zero Trust, proxy, NIDS/NIPS et architectures résilientes.', link: '/reseaux/advanced/architecture', tags: ['Expert', 'Architecture'] }
+  { icon: 'medal', title: 'CompTIA Security+ SY0-701', category: 'Certifications', desc: 'Le socle fondamental : menaces, architecture, GRC et opérations.', link: '/certification/securityplus', tags: ['CompTIA', 'Fondamentaux'] },
+  { icon: 'eye', title: 'Analyste SOC', category: 'Certifications', desc: 'Défense active : SIEM (Elastic/Splunk), logs Windows et réponse aux incidents.', link: '/certification/analyst-soc/', tags: ['Blue Team', 'SOC', 'ELK'] },
+  { icon: 'target', title: 'CompTIA Pentest+', category: 'Certifications', desc: "Méthodologie de test d'intrusion, scan de vulnérabilités et reporting.", link: '/certification/pentestplus', tags: ['Red Team', 'CompTIA'] },
+  { icon: 'skull', title: 'Red Team Analyst', category: 'Certifications', desc: "Simulation d'adversaire, persistance et évasion de défense.", link: '/certification/redteam-analyst/', tags: ['Red Team', 'Avancé'] },
+  { icon: 'landmark', title: 'Gouvernance (GRC)', category: 'Cybersécurité', desc: 'Normes ISO 27001, analyse de risques, ITIL et plans de continuité (PCA).', link: '/cybersecurite/gouv/', tags: ['ISO', 'Management'] },
+  { icon: 'brand-splunk', title: 'Cyberdéfense & Splunk', category: 'Cybersécurité', desc: 'Architecture SOC, règles Snort, durcissement et maîtrise de Splunk (SPL).', link: '/cybersecurite/cyberdefense/soc', tags: ['Splunk', 'Défense'] },
+  { icon: 'globe', title: 'Attaques web', category: 'Cybersécurité', desc: "Injections SQL, XSS, SSRF, IDOR et contournement d'authentification.", link: '/cybersecurite/web/discovery', tags: ['OWASP', 'Web'] },
+  { icon: 'bug', title: 'Malware Dev', category: 'Cybersécurité', desc: 'Création de logiciels malveillants, obfuscation et rétro-ingénierie.', link: '/cybersecurite/malware-dev/', tags: ['Dev', 'Reverse'] },
+  { icon: 'venetian-mask', title: 'Dark web', category: 'Cybersécurité', desc: 'Compréhension, accès sécurisé et surveillance des menaces (CTI).', link: '/cybersecurite/darkweb/intro', tags: ['Tor', 'Onion'] },
+  { icon: 'wrench', title: 'Outils de hacking', category: 'Cybersécurité', desc: "Maîtriser l'arsenal : Nmap, Burp Suite, Metasploit et Wireshark.", link: '/cybersecurite/outils/intro', tags: ['Outils', 'Kali'] },
+  { icon: 'brand-linux', title: 'Linux & Bash', category: 'Environnement', desc: 'Administration système, ligne de commande et gestion des processus.', link: '/environnement/linux/linux', tags: ['Linux', 'SysAdmin'] },
+  { icon: 'brand-windows', title: 'Windows Server', category: 'Environnement', desc: 'Active Directory, GPO, DNS/DHCP et clustering de basculement.', link: '/environnement/winserv/admin/intro', tags: ['Microsoft', 'AD'] },
+  { icon: 'brand-ansible', title: 'Ansible', category: 'Environnement', desc: 'Infrastructure as Code (IaC), playbooks, rôles et Vault.', link: '/environnement/linux/ansible/intro', tags: ['DevOps', 'Automatisation'] },
+  { icon: 'brand-powershell', title: 'PowerShell', category: 'Environnement', desc: 'Scripting avancé, administration AD et automatisation Windows.', link: '/environnement/winserv/powershell/intro', tags: ['Scripting', 'Windows'] },
+  { icon: 'brand-cisco', title: 'Cisco & réseau', category: 'Environnement', desc: "Configuration d'équipements (IOS) et routage.", link: '/environnement/cisco', tags: ['Réseau', 'Commutation'] },
+  { icon: 'brand-vmware', title: 'Virtualisation', category: 'Environnement', desc: 'Hyperviseurs, machines virtuelles et conteneurisation.', link: '/environnement/virtualisation', tags: ['VMware', 'Docker'] },
+  { icon: 'brand-python', title: 'Python', category: 'Programmation', desc: 'Scripting offensif (scanners, brute-force) et développement web (Django).', link: '/programmation/python/', tags: ['Scripting', 'Sécurité'] },
+  { icon: 'brand-javascript', title: 'JavaScript', category: 'Programmation', desc: 'Le langage du web : manipulation du DOM et logique client/serveur.', link: '/programmation/javascript/', tags: ['Web', 'Frontend'] },
+  { icon: 'brand-c', title: 'Langage C', category: 'Programmation', desc: 'Programmation bas niveau, gestion mémoire et compréhension système.', link: '/programmation/c/', tags: ['Bas niveau', 'Kernel'] },
+  { icon: 'brand-rust', title: 'Rust', category: 'Programmation', desc: 'Performance et sécurité mémoire (ownership) pour le système moderne.', link: '/programmation/rust/', tags: ['Système', 'Sûreté'] },
+  { icon: 'brand-ruby', title: 'Ruby', category: 'Programmation', desc: 'Scripting élégant et orienté objet.', link: '/programmation/ruby/', tags: ['Scripting', 'POO'] },
+  { icon: 'compass', title: 'Fondamentaux réseau', category: 'Réseaux', desc: 'Modèles OSI et TCP/IP, topologies LAN/WAN et adressage.', link: '/reseaux/fondamentaux', tags: ['Théorie', 'OSI'] },
+  { icon: 'signpost-big', title: 'Protocoles web', category: 'Réseaux', desc: 'Fonctionnement profond de DNS, HTTP, NAT et des pare-feux.', link: '/reseaux/dns', tags: ['Web', 'Flux'] },
+  { icon: 'key', title: 'Cryptographie & VPN', category: 'Réseaux', desc: 'Chiffrement symétrique et asymétrique, hachage, PKI et tunnels IPsec.', link: '/reseaux/crypto/intro', tags: ['Crypto', 'PKI'] },
+  { icon: 'construction', title: 'Durcissement réseau', category: 'Réseaux', desc: 'Sécurisation des commutateurs, architectures cloisonnées et SNMP.', link: '/reseaux/durcissement/intro', tags: ['Durcissement', 'Infra'] },
+  { icon: 'brand-wireshark', title: 'Dépannage & Wireshark', category: 'Réseaux', desc: 'Analyse de paquets et méthodologie de résolution d’incidents.', link: '/reseaux/depannage/intro', tags: ['Analyse', 'PCAP'] },
+  { icon: 'shield-plus', title: 'Sécurité avancée', category: 'Réseaux', desc: 'Zero Trust, proxy, NIDS/NIPS et architectures résilientes.', link: '/reseaux/advanced/architecture', tags: ['Expert', 'Architecture'] }
 ];
 
 const PAGE_SIZE = 12;
@@ -157,11 +160,7 @@ function loadMore() {
           >
             <span class="card-head">
               <span class="tile" aria-hidden="true">
-                <component
-                  :is="categoryIcons[item.category]"
-                  :size="19"
-                  :stroke-width="1.75"
-                />
+                <RdIcon :name="item.icon" :size="19" />
               </span>
               <span class="card-cat">{{ item.category }}</span>
               <ArrowRight class="card-cue" :size="15" aria-hidden="true" />
@@ -197,7 +196,7 @@ function loadMore() {
       <div class="shell">
         <div class="contrib">
           <span class="tile" aria-hidden="true">
-            <Github :size="19" :stroke-width="1.75" />
+            <RdIcon name="brand-github" :size="19" />
           </span>
           <div class="contrib-body">
             <h2 class="contrib-title">Contribuez à ces cours</h2>

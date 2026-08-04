@@ -3,11 +3,11 @@ sidebar: auto
 redac: true
 date: 2025-09-28
 ---
-# 📕 Fondamentaux des réseaux
+# <RdIcon name="compass" /> Fondamentaux des réseaux
 
 <ESDInfo />
 
-## **📺 TCP/IP**
+## <RdIcon name="cable" /> TCP/IP
 
 <img src="./img/tcp-ip_illustration.png" width="200" height="200">
 
@@ -24,7 +24,7 @@ En revanche, les couches "*Session*", "*Présentation*" et "*Application*" ne so
 
 **Ce modèle qui mélange OSI et TCP/IP est celui réellement utilisé dans la pratique.**
 
-## 📦 OSI
+## <RdIcon name="layers-3" /> OSI
 
 <img src="./img/osi.png" width="700" height="700">
 
@@ -131,7 +131,7 @@ Bien que conçu pour avoir un protocole par couche, certains protocoles fonction
 
 * Nombreux protocoles: ***HTTP***, ***FTP***, ***DHCP***, ***SMTP***, ***POP3***, ***SSH***, ***LDAP***, ***RDP***, ***TELNET***, etc.
 
-## 📏 La taille des réseaux
+## <RdIcon name="ruler" /> La taille des réseaux
 
 Il existe différentes tailles de réseau. Peu importe sa taille, un réseau permet l’échange de données. Cependant, en fonction de la taille du réseau, il utilisera certaines technologies ou protocoles qui lui sont propres.
 
@@ -189,7 +189,7 @@ En effet, grâce à un réseau WAN, l'entreprise va pouvoir relier ses différen
 
 Le GAN pour **Global Area Network** qui n'a aucune limite de portée et qui fait référence à un réseau mondial (ou réseau global), il est donc encore au dessus du WAN, mais c'est un terme qui n'est pas fréquemment utilisé.
 
-## 👁️ Le DICP
+## <RdIcon name="shield-check" /> Le DICP
 
 **DICP = Disponibilité, intégrité, confidentialité, preuve**
 

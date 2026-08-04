@@ -3,7 +3,7 @@ sidebar: auto
 redac: true
 date: 2024-03-24
 ---
-# Le modèle TCP/IP
+# <RdIcon name="cable" /> Le modèle TCP/IP
 
 Le modèle TCP/IP est, à bien des égards, très similaire au modèle OSI. Il a quelques années de plus et sert de base à un réseautage réel. Le modèle TCP/IP se compose de quatre couches : **application**, **transport**, **Internet** et **interface réseau**. Ensemble, ceux-ci couvrent le même éventail de fonctions que les sept couches du modèle OSI.
 
@@ -22,7 +22,7 @@ Pour comparaison, voilà à quoi correspond le modèle OSI au modèle TCP/IP :
 
 Les processus d'encapsulation et de désencapsulation fonctionnent exactement de la même manière avec le modèle TCP/IP qu'avec le modèle OSI. À chaque couche du modèle TCP/IP, un en-tête est ajouté lors de l'encapsulation et supprimé lors de la désencapsulation.
 
-## En pratique
+## <RdIcon name="play" /> En pratique
 
 Lorsque nous parlons de TCP/IP, c'est bien beau de penser à une table comportant quatre couches, mais nous parlons en réalité d'une suite de protocoles & des ensembles de règles qui définissent la manière dont une action doit être effectuée. TCP/IP tire son nom des deux plus importants d'entre eux : le **protocole de contrôle de transmission** qui contrôle le flux de données entre deux points de terminaison, et le **protocole Internet**, qui contrôle la manière dont les paquets sont adressés et envoyés.
 

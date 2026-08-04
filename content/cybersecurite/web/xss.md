@@ -3,11 +3,11 @@ sidebar: auto
 redac: true
 date: 2024-10-16
 ---
-# Failles XSS 
+# <RdIcon name="code-xml" /> Failles XSS
 <Badge type="tip" text="Rédigé le 16/10/2024" />
 <Badge type="warning" text="En cours de rédaction" />
 
-## Les différents types de failles XSS
+## <RdIcon name="code-xml" /> Les différents types de failles XSS
 
 * ***Stored***: Stock un payload dans le serveur
 * ***Reflected***: Nécessite l'interaction de l'utilisateur
@@ -35,7 +35,7 @@ Le Self Access est une forme particulière de XSS où le code malveillant inject
 
 Le Blind Access, ou XSS aveugle, est une variante particulièrement insidieuse du XSS où l'attaquant ne voit pas directement le résultat de son injection. Cette situation se produit souvent dans des contextes où l'entrée de l'utilisateur est traitée en arrière-plan ou affichée à d'autres utilisateurs, comme dans un système de messagerie interne ou un panneau d'administration. Par exemple, un attaquant pourrait injecter un script malveillant dans un formulaire de contact. Bien que l'attaquant ne voie pas le résultat, le script pourrait s'exécuter lorsqu'un administrateur consulte les messages reçus. Les attaques de Blind Access sont particulièrement dangereuses car elles peuvent passer inaperçues pendant longtemps, permettant potentiellement à l'attaquant de compromettre des comptes à privilèges élevés. Des outils comme XSS Hunter peuvent être utilisés pour détecter et exploiter ces vulnérabilités en envoyant des notifications à l'attaquant lorsque le payload est exécuté.
 
-## Méthodes de test
+## <RdIcon name="flask-conical" /> Méthodes de test
 
 Pour tester les vulnérabilités XSS, il est recommandé de suivre les étapes suivantes :
 

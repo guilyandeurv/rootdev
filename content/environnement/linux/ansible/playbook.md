@@ -3,10 +3,10 @@ sidebar: auto
 date: 2025-10-11
 ---
 
-# ⏯️ Playbook
+# <RdIcon name="square-play" /> Playbook
 <ais />
 
-## Présentation
+## <RdIcon name="presentation" /> Présentation
 
 Les `playbook` Ansible sont des fichiers `yaml` utilisés pour orchestrer des tâches informatiques. Ils contiennent un ou plusieurs *"jeux"* (`play`) définissant l'état souhaité d'un système distant.
 
@@ -14,7 +14,7 @@ Composant fondamental d'Ansible, un playbook automatise des séries de tâches s
 
 Les `playbook` facilitent l'automatisation en regroupant les ressources nécessaires et en évitant les actions manuelles répétitives. Étant du code source, ils peuvent être réutilisés, partagés et versionnés pour un travail collaboratif.
 
-## Structure du `playbook`
+## <RdIcon name="file-code" /> Structure du `playbook`
 
 Un `playbook` contient des jeux ordonnés, chacun listant les tâches à exécuter sur des hôtes spécifiques.
 
@@ -72,7 +72,7 @@ Le paramètre `tasks` liste les tâches de chaque jeu, chacune ayant un nom desc
 
 Dans l'exemple, on utilise le module `apt` avec ses **arguments**, puis le module `service` pour gérer les services du système.
 
-## Exécution du `playbook`
+## <RdIcon name="square-play" /> Exécution du `playbook`
 
 Ansible exécute séquentiellement les tâches du `playbook` sur tous les hôtes sélectionnés. Ce comportement est personnalisable via des [stratégies](https://docs.ansible.com/ansible/latest/user_guide/playbooks_strategies.html#playbooks-strategies).
 
@@ -187,7 +187,7 @@ Pour cibler des hôtes spécifiques, on utilise `--limit` :
 ansible-playbook -i inventaire.yaml rootdev-playbook.yaml --limit serveurdatabase1.rootdev.fr
 ```
 
-## Les variables
+## <RdIcon name="box" /> Les variables
 
 Les variables sont des valeurs réutilisables dans un `playbook` ou autres objets Ansible, composées uniquement de lettres, chiffres et traits de soulignement, et commençant par une lettre.
 
@@ -439,7 +439,7 @@ L'instruction `register` permet de stocker la sortie d'une commande dans une var
         var: sortie_register
 ```
 
-## Les facts Ansible
+## <RdIcon name="clipboard-list" /> Les facts Ansible
 
 Avant d'exécuter les tâches d'un `playbook`, Ansible collecte automatiquement des informations sur les hôtes distants appelées `facts` :
 
@@ -453,7 +453,7 @@ Ces informations sont stockées au format `json`. Le module `setup` les collecte
 
 Les `facts` sont les données système et propriétés de l'**hôte** cible (IP, `BIOS`, logiciels, matériel). Ils permettent à l'administrateur de gérer les hôtes selon leur état **actuel** plutôt que d'agir sans connaître la **santé** du système.
 
-## Tâches conditionnelles
+## <RdIcon name="git-branch" /> Tâches conditionnelles
 
 Les conditions dans Ansible permettent d'exécuter ou d'ignorer des tâches selon certains critères, en utilisant des variables, des facts ou des résultats de tâches précédentes.
 
@@ -539,7 +539,7 @@ Les conditions peuvent aussi utiliser des variables enregistrées :
       when: hosts_contents.stdout.find(localhost) != -1
 ```
 
-## Boucles
+## <RdIcon name="repeat" /> Boucles
 
 Les boucles Ansible permettent d'exécuter une tâche plusieurs fois avec différents paramètres. Par exemple, une seule tâche avec une boucle peut créer plusieurs fichiers, évitant la répétition de code.
 
@@ -610,7 +610,7 @@ Avec `until`, on réessaye une tâche jusqu'à satisfaction d'une condition :
 
 Pour plus d'informations, lire le [guide](https://docs.ansible.com/ansible/latest/user_guide/playbooks_loops.html) officiel des boucles Ansible.
 
-## Les balises (TAGS)
+## <RdIcon name="tags" /> Les balises (TAGS)
 
 Les balises permettent de simplifier les playbooks Ansible en ciblant des tâches spécifiques lors de l'exécution.
 
@@ -747,7 +747,7 @@ Les tâches avec `always` s'exécutent toujours, tandis que celles avec `never` 
 
 Plus d'informations : [Documentation](https://docs.ansible.com/ansible/latest/user_guide/playbooks_tags.html)
 
-## Templating avec Jinja2
+## <RdIcon name="braces" /> Templating avec Jinja2
 
 ### **Introduction**
 
@@ -862,7 +862,7 @@ PLAY RECAP *********************************************************************
 serveurweb1.rootdev.fr : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 ```
 
-## Importation d'un `playbook` Ansible
+## <RdIcon name="download" /> Importation d'un `playbook` Ansible
 
 Avec la directive `import_playbook`, un ou plusieurs `playbook` peuvent être importés. La directive `import_playbook` importe de façon statique un `playbook` dans un autre `playbook`. Cette directive est très utile quand on veut diviser un jeu en plusieurs fonctions, on en créera donc plusieurs ainsi qu'un fichier principal **parent** qui sera utilisé pour appeler les `playbook` **enfants** :
 

@@ -1,5 +1,7 @@
 {
   "devDependencies": {
+    "@iconify-json/lucide": "^1.2.121",
+    "@iconify-json/simple-icons": "^1.2.93",
     "@nolebase/vitepress-plugin-enhanced-readabilities": "^2.18.2",
     "@nolebase/vitepress-plugin-highlight-targeted-heading": "^2.18.2",
     "sass": "^1.100.0",
@@ -10,17 +12,17 @@
     "docs:dev": "vitepress dev content",
     "docs:build": "vitepress build content",
     "docs:preview": "vitepress preview content",
-    "postinstall": "patch-package"
+    "postinstall": "patch-package",
+    "icons:sync": "node content/.vitepress/icons/sync.mjs"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^7.2.0",
     "@vitejs/plugin-vue": "^6.0.7",
+    "immutable": "^5.1.7",
     "lucide-vue-next": "^1.0.0",
     "patch-package": "^8.0.1",
-    "tar": "^7.5.20",
-    "immutable": "^5.1.7",
+    "postcss": "^8.5.22",
     "rollup": "^4.59.0",
-    "postcss" : "^8.5.22"
+    "tar": "^7.5.20"
   },
   "overrides": {
     "preact": "^10.26.10",

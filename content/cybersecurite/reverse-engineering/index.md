@@ -3,11 +3,11 @@ sidebar: auto
 redac: true
 date: 2024-10-25
 ---
-# Introduction au Reverse Engineering
+# <RdIcon name="binary" /> Introduction au Reverse Engineering
 
 Le reverse engineering, ou ingénierie inverse, est une discipline fascinante qui consiste à comprendre le fonctionnement interne d'un système, d'un dispositif ou d'un logiciel sans avoir accès à sa documentation originale ou à son code source. Cette pratique est utilisée dans divers domaines, de la cybersécurité à l'analyse de logiciels malveillants, en passant par l'amélioration de produits existants.
 
-## Qu'est-ce que le Reverse Engineering ?
+## <RdIcon name="microscope" /> Qu'est-ce que le Reverse Engineering ?
 
 Le reverse engineering est le processus d'analyse d'un produit fini pour comprendre comment il a été conçu et comment il fonctionne. Ce processus implique généralement les étapes suivantes :
 
@@ -17,7 +17,7 @@ Le reverse engineering est le processus d'analyse d'un produit fini pour compren
 4. Reconstruction du fonctionnement interne
 5. Documentation des découvertes
 
-## Applications du Reverse Engineering
+## <RdIcon name="microscope" /> Applications du Reverse Engineering
 
 Le reverse engineering trouve des applications dans de nombreux domaines :
 
@@ -27,7 +27,7 @@ Le reverse engineering trouve des applications dans de nombreux domaines :
 * **Archéologie numérique** : Récupération de données à partir de systèmes obsolètes
 * **Interopérabilité** : Création de systèmes compatibles avec des produits existants
 
-## Outils couramment utilisés
+## <RdIcon name="wrench" /> Outils couramment utilisés
 
 Voici quelques outils populaires utilisés en reverse engineering :
 
@@ -37,7 +37,7 @@ Voici quelques outils populaires utilisés en reverse engineering :
 * **Outils d'analyse de fichiers** : Hex editors, Binwalk
 * **Décompilateurs** : JD-GUI (pour Java), dotPeek (pour .NET)
 
-## Exemple simple : Analyse d'un programme "Hello World"
+## <RdIcon name="sparkles" /> Exemple simple : Analyse d'un programme "Hello World"
 
 Prenons l'exemple d'un programme ***C*** simple :
 
@@ -68,7 +68,7 @@ hello_str:
 
 L'analyse de ce code assembleur nous permet de comprendre comment le programme fonctionne au niveau machine, même sans avoir accès au code source original.
 
-## Considérations éthiques et légales
+## <RdIcon name="gavel" /> Considérations éthiques et légales
 
 Il est important de noter que le reverse engineering peut soulever des questions éthiques et légales. Voici quelques points à considérer :
 
@@ -77,6 +77,6 @@ Il est important de noter que le reverse engineering peut soulever des questions
 * Utiliser ces compétences de manière éthique et responsable
 * Etre conscient des lois locales concernant le reverse engineering
 
-## Conclusion
+## <RdIcon name="circle-check-big" /> Conclusion
 
 Le reverse engineering est un domaine passionnant qui offre de nombreuses opportunités d'apprentissage et d'innovation. Que ce soit par intérêt à la sécurité informatique, le développement de logiciels ou l'ingénierie, les compétences en reverse engineering peuvent être extrêmement précieuses dans une carrière.

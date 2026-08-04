@@ -3,10 +3,10 @@ sidebar: auto
 date: 2024-12-19
 ---
 
-# Analyse SOC : Services Web
+# <RdIcon name="globe-lock" /> Analyse SOC : Services Web
 <ESDInfo />
 
-## La surveillance Web
+## <RdIcon name="globe-lock" /> La surveillance Web
 
 Le filtrage de la navigation WEB à l'intérieur d'une organisation est indispensable. Il peut être intéressant de surveiller plusieurs éléments :
 * Le ***proxy*** avec les users agents, le nombre de sites visités une fois, les URLs n'ayant pas fait de recherche DNS, les URLs contenant des extensions de fichiers type script (`.ps1`, `.vbs`, etc...), les URLs contenant plusieurs adresses IP

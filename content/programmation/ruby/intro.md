@@ -3,9 +3,9 @@ sidebar: auto
 redac: true
 date: 2024-08-09
 ---
-# Introduction à Ruby
+# <RdIcon name="sprout" /> Introduction à Ruby
 
-## Interactive Ruby
+## <RdIcon name="terminal" /> Interactive Ruby
 Une première approche de Ruby, la plus simple, consiste à utiliser IRB (Interactive Ruby) dans un terminal :
 
 Sur macOS, ouvrrir un Terminal et taper `irb`
@@ -17,7 +17,7 @@ IRB permet d’écrire et d’interpréter du Ruby à la volée, sans avoir à e
 3.2.4 :002 > 
 ```
 
-## Hello World !
+## <RdIcon name="sparkles" /> Hello World !
 
 ```ruby:line-numbers=1 {2}
 puts "Hello World !"
@@ -28,7 +28,7 @@ Hello World ! # [!code ++]
 `puts` est l'équivalent en **Ruby** de `Console.WriteLine` en **C#** ou de `print` en **Python**.
 `nil` lui est toujours retourné par `puts`, il indique l'absence de valeur.
 
-## Opérateurs mathématiques
+## <RdIcon name="sigma" /> Opérateurs mathématiques
 
 |Opérateur|Syntaxe|Exemple|
 |-|-|-|
@@ -41,7 +41,7 @@ Hello World ! # [!code ++]
 
 *Math.* correspond à la même fonction qu'en **Python**, seule différence ici, c'est qu'en **Ruby**, on appelle ça un module.
 
-## Les méthodes (fonction)
+## <RdIcon name="square-function" /> Les méthodes (fonction)
 
 Le mot-clé `def` indique le début d'une définition d'une méthode, et se clôture par `end`. 
 

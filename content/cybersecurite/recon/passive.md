@@ -3,12 +3,12 @@ sidebar: auto
 redac: true
 date: 2024-03-17
 ---
-# La reconnaissance passive
+# <RdIcon name="binoculars" /> La reconnaissance passive
 
 La reconnaissance passive est le premier acte d'un test d'intrusion. Il permet d'en apprendre davantage sur la cible en terme de connaissances publiques.
 Cette étape à pour intérêt de récupérer quelconque information qui pourrait se montrer utile dans l'intrusion plus tard.
 
-## Quelles informations sont utiles à récupérer ?
+## <RdIcon name="search" /> Quelles informations sont utiles à récupérer ?
 
 1. L'adresse ou les adresses IP de la cible
 
@@ -22,7 +22,7 @@ Ces informations se montrent utiles lors d'une attaque d'ingénierie sociale par
 
 Combien de réseau possède la cible ? Quels systèmes d'exploitation et en quelles versions utilise-t-elle ? Quels logiciels sont utilisés dans l'entreprise et en quelles versions ? Comment le site web a été construit ?
 
-## Récupérer des adresses IP et physiques
+## <RdIcon name="route" /> Récupérer des adresses IP et physiques
 
 Quoi de plus commun que le ping pour récupérer une adresse IP d'un site web ?
 ```shell
@@ -110,7 +110,7 @@ Cela fonctionne aussi par ligne de commande :
 domain:                        mon-ent-occitanie.fr
 ```
 
-## Outils de recherche de fuites de données
+## <RdIcon name="search" /> Outils de recherche de fuites de données
 
 ### IntelligenceX (IntelX.io)
 
@@ -126,7 +126,7 @@ Supposons qu'une fuite ait pu se produire avec une adresse mail en lien avec not
 
 [Have i been pwned?](https://haveibeenpwned.com/)
 
-## Connaître les technologies utilisées par un site web
+## <RdIcon name="code-xml" /> Connaître les technologies utilisées par un site web
 
 ### WhatWeb
 
@@ -195,7 +195,7 @@ On peut lire ici quelques technologies utilisées par le site ciblé, avec une d
 Pour des questions de confort de lecture, le résultat complet est [récupérable ici](./assets/whatweb-resultats.txt)
 :::
 
-## Récupérer des adresses mail & pseudonymes
+## <RdIcon name="mail" /> Récupérer des adresses mail & pseudonymes
 
 ### theHarvester
 
@@ -214,7 +214,7 @@ Il s'utilise de cette manière :
 python3 sherlock.py [username] # -o pour sauvegarder les résultats
 ```
 
-## Autres outils pertinents
+## <RdIcon name="wrench" /> Autres outils pertinents
 
 ### RedHawk
 

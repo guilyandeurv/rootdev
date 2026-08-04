@@ -1,10 +1,10 @@
 ---
 sidebar: auto
 ---
-# Architecture et design
+# <RdIcon name="drafting-compass" /> Architecture et design
 <Badge type="tip" text="Rédigé le 24/03/2024" />
 
-## Importance des concepts de sécurité en entreprise (Objectif 2.1)
+## <RdIcon name="building-2" /> Importance des concepts de sécurité en entreprise (Objectif 2.1)
 
 L'objectif 2.1 de l'examen Security+ est d'expliquer l'importance des concepts de sécurité dans un environnement d'entreprise. 
 
@@ -34,7 +34,7 @@ La différence entre les sites :
 
 En comprenant et en appliquant ces concepts, les entreprises peuvent renforcer leur posture de sécurité et protéger leurs actifs critiques contre les menaces internes et externes.
 
-## Concepts de virtualisation et de cloud computing (Objectif 2.2)
+## <RdIcon name="cloud" /> Concepts de virtualisation et de cloud computing (Objectif 2.2)
 
 L'objectif 2.2 de l'examen Security+ couvre les concepts de virtualisation et de cloud computing.
 
@@ -62,7 +62,7 @@ Favorise la réutilisation du code et facilite le déploiement rapide et cohére
 
 En intégrant ces concepts, les organisations peuvent tirer parti des avantages du cloud computing tout en mettant en œuvre des mesures de sécurité adéquates pour protéger leurs données et leurs systèmes contre les menaces potentielles.
 
-## Concepts de développement, déploiement et automatisation sécurisés des applications (Objectif 2.3)
+## <RdIcon name="git-pull-request" /> Concepts de développement, déploiement et automatisation sécurisés des applications (Objectif 2.3)
 
 L'objectif 2.3 de l'examen Security+ couvre les concepts de développement, de déploiement et d'automatisation sécurisés des applications.
 
@@ -103,7 +103,7 @@ L'élasticité va plus loin en permettant au système de réduire ses ressources
 
 En intégrant ces concepts de développement, de déploiement et d'automatisation sécurisés, les organisations peuvent créer et gérer des applications robustes et sûres, tout en optimisant l'efficacité de leurs opérations informatiques.
 
-## Concepts de conception d'authentification et d'autorisation (Objectif 2.4)
+## <RdIcon name="key-round" /> Concepts de conception d'authentification et d'autorisation (Objectif 2.4)
 
 L'objectif 2.4 de l'examen Security+ couvre les concepts de conception d'authentification et d'autorisation.
 
@@ -126,7 +126,7 @@ En plus des facteurs traditionnels, des attributs comme la localisation de l'uti
 
 En utilisant des méthodes d'authentification et d'autorisation appropriées, les organisations peuvent garantir que seules les personnes autorisées ont accès aux ressources et aux données sensibles, renforçant ainsi la sécurité de leur infrastructure.
 
-## Implémentation de la résilience en cybersécurité (Objectif 2.5)
+## <RdIcon name="life-buoy" /> Implémentation de la résilience en cybersécurité (Objectif 2.5)
 
 L'objectif 2.5 de l'examen Security+ concerne la mise en œuvre de la résilience en cybersécurité.
 
@@ -151,7 +151,7 @@ Avoir des fournisseurs différents dans la chaîne d'approvisionnement réduit l
 
 En mettant en œuvre ces pratiques de résilience, les organisations peuvent renforcer leur capacité à faire face aux menaces et aux perturbations, garantissant ainsi la continuité des opérations et la sécurité des systèmes informatiques.
 
-## Implications de sécurité des systèmes embarqués et spécialisés (Objectif 2.6)
+## <RdIcon name="cpu" /> Implications de sécurité des systèmes embarqués et spécialisés (Objectif 2.6)
 
 L'objectif 2.6 de l'examen Security+ consiste à expliquer les implications de sécurité des systèmes embarqués et spécialisés. 
 
@@ -175,7 +175,7 @@ Les contraintes spécifiques des systèmes embarqués, telles que la puissance l
 
 En comprenant ces concepts, les professionnels de la cybersécurité peuvent mieux gérer les risques associés aux systèmes embarqués et spécialisés, et garantir la sécurité des environnements informatiques.
 
-## Importance des contrôles de sécurité physique (Objectif 2.7)
+## <RdIcon name="door-closed" /> Importance des contrôles de sécurité physique (Objectif 2.7)
 
 Cette explication couvre divers aspects des contrôles de sécurité physique de manière exhaustive.
 
@@ -203,7 +203,7 @@ Des techniques telles que la combustion, le déchiquetage, la pulvérisation, la
 Comprendre ces contrôles de sécurité physique est crucial pour l'examen Security+ et pour mettre en œuvre des mesures de sécurité efficaces dans des scénarios réels.
 
 
-## Concepts de cryptographie (Objectif 2.8)
+## <RdIcon name="key" /> Concepts de cryptographie (Objectif 2.8)
 
 L'objectif 2.8 de l'examen Security+ consiste à résumer les bases des concepts cryptographiques. La cryptographie est la pratique qui consiste à utiliser les mathématiques pour obscurcir le sens des informations sensibles pour les personnes non autorisées à les visualiser. 
 

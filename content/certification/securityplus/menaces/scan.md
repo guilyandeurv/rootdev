@@ -1,10 +1,10 @@
 ---
 sidebar: auto
 ---
-# Scan des vulnérabilités
+# <RdIcon name="scan-search" /> Scan des vulnérabilités
 <Badge type="tip" text="Rédigé le 18/10/2024" />
 
-## Qu'est-ce que la gestion des vulnérabilités ?
+## <RdIcon name="circle-help" /> Qu'est-ce que la gestion des vulnérabilités ?
 ### Complexité des systèmes modernes
 
 Les systèmes et applications informatiques modernes sont extrêmement compliqués. Il n'est pas surprenant d'apprendre qu'il existe des millions de lignes de code dans chaque logiciel majeur.
@@ -84,7 +84,7 @@ Lors de l'interprétation des résultats des recherches de vulnérabilités, il 
 
 Peu importe pourquoi un programme de gestion des vulnérabilités est en cours de développement, les outils et processus de base sont les mêmes. Avant de commencer, il est important de connaître les règles qui s'appliquent à l'organisation pour concevoir un programme conforme aux exigences.
 
-## Identifier les cibles de scan
+## <RdIcon name="target" /> Identifier les cibles de scan
 
 ### Développer les exigences du programme
 
@@ -156,7 +156,7 @@ De nombreuses organisations adoptent l'approche de scanner régulièrement tous 
 
 Exemple : Même en scannant tout, il est nécessaire de prioriser les efforts de remédiation.
 
-## Configuration du Scan
+## <RdIcon name="scan" /> Configuration du Scan
 ### Créer un nouveau scan
 
 Nous venons de réaliser un simple scan de vulnérabilité, mais explorons maintenant le processus de configuration d'un scan en détail.
@@ -229,7 +229,7 @@ Par défaut, Nessus inclut tous les ports couramment utilisés, mais il est poss
 
 Nessus utilise des plugins pour effectuer des vérifications de vulnérabilités. Chaque plugin est conçu pour vérifier une vulnérabilité spécifique, et ils sont organisés par type de systèmes affectés.
 
-## Perspective du Scan
+## <RdIcon name="scan" /> Perspective du Scan
 ### Différents types de scans de vulnérabilités
 
 Tous les scans de vulnérabilités ne sont pas identiques. Bien qu'ils puissent tester les mêmes systèmes avec les mêmes outils, ports et services, d'autres facteurs peuvent influencer les résultats des scans. Parlons de la perspective du scan.
@@ -298,7 +298,7 @@ Une alternative aux scans basés sur l'agent est le scan basé sur les identifia
 
 *Bonnes pratiques* : Ne pas fournir de compte administratif au scanner, mais plutôt un compte avec un accès en lecture seule à la configuration du système.
 
-## Security Content Automation Protocol (***SCAP***)
+## <RdIcon name="cog" /> Security Content Automation Protocol (***SCAP***)
 ### Introduction
 
 Le monde de la gestion des vulnérabilités est rempli de jargon, rendant parfois les choses confuses. Les termes "vulnérabilité des applications web", "problème d'injection SQL" et "défaut de validation des entrées" peuvent tous désigner la même chose. De plus, les vulnérabilités peuvent être qualifiées de "sévères", "critiques" ou "urgentes", ajoutant à l'ambiguïté. Cette confusion peut empêcher l'automatisation des activités de gestion des vulnérabilités, comme si les systèmes ne parlaient pas la même langue.
@@ -341,7 +341,7 @@ Voici un aperçu des composants du SCAP :
 
 Parmi ces composants, le **Common Vulnerability Scoring System** (***CVSS***) est particulièrement utilisé car il offre une méthode cohérente pour évaluer la gravité des vulnérabilités de sécurité.
 
-## CVSS (*Common Vulnerability Scoring System*)
+## <RdIcon name="gauge" /> CVSS (*Common Vulnerability Scoring System*)
 ### Introduction
 
 Le **Common Vulnerability Scoring System** (***CVSS***) attribue un score à chaque vulnérabilité sur une échelle de 10 points. Ce score de base est déterminé en évaluant huit métriques différentes et en combinant les résultats.
@@ -436,7 +436,7 @@ Capturer si une vulnérabilité peut affecter des composants autres que le compo
 
 * **Unchanged**: L'exploit ne peut affecter que les ressources gérées par la même autorité de sécurité.
 
-## Analyse des rapports de scan
+## <RdIcon name="file-chart-column" /> Analyse des rapports de scan
 ### Rôle de l'analyste en cybersécurité
 
 En tant qu'analyste en cybersécurité, une grande partie du temps est consacrée à l'analyse des rapports de scans de vulnérabilités. Les responsabilités incluent :
@@ -519,7 +519,7 @@ Il existe quatre résultats possibles pour tout rapport de vulnérabilité :
 
 4. **False Negative** : La vulnérabilité existe mais n'a pas été détectée.
 
-## Correlation des Résultats de Scan
+## <RdIcon name="git-merge" /> Correlation des Résultats de Scan
 ### Validation et élimination des faux positifs
 
 En plus de valider les résultats des scans pour éliminer les faux positifs et enlever les exceptions documentées, il est essentiel de corréler les rapports de scan avec d'autres informations disponibles à partir de diverses sources.

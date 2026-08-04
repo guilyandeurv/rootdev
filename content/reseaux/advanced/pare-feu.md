@@ -3,10 +3,10 @@ sidebar: auto
 date: 2025-10-12
 ---
 
-# 🧱 Pare-feu
+# <RdIcon name="flame-kindling" /> Pare-feu
 <ais />
 
-## 🧰 Pfsense
+## <RdIcon name="brick-wall" /> Pfsense
 
 [Pfsense](https://www.pfsense.org/) est un pare-feu Open Source léger basé sur FreeBSD, développé par [Netgate](https://www.netgate.com/).
 
@@ -25,7 +25,7 @@ Pfsense offre également des fonctionnalités VPN et dispose d'une interface de 
 
 Pfsense est disponible en version virtuelle, physique ou cloud. Une [documentation complète](https://docs.netgate.com/pfsense/en/latest/solutions/) est fournie par Netgate.
 
-## 🧱 Firewalls
+## <RdIcon name="brick-wall" /> Firewalls
 
 Un Firewall est un équipement responsable du filtrage des flux entrants et sortants d'un réseau. Cette frontière peut être entre Internet et votre réseau local, entre deux réseaux locaux, ou entre une machine et le réseau local.
 
@@ -42,7 +42,7 @@ Les pare-feu peuvent router les paquets, mais un routeur reste souvent nécessai
 
 Les réponses varient selon les technologies utilisées.
 
-## 🕸️ Les Filtrages
+## <RdIcon name="filter" /> Les Filtrages
 
 Le pare-feu filtre les paquets selon sa politique de filtrage, en utilisant principalement :
 
@@ -115,7 +115,7 @@ Le tableau ci-dessus provient de la table d'état d'un pfsense, on peut constate
 
 Dans une situation d'établissement de connexion, on peut potentiellement constater deux valeurs différentes sur la même ligne, dû à la différence d'état entre la source et la destination.
 
-## 📚 Les types de Firewalls
+## <RdIcon name="brick-wall" /> Les types de Firewalls
 
 Les firewalls ont évolué vers deux types principaux : les **Next Generation Firewalls** (***NGFW***) et les **Unified Threat Management** (***UTM***).
 
@@ -131,7 +131,7 @@ Aujourd'hui, la distinction entre NGFW et UTM s'estompe. L'essentiel est de choi
 
 Attention toutefois : selon l'ANSSI, multiplier les fonctionnalités sur un firewall augmente sa surface d'attaque. Une utilisation prudente est recommandée.
 
-## 📏 Les règles de Firewall
+## <RdIcon name="brick-wall" /> Les règles de Firewall
 
 Les règles de Firewall sont composées de plusieurs éléments essentiels :
 

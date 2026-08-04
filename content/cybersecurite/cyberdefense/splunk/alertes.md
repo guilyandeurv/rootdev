@@ -3,5 +3,5 @@ sidebar: auto
 date: 2025-09-28
 ---
 
-# ⚠️ Les alertes
+# <RdIcon name="bell-ring" /> Les alertes
 <ais />

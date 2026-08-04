@@ -3,5 +3,5 @@ sidebar: auto
 date: 2025-09-28
 ---
 
-# 🔎 Introduction
+# <RdIcon name="chevrons-right" /> Introduction
 <ais />

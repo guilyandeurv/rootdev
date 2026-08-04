@@ -2,17 +2,17 @@
 sidebar: auto
 ---
 
-# 📛 Certification CompTIA Security+ SY0-701
+# <RdIcon name="signpost" /> Certification CompTIA Security+ SY0-701
 
 ![CompTia Security + logo](./img/comptia-security+.png)
 
 Page dédiée à la certification CompTIA Security+ SY0-701. Cette certification est une accréditation reconnue dans le domaine de la sécurité informatique et est conçue pour valider les compétences essentielles nécessaires pour assurer la sécurité des systèmes et des réseaux.
 
-## Objectifs de la certification
+## <RdIcon name="target" /> Objectifs de la certification
 
 Les objectifs de la certification CompTIA Security+ SY0-701 sont définis par CompTIA et couvrent plusieurs domaines clés de la sécurité informatique. En développant chaque objectif avec des exemples concrets, des concepts clés et en citant les types d'attaques associés, les candidats peuvent mieux comprendre comment ces concepts s'appliquent dans des situations réelles et être mieux préparés pour l'examen de certification CompTIA Security+ SY0-701.
 
-## Menaces, attaques et vulnérabilités
+## <RdIcon name="shield-alert" /> Menaces, attaques et vulnérabilités
 
 Ce domaine évalue la capacité des candidats à analyser les menaces potentielles, les différentes techniques d'attaque et à identifier les vulnérabilités dans les systèmes et les réseaux.
 
@@ -63,7 +63,7 @@ Ce domaine évalue la capacité des candidats à analyser les menaces potentiell
 #### Exemple :
 Une entreprise subit une attaque par déni de service distribué (DDoS), où un grand nombre de machines compromises inondent son réseau de requêtes, rendant les services inaccessibles pour les utilisateurs légitimes.
 
-## Architecture et design
+## <RdIcon name="drafting-compass" /> Architecture et design
 
 Dans ce domaine, les candidats doivent démontrer leur compréhension des principes fondamentaux de l'architecture sécurisée, y compris la conception de réseaux sécurisés et la mise en place de mesures de sécurité appropriées.
 
@@ -76,7 +76,7 @@ Dans ce domaine, les candidats doivent démontrer leur compréhension des princi
 #### Exemple :
 Une entreprise utilise des VLANs (Virtual Local Area Networks) pour séparer les départements au sein de son réseau, limitant ainsi l'accès aux ressources sensibles uniquement aux employés autorisés.
 
-## Attaques d'application
+## <RdIcon name="smartphone" /> Attaques d'application
 
 Ce domaine se concentre sur les attaques ciblant les applications, telles que les injections SQL, les attaques XSS (Cross-Site Scripting) et les attaques CSRF (Cross-Site Request Forgery). Les candidats doivent être capables de reconnaître et de contrer ces types d'attaques.
 
@@ -87,7 +87,7 @@ Ce domaine se concentre sur les attaques ciblant les applications, telles que le
 #### Exemple :
 Un site web vulnérable à une attaque XSS permet à un attaquant d'injecter un script malveillant dans une page web, ce qui peut ensuite être exécuté sur le navigateur des utilisateurs, compromettant ainsi la sécurité de leur session.
 
-## Opérations et réponses d'incident
+## <RdIcon name="ambulance" /> Opérations et réponses d'incident
 
 Ce domaine évalue la capacité des candidats à mettre en œuvre et à gérer les opérations de sécurité au quotidien, ainsi qu'à élaborer et à exécuter des plans de réponse aux incidents en cas de violation de la sécurité.
 
@@ -101,7 +101,7 @@ Ce domaine évalue la capacité des candidats à mettre en œuvre et à gérer l
 #### Exemple :
 En cas de violation de la sécurité, une équipe de réponse aux incidents est activée pour enquêter sur l'incident, identifier les sources de la compromission et restaurer l'intégrité du système.
 
-## Gouvernance, risque et conformité
+## <RdIcon name="landmark" /> Gouvernance, risque et conformité
 
 Dans ce domaine, les candidats doivent démontrer leur compréhension des concepts de gouvernance de la sécurité, de gestion des risques et de conformité aux réglementations en matière de sécurité informatique.
 

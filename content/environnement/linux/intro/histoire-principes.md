@@ -3,10 +3,10 @@ sidebar: auto
 date: 2026-01-18
 ---
 
-# 📔 Histoire et principes clés
+# <RdIcon name="history" /> Histoire et principes clés
 <ais />
 
-## 🤔 Pourquoi j'étudie ceci ?
+## <RdIcon name="circle-help" /> Pourquoi j'étudie ceci ?
 
 - **L'histoire de Linux** permet de comprendre son évolution et son impact technologique.
 - **La connaissance des distributions** aide à choisir la version adaptée à ses besoins.
@@ -15,7 +15,7 @@ date: 2026-01-18
 - **Naviguer dans la structure du système de fichiers sur Linux** pour localiser et organiser les fichiers.
 - **Gérer les utilisateurs et les permissions** afin de protéger l'accès aux fichiers et ressources système.
 
-## 🦕 Histoire & distributions
+## <RdIcon name="history" /> Histoire & distributions
 
 Dans les années 80, **Richard Stallman** crée GNU, un système d'exploitation libre basé sur Unix. Parallèlement, Linus Torwalds développe Linux. La fusion des deux projets donne naissance à GNU/Linux. Plusieurs distributions majeures en découlent :
 
@@ -30,7 +30,7 @@ Parmi les distributions dérivées, **Ubuntu** est la plus populaire. Basée sur
 
 <img src="./img/ubuntu.png" width="500" height="500">
 
-## 🧱 Structure du système de fichiers sur Linux
+## <RdIcon name="folder-tree" /> Structure du système de fichiers sur Linux
 
 L'architecture des dossiers Linux est comparable à un arbre : depuis la racine `/`, tous les fichiers sont accessibles en suivant un chemin spécifique, quel que soit leur support de stockage *(disques durs, clés USB, etc.)*.
 
@@ -60,7 +60,7 @@ Voici les principaux dossiers à la racine :
 - **`/usr`** : Programmes utilisateur
 - **`/var`** : Données variables *(logs, mails, etc.)*
 
-## 🧑‍⚖️ Utilisateurs et droits
+## <RdIcon name="users" /> Utilisateurs et droits
 
 Linux est un système multi-utilisateurs permettant des accès simultanés. **Il s'adapte parfaitement aux serveurs** *(notamment pour l'hébergement web où chaque site a son propre utilisateur)*.
 
@@ -78,7 +78,7 @@ La propriété définit *"Qui a quels droits sur le fichier ou le dossier ?"* se
 
 Pour des raisons de sécurité, les actions système importantes nécessitent les droits root *(Super Utilisateur)*.
 
-## 👑 L'utilisateur Root et la commande `sudo`
+## <RdIcon name="user-cog" /> L'utilisateur Root et la commande `sudo`
 
 L'utilisateur root (Super Utilisateur) possède des droits d'administration complets sur le système. Pour protéger contre les erreurs et attaques, les autres utilisateurs ont des droits limités et ne peuvent pas modifier les fichiers système critiques. Seul root peut accéder aux fonctionnalités sensibles, ce qui maintient la sécurité et la stabilité du système.
 
@@ -106,7 +106,7 @@ exit
 
 - Pour exécuter une commande avec les droits root, on ajoute le préfixe **`sudo`**. Un mot de passe peut être demandé pour confirmer l'élévation des privilèges.
 
-## 🛂 Permissions
+## <RdIcon name="lock" /> Permissions
 
 Les fichiers et dossiers possèdent trois types de permissions pour chaque propriétaire :
 
@@ -206,7 +206,7 @@ Cette méthode permet de spécifier les utilisateurs à qui des permissions doiv
     - **`w`** : droit d'écriture *(write)*
     - **`x`** : droit d'exécution *(execute)*
 
-## 💼 Variables d'environnement
+## <RdIcon name="settings-2" /> Variables d'environnement
 
 Les variables d'environnement permettent de configurer le comportement des logiciels. Par exemple, `LANG` définit la langue utilisée par le système.
 

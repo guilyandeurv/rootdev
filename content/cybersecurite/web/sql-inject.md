@@ -3,7 +3,7 @@ sidebar: auto
 redac: true
 date: 2024-*-*
 ---
-# Injection SQL 
+# <RdIcon name="database-zap" /> Injection SQL
 <Badge type="tip" text="Rédigé le */*/2024" />
 <Badge type="danger" text="<---- mettre à jour" />
 <Badge type="warning" text="En cours de rédaction" />

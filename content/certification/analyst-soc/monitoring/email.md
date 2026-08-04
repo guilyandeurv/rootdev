@@ -3,10 +3,10 @@ sidebar: auto
 date: 2024-12-19
 ---
 
-# Analyse SOC : Email
+# <RdIcon name="mail-warning" /> Analyse SOC : Email
 <ESDInfo />
 
-## L'email, LA source de menace
+## <RdIcon name="mail-warning" /> L'email, LA source de menace
 
 L'email est très souvent le vecteur d'infection des ***A***dvance ***P***ersistent ***T***hreat.
 Il est donc nécessaire de surveiller :

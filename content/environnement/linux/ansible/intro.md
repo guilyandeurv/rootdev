@@ -3,10 +3,10 @@ sidebar: auto
 date: 2025-10-11
 ---
 
-# 🔎 Introduction
+# <RdIcon name="wand-sparkles" /> Introduction
 <ais />
 
-## **Le Projet Ansible**
+## <RdIcon name="wand-sparkles" /> **Le Projet Ansible**
 
 ### **Présentation générale**
 
@@ -54,7 +54,7 @@ Plus besoin de configuration **manuelle** : la machine de contrôle utilise SSH 
 
 Pour **l'automatisation** des infrastructures, Ansible gère le provisionnement cloud, virtuel et physique, compatible avec les principaux fournisseurs comme `AWS`, `Azure`, `GCP`, `OVH`.
 
-## Installation d'Ansible
+## <RdIcon name="download" /> Installation d'Ansible
 
 On utilisera **Ubuntu** pour déployer l'instance Ansible.
 
@@ -103,7 +103,7 @@ which ansible
 ansible --version
 ```
 
-## **Architecture Ansible**
+## <RdIcon name="wand-sparkles" /> **Architecture Ansible**
 
 <img src="./img/architectures.png" width="400" height="400">
 

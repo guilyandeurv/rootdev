@@ -3,5 +3,5 @@ sidebar: auto
 date: 2025-09-28
 ---
 
-# 📈 Commandes stats
+# <RdIcon name="sigma" /> Commandes stats
 <ais />

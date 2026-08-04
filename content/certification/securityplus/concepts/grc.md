@@ -1,10 +1,10 @@
 ---
 sidebar: auto
 ---
-# Gouvernance, risques et conformité
+# <RdIcon name="gavel" /> Gouvernance, risques et conformité
 <Badge type="tip" text="Rédigé le 26/03/2024" />
 
-## Comparer et contraster différents types de contrôles de sécurité (Objectif 5.1)
+## <RdIcon name="shield-check" /> Comparer et contraster différents types de contrôles de sécurité (Objectif 5.1)
 
 ### Regroupement par objectif ou type de contrôle
 
@@ -51,7 +51,7 @@ Exemple: Évaluations régulières des risques, intégration de la sécurité da
 
 Comprendre ces différents types de contrôles de sécurité est essentiel pour réussir l'examen Security Plus.
 
-## Importance des réglementations, normes ou cadres applicables à la posture de sécurité d'une organisation (Objectif 5.2)
+## <RdIcon name="landmark" /> Importance des réglementations, normes ou cadres applicables à la posture de sécurité d'une organisation (Objectif 5.2)
 
 ### Réglementations et législations
 
@@ -88,7 +88,7 @@ Comprendre ces différents types de contrôles de sécurité est essentiel pour 
 
 En tant que candidat à l'examen Security+, il est crucial de comprendre ces réglementations, normes et cadres pour garantir une posture de sécurité efficace pour une organisation.
 
-## Importance des politiques pour la sécurité organisationnelle (Objectif 5.3)
+## <RdIcon name="scroll-text" /> Importance des politiques pour la sécurité organisationnelle (Objectif 5.3)
 
 ### Politiques de sécurité du personnel
 
@@ -147,7 +147,7 @@ En tant que candidat à l'examen Security+, il est crucial de comprendre ces ré
 
 En tant que candidat à l'examen Security+, comprendre et appliquer ces politiques est essentiel pour assurer la sécurité organisationnelle.
 
-## Résumé des processus et concepts de gestion des risques (Objectif 5.4)
+## <RdIcon name="scale" /> Résumé des processus et concepts de gestion des risques (Objectif 5.4)
 
 ### Types de risques
 
@@ -200,7 +200,7 @@ En tant que candidat à l'examen Security+, comprendre et appliquer ces politiqu
 
 En résumé, la gestion des risques implique l'identification, l'évaluation et la gestion des risques pour assurer la continuité des opérations et la résilience de l'organisation face aux menaces potentielles.
 
-## Concepts de confidentialité et de données sensibles en relation avec la sécurité (Objectif 5.5)
+## <RdIcon name="file-lock" /> Concepts de confidentialité et de données sensibles en relation avec la sécurité (Objectif 5.5)
 
 ### Conséquences organisationnelles des violations de la confidentialité et des données
 
