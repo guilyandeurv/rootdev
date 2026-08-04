@@ -727,3 +727,96 @@ html.dark {
     transition: none;
   }
 }
+
+/* --------------------------------------------------------------------------
+ * 10. Bouton de repli de la sidebar
+ *
+ *   Petit rond flottant, collé au bord droit de la sidebar et posé en bas de
+ *   fenêtre. Le bas plutôt que le haut : c'est la seule hauteur où la bande à
+ *   droite de la sidebar est libre de bout en bout. En haut s'empilent la
+ *   pastille de nav puis, entre 960 et 1279px, la barre locale « Sur cette
+ *   page » — le passage qu'elles laissent contre la sidebar ne fait que 16px,
+ *   trop étroit pour un rond de 36px. En bas il n'y a rien : ni la sidebar
+ *   (96px de padding), ni le contenu (`.VPDoc`) ne s'y avancent.
+ *
+ *   Le repli passe par une seule déclaration : `--vp-sidebar-width: 0px`.
+ *   Toutes les formules de mise en page — celles de VitePress comme celles du
+ *   menu « confort de lecture » (plugin Nolebase, qui réécrit largeurs et
+ *   retraits en `!important`) — sont exprimées en fonction de cette variable.
+ *   La mettre à zéro fait donc refluer l'espace réservé partout à la fois :
+ *   contenu, pastille de nav, barre locale, quel que soit le mode de largeur
+ *   choisi. Une pile de surcharges `!important` par cible, elle, aurait dû
+ *   rejouer chacune de ces formules — et repasser à côté au prochain mode.
+ *
+ *   Réservé au bureau (>= 960px, seuil où VitePress fixe la sidebar) : en
+ *   dessous elle est déjà un tiroir fermé par défaut, sans espace réservé à
+ *   récupérer.
+ * -------------------------------------------------------------------------- */
+
+@media (min-width: 960px) {
+  .sidebar-hidden {
+    --vp-sidebar-width: 0px;
+  }
+
+  .sidebar-hidden .VPSidebar {
+    display: none !important;
+  }
+
+  /* Plus de bord à suivre : le bouton revient sur la gouttière, à la même
+     hauteur pour ne pas sauter. */
+  .sidebar-hidden .sidebar-toggle-btn {
+    left: var(--rd-nav-gutter);
+  }
+}
+
+.sidebar-toggle-btn {
+  display: none;
+}
+
+@media (min-width: 960px) {
+  .sidebar-toggle-btn {
+    position: fixed;
+    bottom: 24px;
+    /* `--rd-sidebar-right` est le bord droit réel de la sidebar, mesuré et
+       posé en style inline par le composant (cf. `SidebarToggle.vue`). Le
+       `calc()` de repli ne sert qu'avant la première mesure : il vaut pour la
+       mise en page par défaut, mais pas pour les largeurs du menu « confort
+       de lecture ». */
+    left: calc(var(--rd-sidebar-right, var(--vp-sidebar-width)) + 4px);
+    z-index: 61; /* au-dessus de la sidebar, --vp-z-index-sidebar: 60 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: 1px solid var(--rd-nav-border);
+    border-radius: 50%;
+    background-color: var(--rd-nav-bg);
+    box-shadow: var(--rd-nav-shadow);
+    backdrop-filter: var(--rd-nav-blur);
+    -webkit-backdrop-filter: var(--rd-nav-blur);
+    cursor: pointer;
+    transition: left 0.25s, border-color 0.25s, background-color 0.25s;
+  }
+
+  .sidebar-toggle-btn:hover {
+    border-color: var(--vp-c-brand-1);
+  }
+
+  .sidebar-toggle-btn .rd-i {
+    font-size: 16px;
+  }
+}
+
+/* Repli du `calc()` ci-dessus pour la mise en page centrée de VitePress, où
+   la sidebar n'est plus collée au bord gauche. Sans effet dès que la mesure
+   est arrivée : `--rd-sidebar-right` est déjà un bord absolu. */
+@media (min-width: 1440px) {
+  .sidebar-toggle-btn {
+    left: calc(
+      var(--rd-sidebar-right, calc((100vw - var(--vp-layout-max-width)) / 2 + var(--vp-sidebar-width))) +
+        4px
+    );
+  }
+}

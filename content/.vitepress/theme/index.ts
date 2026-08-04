@@ -43,6 +43,8 @@ import ESDInfo from '../components/ESDInfo.vue'
 import ais from '../components/ais.vue'
 // Icône du jeu maison, utilisable dans les pages Markdown comme dans le thème
 import RdIcon from '../components/RdIcon.vue'
+// Bouton de repli de la sidebar, pour centrer le contenu de la page
+import SidebarToggle from '../components/SidebarToggle.vue'
 // Page ContentPage
 import ContentPage from './components/ContentPage.vue'
 // Page Rootar.io
@@ -60,8 +62,8 @@ export default {
       // A enhanced readabilities menu for narrower screens (usually smaller than iPad Mini)
       'nav-screen-content-after': () => h(NolebaseEnhancedReadabilitiesScreenMenu), 
       // A highlight targeted headings
-      'layout-top': () => [ 
-        h(NolebaseHighlightTargetedHeading), h(ReadingProgress),
+      'layout-top': () => [
+        h(NolebaseHighlightTargetedHeading), h(ReadingProgress), h(SidebarToggle),
       ],
       // Panneau de droite : infos de page en tête, mode focus en pied, notre
       // sommaire iconé entre les deux (le sommaire natif reste calculé pour

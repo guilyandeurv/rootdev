@@ -214,6 +214,8 @@ export const LUCIDE = [
   'package',
   'package-open',
   'package-x',
+  'panel-left-close',
+  'panel-left-open',
   'panel-top',
   'panels-top-left',
   'parentheses',

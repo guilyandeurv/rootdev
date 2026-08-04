@@ -50,6 +50,21 @@ function toSvg(set, name, setName) {
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${left} ${top} ${width} ${height}">${body}</svg>`
 }
 
+/**
+ * Teinte déterministe (0-359°) à partir du nom de l'icône : chaque icône
+ * garde toujours la même couleur d'une build à l'autre, sans registre de
+ * couleurs à maintenir à la main. `icon.scss` transforme ce degré en
+ * `hsl(...)`, avec une saturation/luminosité fixes qui s'adaptent au thème
+ * clair/sombre.
+ */
+function hueForName(name) {
+  let hash = 0
+  for (let i = 0; i < name.length; i++) {
+    hash = (Math.imul(hash, 31) + name.charCodeAt(i)) >>> 0
+  }
+  return hash % 360
+}
+
 /** Encodage minimal : seuls les caractères qui cassent une url() CSS. */
 function toDataUri(svg) {
   const escaped = svg
@@ -94,7 +109,9 @@ export function buildIconCss({ lucideNames = LUCIDE } = {}) {
   mask: var(--rd-i) no-repeat center / 100% 100%;
 }
 
-${rules.map(([name, uri]) => `.rd-i-${name} { --rd-i: url("${uri}"); }`).join('\n')}
+${rules
+    .map(([name, uri]) => `.rd-i-${name} { --rd-i: url("${uri}"); --rd-i-hue: ${hueForName(name)}; }`)
+    .join('\n')}
 `
 
   /* Réécriture uniquement si le contenu change : évite de réveiller le HMR de

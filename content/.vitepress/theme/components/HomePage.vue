@@ -1,45 +1,36 @@
 <script setup lang="ts">
-import {
-  ArrowRight,
-  ArrowUpRight,
-  Award,
-  BookOpen,
-  Code2,
-  Network,
-  Server,
-  Shield,
-  ShieldCheck,
-  Terminal
-} from 'lucide-vue-next';
+import { ArrowRight, ArrowUpRight } from 'lucide-vue-next';
 import RdIcon from '../../components/RdIcon.vue';
 import SiteFooter from './SiteFooter.vue';
 
 /* Points d'entrée concrets — des pages précises, à ne pas confondre avec la
-   grille des domaines plus bas qui, elle, ouvre des sections entières. */
+   grille des domaines plus bas qui, elle, ouvre des sections entières.
+   `icon` est un nom du registre commun (cf. `icons/registry.mjs`), pour que
+   ces cartes profitent de la même coloration que le reste du site. */
 const quickstarts = [
   {
-    icon: ShieldCheck,
+    icon: 'shield-check',
     title: 'Introduction à la cybersécurité',
     tag: 'Cybersécurité',
     desc: 'Le vocabulaire, les grandes familles de menaces et les principes défensifs.',
     link: '/cybersecurite/intro'
   },
   {
-    icon: Network,
+    icon: 'network',
     title: 'Fondamentaux des réseaux',
     tag: 'Réseaux',
     desc: 'Adressage, routage et commutation : les bases avant tout le reste.',
     link: '/reseaux/fondamentaux'
   },
   {
-    icon: Server,
+    icon: 'server',
     title: 'Premiers pas sous Linux',
     tag: 'Systèmes',
     desc: "Histoire, philosophie et commandes de base de l'écosystème.",
     link: '/environnement/linux/linux'
   },
   {
-    icon: Code2,
+    icon: 'code',
     title: 'Débuter avec Python',
     tag: 'Programmation',
     desc: "La syntaxe et les structures utiles à l'outillage de sécurité.",
@@ -49,37 +40,37 @@ const quickstarts = [
 
 const domains = [
   {
-    icon: ShieldCheck,
+    icon: 'shield-check',
     title: 'Cybersécurité',
     desc: 'Gouvernance, reconnaissance, attaques web, cyberdéfense et SOC.',
     link: '/cybersecurite/'
   },
   {
-    icon: Network,
+    icon: 'network',
     title: 'Réseaux',
     desc: 'Modèles OSI et TCP/IP, durcissement, cryptographie et VPN.',
     link: '/reseaux/'
   },
   {
-    icon: Server,
+    icon: 'server',
     title: 'Environnements',
     desc: 'Administration Linux et Windows Server, Ansible, virtualisation.',
     link: '/environnement/'
   },
   {
-    icon: Code2,
+    icon: 'code',
     title: 'Programmation',
     desc: 'Python, JavaScript, Rust, Ruby et C appliqués à la sécurité.',
     link: '/programmation/'
   },
   {
-    icon: Award,
+    icon: 'award',
     title: 'Certifications',
     desc: 'Security+, Pentest+, Red Team Analyst et analyste SOC.',
     link: '/certification/'
   },
   {
-    icon: Terminal,
+    icon: 'terminal',
     title: 'Outils',
     desc: 'Nmap, Burp Suite, Metasploit, Wireshark et stéganographie.',
     link: '/cybersecurite/outils/intro'
@@ -88,19 +79,19 @@ const domains = [
 
 const sources = [
   {
-    icon: Shield,
+    icon: 'shield',
     name: 'TryHackMe',
     desc: 'Apprentissage pratique et gamifié',
     href: 'https://tryhackme.com'
   },
   {
-    icon: BookOpen,
+    icon: 'book-open',
     name: 'Cisco Skills For All',
     desc: 'Préparation aux certifications',
     href: 'https://skillsforall.com'
   },
   {
-    icon: Code2,
+    icon: 'code',
     name: 'Udemy',
     desc: "Cours d'experts reconnus",
     href: 'https://udemy.com'
@@ -184,7 +175,7 @@ const sources = [
                 class="qs-item"
               >
                 <span class="tile" aria-hidden="true">
-                  <component :is="item.icon" :size="19" :stroke-width="1.75" />
+                  <RdIcon :name="item.icon" :size="19" />
                 </span>
                 <span class="qs-body">
                   <span class="qs-head">
@@ -223,7 +214,7 @@ const sources = [
             class="domain-card"
           >
             <span class="tile" aria-hidden="true">
-              <component :is="domain.icon" :size="19" :stroke-width="1.75" />
+              <RdIcon :name="domain.icon" :size="19" />
             </span>
             <h3 class="domain-title">{{ domain.title }}</h3>
             <p class="domain-desc">{{ domain.desc }}</p>
@@ -255,7 +246,7 @@ const sources = [
             class="source-card"
           >
             <span class="tile" aria-hidden="true">
-              <component :is="source.icon" :size="19" :stroke-width="1.75" />
+              <RdIcon :name="source.icon" :size="19" />
             </span>
             <span class="source-body">
               <span class="source-name">{{ source.name }}</span>
@@ -340,11 +331,12 @@ const sources = [
   transition: color 0.2s ease, border-color 0.2s ease;
 }
 
+/* L'icône garde sa teinte propre (cf. `theme/icon.scss`) : seule la bordure
+   de la tuile réagit au survol. */
 .qs-item:hover .tile,
 .domain-card:hover .tile,
 .source-card:hover .tile {
   border-color: var(--vp-c-brand-1);
-  color: var(--vp-c-brand-1);
 }
 
 /* --------------------------------------------------------------------------
