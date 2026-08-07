@@ -60,11 +60,6 @@ export default defineConfig({
          { text: ic('server', 'Environnement'), link: '/environnement/index' },
          { text: ic('library-big', 'Voir tout'), link: '/content' },
         ],
-      },
-      {
-      items: [
-        { text: ic('gamepad-2', 'Jeu rootar.io'), link: '/game' }
-      ]
       }
     ],
 

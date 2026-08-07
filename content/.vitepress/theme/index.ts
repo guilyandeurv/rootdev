@@ -45,10 +45,10 @@ import ais from '../components/ais.vue'
 import RdIcon from '../components/RdIcon.vue'
 // Bouton de repli de la sidebar, pour centrer le contenu de la page
 import SidebarToggle from '../components/SidebarToggle.vue'
+// Repli des sections de la page (entre deux titres `##`)
+import SectionFold from '../components/SectionFold.vue'
 // Page ContentPage
 import ContentPage from './components/ContentPage.vue'
-// Page Rootar.io
-import GameRootario from './components/GameRootario.vue'
 // Page Rust
 import RustPresentation from './components/RustPresentation.vue'
 
@@ -63,7 +63,7 @@ export default {
       'nav-screen-content-after': () => h(NolebaseEnhancedReadabilitiesScreenMenu), 
       // A highlight targeted headings
       'layout-top': () => [
-        h(NolebaseHighlightTargetedHeading), h(ReadingProgress), h(SidebarToggle),
+        h(NolebaseHighlightTargetedHeading), h(ReadingProgress), h(SidebarToggle), h(SectionFold),
       ],
       // Panneau de droite : infos de page en tête, mode focus en pied, notre
       // sommaire iconé entre les deux (le sommaire natif reste calculé pour
@@ -81,7 +81,6 @@ export default {
     app.component('ais', ais)
     app.component('RdIcon', RdIcon)
     app.component('ContentPage', ContentPage)
-    app.component('GameRootario', GameRootario)
     app.component('RustPresentation', RustPresentation)
   }
 } satisfies Theme

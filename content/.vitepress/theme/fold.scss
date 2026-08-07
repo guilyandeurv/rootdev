@@ -1,0 +1,118 @@
+/**
+ * Component: fold
+ *
+ * Repli des sections d'une page, section par section : un bouton par `<h2>`,
+ * qui masque tout ce qui suit jusqu'au titre suivant.
+ * Cf. `components/SectionFold.vue`.
+ * -------------------------------------------------------------------------- */
+
+/* Le bouton est calé sur le bord droit du titre : la gouttière de gauche est
+   déjà prise par le lien d'ancre (`.header-anchor`, en `float`). Le retrait
+   réserve sa place pour que les titres longs ne passent pas dessous. */
+.vp-doc > div > h2 {
+  position: relative;
+  padding-right: 36px;
+}
+
+.rd-fold-toggle {
+  position: absolute;
+  right: 0;
+  /* Aligné sur la dernière ligne du titre, et non sur sa boîte : celle-ci
+     inclut les 24px de retrait haut de VitePress. */
+  bottom: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border-radius: 8px;
+  color: var(--vp-c-text-3);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0;
+  transition:
+    opacity 0.2s,
+    color 0.2s,
+    background-color 0.2s;
+}
+
+/* Discret tant que la section est ouverte ; toujours visible une fois repliée,
+   puisque c'est le seul moyen de la rouvrir. */
+.vp-doc > div > h2:hover .rd-fold-toggle,
+.vp-doc > div > h2.rd-folded .rd-fold-toggle,
+.rd-fold-toggle:focus-visible {
+  opacity: 1;
+}
+
+/* Sans survol (tactile), le bouton n'apparaîtrait jamais. */
+@media (hover: none) {
+  .rd-fold-toggle {
+    opacity: 1;
+  }
+}
+
+.rd-fold-toggle:hover {
+  color: var(--vp-c-text-1);
+  background-color: var(--vp-c-default-soft);
+}
+
+.rd-fold-toggle .rd-i {
+  transition: transform 0.25s ease;
+}
+
+.vp-doc > div > h2.rd-folded .rd-fold-toggle .rd-i {
+  transform: rotate(-90deg);
+}
+
+/* Section repliée : plus rien sous le titre, on resserre l'espace pour que les
+   titres se suivent comme une table des matières. */
+.vp-doc > div > h2.rd-folded {
+  margin-bottom: 0;
+}
+
+/* `!important` : plusieurs blocs du contenu (blocs de code, conteneurs
+   personnalisés, tableaux) posent leur propre `display` avec une spécificité
+   au moins égale. */
+.vp-doc > div > .rd-fold-hidden {
+  display: none !important;
+}
+
+@keyframes rd-fold-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.vp-doc > div > .rd-fold-reveal {
+  animation: rd-fold-reveal 0.22s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vp-doc > div > .rd-fold-reveal {
+    animation: none;
+  }
+
+  .rd-fold-toggle,
+  .rd-fold-toggle .rd-i {
+    transition: none;
+  }
+}
+
+/* À l'impression, la page doit être complète : les sections repliées à l'écran
+   ne doivent pas disparaître du papier. */
+@media print {
+  .vp-doc > div > .rd-fold-hidden {
+    display: revert !important;
+  }
+
+  .rd-fold-toggle {
+    display: none;
+  }
+}

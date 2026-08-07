@@ -86,6 +86,7 @@ export const LUCIDE = [
   'castle',
   'chart-line',
   'check-check',
+  'chevron-down',
   'chevrons-right',
   'circle-check-big',
   'circle-help',
